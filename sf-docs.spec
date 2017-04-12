@@ -1,0 +1,36 @@
+%global         sum The Software Factory project documentation
+
+Name:           sf-docs
+Version:        2.5.0
+Release:        1%{?dist}
+Summary:        %{sum}
+
+License:        ASL 2.0
+URL:            https://softwarefactory-project.io/r/p/%{name}
+Source0:        https://github.com/softwarefactory-project/sf-docs/archive/%{version}.tar.gz
+
+BuildArch:      noarch
+BuildRequires:  python-sphinx
+Requires:       managesf-doc
+Requires:       python-sfmanager-doc
+
+%description
+%{sum}
+
+%prep
+%autosetup -n %{name}-%{version}
+
+%build
+sphinx-build -b html -d build/doctrees docs/ build/html
+
+%install
+mkdir -p %{buildroot}%{_docdir}/software-factory
+mv build/html/* %{buildroot}%{_docdir}/software-factory
+
+%files
+%license LICENSE
+%{_docdir}/software-factory
+
+%changelog
+* Wed Apr 12 2017 Tristan Cacqueray <tdecacqu@redhat.com> - 2.5.0-1
+- Initial packaging import
