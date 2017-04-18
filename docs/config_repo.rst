@@ -35,6 +35,7 @@ To update the configuration repo:
    access_control_user
    gerritlinks_user
    resources_user
+   repoxplorer_user
 
 Available resources models
 ==========================
