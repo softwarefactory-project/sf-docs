@@ -17,11 +17,10 @@ Services supported
   Service           Topic         Source
 ================= ============= ================
  Gerrit             gerrit        `germqtt`_
- Jenkins [1]_       zuul_jobs     `MQTT notification plugin`_
-                                  "firehose-zuul" predefined publisher
+ Jenkins [1]_       zuul_jobs     `MQTT notification plugin`_  and "firehose-zuul" predefined publisher
  Nodepool           nodepool      `ochlero`_
  Zuul               zuul          `ochlero`_
-================= ============= ================ 
+================= ============= ================
 
 .. [1] For jobs managed through the config repository.
 .. _germqtt: http://git.openstack.org/cgit/openstack-infra/germqtt/
