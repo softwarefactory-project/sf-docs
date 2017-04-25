@@ -18,26 +18,67 @@ User stories and bug tracker is available here: https://softwarefactory-project.
 Prepare a development environment
 ---------------------------------
 
-To get a development environment and a Software Factory up and running,
-you need access to a CentOS 7 and execute:
+Manual setup
+............
+
+Software Factory runs and is developed on CentOS 7. Provision a CentOS 7 system, then install the following prerequisites:
 
 .. code-block:: bash
 
  sudo yum install -y epel-release
- sudo yum install -y libvirt libvirt-daemon-lxc git git-review vim-enhanced tmux curl python-devel wget python-pip mariadb-devel python-virtualenv python-devel gcc libffi-devel openldap-devel openssl-devel python-sphinx python-tox python-flake8 ansible
+ sudo yum install -y libvirt libvirt-daemon-lxc git git-review vim-enhanced tmux curl python-devel wget python-pip mariadb-devel python-virtualenv gcc libffi-devel openldap-devel openssl-devel python-sphinx python-tox python-flake8 ansible
  sudo systemctl enable libvirtd
  sudo systemctl start libvirtd
- git clone http://softwarefactory-project.io/r/software-factory
- cd software-factory
- ./fetch_image.sh
+ sudo yum install -y rpmdevtools createrepo mock python-jinja2
+ sudo /usr/sbin/usermod -a -G mock $USER
 
-There is an included Vagrantfile in the tools directory to automate these tasks
-and deploy a usable CentOS 7 instance that can be used for testing:
+Then you will need to check out the Software Factory manifest, and install the Software Factory development repositories:
 
 .. code-block:: bash
 
- VAGRANT_CWD=./tools/ vagrant up
+ mkdir software-factory
+ sudo mkdir -p /var/lib/sf/zuul-rpm-build
+ cd software-factory && git clone https://softwarefactory-project.io/r/software-factory/sfinfo
+ sudo cp -v sfinfo/rpm-gpg/* /etc/pki/rpm-gpg/
+ sudo yum install -y https://softwarefactory-project.io/repos/sf-release-2.5.rpm
 
+You can now install **Zuul-cloner**, as packaged by the Software Factory development team:
+
+.. code-block:: bash
+
+ sudo yum install -y zuul-cloner
+
+Finally, check out the repositories of the Software Factory project (assuming current directory is 'software-factory'):
+
+.. code-block:: bash
+
+ git clone https://softwarefactory-project.io/r/software-factory/software-factory
+ for repo in $(python << EOF
+ import yaml
+ repos = yaml.load(open('sfinfo/sf-master.yaml'))
+ for r in repos['packages']:
+ suffix = r['name']
+ if r['source'] == 'external':
+    suffix += '-distgit'
+ print suffix
+ if 'distgit' in r:
+    print r['distgit']
+ EOF); do
+  git clone https://softwarefactory-project.io/r/$repo;
+ done
+
+Vagrant box
+...........
+
+There is an included Vagrantfile in the tools directory of the software-factory repository to automate these tasks
+and deploy a pre-provisioned CentOS 7 instance that can be used for testing and development:
+
+.. code-block:: bash
+
+ VAGRANT_CWD=./tools/vagrant/sf_dev_env vagrant up
+
+It also comes with a custom bashrc file with some aliases and commands that make it
+easier to package or manage projects.
 
 Optional: use a local http cache
 --------------------------------
@@ -74,17 +115,52 @@ hypervisor):
 * Unit tests
 * Functional tests
 * Upgrade tests
-* Backup tests
+* package building
 * GUI tests
 
-Before sending a patch to the upstream softwarefactory code, it's better
-to run functional and unit tests locally first:
+Before sending a patch to the upstream software factory code, please run functional
+and unit tests locally first to ensure the quality of your code.
+
+unit testing
+............
+
+To run unit tests, cd into the repository's directory and run:
 
 .. code-block:: bash
 
-  ./run_tests.sh                      # unittests
-  ./run_functional-tests.sh           # functional tests
-  ./run_functional-tests.sh upgrade   # upgrade tests
+  ./run_tests.sh
+
+Note that some repositories might lack unit tests, for example **distgits**.
+Changes on these repositories must be tested by attempting to build packages.
+
+testing RPM packaging
+.....................
+
+To build the package for a specific repository, use the following command:
+
+.. code-block:: bash
+
+ /path/to/sfinfo/zuul_rpm_build.py --project <repository> --distro-info /path/to/sfinfo/sf-master.yaml
+
+You can check the help message for zuul_rpm_build.py for more details about its parameters.
+
+functional testing
+..................
+
+Before you can test a change on any given component, you need to package it:
+
+.. code-block:: bash
+
+ /path/to/sfinfo/zuul_rpm_build.py --project <repository> --distro-info /path/to/sfinfo/sf-master.yaml  --local_output /var/lib/sf/zuul-rpm-build --noclean
+
+(you need to make sure the directory /var/lib/sf/zuul-rpm-build exists and is writable)
+
+You can then launch functional tests like this:
+
+.. code-block:: bash
+
+  ./path/to/software-factory/run_functional-tests.sh           # functional tests
+  ./path/to/software-factory/run_functional-tests.sh upgrade   # upgrade tests
 
 
 The functional tests will start LXC container(s) on the local VM to simulate
@@ -96,8 +172,8 @@ as close as possible a real deployment:
   ssh -l root sftests.com      # /etc/hosts entry is automatically added
 
 
-How to develop and/or run a specific functional tests
------------------------------------------------------
+How to develop and/or run a specific functional test
+----------------------------------------------------
 
 Functional tests needs access to the keys and configuration of the deployment.
 First you need to copy the sf-bootstrap-data/ from the managesf node.
@@ -107,13 +183,13 @@ First you need to copy the sf-bootstrap-data/ from the managesf node.
   rsync -a root@sftests.com:/var/lib/software-factory/bootstrap-data/ sf-bootstrap-data/
   nosetests --no-byte-compile -s -v tests/functional
 
-Tips: ::
+Tips:
 
- * '-s' enables the use of 'import pdb; pdb.set_trace()' within a test
- * Within a test insert 'from nose.tools import set_trace; set_trace()' to add breakpoint in nosetests
- * '--no-byte-compile' makes sure no .pyc are run
- * you can use file globs to select specific tests: [...]/tests/functional/*zuul*
- * in order to have passwordless ssh and dns configuration, here is a convenient .ssh/config file:
+* '-s' enables the use of 'import pdb; pdb.set_trace()' within a test
+* Within a test insert 'from nose.tools import set_trace; set_trace()' to add breakpoint in nosetests
+* '--no-byte-compile' makes sure no .pyc are run
+* you can use file globs to select specific tests: [...]/tests/functional/\*zuul\*
+* in order to have passwordless ssh and dns configuration, here is a convenient .ssh/config file:
 
 .. code-block:: none
 
