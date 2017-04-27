@@ -189,7 +189,6 @@ access goes through TCP ports:
 * 22 for ssh access to reconfigure and update deployment
 * 80/443 for web interface, all services are proxyfied on the managesf instance
 * 29418 for gerrit access to submit code review
-* 8080/45452 for Jenkins swarm slave connection
 
 Note that Heat deployment and LXC deployment automatically configure
 security group rules to allow these connections to the gateway.
