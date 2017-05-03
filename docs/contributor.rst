@@ -35,6 +35,12 @@ Software Factory runs and is developed on CentOS 7. Provision a CentOS 7 system,
  sudo yum install -y rpmdevtools createrepo mock python-jinja2
  sudo /usr/sbin/usermod -a -G mock $USER
 
+In order to play with firehose, you may also install the mosquitto utilities:
+
+.. code-block:: bash
+
+ sudo yum install -y mosquitto
+
 Then you will need to check out the Software Factory manifest, and install the Software Factory development repositories:
 
 .. code-block:: bash
