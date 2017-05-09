@@ -1,7 +1,21 @@
 Using Software factory for project development
 ==============================================
 
-To create a project see :ref:`resources-user`
+Create and configure a new project
+----------------------------------
+
+All the step bellow needs to be proposed on the :ref:`Config repository<config-repo>` (and
+approved through regular code review workflow)::
+
+ * The first step is to create the git repository and its acl, see :ref:`this example<project-example>`
+ * Then custom job can be added, or simply reused, see :ref:`Jenkins jobs<jenkins-user>`.
+ * Finally the CI pipelines needs to be configured, see :ref:`Zuul gate<zuul-gate>`.
+
+In short, in a single change, the following files needs to be created:
+
+ * resources/new-project.yaml
+ * jobs/new-project.yaml
+ * zuul/new-project.yaml
 
 
 Contribute to a project on SF

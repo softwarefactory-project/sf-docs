@@ -67,6 +67,8 @@ Once done::
 It is a good practice to check the output of the validation (config-check job)
 and the apply (config-update job).
 
+.. _project-example:
+
 A more complete example
 -----------------------
 
