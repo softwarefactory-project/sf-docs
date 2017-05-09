@@ -19,3 +19,4 @@ This chapter documents how to deploy and manage a Software Factory instance.
    resources_operator
    repoxplorer
    deepdive
+   backup_restore
