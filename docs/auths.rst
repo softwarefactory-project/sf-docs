@@ -33,11 +33,20 @@ following providers are currently supported:
 
 You have to register your SF deployment with the provider of your choice in order to enable
 authentication. Please refer to the provider's documentation to do so. The OAuth2 protocol will
-always require a callback URL regardless of the provider; this URL is http://fqdn/auth/login/oauth2/callback .
+always require a callback URL regardless of the provider. This URL is https://fqdn/auth/login/oauth2/callback
+
+Heres is an example of setting up the GitHub authentication:
+
+Log on https://github.com and open https://github.com/settings/developers and select "register a new application"
+
+You have complete the form, the following parameters are mandatory:
+
+* Application name: $fqdn
+* Homepage URL: https://$fqdn/auth/login
+* Authorization callback URL: https://$fqdn/auth/login/oauth2/callback
 
 During configuration, the identity provider will generate a client ID and a client secret that are
-needed to complete the configuration in sfconfig.yaml. Heres is a example of setting up the GitHub
-authentication:
+needed to complete the configuration in /etc/software-factory/sfconfig.yaml.
 
 .. code-block:: yaml
 
@@ -48,6 +57,10 @@ authentication:
        client_id: "Client ID"
        client_secret: "Client Secret"
 
+
+Apply the configuration by running sfconfig.py and open https://$fqdn/auth/login, select github, you will
+be redirected to a github page to authorize application, validate. Github could now be use to authenticate
+yours users (without access rights, check this page to configure :ref:`access <resources-user>`)
 
 The other OAuth2 providers can be set up in a similar fashion. Because of possible collisions between
 user names and other details, it is advised to use only one provider per deployment.
