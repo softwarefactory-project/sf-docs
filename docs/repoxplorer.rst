@@ -9,7 +9,7 @@ on the platform.
 
 RepoXplorer is an upstream project hosted `here <https://github.com/morucci/repoxplorer>`_.
 
-Documentation can be found `here <https://github.com/morucci/repoxplorer/blob/015c87543a01badf896df66e299a1b48e4aefbf7/README.md>`_.
+Documentation can be found on `github <https://github.com/morucci/repoxplorer/blob/015c87543a01badf896df66e299a1b48e4aefbf7/README.md>`_.
 
 The version currently integrated is the 0.8.0.
 
