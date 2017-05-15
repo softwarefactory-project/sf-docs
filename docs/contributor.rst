@@ -66,18 +66,50 @@ Finally, check out the repositories of the Software Factory project (assuming cu
  import yaml
  repos = yaml.load(open('sfinfo/sf-master.yaml'))
  for r in repos['packages']:
- suffix = r['name']
- if r['source'] == 'external':
-    suffix += '-distgit'
- print suffix
- if 'distgit' in r:
-    print r['distgit']
+   suffix = r['name']
+   if r['source'] == 'external':
+      suffix += '-distgit'
+   print suffix
+   if 'distgit' in r:
+      print r['distgit']
  EOF); do
   git clone https://softwarefactory-project.io/r/$repo;
  done
 
 Vagrant box
 ...........
+
+Installing vagrant on CentOS:
+
+- Download the last version of vagrant for centos (vagrant 1.9 is not yet supported, check this page for information https://github.com/vagrant-libvirt/vagrant-libvirt#installation)
+
+.. code-block:: bash
+
+ cd /tmp
+ curl -O https://releases.hashicorp.com/vagrant/1.8.7/vagrant_1.8.7_x86_64.rpm
+ sudo yum install -y vagrant_1.8.7_x86_64.rpm
+
+- Install all the build dependencies for vagrant-libvirt
+
+.. code-block:: bash
+
+ sudo yum install -y qemu libvirt libvirt-devel ruby-devel gcc qemu-kvm gcc-c++
+
+- Install vagrant-libvirt
+
+.. code-block:: bash
+ vagrant plugin install vagrant-libvirt
+
+Installing vagrant on Fedora
+
+.. code-block:: bash
+ sudo dnf install -y vagrant vagrant-libvirt
+
+Add your user in libvirt group
+
+.. code-block:: bash
+ sudo /usr/sbin/usermod -a -G libvirt $user
+ newgroup
 
 There is an included Vagrantfile in the tools directory of the software-factory repository to automate these tasks
 and deploy a pre-provisioned CentOS 7 instance that can be used for testing and development:
