@@ -6,8 +6,7 @@ Nodepool configuration
 Build scripts, images and labels definition are done via the config repository of SF.
 
 By default SF provides a build script called "base.sh" that is the minimal script to run
-by Nodepool in order to prepare a working slave and attach it to Jenkins. Two yaml files
-are also provided: labels.yaml and images.yaml.
+by Nodepool in order to prepare a working slave and attach it to Jenkins.
 
 Nodepool first needs to prepare snapshots of declared images before being able to spawn
 Jenkins slaves. The following is the process to define an image for Nodepool.
