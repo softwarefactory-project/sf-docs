@@ -35,34 +35,161 @@ Events are published in JSON format. The payload is specific to each event.
 Gerrit
 ......
 
-Every patchset-related events are published.
+Every patchset-related events are published, similarly to the `gerrit stream-events`
+command. A full description of each event type can be found here:
+https://gerrit-review.googlesource.com/Documentation/cmd-stream-events.html
 
 Jenkins
 .......
 
 An event is published whenever a Zuul build ends. It publishes the result of the
-build, and the Zuul parameters it was launched with.
+build, and the Zuul parameters it was launched with:
+
+================== ===========================================
+ Key                Value
+================== ===========================================
+ TIMESTAMP          The Epoch timestamp of the event
+ ZUUL_BRANCH        The branch being tested
+ ZUUL_PIPELINE      The name of the destination pipeline
+ ZUUL_CHANGE        The gerrit review ID
+ ZUUL_CHANGES       the long gerrit ID of the change
+ ZUUL_PATCHSET      The review patchset version number
+ ZUUL_CHANGE_IDS    ZUUL_CHANGE,ZUUL_PATCHSET
+ ZUUL_COMMIT        The commit id of the change
+ ZUUL_REF           The git reference of the change
+ ZUUL_URL           The url used by Zuul to checkout repositories
+ ZUUL_PROJECT       The repository on which the review applies
+ ZUUL_UUID          Internal Zuul job UUID
+ build              The Jenkins build number
+ job                The job's name
+ node               The id of the node on which the job was executed
+ status             The result of the job build
+================== ===========================================
 
 Nodepool
 ........
 
 The following events are published:
 
-* node creation
-* node ready
-* node ready in Jenkins
-* node deleted
-* node deleted in Jenkins
+node creation
+#############
+
+================== ===========================================
+ Key                Value
+================== ===========================================
+ EVENT              CREATE
+ HOSTNAME           The hostname
+ TIMESTAMP          The Epoch timestamp of the event
+ IMAGE              The image used to create the node
+ NODE_ID            The nodepool node ID
+ PROVIDER           The cloud provider on which the node was created
+================== ===========================================
+
+node ready
+##########
+
+================== ===========================================
+ Key                Value
+================== ===========================================
+ EVENT              READY
+ NODE_ID            The nodepool node ID
+ TIMESTAMP          The Epoch timestamp of the event
+================== ===========================================
+
+node ready in the orchestrator
+##############################
+
+================== ===========================================
+ Key                Value
+================== ===========================================
+ EVENT              READY_ORCHESTRATOR
+ NODE_ID            The nodepool node ID
+ TIMESTAMP          The Epoch timestamp of the event
+ ORCHESTRATOR       The name of the orchestrator (Jenkins)
+================== ===========================================
+
+node deleted
+############
+
+================== ===========================================
+ Key                Value
+================== ===========================================
+ EVENT              DELETED
+ NODE_ID            The nodepool node ID
+ TIMESTAMP          The Epoch timestamp of the event
+================== ===========================================
+
+node deleted in the orchestrator
+################################
+
+================== ===========================================
+ Key                Value
+================== ===========================================
+ EVENT              DELETED_ORCHESTRATOR
+ NODE_ID            The nodepool node ID
+ TIMESTAMP          The Epoch timestamp of the event
+ ORCHESTRATOR       The name of the orchestrator (Jenkins)
+================== ===========================================
 
 Zuul
 ....
 
 The following events are published:
 
-* Job moved to any pipeline
-* Job launched
-* Build started
-* Build result
+Job moved to any pipeline
+#########################
+
+================== ===========================================
+ Key                Value
+================== ===========================================
+ EVENT              ADD_TO_PIPELINE
+ PIPELINE           The name of the destination pipeline
+ TIMESTAMP          The Epoch timestamp of the event
+ ZUUL_CHANGE        The gerrit review ID
+ ZUUL_PATCHSET      The review patchset version number
+ ZUUL_CHANGE_IDS    ZUUL_CHANGE,ZUUL_PATCHSET
+ ZUUL_PROJECT       The repository on which the review applies
+================== ===========================================
+
+Job launched
+############
+
+================== ===========================================
+ Key                Value
+================== ===========================================
+ EVENT              LAUNCH_JOB
+ TIMESTAMP          The Epoch timestamp of the event
+ ZUUL_CHANGE        The gerrit review ID
+ ZUUL_PATCHSET      The review patchset version number
+ ZUUL_CHANGE_IDS    ZUUL_CHANGE,ZUUL_PATCHSET
+ ZUUL_UUID          Internal Zuul job UUID
+ JOB_NAME           The name of the job launched
+================== ===========================================
+
+Build started
+#############
+
+================== ===========================================
+ Key                Value
+================== ===========================================
+ EVENT              START_BUILD
+ TIMESTAMP          The Epoch timestamp of the event
+ ZUUL_UUID          Internal Zuul job UUID
+ JOB_NAME           The name of the job launched
+================== ===========================================
+
+Build result
+############
+
+================== ===========================================
+ Key                Value
+================== ===========================================
+ EVENT              BUILD_RESULT
+ TIMESTAMP          The Epoch timestamp of the event
+ ZUUL_UUID          Internal Zuul job UUID
+ JOB_NAME           The name of the job launched
+ RESULT             Either SUCCESS or FAILURE
+================== ===========================================
 
 Subscribing to events
 ---------------------
@@ -80,3 +207,10 @@ For example, to subscribe to every topic on the firehose you would run::
 
 You can adjust the value of the topic parameter to make what you're subscribing
 to more specific.
+
+Simple desktop notifier
+.......................
+
+The `tools` directory in the Software Factory repository contains a simple,
+customizable desktop notifier script that can be used with GTK based desktop
+environments such as gnome.
