@@ -25,7 +25,6 @@ The architecture is defined in /etc/software-factory/arch.yaml:
         - mysql
 
     - name: node02
-      mem: 8
       roles:
         - gerrit
 

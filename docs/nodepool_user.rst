@@ -3,47 +3,44 @@
 Nodepool configuration
 ======================
 
-Build scripts, images and labels definition are done via the config repository of SF.
-
-By default SF provides a build script called "base.sh" that is the minimal script to run
-by Nodepool in order to prepare a working slave and attach it to Jenkins.
-
-Nodepool first needs to prepare snapshots of declared images before being able to spawn
-Jenkins slaves. The following is the process to define an image for Nodepool.
+Diskimages and labels definition are done via the config repository of SF.
 
 Clone the config repository of SF from Gerrit and modify the file "config/nodepool/nodepool.yaml"
 as below.
 
 .. code-block:: yaml
 
-    labels:
-      - name: bare-centos-7
-        image: bare-centos-7
-        min-ready: 1
-        providers:
-          - name: default
+  diskimages:
+    - name: dib-centos-7
+      elements:
+        - centos-minimal
+        - nodepool-minimal
+        - sf-zuul-worker
 
-    providers:
-      - name: default
-        cloud: cloud-name-from-sfconfig.yaml
-        max-servers: 2
-        images:
-          - name: bare-centos-7
-            base-image: CentOS-7-cloud
-            username: centos
-            setup: base.sh
-            min-ram: 2048
+  labels:
+    - name: centos-7
+      image: centos-7
+      min-ready: 1
+      providers:
+        - name: default
 
+  providers:
+    - name: default
+      cloud: default
+      clean-floating-ips: true
+      image-type: raw
+      max-servers: 10
+      boot-timeout: 120
+      pool: nova
+      rate: 10.0
+      networks:
+        - name: slave-net-name
+      images:
+        - name: centos-7
+          diskimage: dib-centos-7
+          username: jenkins
+          min-ram: 1024
 
-Basically here nodepool will start a VM on the provider you defined in sfconfig.yaml using
-the Glance image "CentOS-7-cloud". Nodepool will connect on it using the username "centos".
-Then Nodepool will use "base.sh" to configure the VM.
-Finally Nodepool will snapshot and destroy the VM.
-
-Note the "CentOS-7-cloud" image must be already available in Glance.
-
-Above we tell Nodepool to spawn at least one slave on the default provider from the
-"bare-centos-7" image snapshot. The slave will be identified via the label "bare-centos-7".
 
 By committing this change on the config repository, SF will perform a file syntax
 validation and will allow you (or not) to merge the change (by CR +2 and W +2). Once merged
@@ -63,6 +60,39 @@ each job. This can have some advantages:
 
  * A clean VM for each job
  * A job have full system access (root)
+
+
+Using extra elements
+--------------------
+
+All `diskimage-builder elements <https://docs.openstack.org/developer/diskimage-builder/elements.html>`_
+as well as `sf-elements <https://softwarefactory-project.io/r/gitweb?p=software-factory/sf-elements.git;a=tree;f=elements>`_
+are available for nodepool image. For example you can:
+
+* Replace *centos7* by *fedora* or *gentoo* to change the base os
+* Use *selinux-permissive* to set selinux in permissive mode
+* Use *pip-and-virtualenv* to install package from pypi
+* Use *source-repositories* to provisioned a git repository
+
+
+Adding custom elements
+----------------------
+
+To customize an image, new diskimage builder elements can added to the nodepool/elements directory.
+For example, to add python34 to a centos system, you need to create this element:
+
+.. code-block:: bash
+
+  mkdir nodepool/elements/python34-epel
+  echo -e 'epel\npackage-installs' > nodepool/elements/python34-epel/element-deps
+  echo 'python34:' > nodepool/elements/python34-epel/packages.yaml
+
+
+Then you can add the 'python34-epel' element to an existing image.
+
+Read more about diskimage builder elements `here <https://docs.openstack.org/developer/diskimage-builder/developer/developing_elements.html>`_.
+Or look at some example from `sf-elements <https://softwarefactory-project.io/r/gitweb?p=software-factory/sf-elements.git;a=tree;f=elements>`_.
+
 
 CLI
 ===
