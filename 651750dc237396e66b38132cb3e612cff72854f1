@@ -2,6 +2,57 @@
   "comments": [
     {
       "key": {
+        "uuid": "baa041b7_f2dd5b71",
+        "filename": "docs/contributor.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-06-07T15:15:35Z",
+      "side": 1,
+      "message": "there\u0027s an error about /artifacts not being writable by the user if not run by a privileged user",
+      "revId": "651750dc237396e66b38132cb3e612cff72854f1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_d2da5778",
+        "filename": "docs/contributor.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-06-07T15:15:35Z",
+      "side": 1,
+      "message": "one :",
+      "revId": "651750dc237396e66b38132cb3e612cff72854f1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_b2e7d33f",
+        "filename": "docs/contributor.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-06-07T15:15:35Z",
+      "side": 1,
+      "message": "one :",
+      "revId": "651750dc237396e66b38132cb3e612cff72854f1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "baa041b7_d2ac97ef",
         "filename": "docs/intro.rst",
         "patchSetId": 1
