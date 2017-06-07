@@ -14,7 +14,7 @@ production chain:
 * Code review system : `Gerrit <http://en.wikipedia.org/wiki/Gerrit_%28software%29>`_
 * Issue tracker : `Storyboard <http://docs.openstack.org/infra/storyboard/>`_
 * Continuous integration : `Zuul <http://ci.openstack.org/zuul/>`_
-* Tests environment : `Jenkins <http://en.wikipedia.org/wiki/Jenkins_%28software%29>`_ and `Nodepool <http://docs.openstack.org/infra/system-config/nodepool.html>`_
+* Test instance management : `Nodepool <http://docs.openstack.org/infra/system-config/nodepool.html>`_
 * Collaborative tools : `Etherpad <http://en.wikipedia.org/wiki/Etherpad>`_, `Pastebin <http://en.wikipedia.org/wiki/Pastebin>`_
 
 SF offers a seamless user experience with:
@@ -38,14 +38,6 @@ Setting up a development environment manually can really be
 time consuming and sometimes leads to a lot of configuration
 trouble. SF provides an easy way to get all services configured
 and running.
-
-The SF image can be uploaded to a Glance service, deployed on
-a baremetal server or used as a LXC guest image. Once the image is running,
-a configuration script 'bootstraps' needs to be executed to configure
-all services using Ansible and Puppet.
-
-SF does not require access to the Internet to be installed because all the
-components are pre installed.
 
 SF feature an automated upgrade process continuously tested with integration test.
 
@@ -83,15 +75,8 @@ prevent a change to be merged on the master branch.
 .. image:: imgs/gerrit.jpg
 
 
-Jenkins/Zuul
-============
-
-Jenkins is deployed along with SF as the CI component. It is
-configured to work with Zuul. Zuul will control how Jenkins
-perform jobs. Jenkins slaves can be added either as static slaves or as
-nodepool slaves.
-
-.. image:: imgs/jenkins.jpg
+Zuul
+====
 
 On SF Zuul is by default configured to provide four pipelines:
 
@@ -106,10 +91,10 @@ On SF Zuul is by default configured to provide four pipelines:
 Nodepool
 ========
 
-Nodepool is a Jenkins slaves manager. It is design to provision and
-maintain one or more pools of Jenkins slave. An OpenStack cloud account
+Nodepool is a test instances manager. It is design to provision and
+maintain one or more pools of slave. An OpenStack cloud account
 is needed to allow nodepool to store images/snapshot and start slave VMs.
-Within SF Nodepool is already pre-configured to run together with Jenkins and Zuul.
+Within SF Nodepool is already pre-configured to run together with Zuul.
 
 
 Artifacts export to OpenStack Swift
@@ -147,7 +132,6 @@ Thanks to it you can easily for instance :
 * Add/remove users from project groups in a unified way.
 * Delete a project with its related group in a unified way.
 * Perform and restore a backup of the SF user data.
-* ===
 
 By unified way it means action is performed in Gerrit and on Storyboard, for
 instance if a user is added to the admin group of a project A
@@ -169,8 +153,8 @@ Single Sign On
 ==============
 
 As it is always a pain to deal with login/logout of each component, the
-SF provides an unified authentication through Gerrit, Storyboard and Jenkins.
-Once your are authenticated on Gerrit your are also logged in on Storyboard and Jenkins.
+SF provides an unified authentication through Gerrit, Storyboard.
+Once you are authenticated on Gerrit you are also logged in on Storyboard.
 A logout from one service logs you out from other services as well.
 
 Currently SF provides four kind of backends to authenticate:

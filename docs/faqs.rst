@@ -3,21 +3,6 @@
 Frequently Asked Questions
 ==========================
 
-What is edeploy ?
-.................
-
-Edeploy is a (legacy) tool to manage deployment of image based system.
-It build and manage the lifecycle of an image that comes with everything
-pre-installed so that the whole system can be verified and tested
-without Internet access. That means each new changes results in a new
-image that has been continuously tested through:
-
-* a full deployment + functional tests
-* an upgrade test based on the previous version
-* an openstack integration test based on rdo where nodepool and swift
-  artifacts export features are tested.
-
-
 What is the added value of Software Factory ?
 .............................................
 
@@ -29,7 +14,7 @@ What is the added value of Software Factory ?
 * SSO with ldap/github/launchpad/keystone authentication backend
 * Backup and automatic upgrade mechanism (fully tested in sf CI)
 * Baremetal, LXC, KVM or OpenStack based deployment
-* Fast reproducible setup (3/5 minutes with lxc, 15 minutes with heat)
+* Fast reproducible setup (3/5 minutes on local system, 15 minutes with heat)
 * Openstack integration to run slave (nodepool) and store artifacts (swift)
 
 
@@ -107,21 +92,6 @@ host:
         - elasticsearch
 
 Note that sfconfig.py won't disable a service previously deployed.
-
-
-How-to create channels in Mumble ?
-..................................
-
-You need to log-in as SuperUser using the super_user_password
-from the sfconfig.yaml configuration. If no password was set,
-then you need to read it's value using:
-
-  awk '/super_user_password:/ { print $2 }' /etc/software-factory/sfconfig.yaml
-
-Then you can follow this documentation to create channels and
-set custom ACL:
-
-  https://wiki.mumble.info/wiki/Murmurguide#Becoming_Administrator_and_Registering_a_User
 
 
 How-to setup swift mirror of external requirements ?
