@@ -136,10 +136,3 @@ Identity provider data sync
 By default, user data such as full name or email address are synchronized upon each successful login. Users
 can disable this behavior in the user settings page (available from top right menu). When disabled, users
 can manage the email address used in Software Factory service indepently from the identity provider data.
-
-
-Local database access credencials
-"""""""""""""""""""""""""""""""""
-
-Each service credencials for mysql database access are stored in /etc/software-factory/sfcreds.yaml.
-You can use the `sf_rotate_mysql_passwords.py` command line to replace them all and restart services.
