@@ -3,10 +3,15 @@
 Configure nodepool to manage ephemeral test slaves
 --------------------------------------------------
 
-Nodepool automates management of Jenkins slave. It automatically prepares and
+Nodepool automates management of test instances. It automatically prepares and
 starts VMs that are used for a single job. After each job the VM is destroyed
 and a fresh one is started for the next job. Nodepool also prepares the images
 that are used for testing, for example when additional packages are required.
+
+Nodepool needs 2 services to operate (to be defined in arch.yaml):
+
+ * nodepool-launcher that schedules image build jobs and spawns slaves
+ * nodepool-builder that builds image locally before uploading to the cloud
 
 
 Add a cloud provider
@@ -46,6 +51,15 @@ As an administrator, it can be really useful to check /var/log/nodepool/ to debu
 configuration.
 
 
+Manage diskimages
+^^^^^^^^^^^^^^^^^
+
+To manage diskimage, here are the relevants commands:
+
+* nodepool image-build *image-name* # Trigger an image build
+* nodepool image-upload *image-name* # Upload image to a cloud
+
+
 What to do if nodepool is not working ?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -59,17 +73,13 @@ Until this is provided as an automatic task, here is the manual process:
 
 * Remove un-assigned floating-ip
 * Check nodepool logs for permission errors or api failure
-* Try to update image manually using:
-  nodepool image-update <provider_name> <image_name>
 
 If nothing works, this is how to reset the service:
 
-* Stop nodepoold process
+* Stop nodepool-launcher process
 * Delete all OpenStack nodepool resources
 * Connect to mysql and delete from node, snapshot_image tables
-* Manually update image using:
-  nodepool image-update <provider_name> <image_name>
-* Start nodepoold process
+* Start nodepool-launcher process
 * Follow the logs and wait for servers to be created.
 * Check zuul log to verify it is submitting job request.
 
