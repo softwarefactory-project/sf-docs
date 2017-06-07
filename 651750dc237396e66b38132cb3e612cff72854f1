@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "baa041b7_d2ac97ef",
+        "filename": "docs/intro.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2017-06-07T14:34:14Z",
+      "side": 1,
+      "message": "typo: you",
+      "range": {
+        "startLine": 156,
+        "startChar": 5,
+        "endLine": 156,
+        "endChar": 9
+      },
+      "revId": "651750dc237396e66b38132cb3e612cff72854f1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_b2b91331",
+        "filename": "docs/intro.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2017-06-07T14:34:14Z",
+      "side": 1,
+      "message": "typo: you",
+      "range": {
+        "startLine": 156,
+        "startChar": 38,
+        "endLine": 156,
+        "endChar": 42
+      },
+      "revId": "651750dc237396e66b38132cb3e612cff72854f1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_32a50304",
+        "filename": "docs/nodepool_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2017-06-07T14:34:14Z",
+      "side": 1,
+      "message": "typo: relevant",
+      "range": {
+        "startLine": 57,
+        "startChar": 41,
+        "endLine": 57,
+        "endChar": 43
+      },
+      "revId": "651750dc237396e66b38132cb3e612cff72854f1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_12aaffd4",
+        "filename": "docs/nodepool_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2017-06-07T14:34:14Z",
+      "side": 1,
+      "message": "typo? Should be element, I think",
+      "range": {
+        "startLine": 68,
+        "startChar": 47,
+        "endLine": 68,
+        "endChar": 56
+      },
+      "revId": "651750dc237396e66b38132cb3e612cff72854f1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
