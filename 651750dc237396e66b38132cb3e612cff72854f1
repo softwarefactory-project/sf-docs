@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "baa041b7_b24913d3",
+        "filename": "docs/contributor.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-06-08T00:12:03Z",
+      "side": 1,
+      "message": "oh, that\u0027s an issue with sf-ci then, we need a default when WORKSPACE is not set.",
+      "parentUuid": "baa041b7_f2dd5b71",
+      "revId": "651750dc237396e66b38132cb3e612cff72854f1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "baa041b7_d2da5778",
         "filename": "docs/contributor.rst",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "baa041b7_92460fbe",
+        "filename": "docs/contributor.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-06-08T00:12:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "baa041b7_d2da5778",
+      "revId": "651750dc237396e66b38132cb3e612cff72854f1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "baa041b7_b2e7d33f",
         "filename": "docs/contributor.rst",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2017-06-07T15:15:35Z",
       "side": 1,
       "message": "one :",
+      "revId": "651750dc237396e66b38132cb3e612cff72854f1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_72126bb6",
+        "filename": "docs/contributor.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-06-08T00:12:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "baa041b7_b2e7d33f",
       "revId": "651750dc237396e66b38132cb3e612cff72854f1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -99,6 +153,24 @@
     },
     {
       "key": {
+        "uuid": "baa041b7_521767a3",
+        "filename": "docs/intro.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-06-08T00:12:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "baa041b7_d2ac97ef",
+      "revId": "651750dc237396e66b38132cb3e612cff72854f1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "baa041b7_32a50304",
         "filename": "docs/nodepool_operator.rst",
         "patchSetId": 1
@@ -122,6 +194,24 @@
     },
     {
       "key": {
+        "uuid": "baa041b7_320ce393",
+        "filename": "docs/nodepool_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-06-08T00:12:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "baa041b7_32a50304",
+      "revId": "651750dc237396e66b38132cb3e612cff72854f1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "baa041b7_12aaffd4",
         "filename": "docs/nodepool_user.rst",
         "patchSetId": 1
@@ -139,6 +229,24 @@
         "endLine": 68,
         "endChar": 56
       },
+      "revId": "651750dc237396e66b38132cb3e612cff72854f1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_1211dfac",
+        "filename": "docs/nodepool_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-06-08T00:12:03Z",
+      "side": 1,
+      "message": "I\u0027ve rewritten that part.",
+      "parentUuid": "baa041b7_12aaffd4",
       "revId": "651750dc237396e66b38132cb3e612cff72854f1",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
