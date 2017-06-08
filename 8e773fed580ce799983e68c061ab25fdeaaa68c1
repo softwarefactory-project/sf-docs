@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "baa041b7_8d4b94b0",
+        "filename": "docs/deepdive.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-06-08T12:52:02Z",
+      "side": 1,
+      "message": "configuration files",
+      "range": {
+        "startLine": 55,
+        "startChar": 10,
+        "endLine": 55,
+        "endChar": 16
+      },
+      "revId": "8e773fed580ce799983e68c061ab25fdeaaa68c1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_0dd664c5",
+        "filename": "docs/deploy.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-06-08T12:52:02Z",
+      "side": 1,
+      "message": "Maybe bump the links too",
+      "range": {
+        "startLine": 78,
+        "startChar": 55,
+        "endLine": 79,
+        "endChar": 96
+      },
+      "revId": "8e773fed580ce799983e68c061ab25fdeaaa68c1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_cdd87cf2",
+        "filename": "docs/intro.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-06-08T12:52:02Z",
+      "side": 1,
+      "message": "Why not keeping Nodepool in that list ?",
+      "range": {
+        "startLine": 16,
+        "startChar": 2,
+        "endLine": 16,
+        "endChar": 14
+      },
+      "revId": "8e773fed580ce799983e68c061ab25fdeaaa68c1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
