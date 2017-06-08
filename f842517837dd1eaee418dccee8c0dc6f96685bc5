@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "baa041b7_cdad1c33",
+        "filename": "docs/contributor.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-06-08T13:26:27Z",
+      "side": 0,
+      "message": "see above",
+      "revId": "f842517837dd1eaee418dccee8c0dc6f96685bc5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_cd74fcd0",
+        "filename": "docs/contributor.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-06-08T13:26:27Z",
+      "side": 0,
+      "message": "Isn\u0027t it valid anymore? We should at least mention a way to reach the test GUI.",
+      "revId": "f842517837dd1eaee418dccee8c0dc6f96685bc5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}

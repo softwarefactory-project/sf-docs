@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "baa041b7_0dbb0474",
+        "filename": "docs/contributor.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-06-08T13:26:27Z",
+      "side": 1,
+      "message": "Since https://softwarefactory-project.io/r/#/c/7653/ has been merged the documentation should reflect this. The sfmanager command is actually more accurate.",
+      "revId": "8e773fed580ce799983e68c061ab25fdeaaa68c1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_ed77c0d2",
+        "filename": "docs/contributor.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-06-08T13:26:27Z",
+      "side": 1,
+      "message": "You should mention that this step is necessary prior to functional tests, this is not obvious to newcomers",
+      "revId": "8e773fed580ce799983e68c061ab25fdeaaa68c1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "baa041b7_8d4b94b0",
         "filename": "docs/deepdive.rst",
         "patchSetId": 2
