@@ -33,6 +33,24 @@
       "revId": "f842517837dd1eaee418dccee8c0dc6f96685bc5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_6804be7d",
+        "filename": "docs/contributor.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-06-09T01:30:20Z",
+      "side": 0,
+      "message": "Well the test is not working and it likely needs to be adapted since we don\u0027t use lxc anymore. Let\u0027s document it once it\u0027s working as expected... My last attempt was https://softwarefactory-project.io/r/4841",
+      "parentUuid": "baa041b7_cd74fcd0",
+      "revId": "f842517837dd1eaee418dccee8c0dc6f96685bc5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
