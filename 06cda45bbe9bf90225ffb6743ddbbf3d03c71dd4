@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "baa041b7_882ca2ac",
+        "filename": "docs/deploy.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-06-09T08:42:46Z",
+      "side": 1,
+      "message": "Here too",
+      "range": {
+        "startLine": 79,
+        "startChar": 60,
+        "endLine": 79,
+        "endChar": 65
+      },
+      "revId": "06cda45bbe9bf90225ffb6743ddbbf3d03c71dd4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
