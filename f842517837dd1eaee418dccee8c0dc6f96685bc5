@@ -69,6 +69,24 @@
       "revId": "f842517837dd1eaee418dccee8c0dc6f96685bc5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_63e97f1a",
+        "filename": "docs/contributor.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-06-09T09:50:14Z",
+      "side": 0,
+      "message": "Hum well the dev machine should be similar to a regular deployment or even ci system. I guess this is already explained in the \"deploy.rst\".",
+      "parentUuid": "baa041b7_08409255",
+      "revId": "f842517837dd1eaee418dccee8c0dc6f96685bc5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
