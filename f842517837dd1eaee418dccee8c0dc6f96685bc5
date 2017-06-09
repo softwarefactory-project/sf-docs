@@ -51,6 +51,24 @@
       "revId": "f842517837dd1eaee418dccee8c0dc6f96685bc5",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_08409255",
+        "filename": "docs/contributor.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 235,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-06-09T08:41:06Z",
+      "side": 0,
+      "message": "I meant for a way to reach the GUI with a browser. Does the dev machine need to be declared as sftests.com in /etc/hosts, if the test deployment is scratched after tests by default how do you keep it up, and so on",
+      "parentUuid": "baa041b7_6804be7d",
+      "revId": "f842517837dd1eaee418dccee8c0dc6f96685bc5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
