@@ -56,6 +56,23 @@
       "revId": "a7a742906aa7561fcd571ae227009fb119ad7a9c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_7e69148b",
+        "filename": "docs/contributor.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2017-06-12T10:47:56Z",
+      "side": 1,
+      "message": "Should this be run with sudo when not root? The exact command line that worked for me was:\n\n$ sudo ansible-playbook -e \"local_repo_path\u003d$(pwd)/zuul-rpm-build\" -e \"sf_user\u003dcentos\" -e \"sf_ci\u003d/home/centos/sf-ci\" sf-ci/playbooks/deploy.yml\n\nUsing centos as the deployment user",
+      "revId": "a7a742906aa7561fcd571ae227009fb119ad7a9c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
