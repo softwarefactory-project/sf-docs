@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "baa041b7_be48bc2e",
+        "filename": "docs/contributor.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2017-06-12T09:59:43Z",
+      "side": 1,
+      "message": "Needs indentation ^^",
+      "revId": "a7a742906aa7561fcd571ae227009fb119ad7a9c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_9e55f8c7",
+        "filename": "docs/contributor.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2017-06-12T09:59:43Z",
+      "side": 1,
+      "message": "Some more indentation is missing. I managed to make it work with:\n\nfor repo in $(python \u003c\u003c EOF\nimport yaml\nrepos \u003d yaml.load(open(\u0027sfinfo/sf-master.yaml\u0027))\nfor r in repos[\u0027packages\u0027]:\n    suffix \u003d r[\u0027name\u0027]\n    if r[\u0027source\u0027] \u003d\u003d \u0027external\u0027:\n       suffix +\u003d \u0027-distgit\u0027\n    print suffix\n    if \u0027distgit\u0027 in r:\n       print r[\u0027distgit\u0027]\nEOF); do\n git clone https://softwarefactory-project.io/r/$repo;\ndone\n\nI got a bash warning (-bash: warning: here-document at line 124 delimited by end-of-file (wanted `EOF\u0027)), but it worked.",
+      "range": {
+        "startLine": 40,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 5
+      },
+      "revId": "a7a742906aa7561fcd571ae227009fb119ad7a9c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "baa041b7_3e3cac92",
+        "filename": "docs/contributor.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2017-06-12T09:59:43Z",
+      "side": 1,
+      "message": "This url should be https://softwarefactory-project.io/r/software-factory/sf-ci",
+      "revId": "a7a742906aa7561fcd571ae227009fb119ad7a9c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
