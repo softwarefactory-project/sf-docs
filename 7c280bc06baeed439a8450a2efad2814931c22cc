@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "baa041b7_70d13ccd",
+        "filename": "docs/contributor.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-06-20T15:37:53Z",
+      "side": 1,
+      "message": "The project\u0027s feature and bug tracker",
+      "revId": "7c280bc06baeed439a8450a2efad2814931c22cc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9aa53dc9_df515b10",
         "filename": "docs/contributor.rst",
         "patchSetId": 6
