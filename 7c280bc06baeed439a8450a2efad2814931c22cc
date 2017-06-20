@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9aa53dc9_ff4c1f78",
+        "filename": "docs/contributor.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-06-20T04:12:11Z",
+      "side": 1,
+      "message": "Shouldn\u0027t it be \"are\" ?",
+      "revId": "7c280bc06baeed439a8450a2efad2814931c22cc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_df515b10",
+        "filename": "docs/contributor.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-06-20T04:12:11Z",
+      "side": 1,
+      "message": "This won\u0027t work since ara needs dependencies not available on centos nor rdo. It\u0027s probably better to install sf-release first, then do yum install ara",
+      "revId": "7c280bc06baeed439a8450a2efad2814931c22cc",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
