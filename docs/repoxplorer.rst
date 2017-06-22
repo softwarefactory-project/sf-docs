@@ -28,7 +28,7 @@ Then running:
 
 .. code-block:: bash
 
- # sfconfig.py --skip-install
+ # sfconfig.py
 
 The new component should be accessible via the Software Factory top menu under
 the name repoXplorer.
