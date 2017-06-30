@@ -1,6 +1,35 @@
 Configure zuul
 --------------
 
+Running multiple zuul-merger
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To run multiple zuul-merger:
+
+* Starts a new CentOS instance, either with the sf default secgroup security group, either externally and
+  enabling gearman server access to the zuul-server.
+
+* Adds the new host using a slave reachable ip address in /etc/software-factory/arch.yaml:
+
+.. code-block:: yaml
+
+  - name: zuul-merger01
+    ip: x.x.x.x
+    roles:
+      - zuul-merger
+
+* If the host has a public url, set the public url:
+
+.. code-block:: yaml
+
+  - name: zuul-merger01
+    ip: x.x.x.x
+    public_url: https://zm01.example.com
+    roles:
+      - zuul-merger
+
+* If the host doesn't have a hostname, then the slave will use the host ip.
+
 External logserver
 ^^^^^^^^^^^^^^^^^^
 
