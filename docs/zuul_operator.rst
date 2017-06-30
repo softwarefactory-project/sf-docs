@@ -1,6 +1,31 @@
 Configure zuul
 --------------
 
+Running multiple zuul-merger
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To run multiple zuul-merger:
+
+* Start a new CentOS instance, either with the sf default secgroup security group, either externally and
+  enabling gearman server access (tcp port 4730 by default) to the zuul-server.
+
+* Enable password less ssh access (authorized_keys /root/.ssh/id_rsa.pub from
+  the install-server).
+
+* Add the new host in /etc/software-factory/arch.yaml:
+
+.. code-block:: yaml
+
+  - name: zuul-merger01
+    ip: 192.168.x.y
+    public_url: http://floating-ip|public-dns
+    roles:
+      - zuul-merger
+
+* Note that the public_url needs to be reachable from the slaves,
+  either using the floating-ip,
+  either using the public-dns if the host is resolvable.
+
 External logserver
 ^^^^^^^^^^^^^^^^^^
 
