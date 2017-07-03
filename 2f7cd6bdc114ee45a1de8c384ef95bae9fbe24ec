@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9aa53dc9_dc5b9c2d",
+        "filename": "docs/pages.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-07-03T11:25:37Z",
+      "side": 1,
+      "message": "It\u0027s not really a services, how about: \"Software Factory enables a workflow for publishing static WEB content\"",
+      "revId": "2f7cd6bdc114ee45a1de8c384ef95bae9fbe24ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_bc41f83b",
+        "filename": "docs/pages_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-07-03T11:25:37Z",
+      "side": 1,
+      "message": "you are*",
+      "revId": "2f7cd6bdc114ee45a1de8c384ef95bae9fbe24ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_9c3e34b7",
+        "filename": "docs/pages_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-07-03T11:25:37Z",
+      "side": 1,
+      "message": "The pages-render job detects...",
+      "revId": "2f7cd6bdc114ee45a1de8c384ef95bae9fbe24ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_7c4b705a",
+        "filename": "docs/pages_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-07-03T11:25:37Z",
+      "side": 1,
+      "message": "The pages-update job performs...",
+      "revId": "2f7cd6bdc114ee45a1de8c384ef95bae9fbe24ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_5c48ac5b",
+        "filename": "docs/pages_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-07-03T11:25:37Z",
+      "side": 1,
+      "message": "the job is finished",
+      "revId": "2f7cd6bdc114ee45a1de8c384ef95bae9fbe24ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_3c74c89a",
+        "filename": "docs/pages_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-07-03T11:25:37Z",
+      "side": 1,
+      "message": "s/under/through/",
+      "revId": "2f7cd6bdc114ee45a1de8c384ef95bae9fbe24ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_1c790494",
+        "filename": "docs/pages_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-07-03T11:25:37Z",
+      "side": 1,
+      "message": "setup* or configured* but setuped is not valid :)",
+      "revId": "2f7cd6bdc114ee45a1de8c384ef95bae9fbe24ec",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
