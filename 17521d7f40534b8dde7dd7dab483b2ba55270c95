@@ -1,0 +1,170 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9aa53dc9_bc6d7834",
+        "filename": "docs/zuul_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-07-03T20:08:52Z",
+      "side": 1,
+      "message": "Here the sfconfig script must bu run.",
+      "revId": "17521d7f40534b8dde7dd7dab483b2ba55270c95",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_9c6ab419",
+        "filename": "docs/zuul_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-07-03T20:08:52Z",
+      "side": 1,
+      "message": "define in the config repository a custom publisher",
+      "range": {
+        "startLine": 23,
+        "startChar": 7,
+        "endLine": 23,
+        "endChar": 43
+      },
+      "revId": "17521d7f40534b8dde7dd7dab483b2ba55270c95",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_7c77f002",
+        "filename": "docs/zuul_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-07-03T20:08:52Z",
+      "side": 1,
+      "message": "can be removed",
+      "range": {
+        "startLine": 24,
+        "startChar": 2,
+        "endLine": 24,
+        "endChar": 15
+      },
+      "revId": "17521d7f40534b8dde7dd7dab483b2ba55270c95",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_dc871cd6",
+        "filename": "docs/zuul_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-07-03T20:08:52Z",
+      "side": 1,
+      "message": "tab",
+      "revId": "17521d7f40534b8dde7dd7dab483b2ba55270c95",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_5c742cfc",
+        "filename": "docs/zuul_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-07-03T20:08:52Z",
+      "side": 1,
+      "message": "Finally push the change and approve it on gerrit.",
+      "range": {
+        "startLine": 40,
+        "startChar": 0,
+        "endLine": 41,
+        "endChar": 14
+      },
+      "revId": "17521d7f40534b8dde7dd7dab483b2ba55270c95",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_3c604835",
+        "filename": "docs/zuul_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-07-03T20:08:52Z",
+      "side": 1,
+      "message": "For exporting job log consoles to this new site",
+      "range": {
+        "startLine": 43,
+        "startChar": 2,
+        "endLine": 43,
+        "endChar": 32
+      },
+      "revId": "17521d7f40534b8dde7dd7dab483b2ba55270c95",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_1c658444",
+        "filename": "docs/zuul_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-07-03T20:08:52Z",
+      "side": 1,
+      "message": "and run sfconfig.py",
+      "revId": "17521d7f40534b8dde7dd7dab483b2ba55270c95",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_fc59c08f",
+        "filename": "docs/zuul_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-07-03T20:08:52Z",
+      "side": 1,
+      "message": "Same remark as above.",
+      "range": {
+        "startLine": 51,
+        "startChar": 0,
+        "endLine": 68,
+        "endChar": 14
+      },
+      "revId": "17521d7f40534b8dde7dd7dab483b2ba55270c95",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
