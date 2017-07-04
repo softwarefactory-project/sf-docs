@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9aa53dc9_dc483c8a",
+        "filename": "docs/zuul_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-07-04T01:55:46Z",
+      "side": 1,
+      "message": "It\u0027s already mentioned at the end of this procedure.",
+      "parentUuid": "9aa53dc9_bc6d7834",
+      "revId": "17521d7f40534b8dde7dd7dab483b2ba55270c95",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9aa53dc9_9c6ab419",
         "filename": "docs/zuul_operator.rst",
         "patchSetId": 1
@@ -36,6 +54,24 @@
         "endLine": 23,
         "endChar": 43
       },
+      "revId": "17521d7f40534b8dde7dd7dab483b2ba55270c95",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_bc5e9843",
+        "filename": "docs/zuul_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-07-04T01:55:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9aa53dc9_9c6ab419",
       "revId": "17521d7f40534b8dde7dd7dab483b2ba55270c95",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -65,6 +101,24 @@
     },
     {
       "key": {
+        "uuid": "9aa53dc9_9c5bd454",
+        "filename": "docs/zuul_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-07-04T01:55:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9aa53dc9_7c77f002",
+      "revId": "17521d7f40534b8dde7dd7dab483b2ba55270c95",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9aa53dc9_dc871cd6",
         "filename": "docs/zuul_operator.rst",
         "patchSetId": 1
@@ -76,6 +130,24 @@
       "writtenOn": "2017-07-03T20:08:52Z",
       "side": 1,
       "message": "tab",
+      "revId": "17521d7f40534b8dde7dd7dab483b2ba55270c95",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_7c581057",
+        "filename": "docs/zuul_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-07-04T01:55:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9aa53dc9_dc871cd6",
       "revId": "17521d7f40534b8dde7dd7dab483b2ba55270c95",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -105,6 +177,24 @@
     },
     {
       "key": {
+        "uuid": "9aa53dc9_5c554c1b",
+        "filename": "docs/zuul_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-07-04T01:55:46Z",
+      "side": 1,
+      "message": "I don\u0027t think we need to repeat the gerrit part here, an operator willing to use a custom publisher already knows how to use the config repo. Moreover just mentioning \"merge the config repo change\" works for a local repository too (for when gerrit will be optional).",
+      "parentUuid": "9aa53dc9_5c742cfc",
+      "revId": "17521d7f40534b8dde7dd7dab483b2ba55270c95",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9aa53dc9_3c604835",
         "filename": "docs/zuul_operator.rst",
         "patchSetId": 1
@@ -128,6 +218,24 @@
     },
     {
       "key": {
+        "uuid": "9aa53dc9_3c31680c",
+        "filename": "docs/zuul_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-07-04T01:55:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9aa53dc9_3c604835",
+      "revId": "17521d7f40534b8dde7dd7dab483b2ba55270c95",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9aa53dc9_1c658444",
         "filename": "docs/zuul_operator.rst",
         "patchSetId": 1
@@ -139,6 +247,24 @@
       "writtenOn": "2017-07-03T20:08:52Z",
       "side": 1,
       "message": "and run sfconfig.py",
+      "revId": "17521d7f40534b8dde7dd7dab483b2ba55270c95",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_1c36a403",
+        "filename": "docs/zuul_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-07-04T01:55:46Z",
+      "side": 1,
+      "message": "Running sfconfig.py is already mentioned at the end of this procedure.",
+      "parentUuid": "9aa53dc9_1c658444",
       "revId": "17521d7f40534b8dde7dd7dab483b2ba55270c95",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
