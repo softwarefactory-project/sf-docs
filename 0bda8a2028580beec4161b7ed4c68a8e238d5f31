@@ -22,6 +22,24 @@
       "revId": "0bda8a2028580beec4161b7ed4c68a8e238d5f31",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_92105d50",
+        "filename": "docs/zuul_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-07-05T02:38:55Z",
+      "side": 1,
+      "message": "running sfconfig.py and merging the change can be run in any order.",
+      "parentUuid": "9aa53dc9_17631fb3",
+      "revId": "0bda8a2028580beec4161b7ed4c68a8e238d5f31",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
