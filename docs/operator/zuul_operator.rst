@@ -26,6 +26,57 @@ To run multiple zuul-merger:
   either using the floating-ip,
   either using the public-dns if the host is resolvable.
 
+
+Using jenkins credencials binding
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+By default, zuul-launcher enables credencials binding jobs wrapper with jenkins
+secrets. When Jenkins is enabled, secrets are only copied to zuul-launcher when
+**sfconfig** is executed. When Jenkins is disabled, to manage secrets, use the
+jenkins-secrets-edit.py command line utility:
+
+.. code-block:: console
+
+  $ /usr/share/sf-config/scripts/jenkins-secrets-edit.py --help
+  usage: jenkins-secrets-edit.py [-h] [--secrets-dir SECRETS_DIR]
+                               [--description DESCRIPTION]
+                               {create,read,update,delete} uid [content]
+
+  positional arguments:
+    {create,read,update,delete}
+    uid                   The secret id
+    content               The secret value/file
+
+  optional arguments:
+    -h, --help            show this help message and exit
+    --secrets-dir SECRETS_DIR
+    --description DESCRIPTION
+                          Optional secret description
+
+After running this script, execute **sfconfig** to copy the new secrest to the
+zuul-launcher node. Here is a full example:
+
+  $ jenkins-secrets-edit.py add pypi-credencials ~/.pypirc
+  $ sfconfig --skip-install
+  $ cat <<EOF> /root/config/jobs-zuul/pypi-upload.yaml
+    - job-template:
+      name: '{name}-upload-to-pypi'
+      builders:
+        - prepare-workspace
+        - shell: |
+            cp $PYPIRC ~/.pypirc
+            cd $ZUUL_PROJECT
+            python setup.py register -r pypi
+            python setup.py sdist upload -r pypi
+      wrappers:
+        - credentials-binding:
+            - file:
+                credential-id: 'pypi-credencials'
+                variable: PYPIRC
+      node: '{node}'
+  EOF
+
+
 External logserver
 ^^^^^^^^^^^^^^^^^^
 
