@@ -50,42 +50,58 @@ A new diskimage is created for each release, and it can be rebuilt locally to,
 see :ref:`Image building<sfdib>`.
 
 
-Install image
-.............
+Prepare the installation image
+..............................
 
-SF image needs to be uploaded to Glance:
-
-.. code-block:: bash
-
- $ curl -O http://46.231.132.68:8080/v1/AUTH_b50e80d3969f441a8b7b1fe831003e0a/sf-images/softwarefactory-C7.0-2.6.0.img.qcow2
- $ glance image-create --progress --disk-format qcow2 --container-format bare --name sf-2.6.0 --file softwarefactory-C7.0-2.6.0.img.qcow2
-
-
-Deploy with Heat
-................
-
-Heat templates are available to automate the deployment process of different reference architecture.
-
-They all requires:
-
-* the SF image UUID
-* the external Neutron network UUID (using "neutron net-list")
-* the FQDN of the deployment (domain parameter)
-* a key-pair name (you should have already created it on your account)
+The Software Factory base image first needs to be created in Glance:
 
 .. code-block:: bash
 
- $ wget http://46.231.132.68:8080/v1/AUTH_b50e80d3969f441a8b7b1fe831003e0a/sf-images/softwarefactory-C7.0-2.6.0-allinone.hot
- $ heat stack-create --template-file ./softwarefactory-C7.0-2.6.0-allinone.hot -P "key_name=SSH_KEY;domain=FQDN;image_id=GLANCE_UUID;external_network=NETWORK_UUID;flavor=m1.large" sf_stack
-
-Once the stack is created jump to the section :ref:`Configuration and reconfiguration <reconfiguration>`.
+  $ wget http://46.231.132.68:8080/v1/AUTH_b50e80d3969f441a8b7b1fe831003e0a/sf-images/softwarefactory-C7.0-2.6.0.img.qcow2
+  $ openstack image create sf-2.6.0 --disk-format qcow2 --container-format bare --file softwarefactory-C7.0-2.6.0.img.qcow2
 
 
-Deploy with Nova
-................
+Deploying with Heat
+...................
 
-When Heat is not available, SF can also be deployed manually using the Nova CLI, or
-using the web UI of your cloud provider.
+Heat templates are available to automate the deployment process of different reference architectures.
+
+These templates require the following parameters:
+
+* ``image_id``: The Software Factory image UUID. This is obtained when
+  uploading the `installation image <Prepare the installation image>`_.
+* ``external_network``: The external Neutron network UUID. This is obained by
+  querying Neutron with ``openstack network list``.
+* ``domain``: The fully qualified domain name (FQDN) of the deployment.
+* ``key_name``: The name of the keypair to provision on the servers. You can
+  import a keypair in Nova with ``openstack keypair create`` or list existing
+  keypairs with ``openstack keypair list``.
+
+First, retrieve the template you're interested in, for example 'all in one':
+
+.. code-block:: bash
+
+  $ wget http://46.231.132.68:8080/v1/AUTH_b50e80d3969f441a8b7b1fe831003e0a/sf-images/softwarefactory-C7.0-2.6.0-allinone.hot
+
+Then, create the Heat stack:
+
+.. code-block:: bash
+
+  $ openstack stack create sf_stack --template softwarefactory-C7.0-2.6.0-allinone.hot \
+      --parameter key_name=<key-name> \
+      --parameter domain=<fqdn> \
+      --parameter image_id=<glance image UUID> \
+      --parameter external_network=<neutron external network uuid> \
+      --parameter flavor=<flavor>
+
+Once the stack is created, jump to the section :ref:`Configuration and reconfiguration <reconfiguration>`.
+
+
+Deploying with Nova
+...................
+
+When Heat is not available, Software Factory can also be deployed manually
+using the Nova CLI, or using the web UI of your cloud provider.
 
 Once the VM is created jump to the section :ref:`Configuration and reconfiguration <reconfiguration>`.
 Don't forget to manage by yourself the security groups for the SF deployment :ref:`Network Access <network-access>`.
