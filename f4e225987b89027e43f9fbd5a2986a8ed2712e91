@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5aa745d1_03ee528b",
+        "filename": "docs/deploy.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-07-25T10:15:13Z",
+      "side": 1,
+      "message": "Could you use the URI mentioned here https://www.redhat.com/archives/softwarefactory-dev/2017-July/msg00003.html\n\nWe no longer use that name format scheme.",
+      "revId": "f4e225987b89027e43f9fbd5a2986a8ed2712e91",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aa745d1_e3f2466f",
+        "filename": "docs/deploy.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-07-25T10:15:13Z",
+      "side": 1,
+      "message": "Same here",
+      "revId": "f4e225987b89027e43f9fbd5a2986a8ed2712e91",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
