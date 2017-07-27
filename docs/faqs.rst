@@ -156,13 +156,14 @@ to save and restore the current state:
 .. code-block:: bash
 
     # Print and save running all jobs to /var/lib/zuul/zuul-queues-dump.sh
-    zuul-changes.py dump
+    /usr/share/sf-config/scripts/zuul-changes.py dump
 
-    systemctl restart zuul
+    systemctl restart zuul-server
 
     # Reload the previous state:
-    zuul-changes.py load
+    /usr/share/sf-config/scripts/zuul-changes.py load
 
+Periodic and Post pipeline states are not dumped by this tool.
 
 .. _gerrit-rest-api:
 How can I use the Gerrit REST API?
