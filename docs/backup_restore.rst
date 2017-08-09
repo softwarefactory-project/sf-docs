@@ -4,10 +4,11 @@ Backup restore
 Create a backup
 ---------------
 
-To create a backup, use the `sfmanager </docs/sfmanager.html#backup-and-restore>`_ cli::
+To create a backup, use the following command:
 
-  * sfmanager system backup_start
-  * sfmanager system backup_get
+  * ansible-playbook /var/lib/software-factory/ansible/sf_backup.yml
+
+You can find the tgz generated on /var/lib/software-factory/backup.tar.gz
 
 
 Restore a backup
@@ -27,7 +28,10 @@ On a fresh instance, recover will re-deploy the backup::
 
   * sfconfig.py --recover ./sf_backup.tar.gz
 
-This is used to migrate the services from one instance to another.
+This is used to migrate the services from one instance to another. If you have
+gerrit replication enabled, you should use the flag
+'--disable-external-resources' to disable the replication during the
+recovery process.
 
 Export a backup to an external location
 ---------------------------------------
