@@ -1,3 +1,5 @@
+.. _firehose_user:
+
 Firehose
 ========
 
