@@ -12,11 +12,7 @@ Migrating a repository
 Git repository
 ..............
 
-Simply follow the instructions in the :doc:`Software Factory CLI (sfmanager)<sfmanager>`
-about creating a project on Software Factory. You can either specify the
-upstream repository to clone when creating the project.
-
-You can also initialize an empty project on Software Factory, then import your
+You can initialize an empty project on Software Factory, then import your
 project history from your local copy, like so:
 
 .. code-block:: bash

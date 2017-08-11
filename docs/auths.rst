@@ -112,8 +112,7 @@ Local user management
 
 For simple deployments without an Identity Provider, you can manage the users
 through the SFManager command-line utility (except for the default admin user, defined
-in the sfconfig.yaml file). See SFmanager command-line :ref:`User management <user-management>`
-documentation for more details.
+in the sfconfig.yaml file).
 
 
 Other authentication settings
