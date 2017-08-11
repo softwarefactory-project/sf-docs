@@ -21,7 +21,7 @@ Requires:       python-sfmanager-doc
 %autosetup -n %{name}-%{version}
 
 %build
-sphinx-build -b html -d build/doctrees docs/ build/html
+sphinx-build -W -b html -d build/doctrees docs/ build/html
 
 %install
 mkdir -p %{buildroot}%{_docdir}/software-factory
