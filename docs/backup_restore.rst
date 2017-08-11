@@ -43,6 +43,7 @@ The script will use some variables from /etc/software-factory/sfconfig.yaml
 to configure the backup destination parameters:
 
 .. code-block:: yaml
+
     backup:
         disabled: True
         method: swift                                 # Backup method: swift (default) or scp

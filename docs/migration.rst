@@ -12,7 +12,7 @@ Migrating a repository
 Git repository
 ..............
 
-Simply follow the instructions in the :doc:`Software Factory CLI (sfmanager)<sfmanager>`
+Simply follow the instructions in the `Software Factory CLI (sfmanager) </docs/sfmanager>`_
 about creating a project on Software Factory. You can either specify the
 upstream repository to clone when creating the project.
 
