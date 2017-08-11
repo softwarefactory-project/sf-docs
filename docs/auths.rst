@@ -4,8 +4,8 @@ Authentication
 --------------
 
 Software Factory supports different authentication backend for user.
-The `Cauth <http://softwarefactory-project.io/r/gitweb?p=cauth.git;a=shortlog;h=HEAD>`_ component is used to enforce
-all authenticated HTTP access.
+The `Cauth <https://softwarefactory-project.io/r/gitweb?p=software-factory/cauth.git;a=shortlog;h=HEAD>`_
+component is used to enforce all authenticated HTTP access.
 
 
 Admin user
@@ -112,8 +112,8 @@ Local user management
 
 For simple deployments without an Identity Provider, you can manage the users
 through the SFManager command-line utility (except for the default admin user, defined
-in the sfconfig.yaml file). See SFmanager command-line :ref:`User management <user-management>`
-documentation for more details.
+in the sfconfig.yaml file). See SFmanager command-line
+`User management <docs/sfmanager/sfmanager.html#user-management>`_ documentation for more details.
 
 
 Other authentication settings

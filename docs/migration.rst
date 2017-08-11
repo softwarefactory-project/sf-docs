@@ -12,7 +12,7 @@ Migrating a repository
 Git repository
 ..............
 
-Simply follow the instructions in the :doc:`Software Factory CLI (sfmanager)<sfmanager>`
+Simply follow the instructions in the `Software Factory CLI (sfmanager) </docs/sfmanager>`_
 about creating a project on Software Factory. You can either specify the
 upstream repository to clone when creating the project.
 
@@ -59,7 +59,7 @@ To install the library:
 
 .. code-block:: bash
 
- $ git clone http://softwarefactory-project.io/r/sf-issues-migration
+ $ git clone https://softwarefactory-project.io/r/sf-issues-migration
  $ cd sf-issues-migration
  $ virtualenv .venv
  $ . .venv/bin/activate
