@@ -25,6 +25,24 @@
     },
     {
       "key": {
+        "uuid": "3ab451fb_05ff7802",
+        "filename": "docs/backup_restore.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-08-11T03:40:09Z",
+      "side": 1,
+      "message": "IIRC, restore is to restore a backup in-place, on a running system, while recover is to recover a backup on a new instance, e.g. disaster recovery.\n\nWe talked about working on a more fine-grained restore so that we could restore a single repository (for example when it has been deleted by error). Until then, the restore is not that usefull.",
+      "parentUuid": "3ab451fb_824b7e2b",
+      "revId": "e191c4d8d4174ef5b186735f1f1c442dcb1373b0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3ab451fb_6248722e",
         "filename": "docs/backup_restore.rst",
         "patchSetId": 1
