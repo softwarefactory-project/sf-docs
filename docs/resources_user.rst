@@ -147,8 +147,6 @@ be detected as "Created". If you intend to do that with the repos' resource then
 you have to make sure you have fetch locally your git repo's branches because
 the git repo is going to be deleted and created under the new name.
 
-You can find details about resource models :ref:`here <config-resources-model>`
-
 Resource deletion
 -----------------
 

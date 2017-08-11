@@ -1,7 +1,7 @@
 %global         sum The Software Factory project documentation
 
 Name:           sf-docs
-Version:        2.5.0
+Version:        2.7.0
 Release:        1%{?dist}
 Summary:        %{sum}
 
@@ -11,6 +11,7 @@ Source0:        https://github.com/softwarefactory-project/sf-docs/archive/%{ver
 
 BuildArch:      noarch
 BuildRequires:  python-sphinx
+BuildRequires:  graphviz
 Requires:       managesf-doc
 Requires:       python-sfmanager-doc
 
@@ -21,7 +22,7 @@ Requires:       python-sfmanager-doc
 %autosetup -n %{name}-%{version}
 
 %build
-sphinx-build -b html -d build/doctrees docs/ build/html
+sphinx-build -W -b html -d build/doctrees docs/ build/html
 
 %install
 mkdir -p %{buildroot}%{_docdir}/software-factory
@@ -32,5 +33,9 @@ mv build/html/* %{buildroot}%{_docdir}/software-factory
 %{_docdir}/software-factory
 
 %changelog
+* Mon Aug 14 2017 Nicolas Hicher <nhicher@redhat.com> - 2.7.0-1
+- add -W flag to ensure to build without warnings
+- add graphviz build depends
+
 * Wed Apr 12 2017 Tristan Cacqueray <tdecacqu@redhat.com> - 2.5.0-1
 - Initial packaging import

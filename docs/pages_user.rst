@@ -56,6 +56,6 @@ a real DNS entry configured then you should setup your local resolver.
 
 For exemple adding in /etc/hosts:
 
-.. code-blosk:: bash
+.. code-block:: bash
 
  echo "<SF IP> <repo-name>" | sudo tee -a /etc/hosts

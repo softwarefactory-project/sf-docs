@@ -166,6 +166,7 @@ to save and restore the current state:
 Periodic and Post pipeline states are not dumped by this tool.
 
 .. _gerrit-rest-api:
+
 How can I use the Gerrit REST API?
 ..................................
 
