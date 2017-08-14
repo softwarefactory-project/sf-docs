@@ -95,7 +95,7 @@ Or look at some example from `sf-elements <https://softwarefactory-project.io/r/
 
 
 CLI
-===
+---
 
 The CLI utility *sfmanager* can be used to interact with nodes that are currently running. The
 following actions are supported:
