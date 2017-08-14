@@ -1,6 +1,6 @@
-==================================================
-Software-Factory project Contributor documentation
-==================================================
+=========================
+Contributor documentation
+=========================
 
 
 How can I help?

@@ -1,3 +1,5 @@
+.. _operator:
+
 ======================
 Operator documentation
 ======================
@@ -5,11 +7,11 @@ Operator documentation
 This chapter documents how to deploy and manage a Software Factory instance.
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
 
+   arch
    deploy
    sfconfig
-   arch
    access_control
    migration
    upgrade
