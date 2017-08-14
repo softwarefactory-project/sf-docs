@@ -1,7 +1,7 @@
 .. _sf-arch:
 
-Modular Architecture: arch.yaml
-===============================
+Modular Architecture
+====================
 
 SF architecture is modular and defined by a single file called arch.yaml. This
 file defines the number of nodes, their requirements in term of resources and
@@ -36,6 +36,8 @@ The architecture is defined in /etc/software-factory/arch.yaml:
 
 The minimal architecture includes following components:
 
+.. TODO update with all components, create one page per component
+
 * mysql
 * gateway
 * cauth
@@ -52,12 +54,11 @@ Optional services can be enabled:
 * nodepool
 * mirror
 * murmur
-
-More services are also available, but their integration is still in progress, e.g.: "tech preview":
-
 * storyboard, storyboard-webclient
 * elasticsearch, job-logs-gearman-client, job-logs-gearman-worker, logstash, kibana
 * repoxplorer
+* ...
+
 
 
 Extending the architecture

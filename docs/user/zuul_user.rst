@@ -127,12 +127,3 @@ can configure Zuul (zuul/projects.yaml) as follow:
 
 Zuul will then reports the "demo-job" result as a comment for the tested patch
 but wont set the global note negative.
-
-
-Export to an OpenStack Swift server
-...................................
-
-See the :ref:`Swiftlogs operator documentation<swiftlogs-operator>` and the
-:ref:`user documentation<swiftlogs-user>`.
-
-
