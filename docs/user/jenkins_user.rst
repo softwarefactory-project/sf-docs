@@ -98,7 +98,10 @@ Some explanation about this job configuration:
 * node: is the slave label that specify where the job can be executed.
 
 CLI
-===
+---
+.. warning::
+
+  only working if you use jenkins, not with zuul job
 
 The *sfmanager* utility lets users interact with jobs. The following operations are available:
 

@@ -148,7 +148,7 @@ Access Software Factory
 
 The Dashboard is available at https://FQDN and admin user can authenticate
 using "Internal Login". If you used the default domain *sftests.com* then
-SF allows (user1, user2, user3) with the default "userpass" password to connect.
+SF allows user "admin" with the default "userpass" password to connect.
 
 If you need more information about authentication mechanisms on SF please refer to
 :ref:`Software Factory Authentication <authentication>`.
@@ -158,6 +158,8 @@ If you need more information about authentication mechanisms on SF please refer 
 
 Root password consideration
 ---------------------------
+
+.. TODO  task:565  use cloud-init for non openstack deployment
 
 Software Factory image comes with an empty root password. root login is only
 allowed via the console (**root login with password is not allowed via SSH**). The
