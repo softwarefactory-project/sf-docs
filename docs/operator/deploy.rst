@@ -57,8 +57,8 @@ SF image needs to be uploaded to Glance:
 
 .. code-block:: bash
 
- $ curl -O http://46.231.132.68:8080/v1/AUTH_b50e80d3969f441a8b7b1fe831003e0a/sf-images/softwarefactory-C7.0-2.6.0.img.qcow2
- $ glance image-create --progress --disk-format qcow2 --container-format bare --name sf-2.6.0 --file softwarefactory-C7.0-2.6.0.img.qcow2
+ $ curl -O http://46.231.132.68:8080/v1/AUTH_b50e80d3969f441a8b7b1fe831003e0a/sf-images/sf-2.6.qcow2
+ $ glance image-create --progress --disk-format qcow2 --container-format bare --name sf-2.6.0 --file sf-2.6.qcow2
 
 
 Deploy with Heat
@@ -75,7 +75,9 @@ They all requires:
 
 .. code-block:: bash
 
- $ wget http://46.231.132.68:8080/v1/AUTH_b50e80d3969f441a8b7b1fe831003e0a/sf-images/softwarefactory-C7.0-2.6.0-allinone.hot
+.. TODO fix url for heat template
+
+ $ wget http://46.231.132.68:8080/v1/AUTH_b50e80d3969f441a8b7b1fe831003e0a/sf-images/sf-2.6-softwarefactory-project.io.hot
  $ heat stack-create --template-file ./softwarefactory-C7.0-2.6.0-allinone.hot -P "key_name=SSH_KEY;domain=FQDN;image_id=GLANCE_UUID;external_network=NETWORK_UUID;flavor=m1.large" sf_stack
 
 Once the stack is created jump to the section :ref:`Configuration and reconfiguration <reconfiguration>`.
@@ -148,7 +150,7 @@ Access Software Factory
 
 The Dashboard is available at https://FQDN and admin user can authenticate
 using "Internal Login". If you used the default domain *sftests.com* then
-SF allows (user1, user2, user3) with the default "userpass" password to connect.
+SF allows user "admin" with the default "userpass" password to connect.
 
 If you need more information about authentication mechanisms on SF please refer to
 :ref:`Software Factory Authentication <authentication>`.
@@ -158,6 +160,8 @@ If you need more information about authentication mechanisms on SF please refer 
 
 Root password consideration
 ---------------------------
+
+.. TODO  add cloud-init info without dhcp server
 
 Software Factory image comes with an empty root password. root login is only
 allowed via the console (**root login with password is not allowed via SSH**). The

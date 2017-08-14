@@ -12,6 +12,7 @@ Source0:        https://github.com/softwarefactory-project/sf-docs/archive/%{ver
 BuildArch:      noarch
 BuildRequires:  python-sphinx
 BuildRequires:  graphviz
+BuildRequires:  python-sphinx_rtd_theme
 Requires:       managesf-doc
 Requires:       python-sfmanager-doc
 
@@ -35,7 +36,7 @@ mv build/html/* %{buildroot}%{_docdir}/software-factory
 %changelog
 * Mon Aug 14 2017 Nicolas Hicher <nhicher@redhat.com> - 2.7.0-1
 - add -W flag to ensure to build without warnings
-- add graphviz build depends
+- add graphviz and python-sphinx_rtd_theme build depends
 
 * Wed Apr 12 2017 Tristan Cacqueray <tdecacqu@redhat.com> - 2.5.0-1
 - Initial packaging import
