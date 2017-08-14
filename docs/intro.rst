@@ -1,49 +1,13 @@
-================================
-Introduction to Software Factory
-================================
 
-Software Factory (also called SF) is a collection of services that provides
-a powerful platform to build software. It's designed to
-run on an OpenStack-based cloud but it can also be used standalone
-without features related to the cloud-like tests environments.
+.. TODO: Most configuration settings are available to all user through a special project called config,
+.. or "config repo". Modifications are proposed through Code-Review and integrated through SF
+.. integration pipeline using a special job called config-update.
 
+Main components
+===============
 
-SF integrates services matching each step in the software
-production chain:
-
-* Code review system : `Gerrit <http://en.wikipedia.org/wiki/Gerrit_%28software%29>`_
-* Issue tracker : `Storyboard <http://docs.openstack.org/infra/storyboard/>`_
-* Continuous integration : `Zuul <http://ci.openstack.org/zuul/>`_
-* Test instance management : `Nodepool <http://docs.openstack.org/infra/system-config/nodepool.html>`_
-* Collaborative tools : `Etherpad <http://en.wikipedia.org/wiki/Etherpad>`_, `Pastebin <http://en.wikipedia.org/wiki/Pastebin>`_
-
-SF offers a seamless user experience with:
-
-* Single Sign-On authentication,
-* Unified REST API to manage projects, users and more,
-* Top-menu to access all the services, and
-* Command line as well as web interface to management API.
-
-Most configuration settings are available to all user through a special project called config,
-or "config repo". Modifications are proposed through Code-Review and integrated through SF
-integration pipeline using a special job called config-update.
-
-One should know that SF is entirely developed and produced using SF.
-
-
-Ready to use development platform
-=================================
-
-Setting up a development environment manually can really be
-time consuming and sometimes leads to a lot of configuration
-trouble. SF provides an easy way to get all services configured
-and running.
-
-SF feature an automated upgrade process continuously tested with integration test.
-
-
-Gerrit
-======
+Code review system
+------------------
 
 Gerrit is the main component of SF. It provides the Git
 server, a code review mechanism, and a powerful ACL system. SF
@@ -75,8 +39,8 @@ prevent a change to be merged on the master branch.
 .. image:: imgs/gerrit.jpg
 
 
-Zuul
-====
+Pipelines manager
+-----------------
 
 On SF Zuul is by default configured to provide four pipelines:
 
@@ -88,8 +52,8 @@ On SF Zuul is by default configured to provide four pipelines:
 .. image:: imgs/zuul.jpg
 
 
-Nodepool
-========
+Test instance management
+------------------------
 
 Nodepool is a test instances manager. It is design to provision and
 maintain one or more pools of slave. An OpenStack cloud account
@@ -97,17 +61,8 @@ is needed to allow nodepool to store images/snapshot and start slave VMs.
 Within SF Nodepool is already pre-configured to run together with Zuul.
 
 
-Artifacts export to OpenStack Swift
-===================================
-
-Software Factory configuration knows how to use a Swift container to export and
-store jobs artifacts. A container url and a temp-url-key are the only requirements
-to start pushing jobs artifcats such as system logs or resulting build to a
-a true Object Store like Swift.
-
-
-Etherpad and Lodgeit
-====================
+Collaborative tools
+-------------------
 
 Software Factory deploys along with Storyboard, Gerrit and Jenkins two
 additional collaboration tools. The first one is an Etherpad where team members can
@@ -122,46 +77,17 @@ sharing of code snippets, error stack traces, ===
 .. image:: imgs/paste.jpg
 
 
-Unified project creation
-========================
+Projects metrics
+----------------
 
-SF provides a REST service that can be used to ease SF management.
-Thanks to it you can easily for instance :
+blabla
 
-* Create a project and its related user groups in a unified way.
-* Add/remove users from project groups in a unified way.
-* Delete a project with its related group in a unified way.
-* Perform and restore a backup of the SF user data.
+Log management
+--------------
 
-By unified way it means action is performed in Gerrit and on Storyboard, for
-instance if a user is added to the admin group of a project A
-it is also added on the related Gerrit group automatically.
+blabla
 
+Platform metrics
+----------------
 
-Top menu - One entry point
-==========================
-
-In order to ease the usage of all those nice tools, SF provides
-an unique portal served by only one remotely accessible HTTP server.
-That means only one hostname to remember in order to access all
-the services. Each web interface will be displayed with
-a little menu on the top of your Web browser screen.
-You can move around all SF services with one click.
-
-
-Single Sign On
-==============
-
-As it is always a pain to deal with login/logout of each component, the
-SF provides an unified authentication through Gerrit, Storyboard.
-Once you are authenticated on Gerrit you are also logged in on Storyboard.
-A logout from one service logs you out from other services as well.
-
-Currently SF provides four kind of backends to authenticate:
-
-* Oauth2 for Github, Google and Bitbucket
-* OpenID (e.g. for Launchpad)
-* local user database hosted in the managesf node
-* LDAP backend
-
-.. image:: imgs/login.jpg
+blabla

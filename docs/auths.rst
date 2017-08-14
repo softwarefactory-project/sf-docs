@@ -1,5 +1,22 @@
 .. _authentication:
 
+Single Sign On
+==============
+
+As it is always a pain to deal with login/logout of each component, the
+SF provides an unified authentication through Gerrit, Storyboard.
+Once you are authenticated on Gerrit you are also logged in on Storyboard.
+A logout from one service logs you out from other services as well.
+
+Currently SF provides four kind of backends to authenticate:
+
+* Oauth2 for Github, Google and Bitbucket
+* OpenID (e.g. for Launchpad)
+* local user database hosted in the managesf node
+* LDAP backend
+
+.. image:: imgs/login.jpg
+
 Authentication
 --------------
 
