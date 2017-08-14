@@ -23,19 +23,18 @@ To update the configuration repo:
 
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    cicd_intro
-   jenkins_user
-   zuul_user
-   swiftlogs_user
-   nodepool_user
-   gerritbot_user
-   gerrit_replication_user
-   access_control_user
-   gerritlinks_user
-   resources_user
-   repoxplorer_user
+   ../user/jenkins_user
+   ../user/zuul_user
+   ../user/nodepool_user
+   ../user/gerritbot_user
+   ../user/gerrit_replication_user
+   ../user/access_control_user
+   ../user/gerritlinks_user
+   ../user/resources_user
+   ../user/repoxplorer_user
 
 Available resources models
 ==========================

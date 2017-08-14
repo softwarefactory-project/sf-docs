@@ -14,6 +14,7 @@ BuildRequires:  python-sphinx
 BuildRequires:  graphviz
 Requires:       managesf-doc
 Requires:       python-sfmanager-doc
+Requires:       python-sphinx_rtd_theme
 
 %description
 %{sum}
