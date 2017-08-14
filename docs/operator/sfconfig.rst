@@ -23,6 +23,5 @@ Ansible roles variable can be over-written in /etc/software-factory/custom-vars.
    fqdn
    auths
    zuul_operator
-   swiftlogs_operator
    nodepool_operator
    gerritbot_operator
