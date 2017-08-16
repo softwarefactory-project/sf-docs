@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "3ab451fb_70add830",
+        "filename": "docs/backup_restore.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-08-16T18:22:35Z",
+      "side": 1,
+      "message": "Not a blocker for this review, but how about a shortcut command like sf_backup instead?",
+      "revId": "e191c4d8d4174ef5b186735f1f1c442dcb1373b0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3ab451fb_824b7e2b",
         "filename": "docs/backup_restore.rst",
         "patchSetId": 1
