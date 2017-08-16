@@ -121,6 +121,8 @@ Management
   REST API(You can find some useful information on the `sfmanager documentation </docs/sfmanager/>`_)
 * You can find the description of the :ref:`upgrade process <upgrade>` to upgrade
   to the last version of Software Factory.
+* The :ref:`system metrics section <metric_operator>` explains how to set up the
+  Software Factory system metrics and status dashboard.
 * Finally how to :ref:`backup and restore <backup_restore>` a Software Factory
   deployment.
 
