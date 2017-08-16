@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ab451fb_f067a823",
+        "filename": "docs/operator/metrics_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-08-16T18:42:22Z",
+      "side": 1,
+      "message": "- collecting, drop \"to\"\n- \"defined\" instead of \"describe\"",
+      "revId": "14613bea048b2938144ccff36198393ddb5600c4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ab451fb_d06cac0a",
+        "filename": "docs/operator/metrics_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-08-16T18:42:22Z",
+      "side": 1,
+      "message": "- \"defined\" instead of \"describe\"",
+      "revId": "14613bea048b2938144ccff36198393ddb5600c4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ab451fb_b07120e3",
+        "filename": "docs/operator/metrics_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-08-16T18:42:22Z",
+      "side": 1,
+      "message": "\"the\" instead of \"to\"",
+      "revId": "14613bea048b2938144ccff36198393ddb5600c4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ab451fb_907744d4",
+        "filename": "docs/operator/metrics_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-08-16T18:42:22Z",
+      "side": 1,
+      "message": "dashboards",
+      "revId": "14613bea048b2938144ccff36198393ddb5600c4",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
