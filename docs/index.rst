@@ -1,5 +1,5 @@
 ============================================
-Welcome to software-factory's documentation!
+Welcome to Software Factory's documentation!
 ============================================
 
 .. figure:: imgs/logo.svg
@@ -7,38 +7,39 @@ Welcome to software-factory's documentation!
    :align: center
 
 Software Factory (also called SF) is a collection of services that provides
-a powerful platform to build software. It's designed to
-use an OpenStack-based cloud for resources, but it can also be used with static
-resources.
+a powerful platform to build software. It's optimized to
+use an OpenStack-based cloud for resources, but this is not mandatory at all.
 
-Setting up a development environment manually can really be
-time consuming and sometimes leads to a lot of configuration
-trouble. SF provides an easy way to get all services configured
-and running.
+Setting up a full software development stack manually can really be
+time-consuming. Software Factory provides an easy way to get everything you need to host,
+design, modify, test and build software; all of this pre-configured
+and usable immediately.
 
-SF feature an automated upgrade process continuously tested with integration test.
+Software Factory feature also features automated upgrades, so you don't have to
+worry about upgrading each services yourself.
 
 .. image:: imgs/landing_page.png
    :scale: 50 %
 
-SF integrates services matching each step in the software
+Software Factory integrates services covering each step in the software
 production chain:
 
+* Version control and code hosting
 * Code review system
 * Pipelines manager
-* Test instance management
+* Test instances management
 * Task tracker
 * Collaborative tools
 * Repositories metrics
 * Log management
 * System metrics
 
-SF offers a seamless user experience with:
+Software Factory offers a seamless user experience with:
 
-* Single Sign-On authentication,
-* Unified REST API,
-* Top-menu to access all the services, and
-* Command line tool and web interface.
+* Single Sign-On authentication, on every authenticated service
+* A unified REST API,
+* A top menu to access all the services quickly, and
+* A command line tool and a web interface.
 
 Table of contents
 =================

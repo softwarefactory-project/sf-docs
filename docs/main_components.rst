@@ -4,32 +4,35 @@ Main components
 Code review system
 ------------------
 
-`Gerrit <http://en.wikipedia.org/wiki/Gerrit_%28software%29>`_ is the main
-component of SF. It provides the Git server, a code review mechanism, and a
-powerful ACL system. SF configures Gerrit to integrate correctly with the
-issues tracker and the CI system (Jenkins/Zuul).
+`Gerrit <http://en.wikipedia.org/wiki/Gerrit_%28software%29>`_ is one of the core
+components of Software Factory. It provides the Git repository hosting server,
+a code review mechanism, and a powerful ACL system. Within Software Factory Gerrit
+is tightly integrated with the issue tracker and the CI pipelines manager.
 
 Some useful plugins are installed on Gerrit:
 
-* Reviewer-by-blame: Automatically adds code reviewers to submitted changes according
-  to git-blame result.
-* Replication: Add replication mechanism to synchronize internal Git repositories
-  to remote location.
-* Gravatar: Because sometimes it is quite fun to have its gravatar along its
-  commits and messages.
-* Delete-project: Let the admin the ability to fully remove an useless Gerrit project.
-* Download-commands: Ease integration of Gerrit with IDE
+* Reviewer-by-blame: Automatically adds code reviewers to submitted changes if they
+  authored or modified files affected by the changes.
+* Replication: Allows the replication of Git repositories hosted on Software
+  Factory on a remote location, for example Github.
+* Gravatar: Displays the gravatar picture associated with a contributor's email.
+* Delete-project: Allow a privileged user to fully remove an useless Gerrit project.
+* Download-commands: Allows IDE integration
 
-Some Gerrit hooks are installed to handle Storyboard issues:
+The following hooks are installed to update the issue tracker on specific events:
 
-* An issue referenced in a commit message will be automatically
-  set as "In progress" in Storyboard.
-* An issue referenced by a change will be closed when Gerrit merges it.
+* An issue referenced in the commit message of a new submission will be automatically
+  set as "In progress" in the issue tracker.
+* An issue referenced by a submission will be closed when the patch gets merged into the main repository.
 
-Gerrit is configured to work with Zuul and Jenkins, that means
-project tests can be run when changes are proposed to a project.
-Tests results are published on Gerrit as a note and can
-prevent a change to be merged on the master branch.
+The following events will trigger actions on the CI pipelines:
+
+* A new patch being submitted, or modified
+* A "recheck" or "retrigger" message in the patch's comments
+* A patch reaching the score needed to be candidate for merging (+2 Core, +1 Workflow, +1 Verified)
+* A patch being merged
+
+See the `pipelines manager <Pipelines manager>`_ section for more details.
 
 .. image:: imgs/gerrit.jpg
    :scale: 50 %
@@ -38,33 +41,35 @@ prevent a change to be merged on the master branch.
 Pipelines manager
 -----------------
 
-On SF `Zuul <http://ci.openstack.org/zuul/>`_ is by default configured to provide four pipelines:
+On Software Factory `Zuul <http://ci.openstack.org/zuul/>`_ is by default configured to provide five pipelines:
 
-* A check pipeline
-* A gate pipeline
-* A post pipeline
-* A periodic pipeline
+* A **check** pipeline, used for preliminary tests on upcoming changes
+* A **gate** pipeline, used to make sure an approved change can be merged
+* A **post** pipeline, executing jobs right after a change has been merged
+* A **tag** pipeline, executing jobs after a tag has been pushed on a repository
+* A **periodic** pipeline, building jobs at a regular interval, usually daily
 
 .. image:: imgs/zuul.jpg
    :scale: 50 %
 
 
-Test instance management
-------------------------
+Test instances management
+-------------------------
 
 `Nodepool <http://docs.openstack.org/infra/system-config/nodepool.html>`_ is a
-test instances manager. It is design to provision and maintain one or more
-pools of slave. An OpenStack cloud account is needed to allow nodepool to store
-images/snapshot and start slave VMs. Within SF Nodepool is already pre-configured
-to run together with Zuul.
+test instances manager. It is designed to handle the life cycle of
+work nodes (creation, provision, assignation and destruction) on one or more
+OpenStack projects. At least one OpenStack cloud account is needed to allow nodepool
+to store base images and VM snapshots, and manage work nodes. Within Software Factory
+Nodepool is already preconfigured to run together with Zuul, the pipelines manager.
 
 
-Task tracker
-------------
+Issue tracker
+-------------
 
 `Storyboard <http://docs.openstack.org/infra/storyboard/>`_ is a cross-project
-task-tracker. StoryBoard lets you efficiently track your work across a large
-number of interrelated projects. Flexible project groups let you group together
+task tracker. StoryBoard lets you efficiently track your work across a large
+number of related projects. Flexible project grouping lets you group together
 the projects you're interested in so you can find things quicky and easily.
 
 .. image:: imgs/storyboard.png
@@ -73,24 +78,26 @@ the projects you're interested in so you can find things quicky and easily.
 Collaborative tools
 -------------------
 
-Software Factory deploys along with Storyboard, Gerrit and Zull some
-additional collaboration tools:
+Software Factory deploys a collection of tools that can ease sharing information
+within a team:
 
 * `Etherpad <http://en.wikipedia.org/wiki/Etherpad>`_ where team members can
-  live edit text documents to collaborate. This is really handy for instance to
-  brainstorm of design documents.
+  edit text documents synchronously to collaborate. This is really handy for instance to
+  brainstorm or design drafts together.
 
 .. image:: imgs/etherpad.jpg
    :scale: 50 %
 
-* `Lodgeit <http://www.pocoo.org/projects/lodgeit/>`_, is a pastebin like tool
-  that facilitates rapid sharing of code snippets, error stack traces
+* `Lodgeit <http://www.pocoo.org/projects/lodgeit/>`_ is a pastebin-like tool
+  that helps sharing code snippets, error stack traces, anything text-based that
+  does not need edition.
 
 .. image:: imgs/paste.jpg
    :scale: 50 %
 
-.. TODO Task 567: add mumble description and screenshot
-
+* `Mumble <https://wiki.mumble.info/wiki/Main_Page>`_ is a lightweight VoIP and
+  chat software. Software Factory provides the server out of the box, users have
+  to install the mumble client for their respective OSes.
 
 .. TODO Task 568: add Projects metrics description and screenshot (repoxporer)
 .. ----------------

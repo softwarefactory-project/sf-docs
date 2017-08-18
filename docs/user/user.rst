@@ -6,8 +6,8 @@ This chapter documents how to use Software Factory.
 CI/CD overview
 --------------
 
-The diagram bellow shows an overview of Continous Integration/Deployment system
-of Software Factory:
+The diagram below shows an overview of how Continous Integration/Continuous Deployment
+happens on Software Factory:
 
 .. graphviz:: test_workflow.dot
 .. toctree::
