@@ -4,17 +4,16 @@
 The config repository
 =====================
 
-Many parameters are available to the users through the config repository.
-The config repository is a special projects to configure many Software Factory services.
-This enables users to propose modifications through the code review system,
-and after change approval, the config-update job applies configuration change.
+The config repository is a special project used to configure many Software Factory services.
+This enables users to submit configuration changes through the code review system.
+Once a change has been approved, the config-update job is run to apply the new configuration.
 
-To update the configuration repo:
+To make a change in the configuration:
 
 * First clone the repository: git clone http://<fqdn>/r/config
-* Edit files and commit: git commit
-* Create a review: git review
-* Approve the review to run config update
+* Edit the relevant files and commit: git commit
+* Submit a change for review: git review
+* The configuration will be updated once the change is approved and merged
 
 .. note::
 

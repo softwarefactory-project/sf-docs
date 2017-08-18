@@ -8,9 +8,9 @@ How can I help?
 
 Thanks for asking.
 
-The easiest way to get involved is to join us on IRC: #softwarefactory channel on Freenode.
+The easiest way to get involved is to join us on IRC. We hang out on the #softwarefactory channel on Freenode.
 
-The mailing list is softwarefactory-dev@redhat.com , subscribe here: https://www.redhat.com/mailman/listinfo/softwarefactory-dev.
+To join technical discussions or get announcements, subscribe to our mailing list softwarefactory-dev@redhat.com: https://www.redhat.com/mailman/listinfo/softwarefactory-dev.
 
 The project's feature and bug tracker is available here: https://softwarefactory-project.io/storyboard/#!/project_group/4.
 
@@ -30,8 +30,8 @@ Software Factory runs and is developed on CentOS 7. Provision a CentOS 7 system,
  sudo /usr/sbin/usermod -a -G mock $USER
  newgrp mock
 
-It is recommended that your Centos 7 installation is dedicated to Software Factory development
-to avoid thrid party components conflicts.
+It is recommended that your Centos 7 installation be dedicated to Software Factory development
+to avoid conflicts with unrelated components.
 
 Then you will need to check out the Software Factory repositories:
 
@@ -58,17 +58,17 @@ Then you will need to check out the Software Factory repositories:
  ln -s software-factory/sfinfo/zuul_rpm_build.py .
  ln -s software-factory/sfinfo/sf-master.yaml distro.yaml
 
-The file *sfinfo/sf-master.yaml* contains all repository's references that compose
-the Software Factory distribution. The script above fetch all but you can just
-fetch the needed ones.
+The file *sfinfo/sf-master.yaml* contains the references of all the repositories that form
+the Software Factory distribution. The script above fetches everything but you can just
+fetch the ones you need.
 
 Rebuilding packages
 -------------------
 
 Each component of Software Factory is distributed via a package and as a contributor you may
-need to rebuild a package. You will find RPM package definition in
-software-factory/<component>-distgit directories and sources in software-factory/<component>
-directory.
+need to rebuild a package. You will find most RPM package definitions in
+software-factory/<component>-distgit repositories and sources in software-factory/<component>
+repositories.
 
 Here is an example to rebuild the Zuul package.
 
@@ -78,22 +78,22 @@ Here is an example to rebuild the Zuul package.
 
 Newly built packages are available in the zuul-rpm-build directory.
 
-Use the "--noclean" argument to speed-up the process. This argument prevents
-the mock environment to be destroyed and rebuilt but does not clean the
+Use the "--noclean" argument to speed the process up. This argument prevents
+the mock environment from being destroyed and rebuilt, but does not clean the
 zuul-rpm-build directory so you might want to clean it first.
 
 .. code-block:: bash
 
  rm -Rf ./zuul-rpm-build/* && ./zuul_rpm_build.py --noclean --project software-factory/zuul
 
-Multiple packages to rebuild can be specified.
+Multiple packages can be specified to trigger their builds.
 
 .. code-block:: bash
 
  rm -Rf ./zuul-rpm-build/* && ./zuul_rpm_build.py --noclean --project software-factory/zuul --project software-factory/nodepool
 
-No public DNS entry exist for the Software Factory koji host (where all SF
-packages are built and stored) so for the time being you should:
+There is no public DNS entry for the Software Factory koji host (where all SF
+packages are built and stored); to access our koji instance, you must edit your hosts file like this:
 
 .. code-block:: bash
 
@@ -102,7 +102,7 @@ packages are built and stored) so for the time being you should:
 How to run the tests
 --------------------
 
-Software Factory tests are in the sf-ci repository. You should use the run_tests.sh
+Software Factory's functional tests live in the sf-ci repository. You should use the run_tests.sh
 script as an entry point to run test scenarios.
 
 Deployment test
@@ -116,15 +116,15 @@ Deployment test
 This will run the *deploy* ansible playbook with the *minimal* architecture
 of Software Factory. The *allinone* architecture can be specified too.
 
-The *deploy* playbook install the last development version of Software Factory
-and run some smoke tests (serverspec) to verify services are well configured.
-This is the recommended way to start with sf-ci. If the *deploy* scenario
-does not end with success please ping us on IRC.
+The *deploy* playbook installs the latest development version of Software Factory
+and runs some smoke tests (serverspec) to check that services are well configured.
+This is the recommended way to start with sf-ci. If the *deploy* scenario fails
+please notify us directly on IRC or create a bug report on our tracker.
 
-This scenario take around 15 minutes to execute.
+This scenario completes in about 15 minutes.
 
 If you want to use locally built packages then you can prefix the run_tests.sh command
-with the LOCAL_REPO_PATH=$(pwd)/../zuul-rpm-build.
+with the LOCAL_REPO_PATH=$(pwd)/../zuul-rpm-build:
 
 .. code-block:: bash
 
@@ -136,10 +136,10 @@ for example:
 * sf-config repository content can be rsynced to /usr/share/sf-config
 * managesf can be installed using "python setup.py install"
 
-Access the SF UI
-................
+Access to SF's UI
+.................
 
-After a successful run of run_tests.sh the Software Factory UI is accessible
+After a successful run of run_tests.sh the UI is accessible
 via a web browser. The default hostname of a deployment is *sftests.com*
 so you should be able to access it using *http(s)://sftests.com*.
 
@@ -151,41 +151,42 @@ your host resolver:
  echo "<sf-ip> sftests.com" | sudo tee -a /etc/hosts
 
 Local authentication is enabled for the *admin* user using the
-password *userpass*. Furthermore additional users are available:
+password *userpass*. Some more unprivileged test users are available:
 *user2*, *user3*, *user4* with the password *userpass*.
 
-Please note that *Toogle login form* link must be clicked in order to
+Please note that the *Toogle login form* link must be clicked in order to
 display the login form.
 
-Erase a deployment
+Scratch a deployment
 ..................
 
-To undo a deployment and start over, uses the "--erase" argument:
+To scratch a deployment and start over, use the "--erase" argument:
 
 .. code-block:: bash
 
  sudo sfconfig.py --erase
 
-This command erases deployment data and uninstall most of the
-SF packages. It helps to restart from a pretty clean environment.
+This command erases all data from the current deployment and uninstalls most of the
+Software Factory packages. It is recommended to start working on new features or
+bug fixes on a clean environment.
 
-When switching from a *minimal* deployment to a *allinone* it is adviced
-to run that that command to avoid some side effects during functional tests.
+When switching from a *minimal* deployment to an *allinone* it is advised
+to run that command beforehand to avoid some side effects during functional tests.
 
 
-Functional test
-...............
+Functional tests
+................
 
 The *functional* scenario extends the *deploy* scenario by:
 
-* Provisionning random data (Git repos, reviews, stories, ...)
+* Provisioning random data (Git repos, reviews, stories, ...)
 * Get a backup
-* Run heath-check playbooks (see sf-ci/health-check/)
+* Run health-check playbooks (see sf-ci/health-check/)
 * Run functional tests (see sf-ci/tests/functional/)
 * Check firefose events
 * Erase data (sfconfig --erase)
 * Recover the data from the backup (sfconfig --recover)
-* Check provisionned data have been recovered
+* Check that provisioned data have been recovered
 
 .. code-block:: bash
 
@@ -193,21 +194,21 @@ The *functional* scenario extends the *deploy* scenario by:
 
 Note that you can use LOCAL_REPO_PATH to include your changes.
 
-This scenario take around 60 minutes to execute.
+This scenario completes in about 60 minutes.
 
 Upgrade test
 ............
 
-The *upgrade* scenario simulates an update from the previous released version
-of Software Factory and the current development version.
+The *upgrade* scenario simulates an upgrade from the last released version
+of Software Factory to the current development version.
 
-The scenario is:
+The scenario runs like this:
 
-* Install and deploy the last released of SF
-* Run serverspec validation
+* Install and deploy the latest release of Software Factory
+* Run the serverspec validation tests
 * Provision data
-* Run the upgrade
-* Check provisionned data
+* Upgrade the instance to the current development version
+* Check the provisioned data
 * Run heath-check playbooks
 * Run functional tests
 
@@ -217,12 +218,12 @@ The scenario is:
 
 Note that you can use LOCAL_REPO_PATH to include your changes.
 
-This scenario take around 60 minutes to execute.
+This scenario completes in about 60 minutes.
 
-Direct run of functional tests
-..............................
+Functional tests
+................
 
-After a sf-ci deployment, run:
+After having deployed Software Factory using sf-ci, run:
 
 .. code-block:: bash
 
@@ -239,10 +240,10 @@ Tips:
 * Within a test insert 'from nose.tools import set_trace; set_trace()' to add a breakpoint in nosetests
 * **--no-byte-compile** makes sure no .pyc are run
 
-Direct run of health-check test playbooks
-.........................................
+Health-check playbooks
+......................
 
-After a sf-ci deployment, run:
+After having deployed Software Factory using sf-ci, run:
 
 .. code-block:: bash
 
@@ -254,29 +255,29 @@ coverage by testing:
 * Zuul
 * Gerritbot
 
-Run the SF configuration script
--------------------------------
+Configuration script
+--------------------
 
-After a sf-ci deployment, run:
+After having deployed Software Factory using sf-ci, run:
 
 .. code-block:: bash
 
  sudo sfconfig.py
 
-Use ARA for inspecting SF playbooks runs
-----------------------------------------
+Using ARA to inspect SF playbooks runs
+--------------------------------------
 
 Installation
 ............
 
-ARA provides a browsing interface for Ansible playbook runs. Using it
-during development is a good idea. Here are the steps to install it:
+ARA provides a web interface to inspect Ansible playbook runs like the health-check
+tests. Using it during development is a good idea. Here are the steps to install it:
 
 .. code-block:: bash
 
- sudo yum install https://softwarefactory-project.io/repos/sf-release-2.5.rpm
+ sudo yum install https://softwarefactory-project.io/repos/sf-release-2.6.rpm
  sudo yum install ara
- sudo yum remove sf-release-2.5.0
+ sudo yum remove sf-release-2.6.0
 
 If you already installed the sf-release package (will be the case if sf-ci
 *run_tests.sh* script ran before) then you might need to run *yum downgrade*
@@ -286,8 +287,8 @@ Prepare the environment variables for ARA
 .........................................
 
 The *run_tests.sh* script handles that for you but in case you want to run
-command directly without this script then you must export the following
-variables to configure ARA callbacks in Ansible.
+commands directly without this script, you must export the following
+variables to configure ARA callbacks in Ansible:
 
 .. code-block:: bash
 
@@ -296,8 +297,8 @@ variables to configure ARA callbacks in Ansible.
  export ANSIBLE_ACTION_PLUGINS=$ara_location/plugins/actions
  export ANSIBLE_LIBRARY=$ara_location/plugins/modules
 
-Access the UI
-.............
+User Interface
+..............
 
 .. code-block:: bash
 
@@ -308,8 +309,8 @@ Then connect to http://sftests.com:55666
 Software Factory CI
 -------------------
 
-Changes proposed on Software Factory's repositories will be tested on the
-Software Factory upstream CI by the following jobs:
+Changes submitted to Software Factory's repositories will be tested on the
+Software Factory upstream CI by building the following jobs:
 
 * sf-rpm-build (build RPMs if needed by the change)
 * sf-ci-functional-minimal (run_tests.sh functional minimal)
@@ -317,19 +318,19 @@ Software Factory upstream CI by the following jobs:
 * sf-ci-functional-allinone (run_tests.sh functional allinone)
 * sf-ci-upgrade-allinone (run_tests.sh upgrade allinone)
 
-The Software Factory upstream CI is based on sf-ci too so you can
-expect that a change working/or failing locally will behave similar
-on the CI.
+The Software Factory upstream CI is based on sf-ci too, so the outcome of the
+upstream tests should reflect accurately the results of the tests you would run
+locally.
 
 How to contribute
 -----------------
 
 * Connect to https://softwarefactory-project.io/ to create an account
-* Register your public SSH key on your account. Have a look to: :ref:`Adding public key`.
+* Register your public SSH key on your account. See: :ref:`Adding public key`
 * Check the bug tracker and the pending reviews
 
-Propose a change
-................
+Submit a change
+...............
 
 .. code-block:: bash
 
@@ -338,10 +339,10 @@ Propose a change
   # Hack the code, create a commit on top of HEAD ! and ...
   git review # Summit your proposal on softwarefactory-project.io
 
-Your patch will be listed on the reviews pages at https://softwarefactory-project.io/r/ .
+Your patch will be listed on the reviews dashboard at https://softwarefactory-project.io/r/ .
 Automatic tests are run against it and the CI will
-report results on your patch's Gerrit page. You can
-also check https://softwarefactory-project.io/zuul/ to follow the test process.
+report results on your patch's summary page. You can
+also check https://softwarefactory-project.io/zuul/ to check where your patch is in the pipelines.
 
 Note that Software Factory is developed using Software Factory. That means that you can
 contribute to Software Factory in the same way you would contribute to any other project hosted
