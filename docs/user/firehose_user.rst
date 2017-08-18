@@ -207,8 +207,7 @@ For example, to subscribe to every topic on the firehose you would run::
 
     mosquitto_sub -h firehose.fqdn --topic '#'
 
-You can adjust the value of the topic parameter to make what you're subscribing
-to more specific.
+You can adjust the value of the topic parameter to subscribe only to a specific service.
 
 Simple desktop notifier
 .......................

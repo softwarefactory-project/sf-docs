@@ -6,59 +6,60 @@ Frequently Asked Questions
 What is the added value of Software Factory ?
 .............................................
 
-* Ready to use CI system that works out of the box
-* System configuration interface using yaml and ansible
-* Project configuration interface using code review to manage
-  jobs, zuul layouts and nodepool project configuration
-* REST API to manage project creation and users ACL provisioning
-* SSO with ldap/github/launchpad/keystone authentication backend
-* Backup and automatic upgrade mechanism (fully tested in sf CI)
-* Baremetal, LXC, KVM or OpenStack based deployment
-* Fast reproducible setup (3/5 minutes on local system, 15 minutes with heat)
-* Openstack integration to run slave (nodepool) and store artifacts (swift)
+If you are not sure about using Software Factory, here are some perks that might
+convince you:
+
+* Software Factory is a Continuous Integration system that works out of the box, with everything ready to be used right after the first configuration run.
+  Deploying all the services by hand and with this level of interdependency would take a lot more time.
+* Software Factory helps enforcing the latest best practices in Continuous Integration.
+* In Software Factory, the configuration is treated as code that can therefore be versioned, reviewed, tested or rolled back for any change.
+* Users are automatically and consistently authenticated on each service with Single Sign-On. Again, achieving this by hand would be very time consuming.
+* Software Factory can be fully backed up, restored, and upgraded automatically through tested processes.
+* Software Factory can be deployed anywhere: baremetal systems, LXC, KVM or on OpenStack via Heat.
+* Software Factory is fast to deploy (3/5 minutes on a local system, 15 minutes with Heat).
+* Software Factory runs worker nodes on demand on an OpenStack cloud, which can reduce effective costs of testing.
 
 
-Why can't I +2 after being added to the core group ?
-....................................................
+Why can't I +2 a change after being added to the core group ?
+.............................................................
 
 This may happen because of web browser cache issues. Remove all
-cookies and logout/login to refresh your gerrit privileges.
+cookies then log out and log in again to refresh your gerrit privileges.
 
 
-Why my job fails with the "NOT_REGISTERED" error ?
-..................................................
+Why does my build fail with the "NOT_REGISTERED" error ?
+........................................................
 
-This error happens when zuul can't run a job. Most of the time it's because:
+This error happens when zuul can't build a job. Most of the time it's because:
 
-* A project gate is configured with an unknown job. Jobs definition
-  are likely missing the job used in zuul layout.
-* A slave node label has never been ready. Zuul fails with NOT_REGISTERED
-  (instead of queuing) until a first slave with the correct node label is available.
-  Then after, once Zuul knows a label really exists, it will properly queue jobs.
+* A project gate is configured with an unknown job. The job's definition
+  is likely missing in zuul's layout.
+* No worker node was ever available. Zuul will fail throwing a NOT_REGISTERED error
+  (instead of queuing) until a worker node with the correct label is available.
+  Only then, once Zuul knows a label really exists, will it properly queue builds.
 
-The first step to investigate that error is to verify the job is active
-in jenkins dashboard. If the job is not there, check the config-repo and check
-if the job is either expanded from a job-template (using project name), or
-either the project is fully defined. Otherwise add the job and update
-the config repo.
-
-
-Why my job stays in "queued" ?
-..............................
-
-This happens when no slaves are available to execute a job:
-
-* First check that slaves are attached to jenkins using the dashboard
-  (slaves are shown in the left column)
-* Then verify node labels are corresponding between slave and jjb definition.
+The first step to investigate that error is to verify that the job is present
+in the jobs dashboard. If the job is not there, check the config repository and check
+that the job is either expanded from a job template (using the project's name),
+or that is fully defined. Otherwise add the job and update the config repository.
 
 
-How can I change the hostname?
-..............................
+Why does my build stay in "queued" state ?
+..........................................
 
-You can change the hostname after the deployment by setting the fqdn parameter
+This happens when no worker nodes are available to execute a build:
+
+* First verify that at least one worker node with the right label exists. You can list nodes
+  with the sfmanager CLI.
+* Then verify that your job definition actually uses the right worker node label.
+
+
+How can I change my instance's hostname?
+........................................
+
+You can change the hostname after the deployment by changing the fqdn parameter
 in /etc/software-factory/sfconfig.yaml, removing the existing SSL certificates
-(only required if runninng functional tests and using the default self-signed
+(only required if running functional tests and using the default self-signed
 certificates) and running sfconfig.py again:
 
 .. code-block:: bash
@@ -71,16 +72,16 @@ example git remote urls in .gitreview and .git/config files in repositories
 hosted on Software Factory.
 
 
-How can I distribute service to new instance ?
-..............................................
+How can I run services on a distributed architecture ?
+......................................................
 
-By default, sfconfig.py will deploy and configure all service on
+By default, sfconfig.py will deploy and configure all services on
 the install server (allinone). To use a distributed architecture,
-new instances needs to be manually deployed using the sf image,
+new instances need to be manually deployed using the Software Factory image,
 then root ssh access needs to be granted using the service_rsa.pub
 key.
 
-Example of arch file to offload elasticsearch service to a dedicated
+**Example:** architecture file to offload the elasticsearch service to a dedicated
 host:
 
 .. code-block:: yaml
@@ -94,24 +95,25 @@ host:
 Note that sfconfig.py won't disable a service previously deployed.
 
 
-How-to setup swift mirror of external requirements ?
-....................................................
+How to setup a mirror on swift for external dependencies ?
+..........................................................
 
 The mirror service uses the mirror2swift utility to provide a local cache
-for external ressources. It's usualy used to mirror rpm repository
-for ci image building purpose.
+for external ressources. For example we use it to mirror RPM repositories,
+which speeds up building times of our test environments.
 
 To enable the mirror service, you need to configure a swift container
-in sfconfig.yaml and then specify what url needs to be mirrored in the config-repo:
+in sfconfig.yaml and then specify the URL to mirror in the config-repo:
 
-* Add the mirror role to /etc/software-factory/arch.yaml
+* Add the **mirror** role to /etc/software-factory/arch.yaml
 * Configure the mirror role in /etc/software-factory/sfconfig.yaml
 * Run sfconfig.py
-* Edit mirror configuration template provided in config repo mirrors directory.
+* Edit the mirror configuration template provided in the *mirrors* directory of
+  the config repository.
 
-When the periodic_update is set, the mirror update will be sceduled periodically
-through a dedicated zuul pipeline, status and progress can be checked like any
-other CI jobs. Otherwise, to update the cache manually, this command needs to be
+When **periodic_update** is set, the mirror will be updated periodically
+through a dedicated zuul pipeline. The status of the update can be checked like any
+other CI build. Otherwise, to update the cache manually, this command needs to be
 executed:
 
 .. code-block:: bash
@@ -128,11 +130,11 @@ sfconfig.yaml example:
     swift_mirror_url: http://swift:8080/v1/AUTH_uuid/repomirror/
     swift_mirror_tempurl_key: TEMP_URL_KEY
 
-The swift_mirror_url needs to be the canonical fully qualified url of the destination swift container.
-The swift_mirror_tempurl_key needs to be a write access tempurl key.
+The swift_mirror_url needs to be the canonical, fully qualified url of the target container.
+The swift_mirror_tempurl_key needs to be a tempurl key with writing rights.
 The periodic_update needs to be a valid zuul timer format, e.g. daily is '0 0 * * \*'.
 
-config-repo yaml files represent the list of mirrors as documented here
+The yaml files in the config repository represent the list of mirrors as documented here:
 https://github.com/cschwede/mirror2swift. For example, config/mirrors/centos.yaml:
 
 .. code-block:: yaml
@@ -146,16 +148,16 @@ This will mirror the CentOS-7 base repository to http://swift:8080/v1/AUTH_uuid/
 
 
 
-How-to restart zuul without loosing running jobs ?
-..................................................
+How to restart zuul without losing builds in progress ?
+.......................................................
 
-Zuul service is stateless and stopping the process will loose track
+The zuul service is stateless and stopping the process will lose track
 of running jobs. However the zuul-changes.py utility can be used
 to save and restore the current state:
 
 .. code-block:: bash
 
-    # Print and save running all jobs to /var/lib/zuul/zuul-queues-dump.sh
+    # Print and save all builds in progress to /var/lib/zuul/zuul-queues-dump.sh
     /usr/share/sf-config/scripts/zuul-changes.py dump
 
     systemctl restart zuul-server
@@ -163,35 +165,34 @@ to save and restore the current state:
     # Reload the previous state:
     /usr/share/sf-config/scripts/zuul-changes.py load
 
-Periodic and Post pipeline states are not dumped by this tool.
+The periodic and Post pipelines are not dumped by this tool.
 
 .. _gerrit-rest-api:
 
 How can I use the Gerrit REST API?
 ..................................
 
-You can use the Gerrit REST API to enhance the functionality based on
-your needs. There is an extensive documentation available online:
+The Gerrit REST API is open for queries by default on all Software Factory deployments.
+There is an extensive documentation available online:
 
   https://gerrit-review.googlesource.com/Documentation/rest-api.html
 
 To use the Gerrit REST API in Software Factory, you have to create an API
-password first. To do so, go to the user Settings page accessible on the
-upper right corner and click the Enable button for "Gerrit API key".
-Next, you need to use a different URL to access the Gerrit API. For example, if
-you want to query the list of changes, you would normally execute a request like
-this (as described in
-https://gerrit-review.googlesource.com/Documentation/rest-api-changes.html#list-changes):
+password first. To do so, go to the **User Settings** page (upper right corner on the top menu)
+and click the Enable button for "Gerrit API key".
 
-  GET /changes/?q=status:open+is:watched&n=2 HTTP/1.0
+The Gerrit API is available at the following endpoint:
 
-The full URL for Software Factory would look like this:
+  https://fqdn/api/
 
-  http://sftests.com/api/changes/?q=status:open+is:watched&n=2
+and for authenticated requests, using the API password:
 
-Please note the /api/ here. Authenticated requests (as described in the Gerrit
-documentation) would simply use /api/a/ and the generated API password from
-above.
+  https://fqdn/api/a/
+
+For example, getting open, watched changes on the default deployment with cURL would be:
+
+  curl -X GET http://sftests.com/api/changes/?q=status:open+is:watched&n=2
+
 You can find a full working example to automate some tasks (in this case deleting a specific branch
 on a list of projects) in `tools/deletebranches.py`.
 

@@ -1,29 +1,32 @@
 .. _repoxplorer-manual-configuration:
 
-RepoXplorer manual configuration
-================================
+RepoXplorer
+===========
 
-Please have a look to :ref:`repoxplorer admin configuration <repoxplorer-operator>` for
+Manual configuration
+--------------------
+
+See :ref:`repoxplorer admin configuration <repoxplorer-operator>` for
 more informations about the service.
 
 Configuration
--------------
+.............
 
 Manual configuration is done via the config repository of Software Factory.
-Each time a change is proposed under the config/repoxplorer tree a config
+Each time a change is proposed under the **config/repoxplorer** tree a configuration
 validator is run.
 
 Thanks to the config/repository tree you can:
 
 - define author identities
-- define custom group and group's memberships
-- define indexation of projects/repositories not defined into Software Factory
-- overwrite automatic configuration
+- define custom groups and group memberships
+- define indexation of projects or repositories that are not hosted by Software Factory
+- overwrite the automated configuration
 
-How to define author's identities and emails
---------------------------------------------
+How to define author identities and emails
+............................................
 
-You can add a .yaml file in *config/repoxplorer/* such as:
+You can add a .yaml file in **config/repoxplorer/** such as:
 
 .. code-block:: yaml
 
@@ -37,5 +40,5 @@ You can add a .yaml file in *config/repoxplorer/* such as:
       jdoe@server.com:
         groups: {}
 
-Please refer to repoXplorer upstream documentation for more details
+Please refer to repoXplorer's upstream documentation for more details
 about the format `Sanitize author identities <https://github.com/morucci/repoxplorer/blob/015c87543a01badf896df66e299a1b48e4aefbf7/README.md#sanitize-author-identities>`_.

@@ -3,10 +3,10 @@
 Gerrit comments link customisation
 ==================================
 
-You can configure how gerrit render link from commit message
-using the config-repository gerrit/commentlinks.yaml file:
+You can configure how Gerrit renders links in commit messages
+by editing the **gerrit/commentlinks.yaml** file in the config repository:
 
-* git clone the config-repository
+* clone the config repository with git
 * edit the gerrit/commentlinks.yaml, for example adding bugzilla.redhat.com:
 
 .. code-block:: yaml
@@ -16,8 +16,9 @@ using the config-repository gerrit/commentlinks.yaml file:
        match: "BZ:\\s+#?(\\d+)"
        html: "BZ: <a href=\"https://bugzilla.redhat.com/show_bug.cgi?id=$2\">$2</a>"
 
-* submit and merge the config change.
+* submit and merge the change.
 
-Note that this is just for automatic link rendering in gerrit web interface.
-To actually update the issue, a hook manager (to be developped) is required
-in managesf service.
+.. note::
+
+  This is just for automatic link rendering in the web interface of Gerrit.
+  To actually update the issue on events, you should write a `firehose listener <firehose_user>`_.

@@ -5,41 +5,41 @@ Jenkins jobs configuration
 
 `Jenkins <https://jenkins.io/>`_ is a continuous integration tool.
 
-Jobs are configured in the config-repo jobs/ directory using
-`Jenkins Job Builder (JJB) <http://docs.openstack.org/infra/jenkins-job-builder/>`_. Basically JJB is a definition format in yaml that allow you to easily configure and define Jenkins Jobs.
+Jobs are configured in the config repository's **jobs** directory using
+`Jenkins Job Builder (JJB) <http://docs.openstack.org/infra/jenkins-job-builder/>`_.
+JJB is a definition format in yaml that allows you to easily configure and define Jenkins jobs.
 
 
-Default tests
--------------
+Default jobs
+------------
 
-The default test architecture is based on standard scripts at the root of
-your project.
+There are 3 template jobs defined by default for each repository:
 
-* run_tests.sh              run the unit tests
-* run_functional-tests.sh   run the functional tests
-* publish_docs.sh           publish documentation after a change is merged
+* **{name}-unit-tests**:           run unit tests
+* **{name}-functional-tests**:     run functional tests
+* **{name}-publish-docs**:         publish documentation after a change is merged
 
-Then these scripts are executed by their associated job:
+These jobs expect the following scripts to be present at the root level of a
+repository, respectively:
 
-* '{name}-unit-tests'
-* '{name}-functional-tests'
-* '{name}-publish-docs'
+* run_tests.sh
+* run_functional-tests.sh
+* publish_docs.sh
 
-If a project is a python library, the template job '{name}-upload-to-pypi' can
+
+If a repository hosts a python module, the template job **{name}-upload-to-pypi** can
 be used to push a package to a PyPI server. A valid .pypirc file set as a
 Jenkins credential must exist first; the id of the credential must then be
-passed as the variable 'pypirc' when configuring the job for the project.
+passed as the variable 'pypirc' when configuring the job for the repository.
 More information about the .pypirc file format can be found
 `here <https://docs.python.org/2/distutils/packageindex.html#pypirc>`_.
 
-Obviously, adding these pre-defined scripts to your projects in order to have tests
-executed is not mandatory. You can define your own.
 
+Using default jobs
+-------------------
 
-Adding new jobs
----------------
-
-To add new job, create a new file, for example jobs/project.yaml:
+To have a default job run on your repository's CI pipeline, create a new file,
+for example jobs/project.yaml:
 
 .. code-block:: yaml
 
@@ -50,15 +50,16 @@ To add new job, create a new file, for example jobs/project.yaml:
        - 'sfstack-functional-tests'
 
 
-The above example defines two jobs, 'sfstack-unit-tests' and 'sfstack-functional-tests',
-read :ref:`zuul project gating<zuul-gate>` to see how to automatically run
-those jobs on new patchs.
+The above example adds two jobs, 'sfstack-unit-tests' and 'sfstack-functional-tests',
+to sfstack's CI pipeline.
+See :ref:`zuul project gating<zuul-gate>` to see how to automatically run
+those jobs on new patches.
 
 
 Adding custom jobs
 ------------------
 
-New job can be created without using the provided template:
+New jobs can be created without using the provided template:
 
 .. code-block:: yaml
 
@@ -81,34 +82,34 @@ New job can be created without using the provided template:
        - zuul
      node: centos7-slave
 
-Some explanation about this job configuration:
+Some explanations about this example:
 
-* defaults: is the way the workspace is prepared. In Software Factory default's configuration
+* **defaults**: is the way the build's workspace is prepared. In Software Factory's default configuration
   this defines a freestyle project that can be run concurrently.
-* builders: The builder is the job code. It is important to note that it uses the default
-  "prepare-workspace" builder and then the "shell" one. The former uses "zuul-cloner" to
-  checkout the project + the change to be tested in the workspace. Then the later uses
-  ZUUL_PROJECT to jump into the project source directory and then performs your custom actions.
-* wrappers for credential bindings (optional): this makes credentials defined in Jenkins available
-  in the job's workspace. In this example, a file will be created and stored in the path set by the
+* **builders**: builders are the job's code. It is important to note that it uses the default
+  **"prepare-workspace"** builder and then **"shell"**. The former uses **"zuul-cloner"** to
+  clone the repository at the change to be tested in the workspace. Then the latter
+  defines shell commands to execute within the build's workspace.
+* **wrappers** for credential bindings (optional): this makes credentials defined in Jenkins available
+  in the build's workspace. In this example, a file will be created and stored in the path set by the
   shell variable ${my_secret_file} for the duration of the job.
-* triggers: using "zuul" trigger is mandatory to expose environments variables (set by
-  zuul's scheduler) in the job workspace. Indeed "zuul-cloner" use them. ZUUL_PROJECT is
-  also part of these variables.
-* node: is the slave label that specify where the job can be executed.
+* **triggers**: using the "zuul" trigger is mandatory to expose environment variables (set by
+  zuul's scheduler) in the build's workspace, as default builders need these. ZUUL_PROJECT is
+  an example of these variables.
+* **node**: is the slave label that specifies where the job can be built.
 
 CLI
 ---
 .. warning::
 
-  only working if you use jenkins, not with zuul job
+  The CLI only supports jenkins as a job builder. Support for zuul-job is coming!
 
 The *sfmanager* utility lets users interact with jobs. The following operations are available:
 
-* list informations about jobs. Jobs can be filtered by name and by patchset.
-* show the parameters used by a given job
-* show the logs of a completed job
-* cancel a running job
-* run a new job; parameters from a previous job can be fetched automatically.
+* list informations about builds. Builds can be filtered by name and by patchset.
+* show the parameters used by a given build
+* show the logs of a completed build
+* cancel a running build
+* execute a new build of a job; parameters from a previous build can be fetched automatically.
 
 Please refer to sfmanager's contextual help for more details.

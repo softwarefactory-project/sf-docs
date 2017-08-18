@@ -4,14 +4,17 @@ Using Software factory for project development
 Create and configure a new project
 ----------------------------------
 
-All the step bellow needs to be proposed on the :ref:`Config repository<config-repo>` (and
-approved through regular code review workflow)::
+Creating a new project or repository is done by submitting a change on the
+:ref:`Config repository<config-repo>`. The project will be created or updated
+once the change is merged.
 
- * The first step is to create the git repository and its acl, see :ref:`this example<project-example>`
- * Then custom job can be added, or simply reused, see :ref:`Jenkins jobs<jenkins-user>`.
- * Finally the CI pipelines needs to be configured, see :ref:`Zuul gate<zuul-gate>`.
+The change consists of three parts:
 
-In short, in a single change, the following files needs to be created:
+ * Create the git repository/ies and ACL(s), see :ref:`this example<project-example>`
+ * Define jobs to run for the repository/ies,  see :ref:`Jenkins jobs<jenkins-user>`.
+ * Configure the CI pipelines, see :ref:`Zuul gate<zuul-gate>`.
+
+In short, in a single change, the following files need to be created:
 
  * resources/new-project.yaml
  * jobs/new-project.yaml
@@ -28,7 +31,7 @@ Clone a project
 
 Softwarefactory uses `the GIT protocol <http://en.wikipedia.org/wiki/Git_%28software%29>`_
 as its revision control system. When a project is created, Gerrit
-initializes the projects' repository.
+initializes the project's repository/ies.
 
 Repositories can be `cloned <http://git-scm.com/docs/git-clone>`_ from
 the Gerrit server to a local directory. Gerrit allows multiple ways to clone
@@ -38,9 +41,14 @@ Using HTTP:
 
 .. code-block:: bash
 
- $ git clone http://{fqdn}/r/{project-name}
+ $ git clone https://{fqdn}/r/{project-name}
 
 Using SSH:
+
+.. note::
+
+  This is the recommended way as it will allow reviews to be submitted to Software
+  Factory.
 
 Before accessing the SSH URI, one needs to register the SSH public key of
 its user. (See :ref:`setup_ssh_keys`)
@@ -57,16 +65,15 @@ git-review is a git add-on that manages the reviewing and other aspects of Gerri
 The way you commit using Gerrit is different compared to using a traditional GIT
 repository.
 
-First install git-review. Generally, the easiest way to get last version is
-to install it using the Python package installer pip.
+First install git-review. Generally, the easiest way to get the latest version is
+to install it using the Python package installer pip. It might also be packaged
+for your OS.
 
 .. code-block:: bash
 
  $ sudo pip install git-review
 
-Then initialize the GIT remote for the project you have cloned. You should
-use the SSH way to clone. Please start 'git review -s' as following, the command
-will prompt you to enter your Gerrit user name.
+Then initialize the git remote for the project you have cloned::
 
 .. code-block:: bash
 
@@ -75,17 +82,16 @@ will prompt you to enter your Gerrit user name.
  Could not connect to gerrit.
  Enter your gerrit username: {user-name}
  Trying again with ssh://{user-name}@{fqdn}:29418/p1
- Creating a git remote called "gerrit" that maps to:
-         ssh://{user-name}@{fqdn}:29418/p1
+ Creating a git remote called "gerrit" that maps to: ssh://{user-name}@{fqdn}:29418/p1
 
 
 Submit a patch
 --------------
 
-Before starting to work it is a good practice to setup a branch and work on it.
-The branch name will be displayed as the topic for the patch(es) you are going
-to create from it, so give it a meaningful name like bug/{bug-id},
-title-bug-fix, ...
+Before starting to work it is a good practice to create a specific development
+branch and work on it. The branch name will be displayed as the topic for the
+patch(es) you are going to create on it, so give it a meaningful name like
+bug/{bug-id}, title-bug-fix, ...
 
 To create a branch:
 
@@ -101,8 +107,8 @@ To create a branch:
 Make and commit your change
 ...........................
 
-Modify your local code in some fashion. At any time, you can see the changes
-you made by
+Edit your local code. At any time, you can see the changes
+you made with
 
 .. code-block:: bash
 
@@ -126,7 +132,7 @@ You can review the changes you made so far by
 
  $ git diff
 
-When you finalize your changes, you need to add the changes by executing
+When you are happy with your changes, you need to add the changes by executing
 
 .. code-block:: bash
 
@@ -142,7 +148,7 @@ After adding the files, you need to commit the changes in your local repo
 Commit message hooks
 ''''''''''''''''''''
 
-If you are working on a feature or a bug that is defined in a task on Storyboard
+If you are working on a feature or a bug that is defined in a task on the issue tracker,
 you can add a line like "Task: XXX" in your commit message, where XXX is the
 task number. This way, when you submit your change for review, the
 task will see its status updated to "In Progress"; when the change is merged
@@ -162,8 +168,8 @@ Publishing the change
 
 Before your changes can be merged into master, they must undergo review in Gerrit.
 
-But first, it's a good idea, but not mandatory, to synchronize your change set
-with any changes that may have occurred in master while you've been working.
+But first, it's a good idea, but not mandatory, to synchronize your own change
+with any changes that may have occurred on master while you've been working.
 From within the branch you've been working on, execute the following command:
 
 .. code-block:: bash
@@ -180,7 +186,8 @@ you an opportunity to test your changes against the latest code in master.
 Once you are satisfied with your change set,
 you are ready to push your code to Gerrit for code review.
 
-Make sure you had setup git-review before submitting the code for review.
+Make sure you have run **git review -s** at least once on your local copy of the repository
+before submitting the code for review.
 
 To push the change to Gerrit, execute the following command:
 
@@ -199,21 +206,22 @@ To push the change to Gerrit, execute the following command:
 Amending a change
 .................
 
-Sometimes, you might need to amend a submitted change, for instance
-when someone else does not approve your change by advising you to do it
-differently or even when automatic tests run by Jenkins reports a negative vote
-on your change. Then you need to amend your change. You can amend your own
+Sometimes, you might need to amend a submitted change, for instance to acknowledge
+improvement suggestions or because your change failed in the CI pipelines. Then
+you need to amend your change. You can amend your own
 changes as well as changes submitted by someone else, as long as the change
 hasn't been merged yet.
 
-You can checkout the change like this:
+You can check the change out in your local copy of the repository like this:
 
 .. code-block:: bash
 
  git review -d {change number}
 
-Note, if you already have the change in a branch on your local repository,
-you can just check it out instead
+.. note::
+
+  if you already have the change in a branch on your local repository,
+  you can just check it out instead:
 
 .. code-block:: bash
 
@@ -225,73 +233,76 @@ After adding the necessary changes, amend the existing commit like this
 
  git commit --amend
 
-NOTE: DO NOT use the -m flag to specify a commit summary: that will
-override the previous summary and regenerate the Change-Id. Instead, use
-your text editor to change the commit summary if needed, and keep
-the Change-Id line intact.
+.. warning::
 
-Now, push the change using ``git review``
+  DO NOT use the -m flag to specify a commit summary: that will
+  override the previous summary and regenerate the Change-Id. Instead, use
+  your text editor to change the commit summary if needed, and keep
+  the Change-Id line intact.
+
+Now, push the change using ``git review``.
 
 
 Review workflow
 ---------------
 
-Software Factory mandates every patch to be reviewed before getting merged.
+Software Factory requires every patch to be reviewed before they are merged.
 
 
 Who can review
 ..............
 
-Anybody who is logged into Software Factory is eligible to review a patch
+Anybody who is authenticated on Software Factory is eligible to review a patch
 of any project except for private projects. Private projects can be
-reviewed only by the team leads, developers, and core-developers of that
+reviewed only by the team leads, developers, and core developers of that
 project.
 
 
 How to review
 .............
 
-Ensure you are logged in to SF UI and select the patch you want to
-review from the list of open patches. Following are some important files,
+Ensure you are logged in to Software Factory's web interface and select the patch
+you want to review from the list of open patches. Following are some important files,
 links and buttons that you need to be aware of.
 
 **Reviewers**
   This field contains the list of reviewers for this patch. Getting into
   this list is as simple as posting a comment on the patch. Reviewers
-  can be added by other parties or can be added voluntarily. The list of
-  approvals given by a reviewer appears near their names.
+  can be added by other parties, by default people who have committed changes
+  that affect the files in a given patch are automatically added as reviewers.
+  The list of approvals given by a reviewer appears near their names.
 
-  Following are the approvals
+  Following are the approval types:
 
   - Verified
-      Any rating in this means that the patch has been verified by compiling
-      and running the test cases. This rate is given by a specific user
-      called **Jenkins**. This rate is done automatically if automatic
-      tests are configured for the related project.
+      Any score in this means that the patch has been verified by compiling
+      and running the test cases. This score is given by a specific user
+      called **Jenkins**, by running jobs defined in the repository's *check*
+      or *gate* pipelines.
 
   - Code-Review
       As the name implies, it contains the approvals for code review. Only
-      **core-developers** can give '+2' for Code-Review
+      **core-developers** can attribute a score of '+2'.
 
   - Workflow
-      A '+1' in this means that this patch is approved for merging. Only
-      **core-developers** can give '+1' for 'Workflow'
-      A '0' in this means that this patch is ready for review.
-      A '-1' in this means that this patch is in work in progress status.
+      A '+1' score means that this patch is approved for merging. Only
+      **core-developers** can attribute a score of '+1'.
+      A '0' score means that this patch is ready for review.
+      A '-1' score means that this patch is a work in progress.
 
 **Add Reviewer**
-  This button enables you to add new reviewers. As and when you enter a name
-  you would given with a list of choices closer to your input.
+  This button enables you to add new reviewers.
 
 **Dependencies**
-  Often you would find a need to work on a patch based on a patch that is not
-  merged yet. This field will let you know the list of patches that this patch
-  depends on.
+  This field lists other submitted patches that the current one depends on and that
+  are not merged yet. These patches can belong to the same repository (same
+  branch or not) or to other repositories (for example a change in a client
+  library reflecting a change on the server's API).
 
 **Patch Sets**
   When a patch is committed for the first time, a 'Change-Id' is created. For
   further amendments to the patch, the 'Commit-Id' changes but the 'Change-Id'
-  will not. Gerrit groups the patches and it's revisions based on this. This
+  will not. Gerrit groups the patches and their revisions based on this. This
   field lists all the revisions of the current change set and numbers them
   accordingly.
 
@@ -332,20 +343,20 @@ links and buttons that you need to be aware of.
   'Publish' button just publishes your review information. In addition to
   publishing, 'Publish and Submit' button also submits the change for merging.
   If there are enough scores to approve and if there are no conflicts seen
-  while merging, Gerrit will rebase and merge the change on the master.
+  while merging, Gerrit will rebase and merge the change on the master branch.
 
 
 Approval Scoring
 ................
 
-For any patch, following scores are need before a patch can be merged on the master
+For any patch, the following scores are required before a patch can be merged on the master
 branch.
 
 *Verified*
   At least one '+1' and no '-1'
 
 *Code-Review*
-  At least two '+2' (not cumulative) and no negative scoring.
+  At least two distinct '+2' (not cumulative) and no negative scoring.
 
 *Workflow*
   At least one '+1'
@@ -356,16 +367,16 @@ branch.
 Setting up SSH keys
 -------------------
 
-If the public key already exists, it will be listed in your .ssh
-directory
+If you already have a key pair, the public key will be listed in your .ssh
+directory:
 
 .. code-block:: bash
 
- $ ls ~/.ssh/id_rsa.pub
+ $ ls ~/.ssh/*.pub
 
-In case you have the public key, you can skip to `Adding public key`_
+In that case, you can skip to `Adding public key`_
 
-You can generate a public key if you don't' have it already by
+You can generate a SSH key pair if you don't have one already by
 executing the following commands
 
 .. code-block:: bash
@@ -374,8 +385,8 @@ executing the following commands
  Generating public/private rsa key pair.
  Enter file in which to save the key (/home/you/.ssh/id_rsa):
 
-Then you will be asked enter an optional passphrase. After this
-you have a public key generated at the patch you chose.
+Then you will be prompted for an optional passphrase. Your key pair will then
+be generated.
 
 
 .. _`Adding public key`:
@@ -385,4 +396,5 @@ Adding a public key
 
 Click on your username in the top right corner of the Gerrit UI,
 then choose "Settings". On the left you will see SSH PUBLIC KEYS. Paste your
-SSH Public Key into the corresponding field.
+SSH Public Key (usually the key file ending with the .pub extension) into the
+corresponding field.
