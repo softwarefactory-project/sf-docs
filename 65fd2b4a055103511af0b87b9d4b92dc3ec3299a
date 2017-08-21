@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1ab14d0d_9b452b19",
+        "filename": "docs/operator/deploy.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-08-21T07:51:27Z",
+      "side": 1,
+      "message": "Is the virbr0 creation documented somewhere?",
+      "revId": "65fd2b4a055103511af0b87b9d4b92dc3ec3299a",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
