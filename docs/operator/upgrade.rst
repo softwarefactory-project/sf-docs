@@ -13,6 +13,6 @@ To upgrade to a new release of Software Factory, for example the version 3.0:
 
   $ sudo yum install -y --nogpgcheck https://softwarefactory-project.io/repos/sf-release-3.0.rpm
   $ sudo yum update -y sf-config
-  $ sudo sfconfig.py --upgrade
+  $ sudo sfconfig --upgrade
 
 This process turns off all the services and perform data upgrade if necessary.

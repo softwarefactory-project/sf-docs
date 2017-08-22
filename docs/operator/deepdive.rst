@@ -42,14 +42,14 @@ Ansible usage
 -------------
 
 The arch.yaml file describes what roles should run on which instances. Then
-based on this information, the sfconfig.py process generates all the necessary
+based on this information, the sfconfig process generates all the necessary
 playbooks to configure and maintain the deployment.
 
 
 The system configuration
 ------------------------
 
-The sfconfig.py script drives the system configuration. This script does the following actions:
+The sfconfig script drives the system configuration. This script does the following actions:
 
 * Generates secrets such as internal passwords, ssh keys and tls certificats,
 * Ensures configuration files are up-to-date, this script

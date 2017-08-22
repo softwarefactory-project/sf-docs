@@ -75,7 +75,7 @@ needed to complete the configuration in /etc/software-factory/sfconfig.yaml.
        client_secret: "Client Secret"
 
 
-Apply the configuration by running sfconfig.py and open https://$fqdn/auth/login, select github, you will
+Apply the configuration by running sfconfig and open https://$fqdn/auth/login, select github, you will
 be redirected to a github page to authorize application, validate. Github could now be used to authenticate
 yours users.
 

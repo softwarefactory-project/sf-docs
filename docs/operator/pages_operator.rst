@@ -24,7 +24,7 @@ Then running:
 
 .. code-block:: bash
 
- # sfconfig.py
+ # sfconfig
 
 Domain configuration
 --------------------

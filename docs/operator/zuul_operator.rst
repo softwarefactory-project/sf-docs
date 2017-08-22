@@ -62,7 +62,7 @@ You can configure Zuul to use an external log server.
                 keep-hierarchy: true
                 copy-after-failure: true
 
-* Run sfconfig.py to configure the logserver in zuul.conf, and merge the config
+* Run sfconfig to configure the logserver in zuul.conf, and merge the config
   repo change.
 
 * To export console-log to this new site, change the default_log_site and log_url
@@ -90,7 +90,7 @@ You can configure Zuul to use an external log server.
                 copy-console: true
                 copy-after-failure: true
 
-* Run sfconfig.py to configure the logserver in zuul.conf, and merge the config
+* Run sfconfig to configure the logserver in zuul.conf, and merge the config
   repo change.
 
 

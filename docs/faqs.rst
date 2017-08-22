@@ -60,12 +60,12 @@ How can I change my instance's hostname?
 You can change the hostname after the deployment by changing the fqdn parameter
 in /etc/software-factory/sfconfig.yaml, removing the existing SSL certificates
 (only required if running functional tests and using the default self-signed
-certificates) and running sfconfig.py again:
+certificates) and running sfconfig again:
 
 .. code-block:: bash
 
     sed -i -e 's/fqdn:.*/fqdn: mynewhostname.com/g' /etc/software-factory/sfconfig.yaml
-    sfconfig.py
+    sfconfig
 
 Please note that you might need to update URLs in other places as well, for
 example git remote urls in .gitreview and .git/config files in repositories
@@ -75,7 +75,7 @@ hosted on Software Factory.
 How can I run services on a distributed architecture ?
 ......................................................
 
-By default, sfconfig.py will deploy and configure all services on
+By default, sfconfig will deploy and configure all services on
 the install server (allinone). To use a distributed architecture,
 new instances need to be manually deployed using the Software Factory image,
 then root ssh access needs to be granted using the service_rsa.pub
@@ -92,7 +92,7 @@ host:
       roles:
         - elasticsearch
 
-Note that sfconfig.py won't disable a service previously deployed.
+Note that sfconfig won't disable a service previously deployed.
 
 
 How to setup a mirror on swift for external dependencies ?
@@ -107,7 +107,7 @@ in sfconfig.yaml and then specify the URL to mirror in the config-repo:
 
 * Add the **mirror** role to /etc/software-factory/arch.yaml
 * Configure the mirror role in /etc/software-factory/sfconfig.yaml
-* Run sfconfig.py
+* Run sfconfig
 * Edit the mirror configuration template provided in the *mirrors* directory of
   the config repository.
 

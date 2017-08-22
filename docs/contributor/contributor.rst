@@ -164,7 +164,7 @@ To scratch a deployment and start over, use the "--erase" argument:
 
 .. code-block:: bash
 
- sudo sfconfig.py --erase
+ sudo sfconfig --erase
 
 This command erases all data from the current deployment and uninstalls most of the
 Software Factory packages. It is recommended to start working on new features or
@@ -262,7 +262,7 @@ After having deployed Software Factory using sf-ci, run:
 
 .. code-block:: bash
 
- sudo sfconfig.py
+ sudo sfconfig
 
 Using ARA to inspect SF playbooks runs
 --------------------------------------

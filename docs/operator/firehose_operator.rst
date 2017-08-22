@@ -22,7 +22,7 @@ After upgrading from Software Factory 2.4.X
 To enable Firehose after upgrading to 2.5, some manual steps are required:
 
 #. Add the "firehose" role to the architecture file in /etc/software-factory/arch.yaml
-#. run sfconfig.py on the managesf node of the deployment
+#. run sfconfig on the managesf node of the deployment
 #. Apply the following patch to config/jobs/_default_jobs.yaml:
 
 ::

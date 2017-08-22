@@ -22,6 +22,6 @@ To start the service:
     botname: sfbot
     disabled: false
 
-* Re-apply: sfconfig.py
+* Re-apply: sfconfig
 
 Then finish the configuration with the :ref:`user configuration <gerritbot-user>`

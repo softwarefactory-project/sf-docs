@@ -31,7 +31,7 @@ On a CentOS system:
   $ sudo yum install -y https://softwarefactory-project.io/repos/sf-release-2.6.rpm
   $ sudo yum update -y
   $ sudo yum install -y sf-config
-  $ sudo sfconfig.py
+  $ sudo sfconfig
 
 
 Configuration
@@ -242,7 +242,7 @@ First time: **Please read** :ref:`Root password consideration<root-password>`.
 
  $ ssh -A root@sf_instance
  [root@managesf ~]# vim /etc/software-factory/sfconfig.yaml
- [root@managesf ~]# sfconfig.py
+ [root@managesf ~]# sfconfig
 
 
 .. _network-access:
@@ -267,7 +267,7 @@ SSL Certificates
 
 By default, SF creates a self-signed certificate. To use another certificate,
 you need to copy the provided files to /var/lib/software-factory/bootstrap-data/certs and
-apply the change with the sfconfig.py script.
+apply the change with the sfconfig script.
 
 * gateway.crt: the public certificate
 * gateway.key: the private key

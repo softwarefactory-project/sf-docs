@@ -25,7 +25,7 @@ Recover a backup
 
 On a fresh instance, recover will re-deploy the backup::
 
-  * sfconfig.py --recover ./sf_backup.tar.gz
+  * sfconfig --recover ./sf_backup.tar.gz
 
 This is used to migrate the services from one instance to another.
 
