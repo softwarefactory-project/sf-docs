@@ -11,7 +11,7 @@ the **zuul** directory in the **config** repository.
 
 If you want a deeper understanding of Zuul then check the
 `official documentation <http://docs.openstack.org/infra/zuul/>`_ and/or this
-`blog post <http://techs.enovance.com/7542/dive-into-zuul-gated-commit-system-2>`_.
+`blog post <https://blogs.rdoproject.org/7542/dive-into-zuul-gated-commit-system-2>`_.
 
 
 
