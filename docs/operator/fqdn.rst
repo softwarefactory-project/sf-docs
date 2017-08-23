@@ -1,7 +1,7 @@
 .. _fqdn:
 
-Fully Qualified Domain Name (FQDN)
-----------------------------------
+Fully Qualified Domain Name
+---------------------------
 
 The "fqdn" parameter defines the hostname used to access SF services.
 It is an important parameter since it is used by external identity provider
@@ -20,31 +20,7 @@ such as zuul.fqdn and gerrit.fqdn.
 
 .. note::
 
-    For consistency, hosts defined in the :ref:`arch inventory<sf-arch>` will
+    For consistency, hosts defined in the :ref:`arch inventory<architecture>` will
     have their fqdn hostname set to: name.fqdn
 
 
-Automatic TLS certificate with Let's Encrypt
---------------------------------------------
-
-SF comes with the `lecm <https://github.com/Spredzy/lecm>`_ utility to automatically
-manages TLS certificate. To support let's encrypt https security, you need to
-enable this option in sfconfig.yaml (and run sfconfig after).
-
-.. code-block:: yaml
-
-  network:
-    use_letsencrypt: true
-
-
-Certificate will be automatically created and renewed, you can check the status using
-the *lecm* utility:
-
-.. code-block:: bash
-
-  $ lecm -l
-  +----------------------------------+---------------+------------------------------------------------------------------+-----------------------------------------------------------+------+
-  |               Item               |     Status    |                          subjectAltName                          |                          Location                         | Days |
-  +----------------------------------+---------------+------------------------------------------------------------------+-----------------------------------------------------------+------+
-  |   softwarefactory-project.io     |   Generated   |                 DNS:softwarefactory-project.io                   |    /etc/letsencrypt/pem/softwarefactory-project.io.pem    |  89  |
-  +----------------------------------+---------------+------------------------------------------------------------------+-----------------------------------------------------------+------+

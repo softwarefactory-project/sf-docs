@@ -1,15 +1,4 @@
-.. _sf-arch:
-
-Modular Architecture
-====================
-
-SF architecture is modular and defined by a single file called arch.yaml. This
-file defines the number of nodes, their requirements in term of resources and
-how services are distributed. While every services can be dispatched to a
-dedicated node, it is advised to use the allinone refarch first, and then do
-scale-up as needed (such as moving the SQL database or the ELK stack to
-a separate node).
-
+.. _architecture_config_file:
 
 Configuration
 -------------
@@ -20,11 +9,13 @@ The architecture is defined in /etc/software-factory/arch.yaml:
 
   inventory:
     - name: node01
+      ip: 192.168.240.10
       roles:
         - install-server
         - mysql
 
     - name: node02
+      ip: 192.168.240.11
       roles:
         - gerrit
 
@@ -40,28 +31,48 @@ The minimal architecture includes following components:
 ..      create one page per component if needed
 ..      explain how to use and deploy each component
 
+
+* install-server
 * mysql
+* zookeeper
 * gateway
 * cauth
 * `managesf </docs/managesf/>`_
+* gitweb
 * gerrit
-* zuul
+* logserver
+* zuul-server
+* zuul-launcher
+* zuul-merger
+* nodepool-launcher
 * jenkins
 
 Optional services can be enabled:
 
-* gerritbot
+
+* rabbitmq
 * etherpad
 * lodgeit
-* nodepool
-* mirror
+* gerritbot
+* logserver
+* nodepool-builder
 * murmur
-* storyboard, storyboard-webclient
-* elasticsearch, job-logs-gearman-client, job-logs-gearman-worker, logstash, kibana
+* elasticsearch
+* job-logs-gearman-client
+* job-logs-gearman-worker
+* logstash
+* kibana
+* mirror
+* storyboard
+* storyboard-webclient
 * repoxplorer
-* ...
+* firehose
+* pages
+* hydrant
+* influxdb
+* grafana
 
-
+.. _architecture_extending:
 
 Extending the architecture
 --------------------------
@@ -77,11 +88,14 @@ To deploy a specific service on a dedicated instance:
 * Add desired services in the roles list (e.g., elasticsearch), and
 * Run sfconfig to reconfigure the deployment.
 
-See config/refarch directory for example architectures.
+See sf-config/refarch
+(https://softwarefactory-project.io/r/software-factory/sf-config) directory for
+example architectures.
 
+.. _architecture_migrate_service:
 
-Howto run ELK on a dedicated instance
--------------------------------------
+Migrate a service to a dedicated instance
+-----------------------------------------
 
 This procedure demonstrates how to run the log indexation services (ELK stack) on a dedicated instance:
 
@@ -100,4 +114,4 @@ This procedure demonstrates how to run the log indexation services (ELK stack) o
         - log-gearman-client
         - log-gearman-worker
 
-* Run sfconfig
+* Run sfconfig to apply the architecture modification

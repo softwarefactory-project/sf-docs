@@ -1,5 +1,5 @@
-Firehose
---------
+Embedded MQTT broker
+--------------------
 
 Firehose is an embedded MQTT broker that concentrates events from services
 that are run within your Software Factory deployment.
