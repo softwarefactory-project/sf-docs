@@ -84,7 +84,7 @@ for your OS.
 
  $ sudo pip install git-review
 
-Then initialize the git remote for the project you have cloned::
+Then initialize the git remote for the project you have cloned
 
 .. code-block:: bash
 
