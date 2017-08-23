@@ -3,15 +3,15 @@ digraph {
     edge [fontsize=10];
     rankdir=LR;
 
-    "Gerrit";
-    "Zuul";
-    "master" [label="Jenkins\nMaster"];
-    "slave" [label="Jenkins\nSlave"];
+    "Code review system";
+    "Pipelines manager";
+    "Jobs Launcher";
+    "Slave";
     "User" [shape="box"];
 
-    "User" -> "Gerrit" [label="1. git review"];
-    "Gerrit" -> "Zuul" [label="2. Zuul listens\nfor JSON events"];
-    "Zuul" -> "master" [label="3. Triggers tests"];
-    "master" -> "Gerrit" [label="5. Reports result"];
-    "master" -> "slave" [label="4. Run tests" dir=both];
+    "User" -> "Code review system" [label="1. Submit review"];
+    "Code review system" -> "Pipelines manager" [label="2. Listens for events"];
+    "Pipelines manager" -> "Jobs Launcher" [label="3. Triggers tests"];
+    "Jobs Launcher" -> "Code review system" [label="5. Reports result"];
+    "Jobs Launcher" -> "Slave" [label="4. Run tests" dir=both];
 }
