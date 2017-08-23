@@ -2,6 +2,8 @@
 Deploy Software Factory
 #######################
 
+.. _deployment_requirements:
+
 Requirements
 ============
 
@@ -21,6 +23,8 @@ Always make sure to use the last stable release, the example below use the 2.6
 version.
 
 
+.. _deployment_rpm_based:
+
 Rpm based deployment on CentOS 7
 ================================
 
@@ -31,20 +35,18 @@ On a CentOS system:
   $ sudo yum install -y https://softwarefactory-project.io/repos/sf-release-2.6.rpm
   $ sudo yum update -y
   $ sudo yum install -y sf-config
-  $ sudo sfconfig
 
-
-Configuration
--------------
-
-The sfconfig process uses 2 configuration files to deploy software-factory:
-
-* /etc/software-factory/sfconfig.yaml :ref:`Main configuration documentation<sfconfig>`
-* /etc/software-factory/arch.yaml :ref:`Architecture configuration<sf-arch>`
-
+.. _deployment_image_based:
 
 Image based deployment
 ======================
+
+This documentation describe 3 solutions to install software factory using
+images provides by the project:
+
+* :ref:`on openstack using heat <deployment_image_based_heat>`
+* :ref:`on openstack using nova <deployment_image_based_nova>`
+* :ref:`on kvm host using libvirtd <deployment_image_based_kvm>`
 
 OpenStack based deployment
 --------------------------
@@ -53,6 +55,8 @@ To simplify and speed up the deployment process, a pre-built image should be use
 A new diskimage is created for each release, and it can be rebuilt locally to,
 see :ref:`Image building<sfdib>`.
 
+
+.. _deployment_image_based_install_image:
 
 Install image
 .............
@@ -64,6 +68,8 @@ SF image needs to be uploaded to Glance:
  $ curl -O https://softwarefactory-project.io/releases/sf-2.6/sf-2.6.qcow2
  $ glance image-create --progress --disk-format qcow2 --container-format bare --name sf-2.6.0 --file sf-2.6.qcow2
 
+.. _deployment_image_based_heat:
+
 Deploy with Heat
 ................
 
@@ -71,7 +77,8 @@ Heat templates are available to automate the deployment process of different ref
 
 They all requires:
 
-* the SF image UUID
+* the SF image UUID (:ref:`install image <deployment_image_based_install_image>` and use "openstack image
+  list")
 * the external Neutron network UUID (using "neutron net-list")
 * the FQDN of the deployment (domain parameter)
 * a key-pair name (you should have already created it on your account)
@@ -79,20 +86,24 @@ They all requires:
 .. code-block:: bash
 
  $ curl -O https://softwarefactory-project.io/releases/sf-2.6/sf-2.6-allinone.hot
- $ heat stack-create --template-file ./sf-2.6-allinone.hot -P "key_name=SSH_KEY;domain=FQDN;image_id=GLANCE_UUID;external_network=NETWORK_UUID;flavor=m1.large" sf_stack
+ $ heat stack-create --template-file ./sf-2.6-allinone.hot -P "key_name=SSH_KEY;domain=FQDN;image_id=GLANCE_UUID;external_network=NETWORK_UUID;bootstrap=false;flavor=m1.large" sf_stack
 
-Once the stack is created jump to the section :ref:`Configuration and reconfiguration <reconfiguration>`.
+Once the stack is created jump to the section :ref:`Configuration and reconfiguration <configure_reconfigure>`.
 
+
+.. _deployment_image_based_nova:
 
 Deploy with Nova
 ................
 
 When Heat is not available, SF can also be deployed manually using the Nova CLI, or
-using the web UI of your cloud provider.
+using the web UI of your cloud provider. You should first :ref:`install the software
+factory image <deployment_image_based_install_image>`
 
-Once the VM is created jump to the section :ref:`Configuration and reconfiguration <reconfiguration>`.
-Don't forget to manage by yourself the security groups for the SF deployment :ref:`Network Access <network-access>`.
+Once the VM is created jump to the section :ref:`Configuration and reconfiguration <configure_reconfigure>`.
+Don't forget to manage by yourself the security groups for the SF deployment :ref:`Network Access <configure_network_access>`.
 
+.. _deployment_image_based_kvm:
 
 Kvm based deployment
 --------------------
@@ -223,94 +234,4 @@ First, you have to adapt the following values:
 
   $ ssh 192.168.124.10 -l centos
 
-.. _reconfiguration:
-
-Configuration and reconfiguration
-=================================
-
-First time: **Please read** :ref:`Root password consideration<root-password>`.
-
-* Connect as (root) via SSH to the install-server (the first instance deployed).
-* Edit the configuration sfconfig.yaml (see :ref:`Main configuration documentation<sfconfig>`)
-
-  * set the configuration according to your needs.
-  * all parameters are editable and should be self-explanatory.
-
-* Run configuration script.
-
-.. code-block:: bash
-
- $ ssh -A root@sf_instance
- [root@managesf ~]# vim /etc/software-factory/sfconfig.yaml
- [root@managesf ~]# sfconfig
-
-
-.. _network-access:
-
-Network Access
-==============
-
-All network access goes through the main instance (called gateway). The FQDN
-used during deployment needs to resolved to the instance IP. SF network
-access goes through TCP ports:
-
-* 22 for ssh access to reconfigure and update deployment
-* 80/443 for web interface, all services are proxyfied on the managesf instance
-* 29418 for gerrit access to submit code review
-
-Note that Heat deployment and LXC deployment automatically configure
-security group rules to allow these connections to the gateway.
-
-
-SSL Certificates
-================
-
-By default, SF creates a self-signed certificate. To use another certificate,
-you need to copy the provided files to /var/lib/software-factory/bootstrap-data/certs and
-apply the change with the sfconfig script.
-
-* gateway.crt: the public certificate
-* gateway.key: the private key
-* gateway.chain: the TLS chain file
-
-
-
-Access Software Factory
-=======================
-
-The Dashboard is available at https://FQDN and admin user can authenticate
-using "Internal Login". If you used the default domain *sftests.com* then
-SF allows user "admin" with the default "userpass" password to connect.
-
-If you need more information about authentication mechanisms on SF please refer to
-:ref:`Software Factory Authentication <authentication>`.
-
-
-.. _root-password:
-
-Root password consideration
-===========================
-
-Software Factory image comes with an empty root password. root login is only
-allowed via the console (**root login with password is not allowed via SSH**). The
-empty root password is a facility for folks booting the SF image via a local
-hypervisor (without a metadata server for cloud-init).
-
-It is therefore **highly** recommended to deactivate root login via the console
-**even booted on OpenStack**.
-
-In order to do that:
-
-.. code-block:: bash
-
-  # echo "" > /etc/securetty
-
-However setting a strong password is one of your possibility.
-
-In environments such as OpenStack a metadata server is accessible and the user public
-key will be installed for root and centos users. So user can access the SF node
-via SSH using its private SSH key.
-
-**Outside Openstack, when using a local hypervisor** at first root login via the
-console the user need to add its public ssh key in */root/.ssh/authorized_key* in
-order to be able to access SF node via SSH.
+Once the virtual machine is available, jump to the section :ref:`Configuration and reconfiguration <configure_reconfigure>`.
