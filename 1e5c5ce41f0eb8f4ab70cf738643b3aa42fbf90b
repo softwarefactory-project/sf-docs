@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fabf19d9_c07bb27a",
+        "filename": "docs/user/user.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-08-25T02:43:22Z",
+      "side": 1,
+      "message": "Let\u0027s use better practice, \"$ pip install --user git-review\" doesn\u0027t pollute system env.",
+      "revId": "1e5c5ce41f0eb8f4ab70cf738643b3aa42fbf90b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
