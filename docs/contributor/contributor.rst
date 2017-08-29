@@ -97,7 +97,7 @@ packages are built and stored); to access our koji instance, you must edit your 
 
 .. code-block:: bash
 
- echo "46.231.133.231 koji koji.softwarefactory-project.io" | sudo tee -a /etc/hosts
+ echo "38.145.34.53 koji koji.softwarefactory-project.io" | sudo tee -a /etc/hosts
 
 How to run the tests
 --------------------
