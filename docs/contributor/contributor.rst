@@ -116,8 +116,7 @@ Deployment test
 This will run the *deploy* ansible playbook with the *minimal* architecture
 of Software Factory. The *allinone* architecture can be specified too.
 
-The *deploy* playbook installs the latest development version of Software Factory
-and runs some smoke tests (serverspec) to check that services are well configured.
+The *deploy* playbook installs the latest development version of Software Factory.
 This is the recommended way to start with sf-ci. If the *deploy* scenario fails
 please notify us directly on IRC or create a bug report on our tracker.
 
@@ -205,7 +204,6 @@ of Software Factory to the current development version.
 The scenario runs like this:
 
 * Install and deploy the latest release of Software Factory
-* Run the serverspec validation tests
 * Provision data
 * Upgrade the instance to the current development version
 * Check the provisioned data
@@ -254,6 +252,18 @@ coverage by testing:
 
 * Zuul
 * Gerritbot
+
+Testinfra validation
+....................
+
+After having deployed Software Factory using sf-ci, run:
+
+.. code-block:: bash
+
+ sudo testinfra /usr/share/sf-config/testinfra
+
+The testinfra checks are smoke tests validating Software Factory
+are running.
 
 Configuration script
 --------------------
