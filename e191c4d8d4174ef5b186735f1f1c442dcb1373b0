@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "dac4157f_62cbcc73",
+        "filename": "docs/backup_restore.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-09-05T02:39:38Z",
+      "side": 1,
+      "message": "Could we remove the archive creation at the end of the sf_backup playbook",
+      "revId": "e191c4d8d4174ef5b186735f1f1c442dcb1373b0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3ab451fb_824b7e2b",
         "filename": "docs/backup_restore.rst",
         "patchSetId": 1
@@ -72,6 +89,24 @@
       "side": 1,
       "message": "Looking at the diff between sf_recover and sf_restore that really minimal. The sf_restore:\n\n1/ prepare the backup directory for the archive extraction then extract.\n2/ Stop services before calling restores actions of services.\n3/ Call sfconfig\n\nThe 1 is no longer needed I think.\nThe 2 can be added in the sf_recover even if is case of a new node stopping services is useful but enable sf_recover for a running system.\nThe 3 is not needed because sf_recover call is wrapped by sfconfig already.\n\nSo my point is with not su much changes we can remove sf_restore.yml and use sf_recover.yml in both cases.\n\nFinally maybe we can consider fine grained restoration must be handled by hand so no need for a playbook for that ?",
       "parentUuid": "3ab451fb_05ff7802",
+      "revId": "e191c4d8d4174ef5b186735f1f1c442dcb1373b0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_82cee081",
+        "filename": "docs/backup_restore.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-09-05T02:39:38Z",
+      "side": 1,
+      "message": "Any comments about this ?",
+      "parentUuid": "3ab451fb_f06208ad",
       "revId": "e191c4d8d4174ef5b186735f1f1c442dcb1373b0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
