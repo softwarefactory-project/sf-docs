@@ -160,7 +160,7 @@ First, you have to adapt the following values:
 .. code-block:: bash
 
   $ my_hostname=managesf
-  $ my_domain=sfests.com
+  $ my_domain=sftests.com
   $ my_ssh_pubkey=$(cat ~/.ssh/id_rsa.pub)
 
 * create the user-data file
