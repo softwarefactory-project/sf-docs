@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "dac4157f_a202046e",
+        "filename": "docs/backup_restore.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-05T06:34:46Z",
+      "side": 1,
+      "message": "I prefer to empower user with the actual command instead.",
+      "parentUuid": "3ab451fb_70add830",
+      "revId": "e191c4d8d4174ef5b186735f1f1c442dcb1373b0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dac4157f_62cbcc73",
         "filename": "docs/backup_restore.rst",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2017-09-05T02:39:38Z",
       "side": 1,
       "message": "Could we remove the archive creation at the end of the sf_backup playbook",
+      "revId": "e191c4d8d4174ef5b186735f1f1c442dcb1373b0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_82f8207e",
+        "filename": "docs/backup_restore.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-05T06:34:46Z",
+      "side": 1,
+      "message": "I finally addressed this issue with https://softwarefactory-project.io/r/9559.\n\nSo the documentation should say that:\n\n* By default files are saved in the /var/lib/software-factory/backup directory\n* A tarball can be created using \"-e create_tarball\u003d/home/backup_user/backup.tar.gz\" if needed",
+      "parentUuid": "dac4157f_62cbcc73",
       "revId": "e191c4d8d4174ef5b186735f1f1c442dcb1373b0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -113,6 +149,24 @@
     },
     {
       "key": {
+        "uuid": "dac4157f_62f50c82",
+        "filename": "docs/backup_restore.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-05T06:34:46Z",
+      "side": 1,
+      "message": "The difference is that when running restore, the architecture doesn\u0027t need to be modified, while doing a recover, the instances ip address needs to be manually updated. I\u0027m fine with removing the restore, but that\u0027s how it currently works.",
+      "parentUuid": "dac4157f_82cee081",
+      "revId": "e191c4d8d4174ef5b186735f1f1c442dcb1373b0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3ab451fb_6248722e",
         "filename": "docs/backup_restore.rst",
         "patchSetId": 1
@@ -124,6 +178,24 @@
       "writtenOn": "2017-08-09T16:10:25Z",
       "side": 1,
       "message": "Everything below this line could be discarded.",
+      "revId": "e191c4d8d4174ef5b186735f1f1c442dcb1373b0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_42f2089c",
+        "filename": "docs/backup_restore.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-05T06:34:46Z",
+      "side": 1,
+      "message": "Well actually i kept those feature since they are already implemented...",
+      "parentUuid": "3ab451fb_6248722e",
       "revId": "e191c4d8d4174ef5b186735f1f1c442dcb1373b0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
