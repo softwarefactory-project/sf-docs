@@ -167,6 +167,24 @@
     },
     {
       "key": {
+        "uuid": "dac4157f_33b6483e",
+        "filename": "docs/backup_restore.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-09-07T01:27:28Z",
+      "side": 1,
+      "message": "Following our discussion: sf_restore have been removed recently with the patch 9500 and only the recover exists now. So the doc will reflect that change. Futhermore we said it does not make sense to restore a full backup on a running SF just to restore 1 repo that would have been accidentally deleted for instance. Instead restoring specific data should be done manually where and when it is needed.\n\nThe recover make sense when a new node need to be setuped with backuped data.",
+      "parentUuid": "dac4157f_62f50c82",
+      "revId": "e191c4d8d4174ef5b186735f1f1c442dcb1373b0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3ab451fb_6248722e",
         "filename": "docs/backup_restore.rst",
         "patchSetId": 1
@@ -196,6 +214,24 @@
       "side": 1,
       "message": "Well actually i kept those feature since they are already implemented...",
       "parentUuid": "3ab451fb_6248722e",
+      "revId": "e191c4d8d4174ef5b186735f1f1c442dcb1373b0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_13822453",
+        "filename": "docs/backup_restore.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-09-07T01:27:28Z",
+      "side": 1,
+      "message": "I\u0027ll remove those scripts, I think we are all agree about that.",
+      "parentUuid": "dac4157f_42f2089c",
       "revId": "e191c4d8d4174ef5b186735f1f1c442dcb1373b0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
