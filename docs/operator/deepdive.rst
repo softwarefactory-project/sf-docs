@@ -52,21 +52,25 @@ The system configuration
 The sfconfig script drives the system configuration. This script does the following actions:
 
 * Generates secrets such as internal passwords, ssh keys and tls certificats,
+
 * Ensures configuration files are up-to-date, this script
   checks for missing section and makes sure the defaults value are present. This is particularly
   useful when after an upgrade, a new component configuration has been added
+
 * Generates Ansible inventory and configuration playbook based on the arch.yaml file.
+
+* Generates and execute an Ansible playbook based on the action (e.g. setup, recover, upgrade, ...)
+
 * Waits for ssh access to all instances
-* Run sf_install.yml playbook to install all the components
-* Run sf_setup.yml playbook to setup all the services. This executes all the
-  setup.yml task of enabled ansible roles.
-* Run the sf_configrepo_update.yml playbook
-  to update services based on config repo content.
-* Run sf_postconf.yml playbook to executes all the postconf.yml task of enabled ansible roles such as
-  the mirror role postconf that can enables a new periodic pipeline
+
+* Run testinfra tests
+
 * All the generated data is written in /var/lib/software-factory:
-  * ansible/ contains all the playbooks and the group_vars.
-  * bootstrap-data/ contains file secrets such as tls certificats.
+
+  * ansible/ contains the playbooks and the group_vars.
+
+  * bootstrap-data/ contains file secrets such as tls certificats or ssh keys.
+
   * sql/ contains database creation scripts.
 
 That system configuration process is re-entrant and needs to be executed everytime settings are changed.
