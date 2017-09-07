@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dac4157f_93c4f492",
+        "filename": "docs/operator/backup_restore.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-07T02:41:14Z",
+      "side": 1,
+      "message": "can be copied (using rsync for example)",
+      "revId": "79e4cba8c5cf5914395e3396d18c31807d28aa60",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_73c16080",
+        "filename": "docs/operator/backup_restore.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-07T02:41:14Z",
+      "side": 1,
+      "message": "you could remove the \"that aim\"",
+      "revId": "79e4cba8c5cf5914395e3396d18c31807d28aa60",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_53be5c00",
+        "filename": "docs/operator/backup_restore.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-07T02:41:14Z",
+      "side": 1,
+      "message": "s/Prior to run/Before running/",
+      "revId": "79e4cba8c5cf5914395e3396d18c31807d28aa60",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_33bbe810",
+        "filename": "docs/operator/backup_restore.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-07T02:41:14Z",
+      "side": 1,
+      "message": "Install the sf-release package",
+      "revId": "79e4cba8c5cf5914395e3396d18c31807d28aa60",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_1337c4b1",
+        "filename": "docs/operator/backup_restore.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-07T02:41:14Z",
+      "side": 1,
+      "message": "Copy the backup data",
+      "revId": "79e4cba8c5cf5914395e3396d18c31807d28aa60",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_f33b309b",
+        "filename": "docs/operator/backup_restore.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-07T02:41:14Z",
+      "side": 1,
+      "message": "the legacy arch.yaml",
+      "revId": "79e4cba8c5cf5914395e3396d18c31807d28aa60",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_d3402c0a",
+        "filename": "docs/operator/backup_restore.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-07T02:41:14Z",
+      "side": 1,
+      "message": "it\u0027s a .yaml file",
+      "revId": "79e4cba8c5cf5914395e3396d18c31807d28aa60",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dac4157f_b345b818",
+        "filename": "docs/operator/backup_restore.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-07T02:41:14Z",
+      "side": 1,
+      "message": "data restoring ?",
+      "revId": "79e4cba8c5cf5914395e3396d18c31807d28aa60",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
