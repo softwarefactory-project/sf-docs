@@ -19,7 +19,7 @@ Note that SF uses "sftests.com" as default FQDN and if the FQDN doesn't resolve
 it needs to be locally set in */etc/hosts* file because the web interface
 authentication mechanism redirects browser to the FQDN.
 
-Always make sure to use the last stable release, the example below use the 2.6
+Always make sure to use the last stable release, the example below use the 2.7
 version.
 
 
@@ -32,9 +32,10 @@ On a CentOS system:
 
 .. code-block:: bash
 
-  $ sudo yum install -y https://softwarefactory-project.io/repos/sf-release-2.6.rpm
+  $ sudo yum install -y https://softwarefactory-project.io/repos/sf-release-2.7.rpm
   $ sudo yum update -y
   $ sudo yum install -y sf-config
+  $ sudo sfconfig
 
 .. _deployment_image_based:
 
@@ -65,8 +66,8 @@ The Software Factory base image first needs to be created in Glance:
 
 .. code-block:: bash
 
-  $ curl -O https://softwarefactory-project.io/releases/sf-2.6/sf-2.6.qcow2
-  $ openstack image create sf-2.6.0 --disk-format qcow2 --container-format bare --file softwarefactory-C7.0-2.6.0.img.qcow2
+  $ curl -O https://softwarefactory-project.io/releases/sf-2.7/sf-2.7.qcow2
+  $ openstack image create sf-2.7.0 --disk-format qcow2 --container-format bare --file softwarefactory-C7.0-2.7.0.img.qcow2
 
 .. _deployment_image_based_heat:
 
@@ -90,13 +91,13 @@ First, retrieve the template you're interested in, for example 'all in one':
 
 .. code-block:: bash
 
- $ curl -O https://softwarefactory-project.io/releases/sf-2.6/sf-2.6-allinone.hot
+ $ curl -O https://softwarefactory-project.io/releases/sf-2.7/sf-2.7-allinone.hot
 
 Then, create the Heat stack:
 
 .. code-block:: bash
 
-  $ openstack stack create sf_stack --template softwarefactory-C7.0-2.6.0-allinone.hot \
+  $ openstack stack create sf_stack --template softwarefactory-C7.0-2.7.0-allinone.hot \
       --parameter key_name=<key-name> \
       --parameter domain=<fqdn> \
       --parameter image_id=<glance image UUID> \
@@ -145,9 +146,9 @@ SF image needs to be downloaded on your kvm host
 
 .. code-block:: bash
 
-  $ curl -O https://softwarefactory-project.io/releases/sf-2.6/sf-2.6.qcow2
-  $ sudo mv sf-2.6.qcow2 /var/lib/libvirt/images
-  $ sudo qemu-img resize /var/lib/libvirt/images/sf-2.6.qcow2 +20G
+  $ curl -O https://softwarefactory-project.io/releases/sf-2.7/sf-2.7.qcow2
+  $ sudo mv sf-2.7.qcow2 /var/lib/libvirt/images
+  $ sudo qemu-img resize /var/lib/libvirt/images/sf-2.7.qcow2 +20G
 
 Prepare the cloud-init configuration files
 ..........................................
@@ -235,7 +236,7 @@ First, you have to adapt the following values:
 
 .. code-block:: bash
 
-  $ sudo qemu-img create -f qcow2 -b /var/lib/libvirt/images/sf-2.6.qcow2 /var/lib/libvirt/images/$my_hostname.qcow2
+  $ sudo qemu-img create -f qcow2 -b /var/lib/libvirt/images/sf-2.7.qcow2 /var/lib/libvirt/images/$my_hostname.qcow2
 
 * boot the instance
 

@@ -81,20 +81,29 @@ Then SF is meant to be a self-service system, thus project configuration is done
 The config-repo
 ---------------
 
-Once SF is up and running, the actual configuration of the CI happens in the config-repo:
+Once SF is up and running, the user configuration of Software Factory happens
+via the config-repo:
 
-* jobs/: Jenkins jobs jjb configuration,
-* zuul/: CI gating zuul yaml configuration,
-* nodepool/: Slave configuration with images and labels definitions,
+* zuul3/: Zuul3 configuration
+* nodepool/nodepoolV3.yaml: Nodepool3 configuration
 * gerritbot/: IRC notification for gerrit event configuration,
 * gerrit/: Gerrit replication endpoint configuration, and
 * mirrors/: mirror2swift configuration.
 * resources/: Platform wide groups, projects, repositories definitions.
+* dashboard/: Custom Gerrit dashboard configuration
+* repoxplorer/: RepoXplorer additional definitions (idents, groups, ...)
+* policies/: ManageSF API ACLs definition
+
+Deprecated configuration:
+* jobs/: Jenkins jobs jjb configuration,
+* jobs-zuul/: Zuul-launcher jobs jjb configuration,
+* zuul/: CI gating zuul yaml configuration,
+* nodepool/nodepool.yaml: Slave configuration with images and labels definitions,
 
 This is actually managed through SF CI system, thanks to the config-update job.
 This job is actually an ansible playbook that will:
 
-* Reconfigure each jenkins using jenkins-jobs-builder,
 * Reload zuul configuration (hot reload without losing in-progress tasks),
 * Reload nodepool, gerritbot and gerrit replication, and
 * Set mirror2swift configuration for manual or next periodic update.
+* Apply resources definitions (create repositories, update groups, ...)
