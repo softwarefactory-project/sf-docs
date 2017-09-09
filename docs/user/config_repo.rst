@@ -26,6 +26,8 @@ To make a change in the configuration:
 .. toctree::
    :maxdepth: 2
 
+   zuul3_user
+   nodepool3_user
    jenkins_user
    zuul_user
    nodepool_user

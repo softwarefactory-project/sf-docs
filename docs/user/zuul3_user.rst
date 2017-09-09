@@ -1,0 +1,57 @@
+.. _zuul3-user:
+
+Refer to the upstream `documentation <https://docs.openstack.org/infra/zuul/feature/zuulv3/user/>`
+regarding available pipelines and jobs options.
+
+In Software Factory,
+
+* Projects are added to the main configuration in the config repo zuulV3 directory
+* Jobs can inherit from the zuul-jobs repository base jobs
+* Then projects job can also define custom jobs in their repo
+
+For each sources, there are 2 types of projects:
+
+* config-projects hold configuration information such as logserver access.
+  Jobs defined in config-projects run with elevated privileges.
+* untrusted-projects are projects being tested or deployed.
+
+
+Adding a project to the zuulV3 service
+--------------------------------------
+
+Add a file in the config/zuulV3/project-name.yaml:
+
+.. code-block:: yaml
+
+  - tenant:
+      name: ''
+      source:
+        source-name:
+          untrusted-projects:
+            - project-name
+
+
+* Leave the tenant name to ''
+* Replace source-name by the location of the repository (gerrit for internal gerrit)
+* Replace project-name by the project name
+* Replace untrusted-projects by config-project if the project is going to store secrets
+
+After merging this change, the config-update job will reload the zuul scheduler.
+
+
+Adding a job to a project
+-------------------------
+
+Project CI configuration is happening in repos, a project can define a job by
+having a file named .zuul.yaml at the root of the project's repository:
+
+.. code-block:: yaml
+
+  - project:
+      name: project-name
+      check:
+        jobs:
+          - linters
+      gate:
+        jobs:
+          - linters
