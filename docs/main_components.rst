@@ -38,10 +38,40 @@ See the `pipelines manager <Pipelines manager>`_ section for more details.
    :scale: 50 %
 
 
+Continuous Integration, Delivery, and Deployment system
+-------------------------------------------------------
+
+`Zuul(V3) <https://docs.openstack.org/infra/zuul/feature/zuulv3/>` is the
+service in charge of running tests and managing projects's pipeline such as gate and
+post deployment:
+
+* Jobs are written in ansible and stored in repository
+* Secrets management system to manage deployment/publishing key
+* Simple multi-node jobs description
+
+When deployed locally, the service is configured with a few roles:
+
+* prepare-workspace: copy project with under review change
+* emit-ara-report: generate html logs of ansible play
+* validate-host: verify and log information about build host
+* upload-logs: upload job logs to a static webserver
+
+
+Single-use test nodes on demand
+-------------------------------
+
+`Nodepool(V3) <https://docs.openstack.org/infra/nodepool/feature/zuulv3>` is
+the service in charge of creating tests environment. It supports 3 types of
+drivers to create instances:
+
+* Openstack cloud
+* OpenContainer (runC)
+* Static node
+
 Pipelines manager
 -----------------
 
-On Software Factory `Zuul <http://ci.openstack.org/zuul/>`_ is by default configured to provide five pipelines:
+`Zuul(V2) <http://ci.openstack.org/zuul/>`_ is the legacy CI configured with five pipelines:
 
 * A **check** pipeline, used for preliminary tests on upcoming changes
 * A **gate** pipeline, used to make sure an approved change can be merged
@@ -56,8 +86,8 @@ On Software Factory `Zuul <http://ci.openstack.org/zuul/>`_ is by default config
 Test instances management
 -------------------------
 
-`Nodepool <http://docs.openstack.org/infra/system-config/nodepool.html>`_ is a
-test instances manager. It is designed to handle the life cycle of
+`Nodepool(V2) <http://docs.openstack.org/infra/system-config/nodepool.html>`_ is
+the legacy test instances manager. It is designed to handle the life cycle of
 work nodes (creation, provision, assignation and destruction) on one or more
 OpenStack projects. At least one OpenStack cloud account is needed to allow nodepool
 to store base images and VM snapshots, and manage work nodes. Within Software Factory

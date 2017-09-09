@@ -83,13 +83,18 @@ The config-repo
 
 Once SF is up and running, the actual configuration of the CI happens in the config-repo:
 
-* jobs/: Jenkins jobs jjb configuration,
-* zuul/: CI gating zuul yaml configuration,
-* nodepool/: Slave configuration with images and labels definitions,
+* zuul3/: Zuul3 configuration
+* nodepool/nodepoolV3.yaml: Nodepool3 configuration
 * gerritbot/: IRC notification for gerrit event configuration,
 * gerrit/: Gerrit replication endpoint configuration, and
 * mirrors/: mirror2swift configuration.
 * resources/: Platform wide groups, projects, repositories definitions.
+
+Deprecated configuration:
+* jobs/: Jenkins jobs jjb configuration,
+* jobs-zuul/: Zuul-launcher jobs jjb configuration,
+* zuul/: CI gating zuul yaml configuration,
+* nodepool/nodepool.yaml: Slave configuration with images and labels definitions,
 
 This is actually managed through SF CI system, thanks to the config-update job.
 This job is actually an ansible playbook that will:
