@@ -50,6 +50,8 @@ provides by Software Factory:
    fqdn
    ssl
    auths
+   zuul3_operator
+   nodepool3_operator
    zuul_operator
    nodepool_operator
    gerritbot_operator

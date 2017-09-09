@@ -43,6 +43,10 @@ The minimal architecture includes following components:
 * gitweb
 * gerrit
 * logserver
+* zuul3-scheduler
+* zuul3-executor
+* zuul3-web
+* nodepool3-launcher
 * zuul-server
 * zuul-launcher
 * zuul-merger
@@ -51,7 +55,8 @@ The minimal architecture includes following components:
 
 Optional services can be enabled:
 
-
+* zuul3-merger
+* nodepool3-builder
 * rabbitmq
 * etherpad
 * lodgeit
@@ -81,7 +86,7 @@ Extending the architecture
 
 To deploy a specific service on a dedicated instance:
 
-* Start a new instance using the SF image (same version as the main one) on the same network with the desired flavor
+* Start a new instance on the same network with the desired flavor
 * Attach a dedicated volume if needed
 * Make sure other instances security group allows network access from the new instance
 * Add root public ssh key (install-server:/root/.ssh/id_rsa.pub) to the new instance,
