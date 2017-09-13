@@ -145,6 +145,23 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_eb2fb9f4",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-09-13T12:52:22Z",
+      "side": 1,
+      "message": "Documentation of the legacy nodepool explained here how to declare providers. Could you link to the nodepool_operator doc here if configuration detail remain the same between nodepool2 and nodepool3 ?",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_abb8a1e6",
         "filename": "docs/operator/operator.rst",
         "patchSetId": 1
