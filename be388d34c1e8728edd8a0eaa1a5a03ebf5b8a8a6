@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_711dd80e",
+        "filename": "docs/main_components.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-09-18T13:37:36Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "9abe1de1_ab2ae12a",
+      "range": {
+        "startLine": 41,
+        "startChar": 0,
+        "endLine": 94,
+        "endChar": 83
+      },
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_0bd30d3a",
         "filename": "docs/operator/deepdive.rst",
         "patchSetId": 1
@@ -76,6 +100,24 @@
       "writtenOn": "2017-09-13T11:04:02Z",
       "side": 1,
       "message": "I would have added a sentence saying jobs-zuul and zuul directories are still used only for the default SF internal config-update and config-check configuration jobs. Indeed those jobs are still managed by zuulv2.",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_511ad418",
+        "filename": "docs/operator/deepdive.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-09-18T13:37:36Z",
+      "side": 1,
+      "message": "+1 meaning that these directories must not be removed !",
+      "parentUuid": "9abe1de1_6b1de90e",
       "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -208,6 +250,30 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_311760ef",
+        "filename": "docs/operator/operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-09-18T13:37:36Z",
+      "side": 1,
+      "message": "+1 3rd party CI deserves its own doc page with an intro, advantages and config steps.",
+      "parentUuid": "9abe1de1_cbb3d509",
+      "range": {
+        "startLine": 25,
+        "startChar": 0,
+        "endLine": 47,
+        "endChar": 123
+      },
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_cbaab585",
         "filename": "docs/operator/zuul3_operator.rst",
         "patchSetId": 1
@@ -236,6 +302,30 @@
       "writtenOn": "2017-09-13T11:04:02Z",
       "side": 1,
       "message": "Do we really need the command output ?",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 47,
+        "endChar": 37
+      },
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_8c41733c",
+        "filename": "docs/operator/zuul3_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-09-18T13:37:36Z",
+      "side": 1,
+      "message": "if kept here at least the most important arguments should be explained. For example, shouldn\u0027t \"tenant\" always be the SF-defined default value of the zuul3 deployment?",
+      "parentUuid": "9abe1de1_8b7cbd21",
       "range": {
         "startLine": 28,
         "startChar": 0,
@@ -311,6 +401,23 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_ac5b172e",
+        "filename": "docs/operator/zuul3_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-09-18T13:37:36Z",
+      "side": 1,
+      "message": "I\u0027m not sure I understand this sentence",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_cb8195fd",
         "filename": "docs/user/nodepool3_user.rst",
         "patchSetId": 1
@@ -322,6 +429,41 @@
       "writtenOn": "2017-09-13T11:04:02Z",
       "side": 1,
       "message": "Below is an example of the configuration for using the OCI driver provided by the hypervisor-oci role.",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_6c3e1fba",
+        "filename": "docs/user/nodepool3_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-09-18T13:37:36Z",
+      "side": 1,
+      "message": "is this role explained anywhere in the doc?",
+      "parentUuid": "9abe1de1_cb8195fd",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_4c4b5b5a",
+        "filename": "docs/user/nodepool3_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-09-18T13:37:36Z",
+      "side": 1,
+      "message": "what is expected here, an URI?",
       "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -362,6 +504,23 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_2c48275b",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-09-18T13:37:36Z",
+      "side": 1,
+      "message": "I think an example would be very welcome here.\nAlso, an explanation about what it means for a project to be considered \"untrusted\" in zuul\u0027s context.",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_2b9c9168",
         "filename": "docs/user/zuul3_user.rst",
         "patchSetId": 1
@@ -379,6 +538,40 @@
         "endLine": 40,
         "endChar": 57
       },
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_8c6853bc",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-09-18T13:37:36Z",
+      "side": 1,
+      "message": "Where does \"linters\" come from ? is it a default job ? This file seems to define pipelines jobs for the repository, but where do we define jobs themselves ?",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_4c623bda",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-09-18T13:37:36Z",
+      "side": 1,
+      "message": "does \"project-name\" have to be the name of the repository where .zuul.yaml is stored ? What happens if I make a typo, or write the name of another distinct repo here ?",
       "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
