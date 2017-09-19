@@ -49,6 +49,24 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_ec1c6f79",
+        "filename": "docs/main_components.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "Done, though the comparison between the two versions remains to be written... Maybe as a follow-up?",
+      "parentUuid": "9abe1de1_711dd80e",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_0bd30d3a",
         "filename": "docs/operator/deepdive.rst",
         "patchSetId": 1
@@ -72,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_cc11ab5f",
+        "filename": "docs/operator/deepdive.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9abe1de1_0bd30d3a",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_ebd7b921",
         "filename": "docs/operator/deepdive.rst",
         "patchSetId": 1
@@ -83,6 +119,24 @@
       "writtenOn": "2017-09-13T11:04:02Z",
       "side": 1,
       "message": "Missing directories:\n* dashboard/: Custom Gerrit dashboard configuration\n* repoxplorer/: RepoXplorer additional definitions (idents, groups, ...)\n* policies/: ManageSF API ACLs definition",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_ac167753",
+        "filename": "docs/operator/deepdive.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9abe1de1_ebd7b921",
       "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -124,6 +178,24 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_8c0cd343",
+        "filename": "docs/operator/deepdive.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "It seems like we could get the config-check/update working with the new zuul, so I hope these won\u0027t be needed anymore.",
+      "parentUuid": "9abe1de1_511ad418",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_cbdcf548",
         "filename": "docs/operator/deepdive.rst",
         "patchSetId": 1
@@ -147,6 +219,24 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_4c06bb21",
+        "filename": "docs/operator/deepdive.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9abe1de1_cbdcf548",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_abe1c100",
         "filename": "docs/operator/deepdive.rst",
         "patchSetId": 1
@@ -158,6 +248,24 @@
       "writtenOn": "2017-09-13T11:04:02Z",
       "side": 1,
       "message": "* Apply resources definitions (create repositories, update groups, ...)",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_6c097f31",
+        "filename": "docs/operator/deepdive.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9abe1de1_abe1c100",
       "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -187,6 +295,24 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_2c038711",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "With the \"...\" prefix, this shouldn\u0027t be rendered.",
+      "parentUuid": "9abe1de1_6be4c90c",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_eb2fb9f4",
         "filename": "docs/operator/nodepool3_operator.rst",
         "patchSetId": 1
@@ -198,6 +324,24 @@
       "writtenOn": "2017-09-13T12:52:22Z",
       "side": 1,
       "message": "Documentation of the legacy nodepool explained here how to declare providers. Could you link to the nodepool_operator doc here if configuration detail remain the same between nodepool2 and nodepool3 ?",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_20ff0b03",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9abe1de1_eb2fb9f4",
       "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -221,6 +365,24 @@
         "endLine": 20,
         "endChar": 12
       },
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_00040713",
+        "filename": "docs/operator/operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "What do you mean?",
+      "parentUuid": "9abe1de1_abb8a1e6",
       "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -274,6 +436,24 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_e008f32a",
+        "filename": "docs/operator/operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "Hum, let\u0027s discuss about that, this \"quickstart\" section sounds worthy to have before going into architecture and customization. There could be a more documented \"Third-Party CI\" chapter with more information such as scaling the merger and configuring the reporting...",
+      "parentUuid": "9abe1de1_311760ef",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_cbaab585",
         "filename": "docs/operator/zuul3_operator.rst",
         "patchSetId": 1
@@ -285,6 +465,24 @@
       "writtenOn": "2017-09-13T11:04:02Z",
       "side": 1,
       "message": "s",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_c00def38",
+        "filename": "docs/operator/zuul3_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9abe1de1_cbaab585",
       "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -338,6 +536,42 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_80101750",
+        "filename": "docs/operator/zuul3_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "We do need to discuss and document tenant usage indeed! ftr, the default tenant will be named \u0027local\u0027, see the zuul-web change.",
+      "parentUuid": "9abe1de1_8c41733c",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_a0131b5c",
+        "filename": "docs/operator/zuul3_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "Not really, I thought it would be self explanatory...",
+      "parentUuid": "9abe1de1_8b7cbd21",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_4b9fc55f",
         "filename": "docs/operator/zuul3_operator.rst",
         "patchSetId": 1
@@ -355,6 +589,24 @@
         "endLine": 60,
         "endChar": 40
       },
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_601d0366",
+        "filename": "docs/operator/zuul3_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9abe1de1_4b9fc55f",
       "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -401,6 +653,24 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_401aff6f",
+        "filename": "docs/operator/zuul3_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9abe1de1_6b79692f",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_ac5b172e",
         "filename": "docs/operator/zuul3_operator.rst",
         "patchSetId": 1
@@ -412,6 +682,24 @@
       "writtenOn": "2017-09-18T13:37:36Z",
       "side": 1,
       "message": "I\u0027m not sure I understand this sentence",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_2026ebba",
+        "filename": "docs/operator/zuul3_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9abe1de1_ac5b172e",
       "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -453,6 +741,42 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_e01fd359",
+        "filename": "docs/user/nodepool3_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9abe1de1_cb8195fd",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_002be783",
+        "filename": "docs/user/nodepool3_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "not exactly, though it\u0027s referenced bellow...",
+      "parentUuid": "9abe1de1_6c3e1fba",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_4c4b5b5a",
         "filename": "docs/user/nodepool3_user.rst",
         "patchSetId": 1
@@ -464,6 +788,24 @@
       "writtenOn": "2017-09-18T13:37:36Z",
       "side": 1,
       "message": "what is expected here, an URI?",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_c024cfb0",
+        "filename": "docs/user/nodepool3_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "It\u0027s a hostname",
+      "parentUuid": "9abe1de1_4c4b5b5a",
       "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -487,6 +829,24 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_a03afbcb",
+        "filename": "docs/user/nodepool3_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "This already extensively documented in the linked documentation at the begining of this chapter.\nOnce we have the nodepool-doc build and hosted locally, how about we link its config section instead?",
+      "parentUuid": "9abe1de1_ab866111",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_0b88ad21",
         "filename": "docs/user/zuul3_user.rst",
         "patchSetId": 1
@@ -504,6 +864,24 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_8037f7e2",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9abe1de1_0b88ad21",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_2c48275b",
         "filename": "docs/user/zuul3_user.rst",
         "patchSetId": 1
@@ -515,6 +893,24 @@
       "writtenOn": "2017-09-18T13:37:36Z",
       "side": 1,
       "message": "I think an example would be very welcome here.\nAlso, an explanation about what it means for a project to be considered \"untrusted\" in zuul\u0027s context.",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_6034e3dd",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9abe1de1_2c48275b",
       "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -544,6 +940,24 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_4031dfeb",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9abe1de1_2b9c9168",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_8c6853bc",
         "filename": "docs/user/zuul3_user.rst",
         "patchSetId": 1
@@ -561,6 +975,24 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_204dcb72",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "Well this isn\u0027t exactly documented in software-factory documentation, though this section begin with \"read the zuul doc first\". How about, when we have the zuul-doc build and hosted locally, we link to the relevant section?\n\nFor the record, jobs are defined in zuul.yaml too",
+      "parentUuid": "9abe1de1_8c6853bc",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_4c623bda",
         "filename": "docs/user/zuul3_user.rst",
         "patchSetId": 1
@@ -572,6 +1004,24 @@
       "writtenOn": "2017-09-18T13:37:36Z",
       "side": 1,
       "message": "does \"project-name\" have to be the name of the repository where .zuul.yaml is stored ? What happens if I make a typo, or write the name of another distinct repo here ?",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_0052c713",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-19T22:57:53Z",
+      "side": 1,
+      "message": "It needs to be the name of the repository, what happen on mistake needs to be tested :)",
+      "parentUuid": "9abe1de1_4c623bda",
       "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
