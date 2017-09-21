@@ -626,6 +626,24 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_e0e7d3aa",
+        "filename": "docs/operator/zuul3_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-09-21T12:49:28Z",
+      "side": 1,
+      "message": "With the new zuul-web package of today. The file looks like correct now :)",
+      "parentUuid": "9abe1de1_c05e0f76",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_4b9fc55f",
         "filename": "docs/operator/zuul3_operator.rst",
         "patchSetId": 1
