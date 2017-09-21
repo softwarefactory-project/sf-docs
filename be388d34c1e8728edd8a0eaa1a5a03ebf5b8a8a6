@@ -389,6 +389,24 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_20602b35",
+        "filename": "docs/operator/operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-09-21T10:43:15Z",
+      "side": 1,
+      "message": "line 92 of this file there is a link to \"​deployment_rpm_based\" section from deployment.rst file. Better to avoid duplication.",
+      "parentUuid": "9abe1de1_00040713",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_cbb3d509",
         "filename": "docs/operator/operator.rst",
         "patchSetId": 1
@@ -448,6 +466,24 @@
       "side": 1,
       "message": "Hum, let\u0027s discuss about that, this \"quickstart\" section sounds worthy to have before going into architecture and customization. There could be a more documented \"Third-Party CI\" chapter with more information such as scaling the merger and configuring the reporting...",
       "parentUuid": "9abe1de1_311760ef",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_e0591390",
+        "filename": "docs/operator/operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-09-21T10:43:15Z",
+      "side": 1,
+      "message": "It appears before \"Deployment\" line 84. I would suggest to copy this section after the \"Configuration\" section of that file line 110.\n\nNevertheless I still think it deserves its own file (that can be linked with others line 140) but maybe adding a section line 110 \"Configure Third Party CI\" with just the link to the proper doc file to give that piece of doc an easy access for the reader would be nice.",
+      "parentUuid": "9abe1de1_e008f32a",
       "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -566,6 +602,24 @@
       "side": 1,
       "message": "Not really, I thought it would be self explanatory...",
       "parentUuid": "9abe1de1_8b7cbd21",
+      "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_c05e0f76",
+        "filename": "docs/operator/zuul3_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-09-21T10:43:15Z",
+      "side": 1,
+      "message": "About the tenant discussion I think it is really nice for the user to have only its project(or tenant) related infos in zuul-web. Unfortunately I tried to declared a new tenant under config-repo/zuulv3/ on my deployment but it seems the resulting /etc/opt/rh/rh-python35/zuul/main.yaml was computed like that:\n\n```\n- tenant:\n    name: local\n    source:\n      gerrit:\n        config-projects:\n        - zuul-jobs\n        untrusted-projects:\n        - testr\n```\n\nIn config-repo/zuulV3/ I have:\n\n```[root@managesf.sftests.com zuulV3]# cat _main.yaml \n---\n- tenant:\n    # Use empty name to fix bug with default status.json\n    name: \u0027local\u0027\n    source:\n      gerrit:\n        config-projects:\n          - zuul-jobs\n[root@managesf.sftests.com zuulV3]# cat fabien.yaml \n---  \n- tenant:\n    name: \u0027fabien\u0027\n    source:\n      gerrit:\n        untrusted-projects:\n          - testr\n```\n\nIt seems there is a merge issue.",
+      "parentUuid": "9abe1de1_a0131b5c",
       "revId": "be388d34c1e8728edd8a0eaa1a5a03ebf5b8a8a6",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
