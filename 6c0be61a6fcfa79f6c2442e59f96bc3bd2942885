@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9abe1de1_60774303",
+        "filename": "docs/main_components.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-09-21T10:43:28Z",
+      "side": 1,
+      "message": "\"tag\" and \"periodic\" are not defined yet with zuul V3. It seems that the one name \"release\" replace \"tag\".",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 77
+      },
+      "revId": "6c0be61a6fcfa79f6c2442e59f96bc3bd2942885",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_80513765",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-09-21T10:43:28Z",
+      "side": 1,
+      "message": "nodepool3",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 22
+      },
+      "revId": "6c0be61a6fcfa79f6c2442e59f96bc3bd2942885",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_a0543b54",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-09-21T10:43:28Z",
+      "side": 1,
+      "message": "/var/opt/rh/rh-python35/log/nodepool",
+      "revId": "6c0be61a6fcfa79f6c2442e59f96bc3bd2942885",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_604e23c3",
+        "filename": "docs/operator/zuul3_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-09-21T10:43:28Z",
+      "side": 1,
+      "message": "What about adding ?:\n* Finally passing all loggers\u0027 level to DEBUG in /etc/opt/rh/rh-python35/zuul/scheduler-logging.yaml then restarting the service rh-python35-zuul-scheduler might help to debug.",
+      "revId": "6c0be61a6fcfa79f6c2442e59f96bc3bd2942885",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
