@@ -55,3 +55,27 @@ having a file named .zuul.yaml at the root of the project's repository:
       gate:
         jobs:
           - linters
+
+Create a secret to be used in jobs
+----------------------------------
+
+Zuul provides a public key for every project that need to be used to encrypt
+secret data. Getting a project key is as follow:
+
+.. code-block:: bash
+
+  curl -O https://sftests.com/zuul3/keys/gerrit/project-name.pem
+
+The *encrypt_secret.py* tool, from the Zuul's repository (branch *feature/zuulv3*), can be used to
+create the YAML tree to be pushed in the project *.zuul.d/* directory.
+
+.. code-block:: bash
+
+  ./encrypt_secret.py https://sftests.com/zuul3/ gerrit project-name --infile secret.data --outfile secret.yaml
+
+Then *<name>* and *<fieldname>* fields that are placeholders must be replaced in the
+generated *secret.yaml* file.
+
+A secret used in a job must be defined in the same project than the job is defined.
+The user should read carefully the `section <https://docs.openstack.org/infra/zuul/user/config.html?highlight=secret#secret>`
+about secrets.
