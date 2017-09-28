@@ -25,6 +25,24 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_34e9891b",
+        "filename": "docs/main_components.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-28T16:35:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9abe1de1_60774303",
+      "revId": "6c0be61a6fcfa79f6c2442e59f96bc3bd2942885",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_80513765",
         "filename": "docs/operator/nodepool3_operator.rst",
         "patchSetId": 2
@@ -48,6 +66,24 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_14ee8522",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-28T16:35:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9abe1de1_80513765",
+      "revId": "6c0be61a6fcfa79f6c2442e59f96bc3bd2942885",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_a0543b54",
         "filename": "docs/operator/nodepool3_operator.rst",
         "patchSetId": 2
@@ -65,6 +101,24 @@
     },
     {
       "key": {
+        "uuid": "9abe1de1_f4f2f105",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-28T16:35:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9abe1de1_a0543b54",
+      "revId": "6c0be61a6fcfa79f6c2442e59f96bc3bd2942885",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9abe1de1_604e23c3",
         "filename": "docs/operator/zuul3_operator.rst",
         "patchSetId": 2
@@ -76,6 +130,24 @@
       "writtenOn": "2017-09-21T10:43:28Z",
       "side": 1,
       "message": "What about adding ?:\n* Finally passing all loggers\u0027 level to DEBUG in /etc/opt/rh/rh-python35/zuul/scheduler-logging.yaml then restarting the service rh-python35-zuul-scheduler might help to debug.",
+      "revId": "6c0be61a6fcfa79f6c2442e59f96bc3bd2942885",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_d4f7edf3",
+        "filename": "docs/operator/zuul3_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-09-28T16:35:08Z",
+      "side": 1,
+      "message": "Good idea, done",
+      "parentUuid": "9abe1de1_604e23c3",
       "revId": "6c0be61a6fcfa79f6c2442e59f96bc3bd2942885",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
