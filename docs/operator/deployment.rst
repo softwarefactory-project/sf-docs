@@ -168,6 +168,7 @@ First, you have to adapt the following values:
 .. code-block:: bash
 
   $ cat << EOF >> user-data
+  #cloud-config
   hostname: $my_hostname
   fqdn: $my_hostname.$my_domain
 
