@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9abe1de1_14a685c1",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-09-29T09:55:44Z",
+      "side": 1,
+      "message": "might be worth mentioning it is hidden within the zuul3 branch",
+      "revId": "862b1ac6d113c8777098d1c3ebcf65a9cfbc4135",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_f4aaf184",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-09-29T09:55:44Z",
+      "side": 1,
+      "message": "This is the kind of stuff that should be integrated to sfmanager, I\u0027ll create a story for this",
+      "revId": "862b1ac6d113c8777098d1c3ebcf65a9cfbc4135",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_b4959941",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-09-29T09:55:44Z",
+      "side": 1,
+      "message": "Unclear",
+      "revId": "862b1ac6d113c8777098d1c3ebcf65a9cfbc4135",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_d4afed92",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-09-29T09:55:44Z",
+      "side": 1,
+      "message": "I wish they had some practical examples of what a dictionary might look like for frequent cases like SSH keys or usernames and passwords. Maybe we could have one here?",
+      "revId": "862b1ac6d113c8777098d1c3ebcf65a9cfbc4135",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
