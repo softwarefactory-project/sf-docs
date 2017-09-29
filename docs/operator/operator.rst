@@ -58,35 +58,16 @@ Management
 .. toctree::
    :maxdepth: 1
 
-* If you need to migrate a previous work environment to an instance of
-  Software Factory, you will found useful this `migration documentation <migration>`_
-  to easily migrate your workflow on a Software Factory instance.
-* The `access control documentation <access_control>`_ explains how to configure the
+* The :ref:`access control documentation <access_control>` explains how to configure the
   Software Factory policy engine to control who can do what on the managesf
   REST API(You can find some useful information on the `sfmanager documentation </docs/sfmanager/>`_)
-* You can find the description of the `upgrade process <upgrade>`_ to upgrade
+* You can find the description of the :ref:`upgrade process <upgrade>` to upgrade
   to the last version of Software Factory.
-* Finally how to `backup and restore <backup_restore>`_ a Software Factory
+* Finally how to :ref:`backup and restore <backup_restore>` a Software Factory
   deployment.
 
 Software Factory deep dive
 ==========================
 
 If you need more information about how Software Factory works, you can read
-this `this document who describes SF internals <deepdive>`_
-
-.. These pages are used as reference for all internal links
-.. in the documenation
-.. toctree::
-   :maxdepth: 1
-   :hidden:
-
-   architecture
-   deployment
-   configure
-   image_build
-   deepdive
-   access_control
-   migration
-   upgrade
-   backup_restore
+this :ref:`this document who describes SF internals <deepdive>`

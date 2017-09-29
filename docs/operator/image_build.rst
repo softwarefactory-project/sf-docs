@@ -1,3 +1,5 @@
+:orphan:
+
 .. _sfdib:
 
 SF image building

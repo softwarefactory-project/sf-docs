@@ -1,3 +1,5 @@
+:orphan:
+
 .. _architecture_config_file:
 
 Configuration
