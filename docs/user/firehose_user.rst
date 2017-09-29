@@ -1,4 +1,6 @@
-.. _firehose_user:
+:orphan:
+
+.. _firehose-user:
 
 Firehose
 ========

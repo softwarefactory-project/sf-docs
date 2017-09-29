@@ -16,7 +16,7 @@ Create and configure a new project
 ----------------------------------
 
 Creating a new project or repository is done by submitting a change on the
-:ref:`Config repository<config-repo>`. The project will be created or updated
+:ref:`Config repository <config-repo>`. The project will be created or updated
 once the change is merged.
 
 The change consists of three parts:
@@ -416,17 +416,7 @@ Other useful resources
 ----------------------
 
 * `sfmanager </docs/sfmanager/>`_ is a command line client can be used to interact with the managesf API.
-* You can have a look to `Firehose <firehose_user>`_, an embedded MQTT broker that concentrates
+* You can have a look to :ref:`Firehose <firehose-user>`, an embedded MQTT broker that concentrates
   events from services run within a Software Factory deployment
-* It's possible to `Host static web content <pages_user>`_ if the operator
+* It's possible to :ref:`Host static web content <pages-user>` if the operator
   activate sf-page role.
-
-.. These pages are used as reference for all internal links
-.. in the documenation
-.. toctree::
-   :maxdepth: 1
-   :hidden:
-
-   firehose_user
-   pages_user
-   config_repo

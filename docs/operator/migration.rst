@@ -1,3 +1,7 @@
+:orphan:
+
+.. _migration:
+
 Migration of existing projects to Software Factory
 ==================================================
 

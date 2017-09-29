@@ -4,7 +4,7 @@ Embedded MQTT broker
 Firehose is an embedded MQTT broker that concentrates events from services
 that are run within your Software Factory deployment.
 
-See the :ref:`Firehose user documentation<firehose_user>` for more details.
+See the :ref:`Firehose user documentation<firehose-user>` for more details.
 
 
 Activating Firehose

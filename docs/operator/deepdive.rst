@@ -1,3 +1,7 @@
+:orphan:
+
+.. _deepdive:
+
 Software Factory Internals
 ==========================
 
