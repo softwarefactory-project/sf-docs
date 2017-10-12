@@ -14,6 +14,15 @@ Please check upstream `documentation <https://docs.openstack.org/infra/nodepool/
 first, here are a few hints to debug the service.
 
 
+Required architecture
+^^^^^^^^^^^^^^^^^^^^^
+
+For a minimal deployment, limited to containerized nodes, only the **nodepool3-launcher**
+component is required in the architecture file.
+
+In order to use virtual nodes based on diskimage-builder, the **nodepool3-builder**
+component must be present in the architecture file.
+
 Add a cloud provider
 ^^^^^^^^^^^^^^^^^^^^
 
