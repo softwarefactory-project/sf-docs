@@ -55,8 +55,7 @@ OpenStack based deployment
 --------------------------
 
 To simplify and speed up the deployment process, a pre-built image should be used.
-A new diskimage is created for each release, and it can be rebuilt locally to,
-see :ref:`Image building<sfdib>`.
+A new diskimage is created for each release.
 
 
 .. _deployment_image_based_install_image:
