@@ -2,6 +2,7 @@ Configure zuul(V3)
 ------------------
 
 The zuul(V3) service is installed with rh-python35 software collections:
+
 * The configuration is located in /etc/opt/rh/rh-python35/zuul
 * The logs are written to /var/opt/rh/rh-python35/log/zuul
 * The services are prefixed with rh-python35-
@@ -12,8 +13,9 @@ By default, no merger are being deployed because the executor service
 can perform merge task. However, merger can also be deployed to speed
 up start time in case there are many projects defined.
 
-Please check upstream `documentation <https://docs.openstack.org/infra/zuul/feature/zuulv3/>`
-first.
+Please check the upstream documentation_.
+
+.. _documentation: https://docs.openstack.org/infra/zuul/feature/zuulv3/
 
 
 List past jobs and builds

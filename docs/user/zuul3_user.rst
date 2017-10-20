@@ -1,9 +1,13 @@
 .. _zuul3-user:
 
-Refer to the upstream `documentation <https://docs.openstack.org/infra/zuul/feature/zuulv3/user/>`
-regarding available pipelines and jobs options.
+Zuul3 user documentation
+========================
 
-In Software Factory,
+Refer to the upstream documentation_ regarding available pipelines and jobs options.
+
+.. _documentation: https://docs.openstack.org/infra/zuul/feature/zuulv3/user/
+
+In Software Factory:
 
 * Projects are added to the main configuration in the config repo zuulV3 directory
 * Jobs can inherit from the zuul-jobs repository base jobs
@@ -24,14 +28,14 @@ Add a file in the config/zuulV3/project-name.yaml:
 .. code-block:: yaml
 
   - tenant:
-      name: ''
+      name: local
       source:
         source-name:
           untrusted-projects:
             - project-name
 
 
-* Leave the tenant name to ''
+* Leave the tenant name to *local*
 * Replace source-name by the location of the repository (gerrit for internal gerrit)
 * Replace project-name by the project name
 * Replace untrusted-projects by config-project if the project is going to store secrets
@@ -43,7 +47,7 @@ Adding a job to a project
 -------------------------
 
 Project CI configuration is happening in repos, a project can define a job by
-having a file named .zuul.yaml at the root of the project's repository:
+having a file named *.zuul.yaml* at the root of the project's repository:
 
 .. code-block:: yaml
 
@@ -77,5 +81,6 @@ Then *<name>* and *<fieldname>* fields that are placeholders must be replaced in
 generated *secret.yaml* file.
 
 A secret used in a job must be defined in the same project than the job is defined.
-The user should read carefully the `section <https://docs.openstack.org/infra/zuul/user/config.html?highlight=secret#secret>`
-about secrets.
+The user should read carefully the section_ about secrets.
+
+.. _section: https://docs.openstack.org/infra/zuul/user/config.html?highlight=secret#secret
