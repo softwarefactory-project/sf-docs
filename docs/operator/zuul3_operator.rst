@@ -2,8 +2,9 @@ Configure zuul(V3)
 ------------------
 
 The zuul(V3) service is installed with rh-python35 software collections:
-* The configuration is located in /etc/opt/rh/rh-python35/zuul
-* The logs are written to /var/opt/rh/rh-python35/log/zuul
+
+* The configuration is located in /etc/zuul3
+* The logs are written to /var/log/zuul3
 * The services are prefixed with rh-python35-
 
 A convenient wrapper for the command line is installed in /usr/bin/zuul3.
@@ -12,8 +13,9 @@ By default, no merger are being deployed because the executor service
 can perform merge task. However, merger can also be deployed to speed
 up start time in case there are many projects defined.
 
-Please check upstream `documentation <https://docs.openstack.org/infra/zuul/feature/zuulv3/>`
-first.
+Please check the upstream documentation_.
+
+.. _documentation: https://docs.openstack.org/infra/zuul/feature/zuulv3/
 
 
 List past jobs and builds
@@ -85,7 +87,7 @@ First you need to enable executor keepjob option so that ansible logs are availa
 
 .. code-block:: bash
 
-    /opt/rh/rh-python35/root/bin/zuul-executor -c /etc/opt/rh/rh-python35/zuul/zuul.conf keep
+    /opt/rh/rh-python35/root/bin/zuul-executor -c /etc/zuul3/zuul.conf keep
 
 Then next job execution will be available in /tmp/systemd-private-*-rh-python35-zuul-executor.service-*/tmp/
 
