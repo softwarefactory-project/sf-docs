@@ -16,6 +16,24 @@
       "revId": "5e994f0b93fc098c5bd652f506e7809b00d82a94",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9abe1de1_b576a93c",
+        "filename": "docs/operator/zuul3_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-10-23T09:19:12Z",
+      "side": 1,
+      "message": "Well I\u0027ll keep this information but using the links. I think for an operator that\u0027s still useful. Regarding the service names maybe but it will require quite some work. Let\u0027s keep that as it is for now (you can create a story if you prefer)",
+      "parentUuid": "9abe1de1_15cf95b1",
+      "revId": "5e994f0b93fc098c5bd652f506e7809b00d82a94",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
