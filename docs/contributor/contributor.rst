@@ -12,11 +12,9 @@ The easiest way to get involved is to join us on IRC. We hang out on the #softwa
 
 To join technical discussions or get announcements, subscribe to our mailing list softwarefactory-dev@redhat.com: https://www.redhat.com/mailman/listinfo/softwarefactory-dev.
 
-The project's feature and bug tracker is available here: https://softwarefactory-project.io/storyboard/#!/project_group/4.
+The project's backlog can be browsed `here<https://tree.taiga.io/project/morucci-software-factory/backlog?q=&tags=software%20factory>`_.
 
-New user stories should be submitted as a review to the **sf-specs** repository on Software Factory.
-See https://softwarefactory-project.io/r/gitweb?p=software-factory/sf-specs.git;a=blob_plain;f=README.md for
-details about how to format your patch.
+Issues can be added `here<https://tree.taiga.io/project/morucci-software-factory/issues>`_.
 
 Prepare a development environment
 ---------------------------------
