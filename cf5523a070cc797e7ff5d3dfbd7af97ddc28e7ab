@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7ad32947_bcdc6947",
+        "filename": "docs/operator/architecture.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-08T22:42:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ad32947_bc0ea9e3",
+      "revId": "cf5523a070cc797e7ff5d3dfbd7af97ddc28e7ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ad32947_9c13ed0d",
         "filename": "docs/operator/nodepool3_operator.rst",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2017-11-08T21:42:02Z",
       "side": 1,
       "message": "For further details, please check the upstream documentation",
+      "revId": "cf5523a070cc797e7ff5d3dfbd7af97ddc28e7ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_9ce1ad01",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-08T22:42:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ad32947_9c13ed0d",
       "revId": "cf5523a070cc797e7ff5d3dfbd7af97ddc28e7ab",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "7ad32947_7ce7f112",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-08T22:42:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ad32947_7cf931c8",
+      "revId": "cf5523a070cc797e7ff5d3dfbd7af97ddc28e7ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ad32947_5cf675d8",
         "filename": "docs/operator/nodepool3_operator.rst",
         "patchSetId": 2
@@ -64,6 +118,24 @@
       "writtenOn": "2017-11-08T21:42:02Z",
       "side": 1,
       "message": "Containers [...], that means",
+      "revId": "cf5523a070cc797e7ff5d3dfbd7af97ddc28e7ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_5ce4350c",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-08T22:42:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ad32947_5cf675d8",
       "revId": "cf5523a070cc797e7ff5d3dfbd7af97ddc28e7ab",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "7ad32947_3cf179ce",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-08T22:42:21Z",
+      "side": 1,
+      "message": "No, it was the goal of this previous patch from Tristan to run config-* jobs on localhost so the zuul-executor: https://softwarefactory-project.io/r/#/c/10100",
+      "parentUuid": "7ad32947_3c03b9ba",
+      "revId": "cf5523a070cc797e7ff5d3dfbd7af97ddc28e7ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ad32947_fc2b0132",
         "filename": "docs/operator/nodepool3_operator.rst",
         "patchSetId": 2
@@ -98,6 +188,24 @@
       "writtenOn": "2017-11-08T21:42:02Z",
       "side": 1,
       "message": "a dedicated node, so that containers are well isolated.",
+      "revId": "cf5523a070cc797e7ff5d3dfbd7af97ddc28e7ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_1ceebdec",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-08T22:42:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ad32947_fc2b0132",
       "revId": "cf5523a070cc797e7ff5d3dfbd7af97ddc28e7ab",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -121,6 +229,24 @@
     },
     {
       "key": {
+        "uuid": "7ad32947_fcb9c1ed",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-08T22:42:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ad32947_dc3045a1",
+      "revId": "cf5523a070cc797e7ff5d3dfbd7af97ddc28e7ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ad32947_bc25895d",
         "filename": "docs/operator/nodepool3_operator.rst",
         "patchSetId": 2
@@ -138,6 +264,24 @@
     },
     {
       "key": {
+        "uuid": "7ad32947_dcbe05d4",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-08T22:42:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ad32947_bc25895d",
+      "revId": "cf5523a070cc797e7ff5d3dfbd7af97ddc28e7ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ad32947_9c2acd2b",
         "filename": "docs/operator/nodepool3_operator.rst",
         "patchSetId": 2
@@ -149,6 +293,24 @@
       "writtenOn": "2017-11-08T21:42:02Z",
       "side": 1,
       "message": "according to nodepool3 -h on my test node image-upload is not a valid command anymore; images are automatically uploaded after the diskimage build.\n\nI suggest listing \"hold\" and explain the difference between \"list\", \"image-list\" and \"dib-image-list\" instead",
+      "revId": "cf5523a070cc797e7ff5d3dfbd7af97ddc28e7ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_bcb3490a",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-08T22:42:21Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ad32947_9c2acd2b",
       "revId": "cf5523a070cc797e7ff5d3dfbd7af97ddc28e7ab",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
