@@ -47,11 +47,7 @@ The minimal architecture includes following components:
 * zuul3-executor
 * zuul3-web
 * nodepool3-launcher
-* zuul-server
-* zuul-launcher
-* zuul-merger
-* nodepool-launcher
-* jenkins
+* hypervisor-oci
 
 Optional services can be enabled:
 
@@ -95,9 +91,9 @@ To deploy a specific service on a dedicated instance:
 * Add desired services in the roles list (e.g., elasticsearch), and
 * Run sfconfig to reconfigure the deployment.
 
-See sf-config/refarch
-(https://softwarefactory-project.io/r/software-factory/sf-config) directory for
-example architectures.
+See `sf-config/refarch`_ directory for example architectures.
+
+.. _sf-config/refarch: https://softwarefactory-project.io/r/gitweb?p=software-factory/sf-config.git;a=tree;f=refarch
 
 .. _architecture_migrate_service:
 
