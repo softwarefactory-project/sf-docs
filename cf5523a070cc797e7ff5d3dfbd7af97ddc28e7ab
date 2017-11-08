@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7ad32947_bc0ea9e3",
+        "filename": "docs/operator/architecture.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-11-08T21:42:02Z",
+      "side": 1,
+      "message": "See the sf-config/refarch directory for examples of valid architectures.",
+      "revId": "cf5523a070cc797e7ff5d3dfbd7af97ddc28e7ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_9c13ed0d",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-11-08T21:42:02Z",
+      "side": 1,
+      "message": "For further details, please check the upstream documentation",
+      "revId": "cf5523a070cc797e7ff5d3dfbd7af97ddc28e7ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_7cf931c8",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-11-08T21:42:02Z",
+      "side": 1,
+      "message": "will install",
+      "revId": "cf5523a070cc797e7ff5d3dfbd7af97ddc28e7ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_5cf675d8",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-11-08T21:42:02Z",
+      "side": 1,
+      "message": "Containers [...], that means",
+      "revId": "cf5523a070cc797e7ff5d3dfbd7af97ddc28e7ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_3c03b9ba",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-11-08T21:42:02Z",
+      "side": 1,
+      "message": "but you need at least one default \"centos-oci\" node for the config jobs?",
+      "revId": "cf5523a070cc797e7ff5d3dfbd7af97ddc28e7ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_fc2b0132",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-11-08T21:42:02Z",
+      "side": 1,
+      "message": "a dedicated node, so that containers are well isolated.",
+      "revId": "cf5523a070cc797e7ff5d3dfbd7af97ddc28e7ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_dc3045a1",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-11-08T21:42:02Z",
+      "side": 1,
+      "message": "(NIT)\"available\" instead of \"configured\" ?",
+      "revId": "cf5523a070cc797e7ff5d3dfbd7af97ddc28e7ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_bc25895d",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-11-08T21:42:02Z",
+      "side": 1,
+      "message": "open for ingress traffic on the node",
+      "revId": "cf5523a070cc797e7ff5d3dfbd7af97ddc28e7ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_9c2acd2b",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-11-08T21:42:02Z",
+      "side": 1,
+      "message": "according to nodepool3 -h on my test node image-upload is not a valid command anymore; images are automatically uploaded after the diskimage build.\n\nI suggest listing \"hold\" and explain the difference between \"list\", \"image-list\" and \"dib-image-list\" instead",
+      "revId": "cf5523a070cc797e7ff5d3dfbd7af97ddc28e7ab",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
