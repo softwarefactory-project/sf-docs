@@ -18,8 +18,15 @@ Add a cloud provider
 ^^^^^^^^^^^^^^^^^^^^
 
 To do this, an account on an OpenStack cloud is required and credentials need to
-be known by Nodepool. Moreover it is highly recommended to use a dedicated
-network or tenant for slave instances.
+be known by Nodepool. It is highly recommended to use a project dedicated to
+Nodepool, into which the slave instances will be spawned.
+
+The slave instances inherit the project's "default" security group for access
+rules. Therefore the project's "default" security group must **at least** allow
+incoming SSH traffic (TCP/22) from the zuul-executor node. More permissive access
+can be considered if others should be allowed to SSH into test nodes. Please
+refer to `OpenStack's documentation <https://docs.openstack.org/nova/pike/admin/security-groups.html>`
+to find out how to modify security groups.
 
 In order to configure Nodepool to define a provider (an OpenStack cloud account) you need
 to adapt sfconfig.yaml. Below is an example of configuration.
@@ -34,6 +41,9 @@ to adapt sfconfig.yaml. Below is an example of configuration.
        username: 'user'
        password: 'secret'
        region_name: ''
+       # Uncomment and set domain-related values when using a keystone v3 authentication endpoint
+       # user_domain_name: Default
+       # project_domain_name: Default
 
 To apply the configuration you need to run again the sfconfig script.
 
