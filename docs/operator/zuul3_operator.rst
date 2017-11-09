@@ -1,3 +1,18 @@
+.. danger::
+
+  Zuul3 is still under heavy development and breaking changes might occur from one
+  version of Software Factory to another. It is strongly advised to follow
+  Zuul's upstream developments, for example by registering to OpenStack Infra's
+  `mailing list <http://lists.openstack.org/cgi-bin/mailman/listinfo/openstack-infra>`_.
+
+.. note::
+
+  This is a lightweight documentation intended to get operators started with setting
+  up the Zuul3 service. For more insight on what Zuul3 can do, please refer
+  to its upstream documentation_.
+
+.. _documentation: https://docs.openstack.org/infra/zuul/feature/zuulv3/
+
 Configure zuul(V3)
 ------------------
 
@@ -12,11 +27,6 @@ A convenient wrapper for the command line is installed in /usr/bin/zuul3.
 By default, no merger are being deployed because the executor service
 can perform merge task. However, merger can also be deployed to speed
 up start time in case there are many projects defined.
-
-Please check the upstream documentation_.
-
-.. _documentation: https://docs.openstack.org/infra/zuul/feature/zuulv3/
-
 
 List past jobs and builds
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -60,7 +70,7 @@ Use openstack-infra/zuul-jobs
 
 The zuul-scheduler can automatically import all the jobs defined in
 the openstack-infra/zuul-jobs repository. Use this command line to enable
-it's usage:
+its usage:
 
 .. code-block:: bash
 

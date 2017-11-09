@@ -1,3 +1,18 @@
+.. danger::
+
+  Nodepool(V3) is still under heavy development and breaking changes might occur from one
+  version of Software Factory to another. It is strongly advised to follow
+  Nodepool's upstream developments, for example by registering to OpenStack Infra's
+  `mailing list <http://lists.openstack.org/cgi-bin/mailman/listinfo/openstack-infra>`_.
+
+.. note::
+
+  This is a lightweight documentation intended to get operators started with setting
+  up the Nodepool service. For more insight on what Nodepool can do, please refer
+  to its upstream documentation_.
+
+.. _documentation: https://docs.openstack.org/infra/nodepool/feature/zuulv3/
+
 Configure nodepool(V3)
 ======================
 
@@ -8,12 +23,6 @@ The nodepool(V3) service is installed with the rh-python35 software collections:
 * The services are prefixed with rh-python35-
 
 A convenient wrapper for the command line is installed in /usr/bin/nodepool3.
-
-... Use a local build of nodepool-doc instead of external link
-
-For further details, please check the upstream documentation_.
-
-.. _documentation: https://docs.openstack.org/infra/nodepool/feature/zuulv3
 
 
 Required architecture
