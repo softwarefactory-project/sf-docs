@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7ad32947_7cdb71ee",
+        "filename": "docs/operator/architecture.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-09T09:42:22Z",
+      "side": 1,
+      "message": "Hum ok then we need a patch on sfconfig: https://softwarefactory-project.io/r/10147",
+      "parentUuid": "7ad32947_3c2059f7",
+      "revId": "719917d4f1ff4a81f2ed514678bb5dbfccdefcf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ad32947_3c4979d1",
         "filename": "docs/operator/nodepool3_operator.rst",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2017-11-09T06:00:02Z",
       "side": 1,
       "message": "How about: \"you need to add the cloud client information (auth url, login, password...) to the sfconfig.yaml. See the :ref:`Nodepool user documentation\u003cnodepool-user\u003e` for additional provider settings such as labels and diskimages.\"",
+      "revId": "719917d4f1ff4a81f2ed514678bb5dbfccdefcf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_5cd8b5ef",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-09T09:42:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ad32947_3c4979d1",
       "revId": "719917d4f1ff4a81f2ed514678bb5dbfccdefcf8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "7ad32947_3ce5f9a7",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-09T09:42:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ad32947_dc1605a7",
+      "revId": "719917d4f1ff4a81f2ed514678bb5dbfccdefcf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ad32947_bc0b497d",
         "filename": "docs/operator/nodepool3_operator.rst",
         "patchSetId": 3
@@ -64,6 +118,24 @@
       "writtenOn": "2017-11-09T06:00:02Z",
       "side": 1,
       "message": "install the requirements and configure the node to provide Open Container with *runc*.",
+      "revId": "719917d4f1ff4a81f2ed514678bb5dbfccdefcf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_1ce23da0",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-09T09:42:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ad32947_bc0b497d",
       "revId": "719917d4f1ff4a81f2ed514678bb5dbfccdefcf8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "7ad32947_fced418f",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-09T09:42:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ad32947_9c108daa",
+      "revId": "719917d4f1ff4a81f2ed514678bb5dbfccdefcf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ad32947_7c26d117",
         "filename": "docs/operator/nodepool3_operator.rst",
         "patchSetId": 3
@@ -104,6 +194,24 @@
     },
     {
       "key": {
+        "uuid": "7ad32947_dcf2856f",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-09T09:42:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ad32947_7c26d117",
+      "revId": "719917d4f1ff4a81f2ed514678bb5dbfccdefcf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ad32947_5c231506",
         "filename": "docs/operator/nodepool3_operator.rst",
         "patchSetId": 3
@@ -115,6 +223,24 @@
       "writtenOn": "2017-11-09T06:00:02Z",
       "side": 1,
       "message": "22022",
+      "revId": "719917d4f1ff4a81f2ed514678bb5dbfccdefcf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_bce7c9ab",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-09T09:42:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ad32947_5c231506",
       "revId": "719917d4f1ff4a81f2ed514678bb5dbfccdefcf8",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
