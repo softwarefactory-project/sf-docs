@@ -1,0 +1,107 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7ad32947_1f46afbf",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-09T23:02:35Z",
+      "side": 1,
+      "message": "That\u0027s not clear and what you say about secret and it isn\u0027t in the zuul doc. Do not mention it.",
+      "range": {
+        "startLine": 71,
+        "startChar": 2,
+        "endLine": 72,
+        "endChar": 23
+      },
+      "revId": "595304d848bae455f70043bcf81295f3a5aa377d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_3f496bd1",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-09T23:02:35Z",
+      "side": 1,
+      "message": "You can define secrets in untrusted-projects too. That\u0027s not stipulated in the zuul doc that you should define secret in the config-projects (I haven\u0027t seen it). Please remove that sentence.",
+      "range": {
+        "startLine": 74,
+        "startChar": 2,
+        "endLine": 74,
+        "endChar": 67
+      },
+      "revId": "595304d848bae455f70043bcf81295f3a5aa377d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_ff11b3b0",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-09T23:02:35Z",
+      "side": 1,
+      "message": "I think you should not try to explain to much what is config-projects and untrusted-projects but just link to the upstream doc. Maybe keep it simple by saying add repositories under the untrusted-projects category and not much :)",
+      "revId": "595304d848bae455f70043bcf81295f3a5aa377d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_df16f7a6",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-09T23:02:35Z",
+      "side": 1,
+      "message": "my- ?",
+      "range": {
+        "startLine": 153,
+        "startChar": 12,
+        "endLine": 153,
+        "endChar": 15
+      },
+      "revId": "595304d848bae455f70043bcf81295f3a5aa377d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_bf0b3b7d",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-09T23:02:35Z",
+      "side": 1,
+      "message": "The url to access is ?",
+      "revId": "595304d848bae455f70043bcf81295f3a5aa377d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
