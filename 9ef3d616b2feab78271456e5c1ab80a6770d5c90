@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7ad32947_fc30a109",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 8
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-11-09T11:22:12Z",
+      "side": 1,
+      "message": "installed",
+      "revId": "9ef3d616b2feab78271456e5c1ab80a6770d5c90",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
