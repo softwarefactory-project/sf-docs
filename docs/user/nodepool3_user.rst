@@ -1,7 +1,19 @@
 .. _nodepool3-user:
 
-Refer to the upstream `documentation <https://docs.openstack.org/infra/nodepool/feature/zuulv3/>`
-first.
+.. danger::
+
+  Nodepool(V3) is still under heavy development and breaking changes might occur from one
+  version of Software Factory to another. It is strongly advised to follow
+  Nodepool's upstream developments, for example by registering to OpenStack Infra's
+  `mailing list <http://lists.openstack.org/cgi-bin/mailman/listinfo/openstack-infra>`_.
+
+.. note::
+
+  This is a lightweight documentation intended to get users started with defining
+  test nodes. For more insight on what Nodepool can do, please refer
+  to its upstream documentation_.
+
+.. _documentation: https://docs.openstack.org/infra/nodepool/feature/zuulv3/
 
 
 Nodepool(V3) configuration
