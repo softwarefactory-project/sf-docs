@@ -1,8 +1,12 @@
 .. _nodepool3-user:
 
-Refer to the upstream documentation_ first.
+.. note::
 
-.. _documentation: https://docs.openstack.org/infra/nodepool/feature/zuulv3
+  This is a lightweight documentation intended to get users started with defining
+  test nodes. For more insight on what Nodepool can do, please refer
+  to its upstream documentation_.
+
+.. _documentation: https://docs.openstack.org/infra/nodepool/feature/zuulv3/
 
 
 Nodepool(V3) configuration
@@ -47,4 +51,3 @@ diskimage/label:
             - name: centos7
               min-ram: 1024
               diskimage: centos7
-
