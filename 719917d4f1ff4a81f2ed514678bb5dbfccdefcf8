@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7ad32947_3c2059f7",
+        "filename": "docs/operator/architecture.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-11-09T06:00:02Z",
+      "side": 1,
+      "message": "This actually will be removed from the minimal architecture since it can\u0027t be deployed by default.",
+      "revId": "719917d4f1ff4a81f2ed514678bb5dbfccdefcf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_3c4979d1",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-11-09T06:00:02Z",
+      "side": 1,
+      "message": "How about: \"you need to add the cloud client information (auth url, login, password...) to the sfconfig.yaml. See the :ref:`Nodepool user documentation\u003cnodepool-user\u003e` for additional provider settings such as labels and diskimages.\"",
+      "revId": "719917d4f1ff4a81f2ed514678bb5dbfccdefcf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_dc1605a7",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-11-09T06:00:02Z",
+      "side": 1,
+      "message": "s/must/can/",
+      "revId": "719917d4f1ff4a81f2ed514678bb5dbfccdefcf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_bc0b497d",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-11-09T06:00:02Z",
+      "side": 1,
+      "message": "install the requirements and configure the node to provide Open Container with *runc*.",
+      "revId": "719917d4f1ff4a81f2ed514678bb5dbfccdefcf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_9c108daa",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-11-09T06:00:02Z",
+      "side": 1,
+      "message": "I wouldn\u0027t mention Fedora here, this is a bit confusing. Let\u0027s just say that:\n\"Containers bind mount the local host filesystem, that means you don\u0027t have to configure an image, what is installed on the instance is available inside the containers.\"",
+      "revId": "719917d4f1ff4a81f2ed514678bb5dbfccdefcf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_7c26d117",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-11-09T06:00:02Z",
+      "side": 1,
+      "message": "Note that the OCI provider doesn\u0027t provide network isolation and slave needs to run an a dedicated instance/network. Sfconfig will refuses to install this role on the internal network where software factory services are running. Nevertheless...",
+      "revId": "719917d4f1ff4a81f2ed514678bb5dbfccdefcf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_5c231506",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-11-09T06:00:02Z",
+      "side": 1,
+      "message": "22022",
+      "revId": "719917d4f1ff4a81f2ed514678bb5dbfccdefcf8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
