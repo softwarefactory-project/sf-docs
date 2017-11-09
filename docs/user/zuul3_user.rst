@@ -3,21 +3,45 @@
 Zuul3 user documentation
 ========================
 
-Refer to the upstream documentation_ regarding available pipelines and jobs options.
+.. danger::
+
+  Zuul3 is still under heavy development and breaking changes might occur from one
+  version of Software Factory to another. It is strongly advised to follow
+  Zuul's upstream developments, for example by registering to OpenStack Infra's
+  `mailing list`_
+
+.. _`mailing list`: http://lists.openstack.org/cgi-bin/mailman/listinfo/openstack-infra
+
+.. note::
+
+  This is a lightweight documentation intended to get users started with setting
+  up CI pipelines and jobs. For more insight on what Zuul3 can do, please refer
+  to its upstream documentation_.
 
 .. _documentation: https://docs.openstack.org/infra/zuul/feature/zuulv3/user/
 
-In Software Factory:
+Zuul is a *commit gating system* for continuous integration that ensures that
+repositories are always in a healthy state. It is up to repositories managers
+to define what constitutes a healthy state: for example passing all unit tests,
+success in building software, etc.
 
-* Projects are added to the main configuration in the config repo zuulV3 directory
-* Jobs can inherit from the zuul-jobs repository base jobs
-* Then projects job can also define custom jobs in their repo
+Software Factory ships with Zuul3, which is a major rewrite of Zuul with many improvements.
+Most basic concepts remain valid though, so it is advised to read Software Factory's
+:ref:`general documentation on Zuul <zuul-user>` before proceeding further.
 
-For each sources, there are 2 types of projects:
+Some of the major changes reflected in Software Factory are:
 
-* config-projects hold configuration information such as logserver access.
-  Jobs defined in config-projects run with elevated privileges.
-* untrusted-projects are projects being tested or deployed.
+* In Zuul3's terminology, a **project** is a gated repository
+* Projects must be added to the main configuration in the config repository's **zuulV3** directory
+* Jobs can inherit from the **zuul-jobs** repository base jobs
+* Pipelines are managed within repositories
+* Custom jobs can be defined within repositories
+* It is possible to gate repositories from different sources, depending on Software Factory's
+  configuration:
+
+  * Software Factory's own internal gerrit server
+  * external gerrit servers
+  * Github
 
 
 Adding a project to the zuulV3 service
@@ -36,21 +60,38 @@ Add a file in the config/zuulV3/project-name.yaml:
 
 
 * Leave the tenant name to *local*
-* Replace source-name by the location of the repository (gerrit for internal gerrit)
-* Replace project-name by the project name
-* Replace untrusted-projects by config-project if the project is going to store secrets
+* Replace source-name by the location of the repository (for example, **gerrit** for
+  Software Factory's internal gerrit)
+* Replace project-name by the project's name
+
+For each source, projects can be listed under either category:
+
+* Projects listed under **`config-projects`_**
+  hold configuration information and secrets, for example deployment keys or
+  access to log servers. Jobs defined for config projects run with elevated privileges,
+  and are expected to be thoroughly reviewed prior to being run in automated pipelines.
+  Use *config-projects* if the repository is going to store secrets.
+* Projects listed under **`untrusted-projects`_**
+  are the actual repositories for the software being tested or deployed. Jobs
+  defined for untrusted projects run with restricted privileges.
+  Use *untrusted-projects* in most cases, and if jobs are going to be run on
+  potentially untrusted code, like external contributions.
+
+.. _`config-projects`: https://docs.openstack.org/infra/zuul/admin/tenants.html#attr-tenant.config-projects
+
+.. _`untrusted-projects`: https://docs.openstack.org/infra/zuul/admin/tenants.html#attr-tenant.untrusted-projects
 
 After merging this change, the config-update job will reload the zuul scheduler.
 
+Adding a predefined job to a project
+------------------------------------
 
-Adding a job to a project
--------------------------
-
-Project CI configuration is happening in repos, a project can define a job by
+A project's CI configuration is happening in repositories, a project can define a job by
 having a file named *.zuul.yaml* at the root of the project's repository:
 
 .. code-block:: yaml
 
+  ---
   - project:
       name: project-name
       check:
@@ -60,22 +101,113 @@ having a file named *.zuul.yaml* at the root of the project's repository:
         jobs:
           - linters
 
+* **name** is the name of the project, same as the one defined in
+  ZuulV3's configuration file earlier
+* **check**, **gate** are pipelines defined in Software Factory.
+
+A default deployment of Software Factory comes with the following base jobs:
+
+============= =============================================================
+ Name          Description
+============= =============================================================
+**linters**    Run the bashate, flake8 and yaml linters on relevant files
+============= =============================================================
+
+Software Factory can be configured to import the **openstack-infra/zuul-jobs**
+jobs library; ask your instance operator if this is the case. A list of the jobs in this
+library can be found here_.
+
+.. _here: https://docs.openstack.org/infra/zuul-jobs/jobs.html
+
+A full list of all the jobs that have been built at least once on Software Factory
+can be accessed at https://<fqdn>/zuul3/local/jobs.html.
+
+Defining a custom job within a project
+--------------------------------------
+
+It is possible to define jobs specific to a project within its repository. This
+is done in the *.zuul.yaml* file at the root of the repository. Jobs are based
+on Ansible playbooks.
+
+For example, the following .zuul.yaml file will define a job called **unit-tests**
+to be run in the **check** pipeline along the linters:
+
+.. code-block:: yaml
+
+  ---
+  - job:
+      name: unit-tests
+      parent: base
+      description: this is running the unit tests for this project
+      run: playbooks/unittests
+      nodeset:
+        nodes:
+          - name: test-node
+            label: dib-centos-7
+
+  - project:
+      name: project-name
+      check:
+        jobs:
+          - my-unit-tests
+          - linters
+
+* setting **parent: base** allows this job to inherit from the default *pre* and
+  *post* playbooks which are run before and after the custom job's playbook.
+  These playbooks prepare the work environment and automatically publish artifacts
+  and logs on Software Factory's log server, so while not mandatory, it is advised
+  to add this setting to make use of Software Factory's integrations.
+* **nodeset** defines the nodes that will be spawned to build the job. *Label*
+  refers to nodepool label definitions, see the :ref:`nodepool documentation <nodepool3-user>`
+  for further details. *Name* is the name of the node as it will be available in
+  the job's playbook inventory.
+
+The previous example expects the Ansible playbook "playbooks/unittests.yaml" (or
+"playbooks/unittests/run.yaml") to be present in the project's repository. Here
+is an example of what this playbook could contain:
+
+.. code-block:: yaml
+
+  ---
+  - hosts: test-node
+    tasks:
+      - name: install tox package
+        yum:
+          name: python-tox
+          state: present
+        become: yes
+      - name: run unit tests
+        command: tox
+        args:
+          chdir: {{ zuul.project.src_dir }}/tests
+
+Further documentation can be found online:
+
+* Ansible playbooks_, modules_ documentation
+* `Predefined variables available in jobs`_
+
+.. _playbooks: http://docs.ansible.com/ansible/latest/playbooks.html
+
+.. _modules: http://docs.ansible.com/ansible/latest/modules_by_category.html
+
+.. _`Predefined variables available in jobs`: https://docs.openstack.org/infra/zuul/feature/zuulv3/user/jobs.html#variables
+
 Create a secret to be used in jobs
 ----------------------------------
 
-Zuul provides a public key for every project that need to be used to encrypt
-secret data. Getting a project key is as follow:
+Zuul provides a public key for every project that needs to be used to encrypt
+secret data. To fetch a given project's public key:
 
 .. code-block:: bash
 
-  curl -O https://sftests.com/zuul3/keys/gerrit/project-name.pem
+  curl -O https://<fqdn>/zuul3/keys/gerrit/project-name.pem
 
-The *encrypt_secret.py* tool, from the Zuul's repository (branch *feature/zuulv3*), can be used to
+The *encrypt_secret.py* tool, from the Zuul repository (branch *feature/zuulv3*), can be used to
 create the YAML tree to be pushed in the project *.zuul.d/* directory.
 
 .. code-block:: bash
 
-  ./encrypt_secret.py https://sftests.com/zuul3/ gerrit project-name --infile secret.data --outfile secret.yaml
+  ./encrypt_secret.py https://<fqdn>/zuul3/ gerrit project-name --infile secret.data --outfile secret.yaml
 
 Then *<name>* and *<fieldname>* fields that are placeholders must be replaced in the
 generated *secret.yaml* file.
@@ -84,3 +216,30 @@ A secret used in a job must be defined in the same project than the job is defin
 The user should read carefully the section_ about secrets.
 
 .. _section: https://docs.openstack.org/infra/zuul/user/config.html?highlight=secret#secret
+
+
+Web Interface
+-------------
+
+Zuul comes with the following web interface:
+
+Status
+......
+
+This page shows the current buildsets in Zuul's pipelines. Filtering options are
+available.
+
+Each buildset can be expanded to show the advancement of its builds. Clicking on a build will
+open a stream of its logs in real time.
+
+Jobs
+....
+
+This page lists all the jobs that have been built at least once by Zuul. Filtering
+options are available.
+
+Builds
+......
+
+This page lists all the builds and buildsets that have completed. Filtering
+options are available.
