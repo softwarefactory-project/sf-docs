@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5ad0253b_55376ce3",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-11-10T10:31:59Z",
+      "side": 1,
+      "message": "Remove this\n\nAlso I\u0027d like to test out how secrets are handled for untrusted projects before merging this doc. I\u0027ll do this today",
+      "revId": "e982ff2ac58d79b9be1319b9c4828ff33ce38169",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
