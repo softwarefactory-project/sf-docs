@@ -236,6 +236,30 @@
     },
     {
       "key": {
+        "uuid": "5ad0253b_d5781c92",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-10T10:43:20Z",
+      "side": 1,
+      "message": "Secrets must be defined in the same project than jobs that use them are defined. That\u0027s written in this doc section \u0027Adding a job to a project\u0027. Also I did that test so I can confirm it worked.",
+      "parentUuid": "5ad0253b_151a146f",
+      "range": {
+        "startLine": 74,
+        "startChar": 2,
+        "endLine": 74,
+        "endChar": 67
+      },
+      "revId": "595304d848bae455f70043bcf81295f3a5aa377d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ad32947_aa0d3739",
         "filename": "docs/user/zuul3_user.rst",
         "patchSetId": 5
@@ -265,6 +289,24 @@
       "side": 1,
       "message": "I\u0027m fine with dropping mentions of config-projects, but I feel like users might wonder \"why is my project *untrusted*?\" without a bit of explanation.",
       "parentUuid": "7ad32947_aa0d3739",
+      "revId": "595304d848bae455f70043bcf81295f3a5aa377d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ad0253b_b56da0ce",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-10T10:43:20Z",
+      "side": 1,
+      "message": "Ok for some explanation but only if that clearer than the upstream doc. When I\u0027m reading upstream doc I not confident after what is really the diff between this two kind of projects ... :) So my felling is that difficult to write something useful for the end user here :)",
+      "parentUuid": "7ad32947_0a9b0bcb",
       "revId": "595304d848bae455f70043bcf81295f3a5aa377d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
