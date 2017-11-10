@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7ad32947_8a3a7bcc",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-11-10T10:27:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ad32947_1f034f11",
+      "revId": "595304d848bae455f70043bcf81295f3a5aa377d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ad32947_0aff8b02",
         "filename": "docs/operator/nodepool3_operator.rst",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2017-11-10T09:15:51Z",
       "side": 1,
       "message": "We should really plan on having the doc hosted locally",
+      "revId": "595304d848bae455f70043bcf81295f3a5aa377d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_6a371fe4",
+        "filename": "docs/operator/nodepool3_operator.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-11-10T10:27:23Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "7ad32947_0aff8b02",
       "revId": "595304d848bae455f70043bcf81295f3a5aa377d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "7ad32947_4a3463dd",
+        "filename": "docs/operator/zuul3_operator.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-11-10T10:27:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ad32947_ea032f0c",
+      "revId": "595304d848bae455f70043bcf81295f3a5aa377d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ad32947_ca08732b",
         "filename": "docs/user/zuul3_user.rst",
         "patchSetId": 5
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "7ad32947_2a48075b",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-11-10T10:27:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ad32947_ca08732b",
+      "revId": "595304d848bae455f70043bcf81295f3a5aa377d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ad32947_1f46afbf",
         "filename": "docs/user/zuul3_user.rst",
         "patchSetId": 5
@@ -81,6 +153,30 @@
       "writtenOn": "2017-11-09T23:02:35Z",
       "side": 1,
       "message": "That\u0027s not clear and what you say about secret and it isn\u0027t in the zuul doc. Do not mention it.",
+      "range": {
+        "startLine": 71,
+        "startChar": 2,
+        "endLine": 72,
+        "endChar": 23
+      },
+      "revId": "595304d848bae455f70043bcf81295f3a5aa377d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_aa72d7ab",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-11-10T10:27:23Z",
+      "side": 1,
+      "message": "well that\u0027s what configuration information is, it\u0027s usually secret",
+      "parentUuid": "7ad32947_1f46afbf",
       "range": {
         "startLine": 71,
         "startChar": 2,
@@ -116,6 +212,30 @@
     },
     {
       "key": {
+        "uuid": "5ad0253b_151a146f",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-11-10T10:27:23Z",
+      "side": 1,
+      "message": "Yeah I realize I misunderstood what config projects are. they seem to be specific to Zuul itself like for pipeline and base jobs definitions.\n\nOTOH I\u0027m not sure jobs defined in an untrusted project can have access to secrets?",
+      "parentUuid": "7ad32947_3f496bd1",
+      "range": {
+        "startLine": 74,
+        "startChar": 2,
+        "endLine": 74,
+        "endChar": 67
+      },
+      "revId": "595304d848bae455f70043bcf81295f3a5aa377d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ad32947_aa0d3739",
         "filename": "docs/user/zuul3_user.rst",
         "patchSetId": 5
@@ -127,6 +247,24 @@
       "writtenOn": "2017-11-10T09:15:51Z",
       "side": 1,
       "message": "I think a user will only ever need to use the untrusted-projects. Config project are really meant to setup logserver and preparation playbook, which is well taken care of by sf.",
+      "revId": "595304d848bae455f70043bcf81295f3a5aa377d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ad32947_0a9b0bcb",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-11-10T10:27:23Z",
+      "side": 1,
+      "message": "I\u0027m fine with dropping mentions of config-projects, but I feel like users might wonder \"why is my project *untrusted*?\" without a bit of explanation.",
+      "parentUuid": "7ad32947_aa0d3739",
       "revId": "595304d848bae455f70043bcf81295f3a5aa377d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -208,6 +346,24 @@
     },
     {
       "key": {
+        "uuid": "7ad32947_4ab9032e",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-11-10T10:27:23Z",
+      "side": 1,
+      "message": "I\u0027m more than okay with that, I\u0027ll contact Leif Madsen to make sure I don\u0027t step on any toes",
+      "parentUuid": "7ad32947_6a103f4f",
+      "revId": "595304d848bae455f70043bcf81295f3a5aa377d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ad32947_bf0b3b7d",
         "filename": "docs/user/zuul3_user.rst",
         "patchSetId": 5
@@ -219,6 +375,24 @@
       "writtenOn": "2017-11-09T23:02:35Z",
       "side": 1,
       "message": "The url to access is ?",
+      "revId": "595304d848bae455f70043bcf81295f3a5aa377d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ad0253b_f5fe7804",
+        "filename": "docs/user/zuul3_user.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 225,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-11-10T10:27:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7ad32947_bf0b3b7d",
       "revId": "595304d848bae455f70043bcf81295f3a5aa377d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
