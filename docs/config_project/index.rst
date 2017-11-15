@@ -1,10 +1,7 @@
-:orphan:
-
 .. _config-repo:
 
-=====================
-The config repository
-=====================
+The config repository (config-project)
+--------------------------------------
 
 The config repository is a special project used to configure many Software Factory services.
 This enables users to submit configuration changes through the code review system.
@@ -12,7 +9,7 @@ Once a change has been approved, the config-update job is run to apply the new c
 
 To make a change in the configuration:
 
-* First clone the repository: git clone http://<fqdn>/r/config
+* First clone the repository: git clone http:\/\/<fqdn>/r/config
 * Edit the relevant files and commit: git commit
 * Submit a change for review: git review
 * The configuration will be updated once the change is approved and merged
@@ -21,6 +18,8 @@ To make a change in the configuration:
 
   Files starting by a "_" are default settings and they may be modified by
   an upgrade of Software Factory, thus they **shouldn't be modified manually**.
+  Whenever you want to modify them, please propose an update to factory settings
+  here:
 
 
 .. toctree::
@@ -37,8 +36,3 @@ To make a change in the configuration:
    gerritlinks_user
    resources_user
    repoxplorer_user
-
-Available resources models
-==========================
-
-`Resources </docs/managesf/resources.html>`_ can be created or modified with the resources/ yaml files.

@@ -81,6 +81,8 @@ As an administrator, it can be really useful to check
 /var/log/nodepool3 to debug the Nodepool configuration.
 
 
+.. _nodepool-operator-oci:
+
 Setup the OCI container provider
 --------------------------------
 
