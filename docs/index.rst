@@ -48,7 +48,8 @@ Table of contents
    :maxdepth: 1
 
    main_components
-   user/user
-   operator/operator
-   contributor/contributor
+   user/index
+   config_project/index
+   operator/index
+   contributor/index
    faqs

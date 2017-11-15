@@ -4,7 +4,7 @@ Single Sign On
 ==============
 
 As it is always a pain to deal with login/logout of each component, the
-SF provides an unified authentication through Gerrit, Storyboard.
+SF provides an unified authentication for services such as Gerrit or Storyboard.
 Once you are authenticated on Gerrit you are also logged in on Storyboard.
 A logout from one service logs you out from other services as well.
 

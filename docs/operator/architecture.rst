@@ -1,5 +1,34 @@
 :orphan:
 
+.. _architecture:
+
+Architecture
+============
+
+SF architecture is modular and defined by a single file called arch.yaml. This
+file defines how services are deployed. Each hosts declare:
+
+* A hostname,
+* A ip address,
+* A public_url (used for service like zuul-merger),
+* A list of components.
+
+For example, to add a new zuul-merger, start a new instance inside the internal
+network of the deployment, enable ssh connection by copying the install server
+root user public ssh key to the authorized_keys of the new instance and
+update the arch.yaml with:
+
+.. code-block:: yaml
+
+  # echo >> /etc/software-factory/arch.yaml << EOF
+      - host: zm02
+        ip: 192.168.0.XXX
+        roles:
+          - zuul-merger
+  EOF
+  # sfconfig
+
+
 .. _architecture_config_file:
 
 Configuration
@@ -23,7 +52,7 @@ The architecture is defined in /etc/software-factory/arch.yaml:
 
 .. note::
 
-  Any modification to arch.yaml needs to be manually applied with the sfconfig script.
+  Any modification to the arch.yaml needs to be manually applied with the sfconfig script.
   Run sfconfig after saving the sfconfig.yaml file.
 
 
@@ -75,6 +104,12 @@ Optional services can be enabled:
 * influxdb
 * grafana
 
+
+.. note::
+
+   Check the :ref:`nodepool3 documentation<nodepool-operator-oci>` to learn
+   how to configure the hypervisor-oci role to get container providers in Nodepool.
+
 .. _architecture_extending:
 
 Extending the architecture
@@ -82,10 +117,10 @@ Extending the architecture
 
 To deploy a specific service on a dedicated instance:
 
-* Start a new instance on the same network with the desired flavor
+* Start a new instance on the same network as the install-server with the desired flavor
 * Attach a dedicated volume if needed
 * Make sure other instances security group allows network access from the new instance
-* Add root public ssh key (install-server:/root/.ssh/id_rsa.pub) to the new instance,
+* Add the root public ssh key (install-server:/root/.ssh/id_rsa.pub) to the new instance authorized_keys,
 * Make sure remote ssh connection access happen without password authentication,
 * Add the new instance to the arch inventory and set it's ip address,
 * Add desired services in the roles list (e.g., elasticsearch), and
