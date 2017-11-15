@@ -20,6 +20,24 @@ convince you:
 * Software Factory runs worker nodes on demand on an OpenStack cloud, which can reduce effective costs of testing.
 
 
+Can I disable Gerrit ?
+......................
+
+As of now, Gerrit is mandatory in Software Factory for a couple of reasons:
+
+* Managesf access control policies are based on Gerrit groups.
+* The config repository is hosted on Gerrit with an integrated CI/CD workflow.
+
+Gerrit will be made optional in a future release[1]_ of Software Factory
+
+Note that it is possible to use Software Factory as a third party CI for
+an external Gerrit or a GitHub organization. In this case, the gerrit server
+is only used to host the config repository, and operators can bypass it
+entirely by pushing config repository changes with the "git push" command
+instead of "git review".
+
+.. [1] To be determined
+
 Why can't I +2 a change after being added to the core group ?
 .............................................................
 
@@ -54,8 +72,8 @@ This happens when no worker nodes are available to execute a build:
 * Then verify that your job definition actually uses the right worker node label.
 
 
-How can I change my instance's hostname?
-........................................
+How can I change my deployment's hostname?
+..........................................
 
 You can change the hostname after the deployment by changing the fqdn parameter
 in /etc/software-factory/sfconfig.yaml, removing the existing SSL certificates
@@ -68,31 +86,8 @@ certificates) and running sfconfig again:
     sfconfig
 
 Please note that you might need to update URLs in other places as well, for
-example git remote urls in .gitreview and .git/config files in repositories
+example git remote urls in .gitreview and .git/config files for repositories
 hosted on Software Factory.
-
-
-How can I run services on a distributed architecture ?
-......................................................
-
-By default, sfconfig will deploy and configure all services on
-the install server (allinone). To use a distributed architecture,
-new instances need to be manually deployed using the Software Factory image,
-then root ssh access needs to be granted using the service_rsa.pub
-key.
-
-**Example:** architecture file to offload the elasticsearch service to a dedicated
-host:
-
-.. code-block:: yaml
-
-  inventory:
-    - name: elasticsearch
-      ip: 192.168.0.3
-      roles:
-        - elasticsearch
-
-Note that sfconfig won't disable a service previously deployed.
 
 
 How to setup a mirror on swift for external dependencies ?
@@ -147,7 +142,6 @@ https://github.com/cschwede/mirror2swift. For example, config/mirrors/centos.yam
 This will mirror the CentOS-7 base repository to http://swift:8080/v1/AUTH_uuid/repomirror/os/
 
 
-
 How to restart zuul without losing builds in progress ?
 .......................................................
 
@@ -165,7 +159,8 @@ to save and restore the current state:
     # Reload the previous state:
     /usr/share/sf-config/scripts/zuul-changes.py load
 
-The periodic and Post pipelines are not dumped by this tool.
+The periodic and post pipelines are not dumped by this tool.
+
 
 .. _gerrit-rest-api:
 
