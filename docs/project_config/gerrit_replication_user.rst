@@ -6,8 +6,8 @@ Configure Gerrit git repositories replication
 Introduction
 ------------
 
-Software Factory can replicate git repositories on remote git servers. This feature
-relies on Gerrit's replication plugin.
+Software Factory can replicate git repositories to remote git servers.
+This feature relies on Gerrit's replication plugin.
 
 The replication settings can be changed in the config repository; they can be found in the directory
 "gerrit" you will find a file called replication.config.

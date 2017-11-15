@@ -1,5 +1,10 @@
 .. _nodepool-user:
 
+.. warning::
+
+   Nodepool (v2) is deprecated and will be removed in software-factory version 3.0
+
+
 Nodepool configuration
 ======================
 
@@ -63,6 +68,7 @@ This has several advantages:
  * A job may have full system access (root) with interfering with anything else
  * Better resource management as nodes are only up when needed
 
+.. _diskimage-elements:
 
 Using extra elements
 --------------------

@@ -1,5 +1,10 @@
 .. _zuul-user:
 
+.. warning::
+
+   Zuul (v2) is deprecated and will be removed in software-factory version 3.0
+
+
 Zuul pipelines and gating configuration
 =======================================
 

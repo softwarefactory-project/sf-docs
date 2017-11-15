@@ -2,8 +2,8 @@
 
 .. _deepdive:
 
-Software Factory Internals
-==========================
+Internals
+=========
 
 The goal of this document is to describe SF internals.
 
@@ -47,7 +47,15 @@ Ansible usage
 
 The arch.yaml file describes what roles should run on which instances. Then
 based on this information, the sfconfig process generates all the necessary
-playbooks to configure and maintain the deployment.
+playbooks to configure and maintain the deployment:
+
+* The sf_setup.yml playbook run the install, setup, config_update tasks to deploy
+  the services on a fresh instance.
+* The sf_configrepo_update.yml playbook apply the config project configuration,
+  it is the playbook executed by the config-update job.
+* The sf_backup.yml playbook collect all the services data in /var/lib/software-factory/backup
+* The get_logs.yml playbook collect all the services logs, it's mostly used for sf-ci logs collections.
+* The sf_erase.yml playbook disable and can remove all the services data, it is used to un-install the services.
 
 
 The system configuration
@@ -77,7 +85,7 @@ The sfconfig script drives the system configuration. This script does the follow
 
   * sql/ contains database creation scripts.
 
-That system configuration process is re-entrant and needs to be executed everytime settings are changed.
+That system configuration process is re-entrant and needs to be executed everytime the settings are changed.
 
 Then SF is meant to be a self-service system, thus project configuration is done through the config-repo.
 
@@ -89,7 +97,7 @@ Once SF is up and running, the user configuration of Software Factory happens
 via the config-repo:
 
 * zuul3/: Zuul3 configuration
-* nodepool/nodepoolV3.yaml: Nodepool3 configuration
+* nodepoolV3/: Nodepool3 configuration
 * gerritbot/: IRC notification for gerrit event configuration,
 * gerrit/: Gerrit replication endpoint configuration, and
 * mirrors/: mirror2swift configuration.
@@ -102,7 +110,7 @@ Deprecated configuration:
 * jobs/: Jenkins jobs jjb configuration,
 * jobs-zuul/: Zuul-launcher jobs jjb configuration,
 * zuul/: CI gating zuul yaml configuration,
-* nodepool/nodepool.yaml: Slave configuration with images and labels definitions,
+* nodepool/: Slave configuration with images and labels definitions,
 
 This is actually managed through SF CI system, thanks to the config-update job.
 This job is actually an ansible playbook that will:
