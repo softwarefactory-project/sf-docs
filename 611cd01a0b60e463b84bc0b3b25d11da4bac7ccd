@@ -1,0 +1,273 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3acd31a7_f42b1832",
+        "filename": "docs/config_project/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-15T14:10:03Z",
+      "side": 1,
+      "message": "I would have remove that. IMO that\u0027s not needed.",
+      "range": {
+        "startLine": 3,
+        "startChar": 22,
+        "endLine": 3,
+        "endChar": 38
+      },
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3acd31a7_d4301ca1",
+        "filename": "docs/config_project/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-15T14:10:03Z",
+      "side": 1,
+      "message": "Something missing here ? what you wanted to say ?",
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3acd31a7_942aa42b",
+        "filename": "docs/config_project/pages_user.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-15T14:10:03Z",
+      "side": 1,
+      "message": "I would have added a note here telling this is not compatible yet with zuulv3.",
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3acd31a7_7420284a",
+        "filename": "docs/operator/architecture.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-15T14:10:03Z",
+      "side": 1,
+      "message": "/root/.ssh/authorized_keys",
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3acd31a7_d4d7fc21",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-15T14:10:03Z",
+      "side": 1,
+      "message": "s/the//",
+      "range": {
+        "startLine": 34,
+        "startChar": 14,
+        "endLine": 34,
+        "endChar": 17
+      },
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3acd31a7_f4d2f833",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-15T14:10:03Z",
+      "side": 1,
+      "message": "s/the//",
+      "range": {
+        "startLine": 35,
+        "startChar": 26,
+        "endLine": 35,
+        "endChar": 29
+      },
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3acd31a7_1417b4ee",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-15T14:10:03Z",
+      "side": 1,
+      "message": "ies",
+      "range": {
+        "startLine": 36,
+        "startChar": 46,
+        "endLine": 36,
+        "endChar": 47
+      },
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3acd31a7_341ab018",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-15T14:10:03Z",
+      "side": 1,
+      "message": "together",
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3acd31a7_74e70813",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-15T14:10:03Z",
+      "side": 1,
+      "message": "So this is the third example :) why not add adding it in the architecture documentation ? But well I\u0027m OK.",
+      "range": {
+        "startLine": 134,
+        "startChar": 0,
+        "endLine": 144,
+        "endChar": 0
+      },
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3acd31a7_54e40c0c",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-15T14:10:03Z",
+      "side": 1,
+      "message": "install-server to use the same name convention.",
+      "range": {
+        "startLine": 153,
+        "startChar": 9,
+        "endLine": 153,
+        "endChar": 23
+      },
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3acd31a7_14c5745a",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-15T14:10:03Z",
+      "side": 1,
+      "message": "Actually that\u0027s not true. Every deployments is admin:userpass if the admin pass is not changed in sfconfig.yaml. If sftests.com is used then you get additional users user[2-5] with userpass as default password.",
+      "range": {
+        "startLine": 185,
+        "startChar": 24,
+        "endLine": 186,
+        "endChar": 71
+      },
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3acd31a7_74a3889f",
+        "filename": "docs/user/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-15T14:10:03Z",
+      "side": 1,
+      "message": "This should be added in the \u0027Managing resources via the config repository\u0027 section directly",
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3acd31a7_54a08c90",
+        "filename": "docs/user/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2017-11-15T14:10:03Z",
+      "side": 1,
+      "message": "All of this is not needed as they have an entry in the left menu.",
+      "range": {
+        "startLine": 185,
+        "startChar": 0,
+        "endLine": 191,
+        "endChar": 36
+      },
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
