@@ -2,8 +2,8 @@
 
 .. _deepdive:
 
-Software Factory Internals
-==========================
+Internals
+=========
 
 The goal of this document is to describe SF internals.
 
@@ -77,7 +77,7 @@ The sfconfig script drives the system configuration. This script does the follow
 
   * sql/ contains database creation scripts.
 
-That system configuration process is re-entrant and needs to be executed everytime settings are changed.
+That system configuration process is re-entrant and needs to be executed everytime the settings are changed.
 
 Then SF is meant to be a self-service system, thus project configuration is done through the config-repo.
 
@@ -89,7 +89,7 @@ Once SF is up and running, the user configuration of Software Factory happens
 via the config-repo:
 
 * zuul3/: Zuul3 configuration
-* nodepool/nodepoolV3.yaml: Nodepool3 configuration
+* nodepoolV3/: Nodepool3 configuration
 * gerritbot/: IRC notification for gerrit event configuration,
 * gerrit/: Gerrit replication endpoint configuration, and
 * mirrors/: mirror2swift configuration.
@@ -102,7 +102,7 @@ Deprecated configuration:
 * jobs/: Jenkins jobs jjb configuration,
 * jobs-zuul/: Zuul-launcher jobs jjb configuration,
 * zuul/: CI gating zuul yaml configuration,
-* nodepool/nodepool.yaml: Slave configuration with images and labels definitions,
+* nodepool/: Slave configuration with images and labels definitions,
 
 This is actually managed through SF CI system, thanks to the config-update job.
 This job is actually an ansible playbook that will:

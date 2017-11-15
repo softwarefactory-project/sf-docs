@@ -19,37 +19,7 @@ A convenient wrapper for the command line is installed in /usr/bin/zuul3.
 
 By default, no merger are being deployed because the executor service
 can perform merge task. However, merger can also be deployed to speed
-up start time in case there are many projects defined.
-
-List past jobs and builds
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The zuul-web service is running with a jobs controller interface you can use
-to query Zuul jobs or builds history:
-
-.. code-block:: bash
-
-  $ sudo zuul3 show jobs|builds --help
-    usage: zuul show jobs|builds [-h] [--tenant TENANT] [--project PROJECT]
-                      [--pipeline PIPELINE] [--change CHANGE]
-                      [--patchset PATCHSET] [--ref REF] [--result RESULT]
-                      [--uuid UUID] [--job_name JOB_NAME] [--voting VOTING]
-                      [--node_name NODE_NAME] [--limit LIMIT] [--skip SKIP]
-
-      --tenant TENANT       filter by tenant
-      --project PROJECT     filter by project
-      --pipeline PIPELINE   filter by pipeline
-      --change CHANGE       filter by change
-      --patchset PATCHSET   filter by patchset
-      --ref REF             filter by ref
-      --result RESULT       filter by result
-      --uuid UUID           filter by uuid
-      --job_name JOB_NAME   filter by job_name
-      --voting VOTING       filter by voting
-      --node_name NODE_NAME
-                        filter by node_name
-      --limit LIMIT         Limit the query
-      --skip SKIP           Skip rows
+up start time when there are many projects defined.
 
 
 Configure an external gerrit (use Software Factory as a Third-Party CI)

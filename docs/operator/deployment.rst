@@ -1,43 +1,201 @@
 :orphan:
 
+.. _deploy:
+
 #######################
 Deploy Software Factory
 #######################
+
+This section presents how to properly deploy software factory services.
+
+
+Overview
+========
+
+Follow these steps for a successful deployment:
+
+* Use a CentOS-7 system or grab the `provided disk image <https://softwarefactory-project.io/releases/sf-2.7/sf-2.7.qcow2>`_
+  with all the components pre-installed.
+
+* Create as many host instances as needed according to the
+  :ref:`recommended requirements<deployment_requirements>`.
+
+* Setup :ref:`network access control` and make sure the install-server can ssh
+  into the other instance using the root user ssh key.
+
+* On the install server, do a :ref:`minimal configuration<deployment_configuration>`.
+
+* Run sfconfig to:
+
+  * Generate an Ansible playbook based on the arch.yaml file,
+  * Generate secrets and group_vars based on the sfconfig.yaml file, and
+  * Run the playbook to:
+
+    * Install the services if needed.
+    * Configure and start the services.
+    * Setup the config and zuul-jobs repository.
+
+
+Alternatively, you can also follow one of these
+:ref:`automated deployments guide <deployment_image_based>` based on custom disk
+image.
+
 
 .. _deployment_requirements:
 
 Requirements
 ============
 
-SF deployment needs:
+SF needs at least one instance, referred to as the *install-server*. However
+it is recommended to distribute the components accross multiple instance
+to isolate the services and avoid a single point of failure.
 
-* A CentOS system
-* **Minimum** 40GB of hardrive and 4GB of memory
-* **Recommended** 80GB of hardrive and 8GB of memory
-* A DNS entry for the FQDN of your SF deployment. SF can only be accessed by
-  its FQDN (Authentication will fail if accessed via its IP)
+All the services could easily run with 4CPU, 8GB of memory and 20GB of disk,
+but here are some recommendation for a medium size deployment:
 
-Note that SF uses "sftests.com" as default FQDN and if the FQDN doesn't resolve
-it needs to be locally set in */etc/hosts* file because the web interface
-authentication mechanism redirects browser to the FQDN.
+========== ========= =======
+ Name       Disk      Ram
+========== ========= =======
+Zuul        1GB       2GB
+Nodepool    20GB      2GB
+Zookeeper   1GB       1GB
+Logstash    40GB      2GB
+Logserver   40GB
+Gerrit      40GB      2GB
+Others      5GB       1GB
+========== ========= =======
 
-Always make sure to use the last stable release, the example below use the 2.7
-version.
 
+.. _network access control:
 
-.. _deployment_rpm_based:
+Network Access Control
+======================
 
-Rpm based deployment on CentOS 7
-================================
+All external network access goes through the gateway instance and the FQDN
+needs to resolve to the instance IP:
 
-On a CentOS system:
+============================ ======================================
+ Port                         Service
+============================ ======================================
+443                           the web interface
+29418                         gerrit access to submit code review
+1883 and 1884                 mqtt events
+64738 (TCP) and 64738 (UDP)   mumble (the audio conference service)
+============================ ======================================
+
+Administrator will need SSH access to the install-server to manage the services.
+
+Internal instances need many network access between each other and it's
+recommended to run all the services. For examples, internal network usually need:
+
+====================== =========================
+ Service name           Consumers
+====================== =========================
+SQL server              Most services
+Gearman/Zookeeper       Zuul/Nodepool
+Gearman/Elasticsearch   Log-gearman for logstash
+====================== =========================
+
+Test instances (slaves) need to be isolated from the service network:
+
+====================== =========================
+ Provider type          TCP Port access for Zuul
+====================== =========================
+ OpenStack              22
+ OpenContainer          22022 - 65035
+====================== =========================
+
+.. _deployment_configuration:
+
+Deployment configuration
+========================
+
+Deployment and maintenance operations (such as backup/restore or upgrade) are
+performed through a node called the install-server which act as a jump server.
+Make sure this instance can ssh into the other instances using ssh public key.
+The steps bellow need to be performed on the install-server.
+
+If you used a vanilla CentOS-7 system, you have to install the sf-config package
+on the install-server:
 
 .. code-block:: bash
 
-  $ sudo yum install -y https://softwarefactory-project.io/repos/sf-release-2.7.rpm
-  $ sudo yum update -y
-  $ sudo yum install -y sf-config
-  $ sudo sfconfig
+  yum install -y https://softwarefactory-project.io/repos/sf-release-2.7.rpm
+  yum update -y
+  yum install -y sf-config
+
+
+To enable extra services (such as logstash) or to distribute services on
+multiple instances, you have to edit the arch.yaml file
+(see the :ref:`architecture documentation<architecture>` for more details).
+For example to add a logstash service on a dedicated instance, adds to
+the /etc/software-factory/arch.yaml file:
+
+.. code-block:: yaml
+
+  - name: elk
+    ip: 192.168.XXX.YYY
+    roles:
+      - elasticsearch
+      - job-logs-gearman-client
+      - job-logs-gearman-worker
+      - logstash
+      - kibana
+
+
+.. note::
+
+  You can find references architectures in /usr/share/sf-config/refarch, for
+  example the softwarefactory-project.io.yaml is the architecture we use in
+  our main deployment.
+
+
+From the install server, you can also set operator settings such as GitHub
+integration or register OpenStack provider in the sfconfig.yaml file
+(see the :ref:`configuration documentation<configure>` for more details).
+For example, to define your fqdn, the admin password and an OpenStack
+cloud providers, adds to /etc/software-factory/sfconfig.yaml file:
+
+.. code-block:: yaml
+
+  fqdn: example.com
+  authentication:
+    admin_password: super_secret
+  nodepool3:
+    providers:
+      - name: default
+        auth_url: https://cloud.example.com/v3
+        project_name: tenantname
+        username: username
+        password: secret
+        region_name: regionOne
+
+
+Finally, to setup and start the services, run:
+
+.. code-block:: bash
+
+  sfconfig
+
+
+Access Software Factory
+-----------------------
+
+The Dashboard is available at https://FQDN and admin user can authenticate
+using "Internal Login". If you used the default domain *sftests.com* then
+SF allows user "admin" with the default "userpass" password to connect.
+
+Congratulation, you successfully deployed Software Factory.
+You can now head over to the :ref:`architecture documentation<architecture>` to
+check what services can be enabled, or read the
+:ref:`configuration documentation<configure>` to check all services settings.
+
+Lastly you can learn more about operation such as maintenance, backup and
+upgrade in the :ref:`management documentation<management>`.
+
+Otherwise you can find bellow some guide to help you automate deployment steps
+so that you can easily reproduce a deployment.
+
 
 .. _deployment_image_based:
 
@@ -118,7 +276,7 @@ using the web UI of your cloud provider. You should first :ref:`install the soft
 factory image <deployment_image_based_install_image>`
 
 Once the VM is created jump to the section :ref:`Configuration and reconfiguration <configure_reconfigure>`.
-Don't forget to manage by yourself the security groups for the SF deployment :ref:`Network Access <configure_network_access>`.
+Don't forget to manage by yourself the security groups for the SF deployment :ref:`Network Access <network access control>`.
 
 .. _deployment_image_based_kvm:
 
