@@ -1,6 +1,11 @@
 Configure zuul
 --------------
 
+.. warning::
+
+   Zuul (v2) is deprecated and will be removed in software-factory version 3.0
+
+
 Running multiple zuul-merger
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

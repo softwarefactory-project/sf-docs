@@ -9,10 +9,14 @@
 .. _documentation: https://docs.openstack.org/infra/nodepool/feature/zuulv3/
 
 
-Nodepool(V3) configuration
-==========================
+Nodepool3 user documentation
+============================
 
 Labels, providers and diskimage are defined in *config/nodepoolV3/*.
+All the yaml files present in this directory are merged to create the final
+Nodepool configuration. It's recommended to create a file per provider or project
+so that it's easier to manage.
+
 
 Below is an example of a cloud provider configuration and an associated
 diskimage/label:
@@ -51,3 +55,27 @@ diskimage/label:
             - name: centos7
               min-ram: 1024
               diskimage: centos7
+
+
+Cloud provider tunning
+----------------------
+
+`Provider settings <https://docs.openstack.org/infra/nodepool/feature/zuulv3/configuration.html#provider>`_
+include:
+
+* **rate**: the delay between each api call, set it to 1 or lower for fast operation.
+* **clean-floating-ips**: automatically release all unused floating-ip.
+* **boot-timeout** : the delay to wait for instance to start, default is 60.
+
+`Labels settings <https://docs.openstack.org/infra/nodepool/feature/zuulv3/configuration.html#pool-labels>`_
+include:
+
+* **boot-from-volume**: Use a volume instead of ephemeral disk.
+* **cloud-image**: Use an externally managed image instead of DIB.
+
+
+Diskimage elements
+------------------
+
+When using **nodepool3-builder**, you can create custom disk-image using
+diskimage-builder. Refer to the nodepoolV2 :ref:`user documentation<diskimage-elements>`.

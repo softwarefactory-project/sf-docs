@@ -132,13 +132,18 @@ Below is a YAML file that can be used as a starting point:
           - marco@ichiban-cloud.io
         description: Project Core of ichiban-cloud
 
-Please note the users mentioned in the groups must have logged at least once
-on Software Factory.
+
+.. Note::
+
+   Users mentioned in a group must have been logged at least once on Software Factory.
+
+Have a look to the `resources schema documentation </docs/managesf/resources.html>`_ for
+more information about resources definition.
 
 Deleting a resource is as simple as removing it from the resources YAML files.
 Updating a resource is as simple as updating it in the resources YAML files.
 
-Keys under each resources' groups are usually used to create and reference (as
+Keys under each resources' groups are used to create and reference (as
 unique id) real resources into services. So if you want to rename a resource
 you will see that the resource is detected as "Deleted" and a new one will
 be detected as "Created". If you intend to do that with a repository resource then

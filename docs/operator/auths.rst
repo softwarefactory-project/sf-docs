@@ -1,10 +1,18 @@
 .. _authentication:
 
-Single Sign On
-==============
+Authentication
+--------------
 
-As it is always a pain to deal with login/logout of each component, the
-SF provides an unified authentication through Gerrit, Storyboard.
+Software Factory supports different authentication backend for user.
+The `Cauth <https://softwarefactory-project.io/r/gitweb?p=software-factory/cauth.git;a=shortlog;h=HEAD>`_
+component is used to enforce all authenticated HTTP access.
+
+
+
+Single Sign On
+^^^^^^^^^^^^^^
+
+SF provides an unified authentication for services such as Gerrit or Storyboard.
 Once you are authenticated on Gerrit you are also logged in on Storyboard.
 A logout from one service logs you out from other services as well.
 
@@ -16,13 +24,6 @@ Currently SF provides four kind of backends to authenticate:
 * LDAP backend
 
 .. image:: ../imgs/login.jpg
-
-Authentication
---------------
-
-Software Factory supports different authentication backend for user.
-The `Cauth <https://softwarefactory-project.io/r/gitweb?p=software-factory/cauth.git;a=shortlog;h=HEAD>`_
-component is used to enforce all authenticated HTTP access.
 
 
 Admin user
@@ -124,6 +125,7 @@ Connect provider can be configured at a time.
 The issuer_url can be tested using the */.well-known/openid-configuration* uri path, e.g.:
 https://accounts.google.com/.well-known/openid-configuration
 
+
 Local user management
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -131,6 +133,13 @@ For simple deployments without an Identity Provider, you can manage the users
 through the SFManager command-line utility (except for the default admin user, defined
 in the sfconfig.yaml file). See SFmanager command-line
 `User management </docs/sfmanager/sfmanager.html#user-management>`_ documentation for more details.
+
+For example, to create a local user, run this command from the install-server:
+
+.. code-block:: bash
+
+    sfmanager user create --username demo --password demo
+        --email demo@sftests.com --fullname "A local demo user"
 
 
 Other authentication settings

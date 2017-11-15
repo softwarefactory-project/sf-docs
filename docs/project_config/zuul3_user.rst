@@ -7,9 +7,10 @@ Zuul3 user documentation
 
   This is a lightweight documentation intended to get users started with setting
   up CI pipelines and jobs. For more insight on what Zuul3 can do, please refer
-  to its upstream documentation_.
+  to its upstream documentation_ and migration-documentation_.
 
 .. _documentation: https://docs.openstack.org/infra/zuul/feature/zuulv3/user/
+.. _migration-documentation: https://docs.openstack.org/infra/manual/zuulv3.html
 
 Zuul is a *commit gating system* for continuous integration that ensures that
 repositories are always in a healthy state. It is up to repositories managers
@@ -30,6 +31,7 @@ Some of the major changes reflected in Software Factory are:
 * Github was added as a possible repository source for gating projects, enabling
   Software Factory to act as a third party CI for repositories hosted on Github.
 
+.. _zuul3-main-yaml:
 
 Adding a project to the zuulV3 service
 --------------------------------------
@@ -105,6 +107,8 @@ A default deployment of Software Factory comes with the following base jobs:
  Name          Description
 ============= =============================================================
 **linters**    Run the bashate, flake8 and yaml linters on relevant files
+**tox**        Run tox
+**tox-py27**   Run tox -epy27
 ============= =============================================================
 
 Software Factory can be configured to import the **openstack-infra/zuul-jobs**
@@ -133,7 +137,7 @@ to be run in the **check** pipeline along the linters:
       name: unit-tests
       parent: base
       description: this is running the unit tests for this project
-      run: playbooks/unittests
+      run: playbooks/unittests.yaml
       nodeset:
         nodes:
           - name: test-node
@@ -194,7 +198,7 @@ secret data. To fetch a given project's public key:
 
 .. code-block:: bash
 
-  curl -O https://<fqdn>/zuul3/keys/gerrit/project-name.pem
+  curl -O https://<fqdn>/zuul3/keys/gerrit/project-name.pub
 
 The *encrypt_secret.py* tool, from the Zuul repository (branch *feature/zuulv3*), can be used to
 create the YAML tree to be pushed in the project *.zuul.d/* directory.
