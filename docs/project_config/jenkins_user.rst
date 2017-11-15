@@ -1,5 +1,9 @@
 .. _jenkins-user:
 
+.. warning::
+
+   Jenkins is deprecated and will be removed in Software Factory 3.0
+
 Jenkins jobs configuration
 ==========================
 
