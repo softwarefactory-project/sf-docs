@@ -1,5 +1,9 @@
 :orphan:
 
+.. note::
+
+   This role isn't compatible with zuulv3
+
 .. _pages-user:
 
 Publish static web content

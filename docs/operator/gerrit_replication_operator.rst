@@ -3,9 +3,6 @@
 Gerrit GIT repositories replication
 ===================================
 
-Sofware Factory admin related tasks for the replication
--------------------------------------------------------
-
 Below are some explanations and common tasks for a SF admin
 related to the replication.
 
@@ -13,7 +10,7 @@ See the :ref:`Gerrit replication user documentation<gerrit-replication-user>`
 
 
 Public key to provide to SF users for the replication
-.....................................................
+-----------------------------------------------------
 
 You should expose the Gerrit public SSH key to your users
 in order to let them configure the replication target to authorize
@@ -25,7 +22,7 @@ You will find the key at this path::
 
 
 Add the host key of the remote server to the known_hosts
-........................................................
+--------------------------------------------------------
 
 The gerrit replication plugin expects to validate the remote's
 host key. It will look at /var/lib/gerrit/.ssh/known_hosts. If the
@@ -36,7 +33,7 @@ replication issue is "Host key rejected" from the log file
 
 
 Define a deploy key inside Software Factory
-...........................................
+-------------------------------------------
 
 In order to configure Gerrit to use a specific deploy key you have to
 edit the file /var/lib/gerrit/.ssh/config. The following statements
@@ -71,7 +68,7 @@ These commands will copy the key at the right place and populate
 
 
 Restart the Gerrit replication plugin
-.....................................
+-------------------------------------
 
 If a modification in .ssh/config or .ssh/known_hosts is not taken
 in account by the Gerrit replication plugin then you will need to
@@ -84,7 +81,7 @@ reload and restart the replication with the following commands.
 
 
 General recommendations for the replication on GitHub
-.....................................................
+-----------------------------------------------------
 
 If some of your users plan to replicate GIT repositories on Github it
 can be useful to create a specific SF user on Github with the Gerrit

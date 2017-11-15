@@ -6,8 +6,8 @@
 
 .. _documentation: https://docs.openstack.org/infra/nodepool/feature/zuulv3/
 
-Configure nodepool(V3)
-======================
+Operate nodepool3
+=================
 
 The nodepool(V3) service is installed with the rh-python35 software collections:
 
@@ -18,36 +18,55 @@ The nodepool(V3) service is installed with the rh-python35 software collections:
 A convenient wrapper for the command line is installed in /usr/bin/nodepool3.
 
 
-Required architecture
----------------------
+Architecture
+------------
 
-For a minimal deployment, limited to containerized nodes, only the **nodepool3-launcher**
-and **hypervisor-oci** components are required in the architecture file.
+Minimal
+.......
 
-In order to use virtual nodes based on diskimage, the **nodepool3-builder**
-component must be present in the architecture file.
+The **nodepool3-launcher** component is required in the architecture file to
+enable nodepool3.
+
+This minimal deployment uses an OpenStack cloud provider, where images available
+to build test nodes will be managed through the OpenStack cloud itself, for example
+with Glance.
+
+OCI containers
+..............
+
+To use the OCI container driver, add the **hypervisor-oci** component to the
+architecture file or check the :ref:`OCI manual setup<nodepool-manual-operator-oci>` below.
+
+Diskimage-builder
+.................
+
+To manage custom images through the config repository, built using diskimage-builder
+(DIB), add the **nodepool3-builder** component in the architecture file.
+
+.. tip::
+
+  With diskimage-builder, Software Factory users can customize test images without
+  the need for specific authorizations on the OpenStack project. And since custom
+  images definitions are subject to reviews on the config repository, operators
+  can choose to allow or reject these images.
+
 
 Add a cloud provider
 --------------------
 
-To do this, an account on an OpenStack cloud is required and credentials need to
-be known by Nodepool. It is highly recommended to use a project dedicated to
-Nodepool, into which the slave instances will be spawned.
+To add a cloud provider, an OpenStack cloud account is required.
+It is highly recommended to use a project dedicated to
+Nodepool.
 
 The slave instances inherit the project's "default" security group for access
-rules. Therefore the project's "default" security group must **at least** allow
-incoming SSH traffic (TCP/22) from the zuul-executor node. More permissive access
-can be considered if others should be allowed to SSH into test nodes. Please
-refer to `OpenStack's documentation <https://docs.openstack.org/nova/pike/admin/security-groups.html>`
+rules. Therefore the project's "default" security group must allow
+incoming SSH traffic (TCP/22) from the zuul-executor node.
+Please refer to `OpenStack's documentation <https://docs.openstack.org/nova/pike/admin/security-groups.html>`_
 to find out how to modify security groups.
 
-In order to configure Nodepool to define a provider (an OpenStack cloud account) you need
-to adapt sfconfig.yaml. Indeed you need to add the cloud client information
-(auth url, login, password...) to the sfconfig.yaml.
-See the :ref:`Nodepool user documentation<nodepool-user>` for additional provider settings
-such as labels and diskimages.
-
-Below is an example of configuration.
+In order to configure an OpenStack provider you need
+to add in sfconfig.yaml the cloud client information, below is an example of
+configuration.
 
 .. code-block:: yaml
 
@@ -81,29 +100,145 @@ As an administrator, it can be really useful to check
 /var/log/nodepool3 to debug the Nodepool configuration.
 
 
-Setup the OCI container provider
---------------------------------
+.. _nodepool-operator-oci:
+
+Add a container provider
+------------------------
+
+Software Factory's Nodepool service comes with a new OCI (OpenContainer) driver
+based on a simple runc implementation. It is still under review and not integrated
+in the upstream version of Nodepool yet, however it is available in Software Factory
+to enable a lightweight environment for Zuul jobs, instead of full-fledged OpenStack
+instances.
+
+The driver will start containerized *sshd* processes using a TCP port in a range from
+22022 to 65535. Make sure the OCI provider host accepts incoming traffic on these
+ports from the zuul-executor.
+
+
+Setup an OCI provider using the hypervisor-oci role
+...................................................
 
 The role **hypervisor-oci** can be added to the architecture file. This role will
-install the requirements and configure the node to provide Open Container with *runc*.
-This role must be installed on a Centos 7 instance. Containers *bind mount* the local host
+install the requirements and configure the node.
+This role must be installed on a Centos 7 instance. Containers *bind mount* the local host's
 filesystem, that means you don't have to configure an image, what is installed on
 the instance is available inside the containers. The role can be defined on multiple
 nodes in order to scale.
 
-Note that the OCI provider doesn't provide network isolation and slave needs to run on
-a dedicated instance/network. sfconfig will refuse to install this role on a server
-where Software Factory services are running. Nevertheless you can bypass this
-protection by using the sfconfig's option *--enable-insecure-slaves*.
-
 Please refer to :ref:`Extending the architecture<architecture_extending>` for adding a node
-to the architecture then run sfconfig.
+to the architecture, then run sfconfig.
 
-Note that *config/nodepoolV3/_local_hypervisor_oci.yaml* will by automatically updated
-making OCI provider(s) available in Nodepool.
+.. warning::
 
-Please make sure the TCP port range 22022 to 65535 is open to incoming traffic
-on the **hypervisor-oci** node(s).
+  The OCI provider doesn't enforce network isolation and slaves need to run on
+  a dedicated instance/network. sfconfig will refuse to install this role on a server
+  where Software Factory services are running. Nevertheless you can bypass this
+  protection by using the sfconfig's option *--enable-insecure-slaves*.
+
+.. note::
+
+  Note that *config/nodepoolV3/_local_hypervisor_oci.yaml* will by automatically updated
+  in the config repository, making OCI provider(s) available in Nodepool.
+
+
+.. _nodepool-manual-operator-oci:
+
+Manual setup of an OCI container provider
+.........................................
+
+Alternatively, you can setup a container provider manually using one or more
+dedicated server(s), which could be running Fedora, CentOS, RHEL or any other
+Linux distribution:
+
+* Create a new user, for example: useradd -m zuul-worker
+* Authorize nodepool to connect as root: copy the /var/lib/nodepool3/.ssh/id_rsa.pub to
+  /root/.ssh/authorized_keys
+* Authorize zuul to connect to the new user: copy the /var/lib/zuul3/.ssh/id_rsa.pub to
+  /home/zuul-worker/.ssh/authorized_keys
+* Create the working directory: mkdir /home/zuul-worker/src
+* Install runc and any other test packages such as yamllint, rpm-build, ...
+* Authorize network connection from software factory on port 22 and 22022 to 65535
+
+Then register the provider to the nodepoolV3 configuration: in the config repository
+add a new file in /root/config/nodepoolV3/new-oci-provider.yaml:
+
+.. code-block:: yaml
+
+  labels:
+    - name: new-container
+
+  providers:
+    - name: new-provider
+      driver: oci
+      hypervisor: instance-hostname-or-ip
+      pools:
+        - name: main
+	  max-servers: instance-core-number
+	  labels:
+	    - name: new-container
+	      username: zuul-worker
+
+Once this config repo change is merged, any job can now use this new-container label.
+
+
+Use custom container images with the OCI provider
+.................................................
+
+By default, the server root filesystem is used for the container rootfs, but
+you can create and use different rootfs for the containers. To create a new
+rootfs, do:
+
+* Extract a rootfs, for example from a cloud disk image, e.g. in /srv/centos-6
+* Create server ssh keys: chroot /srv/centos-6 /usr/sbin/sshd-keygen
+* Create a new user: chroot /srv/centos-6 useradd -m zuul-worker
+* Install test packages: chroot /srv/centos-6 yum install -y rpm-build
+* Authorize zuul to connect to the new user: copy the /var/lib/zuul3/.ssh/id_rsa.pub to
+  /srv/centos-6/home/zuul-worker/.ssh/authorized_keys
+
+Then create a new label in the nodepoolV3 configuration using the 'path'
+attribute to set the new rootfs, for example:
+
+.. code-block:: yaml
+
+  labels:
+    - name: centos-6-container
+
+  providers:
+    - name: new-provider
+      driver: oci
+      hypervisor: install-hostname-or-ip
+      pools:
+        - name: main
+	  max-servers: install-core-number
+	  labels:
+	    - name: centos-6-container
+	      username: zuul-worker
+	      path: /srv/centos-6
+
+
+Debug container creation failure
+................................
+
+If for some reason containers fail to start, here are some tips to investigate
+the errors:
+
+* Look for failure in logs, e.g.: grep nodepool.driver.oci /var/log/nodepool3/launcher.log
+* Catch container start failures by running runc manually on the host server:
+
+.. code-block:: bash
+
+  runc run --bundle /var/lib/nodepool/oci/$nodepool-node-server-id debug-run
+
+* Execute command directly:
+
+.. code-block:: bash
+
+  runc list
+  runc exec $container-id bash
+
+* Verify the runtime OCI specification config.json file located in the bundle directory
+* Check that zuul can connect to the server on ports higher than 22022
 
 
 Useful commands

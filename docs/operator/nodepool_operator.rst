@@ -1,5 +1,10 @@
 .. _nodepool-operator:
 
+.. warning::
+
+   Nodepool (v2) is deprecated and will be removed in Software Factory 3.0
+
+
 Configure nodepool to manage ephemeral test slaves
 --------------------------------------------------
 
