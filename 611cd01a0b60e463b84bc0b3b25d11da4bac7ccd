@@ -25,6 +25,24 @@
     },
     {
       "key": {
+        "uuid": "3acd31a7_b798026c",
+        "filename": "docs/config_project/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-11-16T04:39:48Z",
+      "side": 1,
+      "message": "Ok, I was trying to get closer to upstream terminology (project-config and system-config) but failed and wrote config-project :)\nNext PS will remove that ().",
+      "parentUuid": "3acd31a7_f42b1832",
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3acd31a7_d4301ca1",
         "filename": "docs/config_project/index.rst",
         "patchSetId": 2
@@ -36,6 +54,24 @@
       "writtenOn": "2017-11-15T14:10:03Z",
       "side": 1,
       "message": "Something missing here ? what you wanted to say ?",
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3acd31a7_979d065c",
+        "filename": "docs/config_project/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-11-16T04:39:48Z",
+      "side": 1,
+      "message": "I forgot to link to the sf-config project, I reworded that sentence.",
+      "parentUuid": "3acd31a7_d4301ca1",
       "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -59,6 +95,24 @@
     },
     {
       "key": {
+        "uuid": "3acd31a7_77a38a9f",
+        "filename": "docs/config_project/pages_user.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-11-16T04:39:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3acd31a7_942aa42b",
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3acd31a7_7420284a",
         "filename": "docs/operator/architecture.rst",
         "patchSetId": 2
@@ -70,6 +124,24 @@
       "writtenOn": "2017-11-15T14:10:03Z",
       "side": 1,
       "message": "/root/.ssh/authorized_keys",
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3acd31a7_57a08e90",
+        "filename": "docs/operator/architecture.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-11-16T04:39:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3acd31a7_7420284a",
       "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -99,6 +171,24 @@
     },
     {
       "key": {
+        "uuid": "3acd31a7_37ad1289",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-11-16T04:39:48Z",
+      "side": 1,
+      "message": "I think we need \"the\" for grammar.",
+      "parentUuid": "3acd31a7_d4d7fc21",
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3acd31a7_f4d2f833",
         "filename": "docs/operator/deployment.rst",
         "patchSetId": 2
@@ -116,6 +206,24 @@
         "endLine": 35,
         "endChar": 29
       },
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3acd31a7_17aa1671",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-11-16T04:39:48Z",
+      "side": 1,
+      "message": "ditto",
+      "parentUuid": "3acd31a7_f4d2f833",
       "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -145,6 +253,24 @@
     },
     {
       "key": {
+        "uuid": "3acd31a7_f7b55ad0",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-11-16T04:39:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3acd31a7_1417b4ee",
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3acd31a7_341ab018",
         "filename": "docs/operator/deployment.rst",
         "patchSetId": 2
@@ -156,6 +282,24 @@
       "writtenOn": "2017-11-15T14:10:03Z",
       "side": 1,
       "message": "together",
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3acd31a7_d7ba5ec0",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-11-16T04:39:48Z",
+      "side": 1,
+      "message": "Done, also removed the \"easily\" word.",
+      "parentUuid": "3acd31a7_341ab018",
       "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -185,6 +329,24 @@
     },
     {
       "key": {
+        "uuid": "3acd31a7_77ca6a51",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-11-16T04:39:48Z",
+      "side": 1,
+      "message": "I think it\u0027s good to give example in this deployment chapter, like that it covers most of the action needed to deploy.",
+      "parentUuid": "3acd31a7_74e70813",
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3acd31a7_54e40c0c",
         "filename": "docs/operator/deployment.rst",
         "patchSetId": 2
@@ -202,6 +364,24 @@
         "endLine": 153,
         "endChar": 23
       },
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3acd31a7_57c76e45",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-11-16T04:39:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3acd31a7_54e40c0c",
       "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -231,6 +411,24 @@
     },
     {
       "key": {
+        "uuid": "3acd31a7_37c4f23e",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-11-16T04:39:48Z",
+      "side": 1,
+      "message": "Yep, that\u0027s true. We should work on changing it to \"CHANGE_ME\", and automatically randomize it when not changed.",
+      "parentUuid": "3acd31a7_14c5745a",
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3acd31a7_74a3889f",
         "filename": "docs/user/index.rst",
         "patchSetId": 2
@@ -242,6 +440,24 @@
       "writtenOn": "2017-11-15T14:10:03Z",
       "side": 1,
       "message": "This should be added in the \u0027Managing resources via the config repository\u0027 section directly",
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3acd31a7_d7e13ed2",
+        "filename": "docs/user/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 183,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-11-16T04:39:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3acd31a7_74a3889f",
       "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -265,6 +481,24 @@
         "endLine": 191,
         "endChar": 36
       },
+      "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3acd31a7_b7e6c2e6",
+        "filename": "docs/user/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2017-11-16T04:39:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3acd31a7_54a08c90",
       "revId": "611cd01a0b60e463b84bc0b3b25d11da4bac7ccd",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
