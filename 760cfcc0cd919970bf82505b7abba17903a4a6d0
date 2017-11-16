@@ -34,6 +34,24 @@
       "revId": "760cfcc0cd919970bf82505b7abba17903a4a6d0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3acd31a7_5a3e75b9",
+        "filename": "docs/operator/quickstart.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-11-16T13:06:29Z",
+      "side": 1,
+      "message": "Alias definition will need to be explained in the doc, I don\u0027t remember seeing anything about it",
+      "parentUuid": "3acd31a7_ba1fc95a",
+      "revId": "760cfcc0cd919970bf82505b7abba17903a4a6d0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
