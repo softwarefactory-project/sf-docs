@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3acd31a7_fafe6104",
+        "filename": "docs/operator/quickstart.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-11-16T12:33:51Z",
+      "side": 1,
+      "message": "review.openstack.org ?",
+      "revId": "760cfcc0cd919970bf82505b7abba17903a4a6d0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
