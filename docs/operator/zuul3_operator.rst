@@ -27,6 +27,69 @@ Configure an external gerrit (use Software Factory as a Third-Party CI)
 
 Refer to the :ref:`Third-Party-CI Quick Start guide <tpci-quickstart>`
 
+.. _zuul3-github-app-operator:
+
+Create a GitHub app
+-------------------
+
+To create a GitHub app on my-org follow this
+`documentation <https://developer.github.com/apps/building-integrations/setting-up-and-registering-github-apps/registering-github-apps/>`_:
+
+* Go to https://github.com/organizations/my-org/settings/apps/new
+* Set GitHub App name to "my-org-zuul"
+* Set Homepage URL to "https://fqdn"
+* Set Setup URL to "https://fqdn/docs/project_config/zuul3_user.html#adding-a-project-to-the-zuulv3-service"
+* Set Webhook URL to "https://fqdn/zuul3/connection/github.com/payload"
+* Create a Webhook secret
+* Set permissions:
+
+  * Commit statuses: Read & Write
+  * Issues: Read & Write
+  * Pull requests: Read & Write
+  * Repository contents: Read & Write (write to let zuul merge change)
+
+* Set events subscription:
+
+  * Label
+  * Status
+  * Issue comment
+  * Issues
+  * Pull request
+  * Pull request review
+  * Pull request review comment
+  * Commit comment
+  * Create
+  * Push
+  * Release
+
+* Set Where can this GitHub App be installed to "Any account"
+* Create the App
+* Verify in the 'Advanced' tab that the Ping payload works (green tick and 200 response)
+* Generate a Private key in the app settings page
+
+Then configure the github connection in sfconfig.yaml, add to the github_connections:
+
+.. code-block:: yaml
+
+  - name: "github.com"
+    webhook_token: uuid # The token used in app creation
+    app_id: 42 # Can be found under the Public Link on the right hand side labeled ID.
+    app_key: | # In Github this is known as Private key and must be collected when generated
+      -----BEGIN RSA PRIVATE KEY-----
+      KEY CONTENT HERE
+      -----END RSA PRIVATE KEY-----
+
+Finally run **sfconfig** to apply the configuration.
+
+.. note::
+
+   It's recommended to use a GitHub app instead of manual webhook. When using
+   manual webhook, set the api_token instead of the app_id and app_key.
+   Manual webhook documentation is still TBD...
+
+
+Check out the :ref:`Zuul GitHub App user documentation<zuul3-github-app-user>` to start using the application.
+
 
 Use openstack-infra/zuul-jobs
 -----------------------------
