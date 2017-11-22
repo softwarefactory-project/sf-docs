@@ -7,9 +7,9 @@ Zuul3 user documentation
 
   This is a lightweight documentation intended to get users started with setting
   up CI pipelines and jobs. For more insight on what Zuul3 can do, please refer
-  to its upstream documentation_ and `migration documentation`_.
+  to its `upstream documentation`_ and `migration documentation`_.
 
-.. _documentation: https://docs.openstack.org/infra/zuul/feature/zuulv3/user/
+.. _`upstream documentation`: https://docs.openstack.org/infra/zuul/feature/zuulv3/user/
 .. _`migration documentation`: https://docs.openstack.org/infra/manual/zuulv3.html
 
 Zuul is a *commit gating system* for continuous integration that ensures that
@@ -247,3 +247,23 @@ Zuul's Builds dashboard can be reached at https://<fqdn>/zuul3/local/builds.html
 
 This page lists all the builds and build sets that have completed. Filtering
 options are available.
+
+
+.. _zuul3-github-app-user:
+
+Configure a GitHub App
+----------------------
+
+After a GitHub Application is created and configured in Software Factory (see this :ref:`guide <zuul3-github-app-operator>`),
+to add the application to your projects, follow this `documentation <https://help.github.com/articles/installing-an-app-in-your-organization/#installing-a-github-app-in-your-organization>`_:
+
+* Visit the application page, e.g.: https://github.com/apps/my-org-zuul
+* Click "Install"
+* Select your GitHub organisation
+* Pick all repositories
+* Click "Install"
+
+Then you'll be redirected to the Setup URL with the instruction to finish the configuration, checkout the :ref:`Zuul3 user documentation <zuul3-main-yaml>`:
+
+* Update the config repository to add the projects to the zuul main.yaml file, and
+* Create a Pull Request to add a .zuul.yaml to your project and verify it works.
