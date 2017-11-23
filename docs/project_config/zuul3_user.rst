@@ -260,10 +260,20 @@ to add the application to your projects, follow this `documentation <https://hel
 * Visit the application page, e.g.: https://github.com/apps/my-org-zuul
 * Click "Install"
 * Select your GitHub organisation
-* Pick all repositories
+* Select the repositories to install the application on
 * Click "Install"
 
 Then you'll be redirected to the Setup URL with the instruction to finish the configuration, checkout the :ref:`Zuul3 user documentation <zuul3-main-yaml>`:
 
-* Update the config repository to add the projects to the zuul main.yaml file, and
+* Update the config repository to add the projects to the zuul main.yaml file.
 * Create a Pull Request to add a .zuul.yaml to your project and verify it works.
+
+.. note::
+
+  Software Factory pre-configures its default *check* pipeline to trigger jobs according to the pull request
+  status. Status of jobs running in the *check* pipeline will be reported in the pull request. You might want
+  to define specific pipelines like a *github-gate* and a *github-post*. To do so you should propose them in
+  the *config* repository *zuul.d/*. Refer to the upstream manual_.
+
+.. _manual: https://docs.openstack.org/infra/zuul/admin/drivers/github.html
+

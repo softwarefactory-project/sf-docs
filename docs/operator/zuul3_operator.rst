@@ -64,10 +64,9 @@ To create a GitHub app on my-org follow this
 
 * Set Where can this GitHub App be installed to "Any account"
 * Create the App
-* Verify in the 'Advanced' tab that the Ping payload works (green tick and 200 response)
-* Generate a Private key in the app settings page
+* In the 'General' tab generate a Private key for your application
 
-Then configure the github connection in sfconfig.yaml, add to the github_connections:
+Configure the Github connection in sfconfig.yaml, add to the github_connections:
 
 .. code-block:: yaml
 
@@ -79,7 +78,8 @@ Then configure the github connection in sfconfig.yaml, add to the github_connect
       KEY CONTENT HERE
       -----END RSA PRIVATE KEY-----
 
-Finally run **sfconfig** to apply the configuration.
+Then run **sfconfig** to apply the configuration. And finally verify in the 'Advanced'
+tab that the Ping payload works (green tick and 200 response). Click "Redeliver" if needed.
 
 .. note::
 
@@ -89,6 +89,10 @@ Finally run **sfconfig** to apply the configuration.
 
 
 Check out the :ref:`Zuul GitHub App user documentation<zuul3-github-app-user>` to start using the application.
+
+More information about the Zuul's Github driver can be found in the Zuul Github driver manual_.
+
+.. _manual: https://docs.openstack.org/infra/zuul/admin/drivers/github.html
 
 
 Use openstack-infra/zuul-jobs
