@@ -35,7 +35,11 @@ Create a GitHub app
 To create a GitHub app on my-org follow this
 `github documentation <https://developer.github.com/apps/building-integrations/setting-up-and-registering-github-apps/registering-github-apps/>`_:
 
-* Go to https://github.com/organizations/my-org/settings/apps/new
+* Open the App creation form:
+
+  * to create the app under an organization, go to `https://github.com/organizations/<organization>org/settings/apps/new`
+  * to create the app under a user account, go to `https://github.com/settings/apps/new`
+
 * Set GitHub App name to "my-org-zuul"
 * Set Homepage URL to "https://fqdn"
 * Set Setup URL to "https://fqdn/docs/project_config/zuul3_user.html#adding-a-project-to-the-zuulv3-service"
@@ -64,14 +68,14 @@ To create a GitHub app on my-org follow this
 
 * Set Where can this GitHub App be installed to "Any account"
 * Create the App
-* In the 'General' tab generate a Private key for your application
+* In the 'General' tab generate a Private key for your application, and download the key to a secure location
 
-Configure the Github connection in sfconfig.yaml, add to the github_connections:
+To configure the Github connection in sfconfig.yaml, add to the **github_connections** section:
 
 .. code-block:: yaml
 
   - name: "github.com"
-    webhook_token: uuid # The token used in app creation
+    webhook_token: XXXX # The Webhook secret defined earlier
     app_id: 42 # Can be found under the Public Link on the right hand side labeled ID.
     app_key: | # In Github this is known as Private key and must be collected when generated
       -----BEGIN RSA PRIVATE KEY-----
