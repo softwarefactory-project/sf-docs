@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa0d59b9_70f968c8",
+        "filename": "docs/project_config/zuul3_user.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-12-20T12:04:13Z",
+      "side": 1,
+      "message": "why is this needed ?",
+      "revId": "45982a280c3394c7f6569a79d7e8a55b957b7de7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa0d59b9_9013bc0d",
+        "filename": "docs/project_config/zuul3_user.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2017-12-20T12:04:13Z",
+      "side": 1,
+      "message": "It might be worth it to explain what a tenant entices - namely that the status page for the project will be https://fqdn/zuul3/project-name/status.html",
+      "revId": "45982a280c3394c7f6569a79d7e8a55b957b7de7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
