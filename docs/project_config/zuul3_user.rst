@@ -42,18 +42,28 @@ directory. For example, config/zuulV3/project-name.yaml can contain the followin
 .. code-block:: yaml
 
   - tenant:
-      name: local
+      name: project-name
       source:
+        gerrit:
+          config-projects:
+            - config:
+                include:
+                - pipeline
+                - job
+                - secret
         source-name:
           untrusted-projects:
-            - project-name
+            - zuul-jobs
+            - repo1
+            - repo2
 
 
-* Leave the tenant name to *local*.
+* Change *project-name* to your tenant name.
 * Replace source-name by the location of the repository: for example, **gerrit** for
   Software Factory's internal gerrit. Other source names, if available, will depend
   on Software Factory's configuration.
-* Replace project-name by the repository's name.
+* List your project's repositories in the *unstrusted-projects* section by replacing
+  *repo1*, *repo2*. Make sure to keep *zuul-jobs* (where mandatory roles are defined).
 
 .. tip::
 
