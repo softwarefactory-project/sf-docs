@@ -2,54 +2,95 @@
 
 .. note::
 
-   This role isn't compatible with zuulv3
+   This feature is only supported via zuul V3
 
 .. _pages-user:
 
 Publish static web content
 ==========================
 
-See :ref:`Pages service for hosting static web content <pages-operator>` for
-more informations about the service.
+Software Factory provides default Zuul jobs to build and publish
+static website content. A user can use them to publish websites on a
+Software Factory instance that will be publicly accessible on
+*https://<custom-name>.sftests.com/*.
 
-Create the source repository
+The following static content are supported:
+
+ * raw
+ * Sphinx
+ * Pelican
+
+
+Activate the build-pages job
 ----------------------------
 
-Software Factory detects publication repositories named *<name>.<sfdomain>* and
-handles them as special repositories that contain content to be published.
+The *build-pages* job is well suited to be triggered in the *check* pipeline.
+It builds the website source. The job fails if a processing error
+occurs. After a successful build, the built website is available in
+the *pages* directory on the log server.
 
-For example, let's assume the Sofware Factory instance you are using is accessible
-via the hostname *sftests.com* and you want to host content at *myproject.sftests.com*;
-then simply create the repository *myproject.sftests.com*. The repository's name determines
-whether it is a publication repository and its URL.
+In *.zuul.yaml* add the following:
 
-Please refer to this :ref:`section <resources-user>` for instructions on creating
-repositories.
+.. code-block:: yaml
 
-Publish content
----------------
+ - project:
+     name: myproject
+     check:
+       jobs:
+         - build-pages
 
-The Git repository can be populated with raw content or pelican (https://blog.getpelican.com) sources.
+The *build-pages* job expects to find the source of the website
+at the root of the repository. If the source is contained in a
+specific directory then the var *scr_dir* need to be updated.
 
-Behind the scene Software Factory attaches two CI jobs to publication repositories:
+.. code-block:: yaml
 
- * pages-render (triggered by the check and gate pipelines)
- * pages-update (triggered by the post pipeline)
+ - project:
+     name: myproject
+     check:
+       jobs:
+         - build-pages:
+             vars:
+                src_dir: website
 
-The *pages-render* job detects the content type and runs some content check.
-Actually only pelican content is checked. The source is processed
-by the job thus any mistakes detected by pelican will generate a
-negative feedback note on the code review service.
 
-Both jobs detect pelican content by testing if the file *pelicanconf.py*
-exists at the root of the repository.
+Activate the build-and-publish-pages job
+----------------------------------------
 
-The *pages-update* job renders content if needed (for pelican content) and publishes it.
-It runs in the *post* pipeline meaning that the run occurs once the code is merged
-in the Git repository.
+The *build-and-publish-pages* is a base job that must be used as parent job
+in your custom publishing job. This custom job should be triggered by
+the *gate* pipeline to build and publishe the website on the Software Factory
+gateway.
 
-As soon as the code is merged and the job is finished then the content is accessible
-under *http(s)://<repo-name>*.
+The following code block give an example of the base job customization to
+define in a yaml file under the *config* repository *zuul.d/*.
+
+.. code-block:: yaml
+
+ - job:
+     name: myproject-build-and-publish-pages
+     parent: build-and-publish-pages
+     final: true
+     vars:
+       name: www-myproject
+     allowed-projects:
+       - myproject
+
+Once the custom job definition is merged the project's *.zuul.yaml* can
+be updated.
+
+.. code-block:: yaml
+
+ - project:
+     name: myproject
+     check:
+       jobs:
+         - build-pages
+     gate:
+       jobs:
+         - myproject-build-and-publish-pages
+
+The website will be accessible on *https://www-myproject.sftests.com*.
 
 Hostname resolution
 -------------------
@@ -63,4 +104,4 @@ For exemple adding in /etc/hosts:
 
 .. code-block:: bash
 
- echo "<SF IP> <repo-name>" | sudo tee -a /etc/hosts
+ echo "<SF IP> <custom-name>.sftests.com" | sudo tee -a /etc/hosts
