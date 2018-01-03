@@ -13,7 +13,6 @@ Management
    firehose_operator
    gerrit_replication_operator
    resources_operator
-   pages_operator
    repoxplorer
    access_control
    metrics_operator
