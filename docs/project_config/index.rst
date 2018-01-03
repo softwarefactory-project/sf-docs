@@ -38,3 +38,4 @@ To make a change in the configuration:
    jenkins_user
    zuul_user
    nodepool_user
+   pages_user
