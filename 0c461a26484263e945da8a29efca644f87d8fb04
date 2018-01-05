@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba076199_a8089b29",
+        "filename": "docs/project_config/pages_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-01-05T03:05:31Z",
+      "side": 1,
+      "message": "No need for this note, next version of sf will only works with zuulv3",
+      "revId": "0c461a26484263e945da8a29efca644f87d8fb04",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba076199_880dd739",
+        "filename": "docs/project_config/pages_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-01-05T03:05:31Z",
+      "side": 1,
+      "message": "why not post?",
+      "revId": "0c461a26484263e945da8a29efca644f87d8fb04",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
