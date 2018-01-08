@@ -161,6 +161,18 @@ to save and restore the current state:
 
 The periodic and post pipelines are not dumped by this tool.
 
+How to restart a config-update job
+..................................
+
+When the *config-update* job fails, you can manually restart the job using
+the command bellow. Make sure to set the *ref-sha* which is the last commit
+hash of the config repository.
+
+.. code-block:: bash
+
+    zuul3 enqueue-ref --trigger gerrit --tenant local --pipeline post --project config --ref master --newrev ref-sha
+
+The job will be running in the post pipeline of the Zuul status page.
 
 .. _gerrit-rest-api:
 
