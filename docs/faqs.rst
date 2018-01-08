@@ -164,6 +164,19 @@ The periodic and post pipelines are not dumped by this tool.
 
 .. _gerrit-rest-api:
 
+How to restart a config-update job
+..................................
+
+In case of a *config-update* job failure, you might want to restart the job. To do so
+run the following command. Make sure to set the *ref-sha* that is the sha of the commit on
+which the *config-update* must be run again.
+
+.. code-block:: bash
+
+    zuul3 enqueue-ref --trigger gerrit --tenant local --pipeline post --project config --ref master --newrev ref-sha
+
+You should see the job being executed on the Zuul status page.
+
 How can I use the Gerrit REST API?
 ..................................
 
