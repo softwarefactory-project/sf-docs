@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba076199_f7cf8ab1",
+        "filename": "docs/faqs.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-01-15T00:27:44Z",
+      "side": 1,
+      "message": "This entry should be moved above the gerrit-rest-api tag.",
+      "revId": "9389af84acdf32a6bd5423510435c61daca289f1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba076199_d7d48648",
+        "filename": "docs/faqs.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-01-15T00:27:44Z",
+      "side": 1,
+      "message": "When the *config-update* job fails, you can manually restart the job using the command bellow.",
+      "revId": "9389af84acdf32a6bd5423510435c61daca289f1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba076199_b7c912af",
+        "filename": "docs/faqs.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-01-15T00:27:44Z",
+      "side": 1,
+      "message": "the *ref-sha* which is the last commit hash of the config repository.",
+      "revId": "9389af84acdf32a6bd5423510435c61daca289f1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba076199_97ce0eb3",
+        "filename": "docs/faqs.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-01-15T00:27:44Z",
+      "side": 1,
+      "message": "The job will be running in the post pipeline of the Zuul status page.",
+      "revId": "9389af84acdf32a6bd5423510435c61daca289f1",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
