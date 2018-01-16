@@ -193,19 +193,19 @@ Further documentation can be found online:
 Create a secret to be used in jobs
 ----------------------------------
 
-Zuul provides a public key for every project that needs to be used to encrypt
-secret data. To fetch a given project's public key:
+Zuul provides a public key for every project. This key needs to be used to encrypt
+secret data. To fetch a project's public key:
 
 .. code-block:: bash
 
-  curl -O https://<fqdn>/zuul3/keys/gerrit/project-name.pub
+  curl -O https://<fqdn>/zuul3/keys/<tenant>/<project>.pub
 
-The *encrypt_secret.py* tool, from the Zuul repository (branch *feature/zuulv3*), can be used to
-create the YAML tree to be pushed in the project *.zuul.d/* directory.
+The *tools/encrypt_secret.py* tool, from the Zuul repository,
+can be used to create the YAML tree to be pushed in the project *.zuul.d/* directory.
 
 .. code-block:: bash
 
-  ./encrypt_secret.py https://<fqdn>/zuul3/ gerrit project-name --infile secret.data --outfile secret.yaml
+  ./encrypt_secret.py --infile secret.data --outfile secret.yaml https://<fqdn>/zuul3/keys/<tenant> <project>
 
 Then *<name>* and *<fieldname>* fields that are placeholders must be replaced in the
 generated *secret.yaml* file.
