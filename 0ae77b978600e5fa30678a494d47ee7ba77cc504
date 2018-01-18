@@ -16,6 +16,24 @@
       "revId": "0ae77b978600e5fa30678a494d47ee7ba77cc504",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba076199_c56dedcd",
+        "filename": "docs/project_config/zuul3_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-01-18T10:05:57Z",
+      "side": 1,
+      "message": "No, I just re-tested the command and the tenant name is part of the url. encrypt_secret.py take two positional arguments url and project. You can quickly test it like that: ./encrypt_secret.py --infile update-storyboard.py --outfile secret.yaml https://softwarefactory-project.io/zuul3/keys/local software-factory/sfinfo",
+      "parentUuid": "ba076199_32c1ad2f",
+      "revId": "0ae77b978600e5fa30678a494d47ee7ba77cc504",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
