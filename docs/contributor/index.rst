@@ -36,6 +36,7 @@ Then you will need to check out the Software Factory repositories:
 .. code-block:: bash
 
  mkdir software-factory
+ mkdir scl
  pushd software-factory
  git clone https://softwarefactory-project.io/r/software-factory/sfinfo
  git clone https://softwarefactory-project.io/r/software-factory/sf-ci
@@ -44,6 +45,8 @@ Then you will need to check out the Software Factory repositories:
  repos = yaml.load(open('sfinfo/sf-master.yaml'))
  for r in repos['packages']:
     suffix = r['name']
+    if not suffix.startswith('software-factory/'):
+        continue
     if r['source'] == 'external':
        suffix += '-distgit'
     print suffix
@@ -53,6 +56,22 @@ Then you will need to check out the Software Factory repositories:
    git clone https://softwarefactory-project.io/r/$repo;
  done
  popd
+ pushd scl
+ for repo in $(python << EOF
+ import yaml
+ repos = yaml.load(open('../software-factory/sfinfo/sf-master.yaml'))
+ for r in repos['packages']:
+    suffix = r['name']
+    if not suffix.startswith('scl/'):
+        continue
+    if r['source'] == 'external':
+       suffix += '-distgit'
+    print suffix
+    if 'distgit' in r:
+       print r['distgit']
+ EOF); do
+   git clone https://softwarefactory-project.io/r/$repo;
+ done
  ln -s software-factory/sfinfo/zuul_rpm_build.py .
  ln -s software-factory/sfinfo/sf-master.yaml distro.yaml
 
@@ -89,13 +108,6 @@ Multiple packages can be specified to trigger their builds.
 .. code-block:: bash
 
  rm -Rf ./zuul-rpm-build/* && ./zuul_rpm_build.py --noclean --project software-factory/zuul --project software-factory/nodepool
-
-There is no public DNS entry for the Software Factory koji host (where all SF
-packages are built and stored); to access our koji instance, you must edit your hosts file like this:
-
-.. code-block:: bash
-
- echo "38.145.34.53 koji koji.softwarefactory-project.io" | sudo tee -a /etc/hosts
 
 How to run the tests
 --------------------
