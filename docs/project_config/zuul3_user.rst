@@ -190,6 +190,52 @@ Further documentation can be found online:
 
 .. _`Predefined variables available in jobs`: https://docs.openstack.org/infra/zuul/feature/zuulv3/user/jobs.html#variables
 
+.. _zuul3-artifacts-export:
+
+Export logs artifacts to the logserver
+--------------------------------------
+
+After a job ran, Software Factory exports the job's *console* log to
+the internal log server.
+
+When a job generate extra artifacts, such as log files, a *post-run* playbook
+can be written to export the artifacts to *zuul.executor.log_root*. Then
+Software Factory base job's *post-run* will push these artifacts to the internal log server.
+
+An example of a *fetch-logs.yaml* playbook.
+
+.. code-block:: yaml
+
+ ---
+ - hosts: all
+   tasks:
+     - name: Upload logs
+       synchronize:
+         src: '{{ zuul.project.src_dir }}/logs'
+         dest: '{{ zuul.executor.log_root }}'
+         mode: pull
+         copy_links: true
+         verify_host: true
+         rsync_opts:
+           - --include=/logs/**
+           - --include=*/
+           - --exclude=*
+           - --prune-empty-dirs
+
+A job can use that playbook as *post-run* then each files
+in the *zuul.project.src_dir/logs/* will be exported to the log server.
+
+.. code-block:: yaml
+
+  ---
+  - job:
+      name: build
+      parent: base
+      description: My job
+      run: playbooks/run.yaml
+      post-run: playbooks/fetch-logs.yaml
+
+
 Create a secret to be used in jobs
 ----------------------------------
 
