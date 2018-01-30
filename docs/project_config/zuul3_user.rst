@@ -190,6 +190,7 @@ Further documentation can be found online:
 
 .. _`Predefined variables available in jobs`: https://docs.openstack.org/infra/zuul/feature/zuulv3/user/jobs.html#variables
 
+
 .. _zuul3-artifacts-export:
 
 Export logs artifacts to the logserver
@@ -237,6 +238,42 @@ in the *zuul.project.src_dir/logs/* will be exported to the log server.
       post-run:
         - playbooks/fetch-logs.yaml
 
+
+.. _zuul3-artifacts-export-logstash:
+
+Export logs artifacts to logstash
+---------------------------------
+
+A job can be configured to export specific artifacts
+to logstash to make them available to the search via Kibana.
+The ELK stack must be activated on the Software Factory instance.
+
+The job variable *logstash_processor_config* need to be provided
+as follow:
+
+.. code-block:: yaml
+
+  ---
+  - job:
+      name: build
+      parent: base
+      description: My job
+      run: playbooks/run.yaml
+      post-run:
+        - playbooks/fetch-logs.yaml
+      vars:
+        logstash_processor_config:
+          files:
+            - name: logs/.*\.log
+            - name: job-output\.txt
+              tags:
+                - console
+                - console.html
+
+With this definition, zuul will export all the generated artifacts
+located in the *logs/* directory to logstash. The *logstash_processor_config*
+variable definition overwrites the one from the Software Factory base job,
+that's why, the *job-output.log* (console) must specified too.
 
 Create a secret to be used in jobs
 ----------------------------------
