@@ -14,6 +14,7 @@ Management
    gerrit_replication_operator
    resources_operator
    repoxplorer
+   elk_operator
    access_control
    metrics_operator
    upgrade
