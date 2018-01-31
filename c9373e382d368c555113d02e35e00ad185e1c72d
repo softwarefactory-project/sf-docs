@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba076199_2e7941fd",
+        "filename": "docs/project_config/zuul3_user.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-01-31T10:41:09Z",
+      "side": 0,
+      "message": "Why remove the tag?",
+      "revId": "c9373e382d368c555113d02e35e00ad185e1c72d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
