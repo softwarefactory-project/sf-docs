@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba076199_ee0b297c",
+        "filename": "docs/project_config/zuul3_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-01-31T10:38:40Z",
+      "side": 1,
+      "message": "a job ran,",
+      "revId": "c9373e382d368c555113d02e35e00ad185e1c72d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba076199_ce1065ab",
+        "filename": "docs/project_config/zuul3_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-01-31T10:38:40Z",
+      "side": 1,
+      "message": "When a job generate extra artifacts, such as log files, a *post-run* playbook can be written to export the artifacts",
+      "revId": "c9373e382d368c555113d02e35e00ad185e1c72d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba076199_ae265114",
+        "filename": "docs/project_config/zuul3_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 238,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-01-31T10:38:40Z",
+      "side": 1,
+      "message": "No need to set a list here, this can be set as \"post-run: playbooks/fetch-logs\"",
+      "revId": "c9373e382d368c555113d02e35e00ad185e1c72d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
