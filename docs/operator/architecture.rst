@@ -69,17 +69,17 @@ The minimal architecture includes following components:
 * cauth
 * `managesf </docs/managesf/>`_
 * gitweb
-* gerrit
+* `gerrit </r/Documentation/index.html>`_
 * logserver
-* zuul3-scheduler
-* zuul3-executor
-* zuul3-web
-* nodepool3-launcher
+* `zuul-scheduler </docs/zuul/>`_
+* `zuul-executor </docs/zuul/>`_
+* `zuul-web </docs/zuul/>`_
+* `nodepool-launcher </docs/nodepool/>`_
 
 Optional services can be enabled:
 
-* zuul3-merger
-* nodepool3-builder
+* zuul-merger
+* nodepool-builder
 * hypervisor-oci
 * rabbitmq
 * etherpad
@@ -106,7 +106,7 @@ Optional services can be enabled:
 
 .. note::
 
-   Check the :ref:`nodepool3 documentation<nodepool-operator-oci>` to learn
+   Check the :ref:`nodepool documentation<nodepool-operator-oci>` to learn
    how to configure the hypervisor-oci role to enable container providers in Nodepool.
 
 .. _architecture_extending:

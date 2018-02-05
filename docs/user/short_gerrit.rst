@@ -27,7 +27,7 @@ Following are some important fields, links and buttons that you need to be aware
   - Verified
       Any score in this means that the patch has been verified by compiling
       and running the test cases. This score is given by a specific user
-      called **Jenkins** or **Zuul** (if Zuul3 is activated), by running jobs
+      called **Jenkins** or **Zuul** (if Zuul is activated), by running jobs
       defined in the repository's *check* or *gate* pipelines.
 
   - Code-Review

@@ -154,7 +154,7 @@ to save and restore the current state:
     # Print and save all builds in progress to /var/lib/zuul/zuul-queues-dump.sh
     /usr/share/sf-config/scripts/zuul-changes.py dump
 
-    systemctl restart zuul-server
+    systemctl restart zuul-scheduler
 
     # Reload the previous state:
     /usr/share/sf-config/scripts/zuul-changes.py load
@@ -170,7 +170,7 @@ hash of the config repository.
 
 .. code-block:: bash
 
-    zuul3 enqueue-ref --trigger gerrit --tenant local --pipeline post --project config --ref master --newrev ref-sha
+    zuul enqueue-ref --trigger gerrit --tenant local --pipeline post --project config --ref master --newrev ref-sha
 
 The job will be running in the post pipeline of the Zuul status page.
 
