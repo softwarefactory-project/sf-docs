@@ -11,7 +11,7 @@ the search via Kibana.
 A Software Factory user might want to export more artifacts
 than the job's console. Indeed a job may generate additional
 log files. In that case a custom zuul *post-run* job must be defined.
-In order to do so a user must refer to :ref:`Export logs artifacts to logstash <zuul3-artifacts-export-logstash>`
+In order to do so a user must refer to :ref:`Export logs artifacts to logstash <zuul-artifacts-export-logstash>`
 
 How to activate
 ---------------

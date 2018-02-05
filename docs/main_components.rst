@@ -41,7 +41,7 @@ See the `pipelines manager <Pipelines manager>`_ section for more details.
 Continuous Integration, Delivery, and Deployment system
 -------------------------------------------------------
 
-`Zuul(V3) <https://docs.openstack.org/infra/zuul/feature/zuulv3/>` is the
+`Zuul <https://docs.openstack.org/infra/zuul>` is the
 service in charge of running tests and managing projects's pipeline such as gate and
 post deployment:
 
@@ -64,9 +64,6 @@ When deployed locally, the service is configured with a few roles:
 * validate-host: verify and log information about build host
 * upload-logs: upload job logs to a static webserver
 
-A Zuul(V2) service is also available for migration purpose but its usage is
-deprecated.
-
 .. image:: imgs/zuul.jpg
    :scale: 50 %
 
@@ -74,7 +71,7 @@ deprecated.
 Test instances managemer
 ------------------------
 
-`Nodepool(V3) <https://docs.openstack.org/infra/nodepool/feature/zuulv3>` is
+`Nodepool <https://docs.openstack.org/infra/nodepool>` is
 the service in charge of creating tests environment. It supports 3 types of
 drivers to create instances:
 
@@ -84,9 +81,6 @@ drivers to create instances:
 
 It is designed to handle the life cycle of work nodes (creation, provision,
 assignation and destruction).
-
-A Nodepool(V2) service is also available for migration purpose but its usage
-is deprecated.
 
 
 Issue tracker

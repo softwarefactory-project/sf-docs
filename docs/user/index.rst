@@ -24,12 +24,12 @@ To create and/or configure a project, you need to create a new review on the con
 repository. The change consists of two parts:
 
  * Create the git repository/ies and ACL(s), see :ref:`this example<project-example>`
- * Add the project to the CI system, see :ref:`ZuulV3 main.yaml<zuul3-main-yaml>`.
+ * Add the project to the CI system, see :ref:`Zuul main.yaml<zuul-main-yaml>`.
 
 In short, in a single change, the following files need to be created:
 
  * resources/new-project.yaml
- * zuulV3/new-project.yaml
+ * zuul/new-project.yaml
 
 Once the change is approved and merged, the project will be created/updated by
 the config-update job.

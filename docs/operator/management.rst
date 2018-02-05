@@ -7,8 +7,8 @@ Management
    :maxdepth: 1
 
    auths
-   zuul3_operator
-   nodepool3_operator
+   zuul_operator
+   nodepool_operator
    gerritbot_operator
    firehose_operator
    gerrit_replication_operator
@@ -19,5 +19,3 @@ Management
    metrics_operator
    upgrade
    backup_restore
-   zuul_operator
-   nodepool_operator

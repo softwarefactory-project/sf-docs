@@ -96,8 +96,8 @@ The config-repo
 Once SF is up and running, the user configuration of Software Factory happens
 via the config-repo:
 
-* zuul3/: Zuul3 configuration
-* nodepoolV3/: Nodepool3 configuration
+* zuul/: Zuul configuration
+* nodepool/: Nodepool configuration
 * gerritbot/: IRC notification for gerrit event configuration,
 * gerrit/: Gerrit replication endpoint configuration, and
 * mirrors/: mirror2swift configuration.
@@ -105,12 +105,6 @@ via the config-repo:
 * dashboard/: Custom Gerrit dashboard configuration
 * repoxplorer/: RepoXplorer additional definitions (idents, groups, ...)
 * policies/: ManageSF API ACLs definition
-
-Deprecated configuration:
-* jobs/: Jenkins jobs jjb configuration,
-* jobs-zuul/: Zuul-launcher jobs jjb configuration,
-* zuul/: CI gating zuul yaml configuration,
-* nodepool/: Slave configuration with images and labels definitions,
 
 This is actually managed through SF CI system, thanks to the config-update job.
 This job is actually an ansible playbook that will:
