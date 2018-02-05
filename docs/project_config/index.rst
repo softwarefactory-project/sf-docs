@@ -28,14 +28,11 @@ To make a change in the configuration:
    :maxdepth: 2
 
    resources_user
-   zuul3_user
-   nodepool3_user
+   zuul_user
+   nodepool_user
    gerritbot_user
    gerrit_replication_user
    access_control_user
    gerritlinks_user
    repoxplorer_user
-   jenkins_user
-   zuul_user
-   nodepool_user
    pages_user

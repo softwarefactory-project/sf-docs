@@ -61,7 +61,7 @@ For this quickstart, we will use the main instance as the hypervisor:
 
 Sfconfig will automatically update the config repository and create some ready
 to use slaves so that you can run zuul tests without an OpenStack account.
-Running "nodepool3 list" will show 2 centos-oci slaves.
+Running "nodepool list" will show 2 centos-oci slaves.
 
 
 .. _tpci-quickstart:
@@ -81,11 +81,11 @@ Then run this command:
 
 .. code-block:: bash
 
-  sfconfig --zuul3-external-gerrit openstack.org#username --zuul3-upstream-jobs
+  sfconfig --zuul-external-gerrit openstack.org#username --zuul-upstream-jobs
 
 Alternatively you can pre-configure the remote user ssh key and copy the key files
 to the install server to deploy everything in one shot using this command:
 
 .. code-block:: bash
 
-  sfconfig --zuul3-external-gerrit openstack.org#username --zuul3-upstream-jobs --zuul3-ssh-key /path/to/user/private/key
+  sfconfig --zuul-external-gerrit openstack.org#username --zuul-upstream-jobs --zuul-ssh-key /path/to/user/private/key

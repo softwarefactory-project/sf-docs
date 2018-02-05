@@ -175,7 +175,7 @@ cloud providers, edit the /etc/software-factory/sfconfig.yaml file like this:
   fqdn: example.com
   authentication:
     admin_password: super_secret
-  nodepool3:
+  nodepool:
     providers:
       - name: default
         auth_url: https://cloud.example.com/v3

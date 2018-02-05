@@ -1,192 +1,144 @@
-Configure zuul
---------------
+.. note::
 
-.. warning::
+  This is a lightweight documentation intended to get operators started with setting
+  up the Zuul service. For more insight on what Zuul can do, please refer
+  to upstream documentation_.
 
-   Zuul (v2) is deprecated and will be removed in Software Factory 3.0
+.. _documentation: https://docs.openstack.org/infra/zuul/
 
+Operate zuul
+============
 
-Running multiple zuul-merger
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The Zuul service is installed with rh-python35 software collections:
 
-To run multiple zuul-merger:
+* The configuration is located in /etc/zuul
+* The logs are written to /var/log/zuul
+* The services are prefixed with rh-python35-
 
-* Start a new CentOS instance, either with the sf default secgroup security group, either externally and
-  enabling gearman server access (tcp port 4730 by default) to the zuul-server.
+A convenient wrapper for the command line is installed in /usr/bin/zuul.
 
-* Enable password less ssh access (authorized_keys /root/.ssh/id_rsa.pub from
-  the install-server).
-
-* Add the new host in /etc/software-factory/arch.yaml:
-
-.. code-block:: yaml
-
-  - name: zuul-merger01
-    ip: 192.168.x.y
-    public_url: http://floating-ip|public-dns
-    roles:
-      - zuul-merger
-
-* Note that the public_url needs to be reachable from the slaves,
-  either using the floating-ip,
-  either using the public-dns if the host is resolvable.
+By default, no merger are being deployed because the executor service
+can perform merge task. However, a merger can also be deployed to speed
+up start time when there are many projects defined.
 
 
-Using jenkins credencials binding
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Configure an external gerrit (use Software Factory as a Third-Party CI)
+-----------------------------------------------------------------------
 
-By default, zuul-launcher enables credencials binding jobs wrapper with jenkins
-secrets. When Jenkins is enabled, secrets are only copied to zuul-launcher when
-**sfconfig** is executed. When Jenkins is disabled, to manage secrets, use the
-jenkins-secrets-edit.py command line utility:
+Refer to the :ref:`Third-Party-CI Quick Start guide <tpci-quickstart>`
 
-.. code-block:: console
+.. _zuul-github-app-operator:
 
-  $ /usr/share/sf-config/scripts/jenkins-secrets-edit.py --help
-  usage: jenkins-secrets-edit.py [-h] [--secrets-dir SECRETS_DIR]
-                               [--description DESCRIPTION]
-                               {create,read,update,delete} uid [content]
+Create a GitHub app
+-------------------
 
-  positional arguments:
-    {create,read,update,delete}
-    uid                   The secret id
-    content               The secret value/file
+To create a GitHub app on my-org follow this
+`github documentation <https://developer.github.com/apps/building-integrations/setting-up-and-registering-github-apps/registering-github-apps/>`_:
 
-  optional arguments:
-    -h, --help            show this help message and exit
-    --secrets-dir SECRETS_DIR
-    --description DESCRIPTION
-                          Optional secret description
+* Open the App creation form:
 
-After running this script, execute **sfconfig** to copy the new secrest to the
-zuul-launcher node. Here is a full example:
+  * to create the app under an organization, go to `https://github.com/organizations/<organization>org/settings/apps/new`
+  * to create the app under a user account, go to `https://github.com/settings/apps/new`
 
-.. code-block:: console
+* Set GitHub App name to "my-org-zuul"
+* Set Homepage URL to "https://fqdn"
+* Set Setup URL to "https://fqdn/docs/project_config/zuul_user.html#adding-a-project-to-the-zuul-service"
+* Set Webhook URL to "https://fqdn/zuul/connection/github.com/payload"
+* Create a Webhook secret
+* Set permissions:
 
-  $ jenkins-secrets-edit.py add pypi-credencials ~/.pypirc
-  $ sfconfig --skip-install
-  $ cat <<EOF> /root/config/jobs-zuul/pypi-upload.yaml
-    - job-template:
-      name: '{name}-upload-to-pypi'
-      builders:
-        - prepare-workspace
-        - shell: |
-            cp $PYPIRC ~/.pypirc
-            cd $ZUUL_PROJECT
-            python setup.py register -r pypi
-            python setup.py sdist upload -r pypi
-      wrappers:
-        - credentials-binding:
-            - file:
-                credential-id: 'pypi-credencials'
-                variable: PYPIRC
-      node: '{node}'
-  EOF
+  * Commit statuses: Read & Write
+  * Issues: Read & Write
+  * Pull requests: Read & Write
+  * Repository contents: Read & Write (write to let zuul merge change)
 
+* Set events subscription:
 
-External logserver
-^^^^^^^^^^^^^^^^^^
+  * Label
+  * Status
+  * Issue comment
+  * Issues
+  * Pull request
+  * Pull request review
+  * Pull request review comment
+  * Commit comment
+  * Create
+  * Push
+  * Release
 
-You can configure Zuul to use an external log server.
+* Set Where can this GitHub App be installed to "Any account"
+* Create the App
+* In the 'General' tab generate a Private key for your application, and download the key to a secure location
 
-* First you need to authorize the zuul process to connect to the server
-  (with scp). Add the zuul public key to the authorized_key of the remote user:
-  /var/lib/zuul/.ssh/id_rsa.pub
-
-* Edit /etc/software-factory/sfconfig.yaml:
+To configure the Github connection in sfconfig.yaml, add to the **github_connections** section:
 
 .. code-block:: yaml
 
-  zuul:
-    external_logservers:
-      - name: logs.example.com
-        user: loguser
-        path: /var/www/logs/sftests.com/
+  - name: "github.com"
+    webhook_token: XXXX # The Webhook secret defined earlier
+    app_id: 42 # Can be found under the Public Link on the right hand side labeled ID.
+    app_key: | # In Github this is known as Private key and must be collected when generated
+      -----BEGIN RSA PRIVATE KEY-----
+      KEY CONTENT HERE
+      -----END RSA PRIVATE KEY-----
 
-* Then define in the config repository a custom publisher using this site
-  (in the jobs-zuul directory):
+Then run **sfconfig** to apply the configuration. And finally verify in the 'Advanced'
+tab that the Ping payload works (green tick and 200 response). Click "Redeliver" if needed.
 
-.. code-block:: yaml
+.. note::
 
-  - publisher:
-      name: logs.example.com
-      publishers:
-        - scp:
-            # Site name must match external_logserver name
-            site: 'logs.example.com'
-            files:
-              - target: '$LOG_PATH'
-                source: 'artifacts/**'
-                keep-hierarchy: true
-                copy-after-failure: true
-
-* Run sfconfig to configure the logserver in zuul.conf, and merge the config
-  repo change.
-
-* To export console-log to this new site, change the default_log_site and log_url
-  so that it's readily available to change author, in
-  /etc/software-factory/sfconfig.yaml:
-
-.. code-block:: yaml
-
-  zuul:
-    default_log_site: logs.example.com
-    log_url: https://logs.example.com/logs/sftests.com/{build.parameters[LOG_PATH]}
-
-* The provided console-log macros is not automatically updated, it must be
-  manually changed in the config repo zuul-jobs/_macros.yaml:
-
-.. code-block:: yaml
-
-  - publisher:
-      name: console-log
-      publishers:
-        - scp:
-            site: 'logs.example.com'
-            files:
-              - target: '$LOG_PATH'
-                copy-console: true
-                copy-after-failure: true
-
-* Run sfconfig to configure the logserver in zuul.conf, and merge the config
-  repo change.
+   It's recommended to use a GitHub app instead of manual webhook. When using
+   manual webhook, set the api_token instead of the app_id and app_key.
+   Manual webhook documentation is still TBD...
 
 
-Third-party CI configuration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Check out the :ref:`Zuul GitHub App user documentation<zuul-github-app-user>` to start using the application.
 
-You can configure Zuul to connect to a remote gerrit event stream.
-First you need a Non-Interactive Users created on the external gerrit.
-Then you need to configure that user to use the local zuul ssh public key:
-/var/lib/zuul/.ssh/id_rsa.pub
-Finally you need to activate the gerrit_connections setting in sfconfig.yaml:
+More information about the Zuul's Github driver can be found in the Zuul Github driver manual_.
 
-.. code-block:: yaml
-
-   gerrit_connections:
-        - name: openstack_gerrit
-          hostname: review.openstack.org
-          puburl: https://review.openstack.org/r/
-          username: third-party-ci-username
+.. _manual: https://docs.openstack.org/infra/zuul/admin/drivers/github.html
 
 
-To benefit from Software Factory CI capabilities as a third party CI, you
-also need to configure the config repository to enable a new gerrit trigger.
-For example, to setup a basic check pipeline, add a new 'zuul/thirdparty.yaml'
-file like this:
+Use openstack-infra/zuul-jobs
+-----------------------------
 
-.. code-block:: yaml
+The zuul-scheduler can automatically import all the jobs defined in
+the openstack-infra/zuul-jobs repository. Use this command line to enable
+its usage:
 
-    pipelines:
-        - name: 3rd-party-check
-          manager: IndependentPipelineManager
-          source: openstack_gerrit
-          trigger:
-              openstack_gerrit:
-                  - event: patchset-created
+.. code-block:: bash
+
+    sfconfig --zuul-upstream-jobs
 
 
-Notice the source and trigger are called 'openstack_gerrit' as set in the
-gerrit_connection name, instead of the default 'gerrit' name.
+Troubleshooting non starting jobs
+---------------------------------
 
-See the :ref:`Zuul user documentation<zuul-user>` for more details.
+* First check that the project is defined in /etc/opt/rh/rh-python35/zuul/main.yaml
+* Then check in scheduler.log that it correctly requested a node and submitted a
+  job to the executor
+* When zuul reports *PRE_FAILURE* or *POST_FAILURE*,
+  then the executor's debugging needs to be turned on
+* Finally passing all loggers' level to DEBUG in
+  /etc/opt/rh/rh-python35/zuul/scheduler-logging.yaml then restarting the service
+  rh-python35-zuul-scheduler might help to debug.
+
+
+Troubleshooting the executor
+----------------------------
+
+First you need to enable the executor's *keepjob* option so that ansible logs are available on dist:
+
+.. code-block:: bash
+
+    /opt/rh/rh-python35/root/bin/zuul-executor -c /etc/zuul/zuul.conf keep
+
+Then next job execution will be available in /tmp/systemd-private-*-rh-python35-zuul-executor.service-*/tmp/
+
+In particular, the work/ansible/job-logs.txt usually tells why a job failed.
+
+When done with debugging, deactivate the keepjob option by running:
+
+.. code-block:: bash
+
+    /opt/rh/rh-python35/root/bin/zuul-executor -c /etc/opt/rh/rh-python35/zuul/zuul.conf nokeep
