@@ -187,3 +187,4 @@ Other useful resources
 
    short_git
    short_gerrit
+   metrics_user
