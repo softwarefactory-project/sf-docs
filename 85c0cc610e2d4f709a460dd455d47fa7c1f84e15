@@ -1,0 +1,193 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a016987_431a1919",
+        "filename": "docs/operator/metrics_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-02-20T17:48:10Z",
+      "side": 1,
+      "message": "and service metrics for Zuul and Nodepool.",
+      "range": {
+        "startLine": 9,
+        "startChar": 42,
+        "endLine": 9,
+        "endChar": 80
+      },
+      "revId": "85c0cc610e2d4f709a460dd455d47fa7c1f84e15",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_631d150f",
+        "filename": "docs/operator/metrics_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-02-20T17:48:10Z",
+      "side": 1,
+      "message": "system",
+      "revId": "85c0cc610e2d4f709a460dd455d47fa7c1f84e15",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_23171def",
+        "filename": "docs/operator/metrics_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-02-20T17:48:10Z",
+      "side": 1,
+      "message": "components",
+      "range": {
+        "startLine": 10,
+        "startChar": 27,
+        "endLine": 10,
+        "endChar": 42
+      },
+      "revId": "85c0cc610e2d4f709a460dd455d47fa7c1f84e15",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_e3d7c521",
+        "filename": "docs/operator/metrics_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-02-20T17:48:10Z",
+      "side": 1,
+      "message": "A metrics collector ?",
+      "range": {
+        "startLine": 17,
+        "startChar": 12,
+        "endLine": 17,
+        "endChar": 32
+      },
+      "revId": "85c0cc610e2d4f709a460dd455d47fa7c1f84e15",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_03d3013a",
+        "filename": "docs/operator/metrics_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-02-20T17:48:10Z",
+      "side": 1,
+      "message": "Zuul and Nodepool",
+      "range": {
+        "startLine": 19,
+        "startChar": 40,
+        "endLine": 19,
+        "endChar": 57
+      },
+      "revId": "85c0cc610e2d4f709a460dd455d47fa7c1f84e15",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_c3dcc948",
+        "filename": "docs/operator/metrics_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-02-20T17:48:10Z",
+      "side": 1,
+      "message": "A web frontend for ... ?",
+      "range": {
+        "startLine": 21,
+        "startChar": 11,
+        "endLine": 21,
+        "endChar": 22
+      },
+      "revId": "85c0cc610e2d4f709a460dd455d47fa7c1f84e15",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_a3e1cd00",
+        "filename": "docs/operator/metrics_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-02-20T17:48:10Z",
+      "side": 1,
+      "message": "(as root):",
+      "revId": "85c0cc610e2d4f709a460dd455d47fa7c1f84e15",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_83e7f111",
+        "filename": "docs/operator/metrics_operator.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-02-20T17:48:10Z",
+      "side": 1,
+      "message": "This appears as a comment in the rendering.",
+      "range": {
+        "startLine": 55,
+        "startChar": 3,
+        "endLine": 55,
+        "endChar": 4
+      },
+      "revId": "85c0cc610e2d4f709a460dd455d47fa7c1f84e15",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a016987_63e4f50c",
+        "filename": "docs/user/metrics_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-02-20T17:48:10Z",
+      "side": 1,
+      "message": "(by the config-update job)",
+      "revId": "85c0cc610e2d4f709a460dd455d47fa7c1f84e15",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
