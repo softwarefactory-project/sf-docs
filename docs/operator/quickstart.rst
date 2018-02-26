@@ -24,7 +24,7 @@ nodepool) using these commands:
 
 .. code-block:: bash
 
-  yum install -y https://softwarefactory-project.io/repos/sf-release-2.7.rpm
+  yum install -y https://softwarefactory-project.io/repos/sf-release-3.0.rpm
   yum update -y
   yum install -y sf-config
   sfconfig --provision-demo

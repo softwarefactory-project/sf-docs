@@ -1,7 +1,7 @@
 %global         sum The Software Factory project documentation
 
 Name:           sf-docs
-Version:        2.7.0
+Version:        3.0.0
 Release:        1%{?dist}
 Summary:        %{sum}
 
@@ -34,6 +34,9 @@ mv build/html/* %{buildroot}%{_docdir}/software-factory
 %{_docdir}/software-factory
 
 %changelog
+* Mon Feb 26 2018 Tristan Cacqueray <tdecacqu@redhat.com> - 3.0.0-1
+- Update version to 3.0
+
 * Mon Aug 14 2017 Nicolas Hicher <nhicher@redhat.com> - 2.7.0-1
 - add -W flag to ensure to build without warnings
 - add graphviz and python-sphinx_rtd_theme build depends
