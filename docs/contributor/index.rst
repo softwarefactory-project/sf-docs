@@ -35,44 +35,27 @@ Then you will need to check out the Software Factory repositories:
 
 .. code-block:: bash
 
- mkdir software-factory
- pushd software-factory
- git clone https://softwarefactory-project.io/r/software-factory/sfinfo
+ mkdir software-factory scl
+ git clone https://softwarefactory-project.io/r/software-factory/sfinfo software-factory/sfinfo
  git clone https://softwarefactory-project.io/r/software-factory/sf-ci
- for repo in $(python << EOF
- import yaml
- repos = yaml.load(open('sfinfo/sf-master.yaml'))
- for r in repos['packages']:
-    suffix = r['name']
-    if r['source'] == 'external':
-       suffix += '-distgit'
-    print suffix
-    if 'distgit' in r:
-       print r['distgit']
- EOF); do
-   git clone https://softwarefactory-project.io/r/$repo;
- done
- popd
  ln -s software-factory/sfinfo/zuul_rpm_build.py .
  ln -s software-factory/sfinfo/sf-master.yaml distro.yaml
 
 The file *sfinfo/sf-master.yaml* contains the references of all the repositories that form
-the Software Factory distribution. The script above fetches everything but you can just
-fetch the ones you need.
+the Software Factory distribution.
 
 Rebuilding packages
 -------------------
 
 Each component of Software Factory is distributed via a package and as a contributor you may
 need to rebuild a package. You will find most RPM package definitions in
-software-factory/<component>-distgit repositories and sources in software-factory/<component>
-repositories.
+<component>-distgit repositories and sources in <component> repositories.
 
 Here is an example to rebuild the Zuul package.
 
 .. code-block:: bash
 
- ./zuul_rpm_build.py --project software-factory/zuul
+ ./zuul_rpm_build.py --project scl/zuul
 
 Newly built packages are available in the zuul-rpm-build directory.
 
@@ -82,20 +65,13 @@ zuul-rpm-build directory so you might want to clean it first.
 
 .. code-block:: bash
 
- rm -Rf ./zuul-rpm-build/* && ./zuul_rpm_build.py --noclean --project software-factory/zuul
+ rm -Rf ./zuul-rpm-build/* && ./zuul_rpm_build.py --noclean --project scl/zuul
 
 Multiple packages can be specified to trigger their builds.
 
 .. code-block:: bash
 
- rm -Rf ./zuul-rpm-build/* && ./zuul_rpm_build.py --noclean --project software-factory/zuul --project software-factory/nodepool
-
-There is no public DNS entry for the Software Factory koji host (where all SF
-packages are built and stored); to access our koji instance, you must edit your hosts file like this:
-
-.. code-block:: bash
-
- echo "38.145.34.53 koji koji.softwarefactory-project.io" | sudo tee -a /etc/hosts
+ rm -Rf ./zuul-rpm-build/* && ./zuul_rpm_build.py --noclean --project scl/zuul --project scl/nodepool
 
 How to run the tests
 --------------------
@@ -108,7 +84,7 @@ Deployment test
 
 .. code-block:: bash
 
- cd software-factory/sf-ci
+ cd sf-ci
  ./run_tests.sh deploy minimal
 
 This will run the *deploy* ansible playbook with the *minimal* architecture
@@ -125,7 +101,7 @@ with the LOCAL_REPO_PATH=$(pwd)/../zuul-rpm-build:
 
 .. code-block:: bash
 
- LOCAL_REPO_PATH=$(pwd)/../../zuul-rpm-build ./run_tests.sh deploy minimal
+ LOCAL_REPO_PATH=$(pwd)/../zuul-rpm-build ./run_tests.sh deploy minimal
 
 To test small changes, it's also possible to install the code directly in place,
 for example:
