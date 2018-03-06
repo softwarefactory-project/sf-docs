@@ -49,7 +49,8 @@ Then you will need to check out the Software Factory repositories:
     print suffix
     if 'distgit' in r:
        print r['distgit']
- EOF); do
+ EOF
+ ); do
    git clone https://softwarefactory-project.io/r/$repo;
  done
  popd
@@ -72,7 +73,7 @@ Here is an example to rebuild the Zuul package.
 
 .. code-block:: bash
 
- ./zuul_rpm_build.py --project software-factory/zuul
+ ./zuul_rpm_build.py --project scl/zuul
 
 Newly built packages are available in the zuul-rpm-build directory.
 
@@ -82,20 +83,13 @@ zuul-rpm-build directory so you might want to clean it first.
 
 .. code-block:: bash
 
- rm -Rf ./zuul-rpm-build/* && ./zuul_rpm_build.py --noclean --project software-factory/zuul
+ rm -Rf ./zuul-rpm-build/* && ./zuul_rpm_build.py --noclean --project scl/zuul
 
 Multiple packages can be specified to trigger their builds.
 
 .. code-block:: bash
 
- rm -Rf ./zuul-rpm-build/* && ./zuul_rpm_build.py --noclean --project software-factory/zuul --project software-factory/nodepool
-
-There is no public DNS entry for the Software Factory koji host (where all SF
-packages are built and stored); to access our koji instance, you must edit your hosts file like this:
-
-.. code-block:: bash
-
- echo "38.145.34.53 koji koji.softwarefactory-project.io" | sudo tee -a /etc/hosts
+ rm -Rf ./zuul-rpm-build/* && ./zuul_rpm_build.py --noclean --project scl/zuul --project scl/nodepool
 
 How to run the tests
 --------------------
