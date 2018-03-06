@@ -36,3 +36,4 @@ To make a change in the configuration:
    gerritlinks_user
    repoxplorer_user
    pages_user
+   metrics_user
