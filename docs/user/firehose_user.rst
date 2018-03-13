@@ -1,5 +1,3 @@
-:orphan:
-
 .. _firehose-user:
 
 Firehose
