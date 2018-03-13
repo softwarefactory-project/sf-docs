@@ -1,5 +1,3 @@
-:orphan:
-
 .. _backup_restore:
 
 Backup restore
