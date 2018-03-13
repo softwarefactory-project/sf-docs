@@ -49,7 +49,6 @@ Table of contents
 
    main_components
    user/index
-   project_config/index
    operator/index
    contributor/index
    faqs
