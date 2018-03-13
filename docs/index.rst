@@ -47,9 +47,8 @@ Table of contents
 .. toctree::
    :maxdepth: 1
 
-   main_components
+   components/index
    user/index
-   project_config/index
    operator/index
    contributor/index
-   faqs
+   faqs/index

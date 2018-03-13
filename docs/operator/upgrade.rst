@@ -1,5 +1,3 @@
-:orphan:
-
 .. _upgrade:
 
 Upgrade Software Factory
