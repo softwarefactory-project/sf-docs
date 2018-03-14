@@ -37,4 +37,4 @@ To make a change in the configuration:
    repoxplorer_user
    pages_user
    firehose_user
-   metrics_user
+   metrics

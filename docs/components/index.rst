@@ -23,6 +23,7 @@ Optional components
 
    Storyboard: Issue tracker <storyboard>
    collaborative_tools
+   metrics
 
 .. TODO Task 568: add Projects metrics description and screenshot (repoxporer)
 .. ----------------
