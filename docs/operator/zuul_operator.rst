@@ -22,6 +22,25 @@ can perform merge task. However, a merger can also be deployed to speed
 up start time when there are many projects defined.
 
 
+Save and restore the queues
+---------------------------
+
+The zuul service is stateless and stopping the process will lose track
+of running jobs. However the zuul-changes.py utility can be used
+to save and restore the current state:
+
+.. code-block:: bash
+
+    # Print and save all builds in progress to /var/lib/zuul/zuul-queues-dump.sh
+    /usr/local/bin/zuul-changes.py dump
+
+    systemctl restart rh-python35-zuul-scheduler
+
+    # Reload the previous state:
+    /usr/local/bin/zuul-changes.py load
+
+The periodic and post pipelines are not dumped by this tool.
+
 Configure an external gerrit (use Software Factory as a Third-Party CI)
 -----------------------------------------------------------------------
 
