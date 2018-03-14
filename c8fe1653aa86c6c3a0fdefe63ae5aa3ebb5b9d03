@@ -16,6 +16,24 @@
       "revId": "c8fe1653aa86c6c3a0fdefe63ae5aa3ebb5b9d03",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba3cc151_20e5aaa7",
+        "filename": "docs/main_components/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-03-14T13:18:04Z",
+      "side": 1,
+      "message": "Yes, I will rename this section and corresponding files, and I will propose a new review will all component describes",
+      "parentUuid": "ba3cc151_a0d0daca",
+      "revId": "c8fe1653aa86c6c3a0fdefe63ae5aa3ebb5b9d03",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
