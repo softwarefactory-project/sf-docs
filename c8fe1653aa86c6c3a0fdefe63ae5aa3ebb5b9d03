@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba3cc151_a0d0daca",
+        "filename": "docs/main_components/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-03-14T13:01:05Z",
+      "side": 1,
+      "message": "Why not having this section called \"Components\" and present all components available in sf-config ?\n\nFor component where we do not have a presentation page yet we can simply redirect to the corresponding operator page. ELK, HOUND, METRICS, MOSQUITTO, REPOXPLORER.\n\nTasks mentioned below no longer exists and I think this can be done in that review. wdyt ?",
+      "revId": "c8fe1653aa86c6c3a0fdefe63ae5aa3ebb5b9d03",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
