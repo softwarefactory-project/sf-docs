@@ -19,14 +19,12 @@ Services supported
   Service           Topic         Source
 ================= ============= ================
  Gerrit             gerrit        `germqtt`_
- Jenkins [1]_       zuul_jobs     `MQTT notification plugin`_  and "firehose-zuul" predefined publisher
  Nodepool           nodepool      `ochlero`_
  Zuul               zuul          `ochlero`_
 ================= ============= ================
 
 .. [1] For jobs managed through the config repository.
 .. _germqtt: http://git.openstack.org/cgit/openstack-infra/germqtt/
-.. _`MQTT notification plugin`: https://wiki.jenkins-ci.org/display/JENKINS/MQTT+Notification+Plugin
 .. _ochlero: https://pypi.python.org/pypi/ochlero
 
 Events published
@@ -40,33 +38,6 @@ Gerrit
 Every patchset-related events are published, similarly to the `gerrit stream-events`
 command. A full description of each event type can be found here:
 https://gerrit-review.googlesource.com/Documentation/cmd-stream-events.html
-
-Jenkins
-.......
-
-An event is published whenever a Zuul build ends. It publishes the result of the
-build, and the Zuul parameters it was launched with:
-
-================== ===========================================
- Key                Value
-================== ===========================================
- TIMESTAMP          The Epoch timestamp of the event
- ZUUL_BRANCH        The branch being tested
- ZUUL_PIPELINE      The name of the destination pipeline
- ZUUL_CHANGE        The gerrit review ID
- ZUUL_CHANGES       the long gerrit ID of the change
- ZUUL_PATCHSET      The review patchset version number
- ZUUL_CHANGE_IDS    ZUUL_CHANGE,ZUUL_PATCHSET
- ZUUL_COMMIT        The commit id of the change
- ZUUL_REF           The git reference of the change
- ZUUL_URL           The url used by Zuul to checkout repositories
- ZUUL_PROJECT       The repository on which the review applies
- ZUUL_UUID          Internal Zuul job UUID
- build              The Jenkins build number
- job                The job's name
- node               The id of the node on which the job was executed
- status             The result of the job build
-================== ===========================================
 
 Nodepool
 ........
