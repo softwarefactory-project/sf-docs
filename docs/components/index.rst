@@ -29,6 +29,7 @@ Optional components
    metrics
    log_management
    code_search
+   Repoxplorer: Browse projects stats <repoxplorer>
    collaborative_tools
 
 .. TODO Task 568: add Projects metrics description and screenshot (repoxporer)
