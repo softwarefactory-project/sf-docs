@@ -17,5 +17,6 @@ Management
    elk_operator
    access_control
    metrics
+   code_search
    upgrade
    backup_restore
