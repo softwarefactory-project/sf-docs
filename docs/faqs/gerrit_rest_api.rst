@@ -8,21 +8,21 @@ There is an extensive documentation available online:
 
   https://gerrit-review.googlesource.com/Documentation/rest-api.html
 
-To use the Gerrit REST API in Software Factory, you have to create an API
-password first. To do so, go to the **User Settings** page (upper right corner on the top menu)
-and click the Enable button for "Gerrit API key".
+The Gerrit API is available at the *https://fqdn/r/* endpoint for
+non authenticated requests and for authenticated requests it is *https://fqdn/r/a/*.
 
-The Gerrit API is available at the following endpoint:
+To use the authenticated endpoint you have to create an API password first.
+To do so, go to the **User Settings** page (upper right corner on the top menu)
+and click on the button *Generate new API key*.
 
-  https://fqdn/api/
+For example, getting open changed with cURL would be:
 
-and for authenticated requests, using the API password:
+.. code-block:: bash
 
-  https://fqdn/api/a/
+  curl "http://fqdn/r/changes/?q=status:open"
 
-For example, getting open, watched changes on the default deployment with cURL would be:
+And to access a restricted resources with cURL would be:
 
-  curl -X GET http://sftests.com/api/changes/?q=status:open+is:watched&n=2
+.. code-block:: bash
 
-You can find a full working example to automate some tasks (in this case deleting a specific branch
-on a list of projects) in `tools/deletebranches.py`.
+  curl -u username:apikey https://fqdn/r/a/accounts/self/password.http
