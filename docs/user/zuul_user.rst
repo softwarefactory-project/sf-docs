@@ -281,14 +281,14 @@ secret data. To fetch a project's public key:
 
 .. code-block:: bash
 
-  curl -O https://<fqdn>/zuul/keys/<tenant>/<project>.pub
+  curl -O https://<fqdn>/zuul/api/tenant/<tenant>/key/<project>.pub
 
 The *tools/encrypt_secret.py* tool, from the Zuul repository,
 can be used to create the YAML tree to be pushed in the project *.zuul.d/* directory.
 
 .. code-block:: bash
 
-  ./encrypt_secret.py --infile secret.data --outfile secret.yaml https://<fqdn>/zuul/keys/<tenant> <project>
+  ./encrypt_secret.py --infile secret.data --outfile secret.yaml https://<fqdn>/zuul/api/tenant/<tenant> <project>
 
 Then *<name>* and *<fieldname>* fields that are placeholders must be replaced in the
 generated *secret.yaml* file.
