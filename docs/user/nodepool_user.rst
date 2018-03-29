@@ -73,6 +73,29 @@ include:
 * **boot-from-volume**: Use a volume instead of an ephemeral disk.
 * **cloud-image**: Use an externally managed image instead of DIB.
 
+Adding extra labels or cloud-image to a provider
+------------------------------------------------
+
+Using the "extra-labels" stanza, extra labels or cloud-image can be added to an
+existing provider using a dedicated file. For example:
+
+.. code-block:: yaml
+
+  labels:
+    - name: custom-label
+      min-ready: 1
+
+  extra-labels:
+    - provider: default-cloud
+      pool: main
+      cloud-images:
+        - name: c2094f1d-9549-4dc8-99f6-e711d7db1e58
+          username: zuul
+      labels:
+        - name: custom-label
+          cloud-image: c2094f1d-9549-4dc8-99f6-e711d7db1e58
+          min-ram: 4096
+
 
 Diskimage elements
 ------------------

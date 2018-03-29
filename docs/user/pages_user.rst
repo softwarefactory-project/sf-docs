@@ -1,6 +1,3 @@
-:orphan:
-
-
 .. _pages-user:
 
 Publish static web content

@@ -16,6 +16,7 @@ Management
    repoxplorer
    elk_operator
    access_control
-   metrics_operator
+   metrics
+   code_search
    upgrade
    backup_restore

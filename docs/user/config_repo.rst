@@ -32,8 +32,9 @@ To make a change in the configuration:
    nodepool_user
    gerritbot_user
    gerrit_replication_user
-   access_control_user
    gerritlinks_user
+   access_control_user
    repoxplorer_user
    pages_user
-   metrics_user
+   firehose_user
+   metrics

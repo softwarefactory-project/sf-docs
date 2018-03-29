@@ -1,5 +1,3 @@
-:orphan:
-
 .. _deepdive:
 
 Internals
@@ -23,15 +21,6 @@ and replicated on github at https://github.com/softwarefactory-project ::
 * ...
 
 All the components are packaged using **distgit** repositories.
-
-
-The components
---------------
-
-Below is an overview of all the components integration (shown as dashed boxes) and services
-along with their connections to each others.
-
-.. graphviz:: components.dot
 
 
 The SSO mechanism
