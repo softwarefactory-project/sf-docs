@@ -61,8 +61,8 @@ To create a GitHub app on my-org follow this
 
 * Set GitHub App name to "my-org-zuul"
 * Set Homepage URL to "https://fqdn"
-* Set Setup URL to "https://fqdn/docs/project_config/zuul_user.html#adding-a-project-to-the-zuul-service"
-* Set Webhook URL to "https://fqdn/zuul/connection/github.com/payload"
+* Set Setup URL to "https://fqdn/docs/user/zuul_user.html"
+* Set Webhook URL to "https://fqdn/zuul/api/connection/github.com/payload"
 * Create a Webhook secret
 * Set permissions:
 
@@ -70,6 +70,7 @@ To create a GitHub app on my-org follow this
   * Issues: Read & Write
   * Pull requests: Read & Write
   * Repository contents: Read & Write (write to let zuul merge change)
+  * Repository Administraion: Read (get branch protection status)
 
 * Set events subscription:
 
