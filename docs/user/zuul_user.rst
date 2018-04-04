@@ -307,7 +307,7 @@ Zuul comes with the following web interface:
 Status
 ......
 
-Zuul's status can be reached at https://<fqdn>/zuul/local/status.html
+Zuul's status can be reached at https://<fqdn>/zuul/t/local/status.html
 
 This page shows the current buildsets in Zuul's pipelines. Filtering options are
 available.
@@ -318,7 +318,7 @@ open a stream of its logs in real time.
 Jobs
 ....
 
-Zuul's Jobs dashboard can be reached at https://<fqdn>/zuul/local/jobs.html
+Zuul's Jobs dashboard can be reached at https://<fqdn>/t/zuul/local/jobs.html
 
 This page lists all the jobs that have been built at least once by Zuul. Filtering
 options are available.
@@ -326,7 +326,7 @@ options are available.
 Builds
 ......
 
-Zuul's Builds dashboard can be reached at https://<fqdn>/zuul/local/builds.html
+Zuul's Builds dashboard can be reached at https://<fqdn>/t/zuul/local/builds.html
 
 This page lists all the builds and build sets that have completed. Filtering
 options are available.
@@ -360,3 +360,30 @@ Then you'll be redirected to the Setup URL with the instruction to finish the co
 
 .. _manual: https://docs.openstack.org/infra/zuul/admin/drivers/github.html
 
+
+.. _zuul-github-branch-protection:
+
+Configure branch protection
+---------------------------
+
+After the GitHub Application is installed, you may want to configure branch protection to
+enforce proper Zuul gating:
+
+* Visit the project setting page, e.g.: https://github.com/<org>/<project>/settings/branches
+
+* Click "Edit" for the branches to protect, and enable these options:
+
+* "Protect this branch"
+
+  * "Require pull request reviews before merging"
+
+    * "Dismiss stale pull request approvals when new commits are pushed"
+
+    * "Require review from Code Owners"
+
+  * "Require status checks to pass before merging"
+
+    * "local/check" status (this may need a initial PR to be created first)
+
+Then in the main zuul config, activate "exclude-unprotected-branches: true" in
+the tenant configuration.
