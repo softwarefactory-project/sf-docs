@@ -1,3 +1,5 @@
+.. _nodepool-operator:
+
 .. note::
 
   This is a lightweight documentation intended to get operators started with setting
@@ -37,6 +39,8 @@ OCI containers
 To use the OCI container driver, add the **hypervisor-oci** component to the
 architecture file or check the :ref:`OCI manual setup<nodepool-manual-operator-oci>` below.
 
+.. _nodepool-operator-dib:
+
 Diskimage-builder
 .................
 
@@ -50,6 +54,17 @@ To manage custom images through the config repository, built using diskimage-bui
   images definitions are subject to reviews on the config repository, operators
   can choose to allow or reject these images.
 
+DIB can build images from scratch using elements, and it is also possible to use
+a local image to add element on top of it (this is mandatory for rhel
+image, check :ref:`nodepool user documentation <nodepool-user-rhel>`). The
+operator should create a directory to store these images on the host where
+**nodepool-builder** service is deployed, and only an operator could add an
+image in this directory.
+
+.. code-block:: bash
+
+   mkdir /var/lib/nodepool/images
+   chown nodepool:nodepool /var/lib/nodepool/images
 
 Add a cloud provider
 --------------------
