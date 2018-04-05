@@ -8,18 +8,16 @@
 
 .. _documentation: https://docs.openstack.org/infra/nodepool
 
-
 Nodepool user documentation
 ===========================
 
-Labels, providers and diskimage are defined in *config/nodepool/*.
-All the yaml files present in this directory are merged to create the final
-Nodepool configuration. It's recommended to create a file per provider or project
-so that it's easier to manage.
-
+Labels, providers and diskimage are defined in *config/nodepool/*. All the yaml
+files present in this directory are merged to create the final Nodepool
+configuration. It's recommended to create a file per provider or project so that
+it's easier to manage.
 
 Below is an example of a cloud provider configuration and an associated
-diskimage/label:
+diskimage/label based on CentOS:
 
 .. code-block:: yaml
 
@@ -30,8 +28,9 @@ diskimage/label:
         - raw
       elements:
         - centos-minimal
+        - vm
         - nodepool-minimal
-        - sf-zuul-worker
+        - zuul-worker-user
 
   labels:
     - name: centos7
@@ -55,7 +54,6 @@ diskimage/label:
             - name: centos7
               min-ram: 1024
               diskimage: centos7
-
 
 Cloud provider tuning
 ---------------------
@@ -86,7 +84,7 @@ All `diskimage-builder elements <https://docs.openstack.org/developer/diskimage-
 as well as `sf-elements <https://softwarefactory-project.io/r/gitweb?p=software-factory/sf-elements.git;a=tree;f=elements>`_
 are available to define a nodepool image. For example you can:
 
-* Replace *centos7* by *fedora* or *gentoo* to change the base OS
+* Replace *centos7* by *fedora*, *debian* or *gentoo* to change the base OS
 * Use *selinux-permissive* to set selinux in permissive mode
 * Use *pip-and-virtualenv* to install packages from PyPI
 * Use *source-repositories* to provision a git repository
@@ -95,8 +93,9 @@ are available to define a nodepool image. For example you can:
 Adding custom elements
 ----------------------
 
-To customize an image, new diskimage builder elements can be added to the **nodepool/elements** directory in the config repository.
-For example, to add python 3.4 to a CentOS-based system, you need to create this element:
+To customize an image, new diskimage builder elements can be added to the
+**nodepool/elements** directory in the config repository. For example, to add
+python 3.4 to a CentOS-based system, you need to create this element:
 
 .. code-block:: bash
 
@@ -109,3 +108,31 @@ Then you can add the 'python34-epel' element to an existing image.
 
 Read more about diskimage builder elements `here <https://docs.openstack.org/developer/diskimage-builder/developer/developing_elements.html>`_.
 Or look at examples from `sf-elements <https://softwarefactory-project.io/r/gitweb?p=software-factory/sf-elements.git;a=tree;f=elements>`_.
+
+Building RHEL images
+--------------------
+
+To build rhel dib-image, you have to download rhel cloud image on
+https://access.redhat.com (login required) and put the image in a directory
+owned by the nodepool user. Then you have to provide the information for
+registration on the env-var statement (see `rhel-common element documentation
+<https://git.openstack.org/cgit/openstack/diskimage-builder/tree/diskimage_builder/elements/rhel-common/README.rst>`_)
+to be able to install packages during the build.
+
+.. code-block:: yaml
+
+  - name: dib-rhel-7
+    formats:
+      - raw
+    elements:
+      - rhel7
+      - vm
+      - rhel-common
+      - nodepool-minimal
+      - zuul-worker-user
+    env-vars:
+      DIB_LOCAL_IMAGE: '/var/lib/nodepool/images/rhel-7.4.qcow2'
+      REG_AUTO_ATTACH: true
+      REG_USER: login
+      REG_PASSWORD: password
+      REG_METHOD: portal
