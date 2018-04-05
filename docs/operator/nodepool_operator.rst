@@ -1,3 +1,5 @@
+.. _nodepool-operator:
+
 .. note::
 
   This is a lightweight documentation intended to get operators started with setting
@@ -39,6 +41,8 @@ architecture file or check the
 :ref:`RunC manual setup<nodepool-manual-operator-runc>` below.
 
 
+.. _nodepool-operator-dib:
+
 Diskimage-builder
 .................
 
@@ -52,6 +56,29 @@ To manage custom images through the config repository, built using diskimage-bui
   images definitions are subject to reviews on the config repository, operators
   can choose to allow or reject these images.
 
+DIB can build images from scratch using elements, and it is also possible to use
+a local image to add element on top of it (this is mandatory for rhel image,
+check :ref:`nodepool user documentation <nodepool-user-rhel>`). The operator
+can store base images on the host where **nodepool-builder** service is
+deployed in */var/lib/nodepool/images*.
+
+.. _nodepool-operator-password:
+
+Storing registration password to build rhel image
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To provide the password environment variable to nodepool-builder service, you
+have add image name and registration password in /etc/software-factory/sfconfig.yaml:
+
+.. code-block:: bash
+
+   nodepool:
+     ...
+     dib_reg_passwords:
+       - image_name: rhel-7
+         reg_password: rhsm_password
+
+Then run sfconfig --skip-install to finish the configuration.
 
 Add a cloud provider
 --------------------
