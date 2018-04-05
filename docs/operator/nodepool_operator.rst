@@ -1,3 +1,5 @@
+.. _nodepool-operator:
+
 .. note::
 
   This is a lightweight documentation intended to get operators started with setting
@@ -37,6 +39,8 @@ OCI containers
 To use the OCI container driver, add the **hypervisor-oci** component to the
 architecture file or check the :ref:`OCI manual setup<nodepool-manual-operator-oci>` below.
 
+.. _nodepool-operator-dib:
+
 Diskimage-builder
 .................
 
@@ -50,6 +54,41 @@ To manage custom images through the config repository, built using diskimage-bui
   images definitions are subject to reviews on the config repository, operators
   can choose to allow or reject these images.
 
+DIB can build images from scratch using elements, and it is also possible to use
+a local image to add element on top of it (this is mandatory for rhel image,
+check :ref:`nodepool user documentation <nodepool-user-rhel>`). The operator
+can store base images on the host where **nodepool-builder** service is
+deployed in */var/lib/nodepool/images*.
+
+.. _nodepool-operator-password:
+
+Storing registration password to build rhel image
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. tip::
+
+   To provide the password environment variable to nodepool-builder service, you
+   have to connect on the nodepool-builder node and run *systemctl edit* to
+   create an override systemd file for storing the password.
+
+1. create the file using systemctl
+
+.. code-block:: bash
+
+   [root@managesf ~]# systemctl edit rh-python35-nodepool-builder
+
+2. add the following content
+
+.. code-block:: ini
+
+   [Service]
+   Environment="REG_PASSWORD=sf-dev"
+
+3. restart nodepool-builder service
+
+.. code-block:: bash
+
+   [root@managesf ~]# systemctl restart rh-python35-nodepool-builder
 
 Add a cloud provider
 --------------------
