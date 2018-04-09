@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "5a43c5e1_11eebc22",
+        "filename": "docs/user/nodepool_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-04-09T13:22:49Z",
+      "side": 1,
+      "message": "That part should be in the nodepool admin doc, non admin users shouldn\u0027t be allowed to ssh into the nodepool node anyway",
+      "revId": "8643d581eab1918319fcb226a39ef5986061d223",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a43c5e1_86f610d6",
         "filename": "docs/user/nodepool_user.rst",
         "patchSetId": 1
