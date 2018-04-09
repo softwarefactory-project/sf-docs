@@ -33,6 +33,24 @@
       "revId": "8643d581eab1918319fcb226a39ef5986061d223",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a43c5e1_11879c62",
+        "filename": "docs/user/nodepool_user.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-04-09T12:54:40Z",
+      "side": 1,
+      "message": "vm is needed to build the image with the last version of dib to ensure block-device element is applied. I was not able to build image without this element (or we can include block-device-mbr https://github.com/openstack/diskimage-builder/blob/master/diskimage_builder/lib/common-functions#L242",
+      "parentUuid": "5a43c5e1_86f610d6",
+      "revId": "8643d581eab1918319fcb226a39ef5986061d223",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
