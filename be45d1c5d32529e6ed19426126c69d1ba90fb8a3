@@ -16,6 +16,24 @@
       "revId": "be45d1c5d32529e6ed19426126c69d1ba90fb8a3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a43c5e1_8cf62fd6",
+        "filename": "docs/user/nodepool_user.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-04-10T13:13:15Z",
+      "side": 1,
+      "message": "I don\u0027t think it is specific to rhel, but only centos, fedora and rhel describe this option in their README on dib elements. I will add a section about this option in the admin doc. Thanks for the review",
+      "parentUuid": "5a43c5e1_2c1d9b66",
+      "revId": "be45d1c5d32529e6ed19426126c69d1ba90fb8a3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
