@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a43c5e1_2c1d9b66",
+        "filename": "docs/user/nodepool_user.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-04-10T08:22:12Z",
+      "side": 1,
+      "message": "I still think there should be an entry in the admin doc about this prerequisite to use RHEL images; is it actually specific to RHEL or can you upload any image that way to be available to DIB ?",
+      "revId": "be45d1c5d32529e6ed19426126c69d1ba90fb8a3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
