@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a50d1a3_7cf6f9d8",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-04-11T09:22:20Z",
+      "side": 1,
+      "message": "Could it be created by sfconfig ?",
+      "range": {
+        "startLine": 66,
+        "startChar": 0,
+        "endLine": 67,
+        "endChar": 51
+      },
+      "revId": "0b56e1ec8e41ea8601860445792d65f432f13c2f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a50d1a3_1c1a5518",
+        "filename": "docs/user/nodepool_user.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-04-11T09:22:20Z",
+      "side": 1,
+      "message": ":p",
+      "range": {
+        "startLine": 86,
+        "startChar": 34,
+        "endLine": 86,
+        "endChar": 40
+      },
+      "revId": "0b56e1ec8e41ea8601860445792d65f432f13c2f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a50d1a3_3c1711ef",
+        "filename": "docs/user/nodepool_user.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-04-11T09:22:20Z",
+      "side": 1,
+      "message": "from",
+      "range": {
+        "startLine": 116,
+        "startChar": 63,
+        "endLine": 116,
+        "endChar": 65
+      },
+      "revId": "0b56e1ec8e41ea8601860445792d65f432f13c2f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a50d1a3_dcd2ad34",
+        "filename": "docs/user/nodepool_user.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-04-11T09:22:20Z",
+      "side": 1,
+      "message": "Where these file must be located ? Not safe on the config repo nodepool/. I guess we need to explain to the operator where to put that file on the nodepool-builder node.",
+      "range": {
+        "startLine": 124,
+        "startChar": 0,
+        "endLine": 139,
+        "endChar": 24
+      },
+      "revId": "0b56e1ec8e41ea8601860445792d65f432f13c2f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
