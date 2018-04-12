@@ -59,10 +59,11 @@ It is highly recommended to use a project dedicated to
 Nodepool.
 
 The slave instances inherit the project's "default" security group for access
-rules. Therefore the project's "default" security group must allow
-incoming SSH traffic (TCP/22) from the zuul-executor node.
-Please refer to `OpenStack's documentation <https://docs.openstack.org/nova/pike/admin/security-groups.html>`_
-to find out how to modify security groups.
+rules. Therefore the project's "default" security group must allow incoming SSH
+traffic (TCP/22) and incoming log stream port (TCP/19885) from the zuul-executor
+node. Please refer to `OpenStack's documentation
+<https://docs.openstack.org/nova/pike/admin/security-groups.html>`_ to find out
+how to modify security groups.
 
 In order to configure an OpenStack provider you need
 to add in sfconfig.yaml the cloud client information, below is an example of
