@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "3a50d1a3_c5165055",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-04-16T19:53:10Z",
+      "side": 1,
+      "message": "Yes, good point. I created a review to create this directory https://softwarefactory-project.io/r/11943",
+      "parentUuid": "3a50d1a3_7cf6f9d8",
+      "range": {
+        "startLine": 66,
+        "startChar": 0,
+        "endLine": 67,
+        "endChar": 51
+      },
+      "revId": "0b56e1ec8e41ea8601860445792d65f432f13c2f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a50d1a3_1c1a5518",
         "filename": "docs/user/nodepool_user.rst",
         "patchSetId": 4
@@ -71,6 +95,30 @@
     },
     {
       "key": {
+        "uuid": "3a50d1a3_650c1c43",
+        "filename": "docs/user/nodepool_user.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-04-16T19:53:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3a50d1a3_3c1711ef",
+      "range": {
+        "startLine": 116,
+        "startChar": 63,
+        "endLine": 116,
+        "endChar": 65
+      },
+      "revId": "0b56e1ec8e41ea8601860445792d65f432f13c2f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a50d1a3_dcd2ad34",
         "filename": "docs/user/nodepool_user.rst",
         "patchSetId": 4
@@ -82,6 +130,30 @@
       "writtenOn": "2018-04-11T09:22:20Z",
       "side": 1,
       "message": "Where these file must be located ? Not safe on the config repo nodepool/. I guess we need to explain to the operator where to put that file on the nodepool-builder node.",
+      "range": {
+        "startLine": 124,
+        "startChar": 0,
+        "endLine": 139,
+        "endChar": 24
+      },
+      "revId": "0b56e1ec8e41ea8601860445792d65f432f13c2f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3a50d1a3_85092834",
+        "filename": "docs/user/nodepool_user.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-04-16T19:53:10Z",
+      "side": 1,
+      "message": "I updated the documentation to explain how to store a password, there is some limitation, but it could be useful for users and operators",
+      "parentUuid": "3a50d1a3_dcd2ad34",
       "range": {
         "startLine": 124,
         "startChar": 0,
