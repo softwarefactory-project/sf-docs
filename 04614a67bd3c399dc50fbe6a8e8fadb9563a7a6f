@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "1a4dcd0f_9b98ab6c",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-04-17T20:31:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a4dcd0f_db7393b3",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 5
+      },
+      "revId": "04614a67bd3c399dc50fbe6a8e8fadb9563a7a6f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a4dcd0f_fb78cf91",
         "filename": "docs/operator/nodepool_operator.rst",
         "patchSetId": 5
@@ -36,6 +60,30 @@
       "writtenOn": "2018-04-17T09:12:17Z",
       "side": 1,
       "message": "Not needed.",
+      "range": {
+        "startLine": 61,
+        "startChar": 40,
+        "endLine": 62,
+        "endChar": 27
+      },
+      "revId": "04614a67bd3c399dc50fbe6a8e8fadb9563a7a6f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a4dcd0f_bb9d675b",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-04-17T20:31:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a4dcd0f_fb78cf91",
       "range": {
         "startLine": 61,
         "startChar": 40,
@@ -71,6 +119,30 @@
     },
     {
       "key": {
+        "uuid": "1a4dcd0f_db8e3327",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-04-17T20:31:39Z",
+      "side": 1,
+      "message": "No it does not edit the file, but create a file with to override values:\n\ncat /etc/systemd/system/rh-python35-nodepool-builder.service.d/override.conf\n[Service]\nEnvironment\u003d\"REG_PASSWORD\u003dsf-dev\"\n\nI updated the documentation to explain this point (it is possible to replace the default file with --full option to edit)",
+      "parentUuid": "1a4dcd0f_5b68e3ba",
+      "range": {
+        "startLine": 80,
+        "startChar": 0,
+        "endLine": 88,
+        "endChar": 36
+      },
+      "revId": "04614a67bd3c399dc50fbe6a8e8fadb9563a7a6f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a4dcd0f_9b6d0bcf",
         "filename": "docs/operator/nodepool_operator.rst",
         "patchSetId": 5
@@ -94,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "1a4dcd0f_fb93ef4d",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-04-17T20:31:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a4dcd0f_9b6d0bcf",
+      "range": {
+        "startLine": 94,
+        "startChar": 32,
+        "endLine": 94,
+        "endChar": 37
+      },
+      "revId": "04614a67bd3c399dc50fbe6a8e8fadb9563a7a6f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a4dcd0f_3b5f1710",
         "filename": "docs/user/nodepool_user.rst",
         "patchSetId": 5
@@ -105,6 +201,30 @@
       "writtenOn": "2018-04-17T09:12:17Z",
       "side": 1,
       "message": "Maybe comment those line or remove them",
+      "range": {
+        "startLine": 162,
+        "startChar": 0,
+        "endLine": 163,
+        "endChar": 24
+      },
+      "revId": "04614a67bd3c399dc50fbe6a8e8fadb9563a7a6f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a4dcd0f_5ba3039f",
+        "filename": "docs/user/nodepool_user.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-04-17T20:31:39Z",
+      "side": 1,
+      "message": "For me we can keep this line as we explain how to secure later in the documentation. For testing, it is useful. I commented the REG_PASSWORD\n\nFor REG_METHOD, I didn\u0027t find the default value (could be portal or satellite).",
+      "parentUuid": "1a4dcd0f_3b5f1710",
       "range": {
         "startLine": 162,
         "startChar": 0,
