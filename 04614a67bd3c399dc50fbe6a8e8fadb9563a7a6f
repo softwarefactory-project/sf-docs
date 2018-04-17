@@ -1,0 +1,165 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a4dcd0f_db7393b3",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-04-17T09:12:17Z",
+      "side": 1,
+      "message": "If that the way to do it then use \u0027can\u0027 instead.",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 5
+      },
+      "revId": "04614a67bd3c399dc50fbe6a8e8fadb9563a7a6f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a4dcd0f_fb78cf91",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-04-17T09:12:17Z",
+      "side": 1,
+      "message": "Not needed.",
+      "range": {
+        "startLine": 61,
+        "startChar": 40,
+        "endLine": 62,
+        "endChar": 27
+      },
+      "revId": "04614a67bd3c399dc50fbe6a8e8fadb9563a7a6f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a4dcd0f_5b68e3ba",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-04-17T09:12:17Z",
+      "side": 1,
+      "message": "Does it edit the service file provided by the nodepool-builder package ? If yes then we should not propose that solution. What about instead having a systemd service EnvironmentFile defined for that purpose at the package level. Then the operator can add var into it.",
+      "range": {
+        "startLine": 80,
+        "startChar": 0,
+        "endLine": 88,
+        "endChar": 36
+      },
+      "revId": "04614a67bd3c399dc50fbe6a8e8fadb9563a7a6f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a4dcd0f_9b6d0bcf",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-04-17T09:12:17Z",
+      "side": 1,
+      "message": "restart",
+      "range": {
+        "startLine": 94,
+        "startChar": 32,
+        "endLine": 94,
+        "endChar": 37
+      },
+      "revId": "04614a67bd3c399dc50fbe6a8e8fadb9563a7a6f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a4dcd0f_3b5f1710",
+        "filename": "docs/user/nodepool_user.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-04-17T09:12:17Z",
+      "side": 1,
+      "message": "Maybe comment those line or remove them",
+      "range": {
+        "startLine": 162,
+        "startChar": 0,
+        "endLine": 163,
+        "endChar": 24
+      },
+      "revId": "04614a67bd3c399dc50fbe6a8e8fadb9563a7a6f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a4dcd0f_7b659fdf",
+        "filename": "docs/user/nodepool_user.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-04-17T09:12:17Z",
+      "side": 1,
+      "message": "defined",
+      "range": {
+        "startLine": 166,
+        "startChar": 13,
+        "endLine": 166,
+        "endChar": 20
+      },
+      "revId": "04614a67bd3c399dc50fbe6a8e8fadb9563a7a6f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1a4dcd0f_1b625bd9",
+        "filename": "docs/user/nodepool_user.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-04-17T09:12:17Z",
+      "side": 1,
+      "message": "must",
+      "range": {
+        "startLine": 167,
+        "startChar": 35,
+        "endLine": 167,
+        "endChar": 38
+      },
+      "revId": "04614a67bd3c399dc50fbe6a8e8fadb9563a7a6f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
