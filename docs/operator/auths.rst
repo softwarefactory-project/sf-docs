@@ -22,6 +22,7 @@ Currently SF provides four kind of backends to authenticate:
 * OpenID (e.g. for Launchpad)
 * local user database hosted in the managesf node
 * LDAP backend
+* SAML2
 
 .. image:: ../imgs/login.jpg
 
@@ -125,6 +126,69 @@ Connect provider can be configured at a time.
 The issuer_url can be tested using the */.well-known/openid-configuration* uri path, e.g.:
 https://accounts.google.com/.well-known/openid-configuration
 
+Single Sign-On with SAML2
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Software Factory can be configured as a Service Provider and rely on an external
+Identity Provider using the SAML2 protocol for users authentication.
+
+The configuration of the single sign-on with SAML2 requires the operator to
+know which user properties and attributes will be sent by the Identity Provider
+to Software Factory, as they need to be mapped to the following user properties
+in Software Factory's configuration file:
+
+* **login**: the user name on Software Factory
+* **email**: the email address
+* **name**: the full name of the user
+* **uid**: the unique identifier of the user on the Identity Provider
+
+If the Identity Provider exposes the SSH public key(s) of its users in an
+attribute, it is possible to map the keys to **ssh_keys**, and specify a
+delimiter character to split the keys from this attribute value.
+
+Here is an example configuration for a `Keycloak <https://www.keycloak.org/>`_
+Identity Provider, using the default built-in user properties for "email" and
+"name", and custom-defined attributes for "login", "uid" and "public_key" (See
+Keycloak's documentation for more details on how to create custom mappings for
+SAML2):
+
+.. code-block:: yaml
+
+  authentication:
+    SAML2:
+      # set to true to activate
+      disabled: true
+      # Customize the login prompt here
+      login_button_text: "Log in with Keycloak"
+      # if the Identity Provider has a mapping for ssh keys, the delimiter
+      # character will be used to split multiple keys
+      key_delimiter: ','
+      mapping:
+        login: "username"
+        email: "urn:oid:1.2.840.113549.1.9.1"
+        name: "urn:oid:2.5.4.4"
+        uid: "uid"
+        ssh_keys: "public_key"
+
+Run ``sfconfig`` once to initialize the Service Provider metadata. If all goes
+well you will be prompted with this message at the end of the run:
+
+.. code-block:: bash
+
+  Service Provider metadata is available at /etc/httpd/saml2/mellon_metadata.xml
+  Once you have the Identity Provider metadata, run:
+    sfconfig --set-idp-metadata <path/to/metadata.xml>
+
+The file ``/etc/httpd/saml2/mellon_metadata.xml`` must then be forwarded to
+the Identity Provider in order to register Software Factory as one of its Service
+Providers. The Identity Provider's administrator should send you the identity
+provider's metadata back in the form of a file or a URL. Re-run sfconfig with
+the path to the metadata to finalize the configuration and activate the
+Single Sign-On:
+
+.. code-block:: bash
+
+  sfconfig --set-idp-metadata <path/to/metadata.xml>
 
 Local user management
 ^^^^^^^^^^^^^^^^^^^^^
