@@ -21,6 +21,24 @@ By default, no merger are being deployed because the executor service
 can perform merge task. However, a merger can also be deployed to speed
 up start time when there are many projects defined.
 
+Jobs default nodeset
+--------------------
+
+The default configuration in */etc/software-factory/sfconfig.yaml* for zuul
+nodeset is to use the label *centos-oci*. This label is only available if you
+added the role *hypervisor-oci* in */etc/software-factory/arch.yaml*. If you
+don't use this role, you should specify the nodeset to use for jobs. For
+example, if you have define a dib image in nodepool configuration, you should
+update */etc/software-factory/sfconfig.yaml* to specify the nodeset name and
+label:
+
+.. code-block:: yaml
+
+    zuul:
+      default_nodeset_name: dib-centos-7
+      default_nodeset_label: dib-centos-7
+
+Then, run :ref:`sfconfig  <configure_reconfigure>` to apply the modification
 
 Save and restore the queues
 ---------------------------
