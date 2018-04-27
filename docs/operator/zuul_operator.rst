@@ -21,6 +21,19 @@ By default, no merger are being deployed because the executor service
 can perform merge task. However, a merger can also be deployed to speed
 up start time when there are many projects defined.
 
+.. warning::
+
+  If your deployment doesn't include 'hypervisor-oci' role in the
+  /etc/software-factory/arch.yaml file, you have to update the following values
+  in /etc/software-factory/sfconfig.yaml to match an existing image and label
+  define in the nodepool configuration in the config repository and run sfconfig
+  to apply the configuration (e.g. with the example image and label in
+  config/nodepool.yaml):
+
+    zuul:
+      default_nodeset_name: dib-centos-7
+      default_nodeset_label: dib-centos-7
+
 
 Save and restore the queues
 ---------------------------
