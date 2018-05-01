@@ -7,15 +7,14 @@ Welcome to Software Factory's documentation!
    :align: center
 
 Software Factory (also called SF) is a collection of services that provides
-a powerful platform to build software. It's optimized to
-use an OpenStack-based cloud for resources, but this is not mandatory at all.
+a powerful platform to build software.
 
-Setting up a full software development stack manually can really be
-time-consuming. Software Factory provides an easy way to get everything you need to host,
+Setting up a full software development stack manually can be time-consuming.
+Software Factory provides an easy way to get everything you need to host,
 design, modify, test and build software; all of this pre-configured
 and usable immediately.
 
-Software Factory feature also features automated upgrades, so you don't have to
+Software Factory also features automated upgrades, so you don't have to
 worry about upgrading each services yourself.
 
 .. image:: imgs/landing_page.png
@@ -41,6 +40,7 @@ Software Factory offers a seamless user experience with:
 * A top menu to access all the services quickly, and
 * A command line tool and a web interface.
 
+
 Table of contents
 =================
 
@@ -48,6 +48,7 @@ Table of contents
    :maxdepth: 1
 
    components/index
+   guides/index
    user/index
    operator/index
    contributor/index
