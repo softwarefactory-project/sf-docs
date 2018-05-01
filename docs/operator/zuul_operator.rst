@@ -66,25 +66,25 @@ To create a GitHub app on my-org follow this
 * Create a Webhook secret
 * Set permissions:
 
-  * Commit statuses: Read & Write
+  * Repository Administraion: Read (get branch protection status)
+  * Repository contents: Read & Write (write to let zuul merge change)
   * Issues: Read & Write
   * Pull requests: Read & Write
-  * Repository contents: Read & Write (write to let zuul merge change)
-  * Repository Administraion: Read (get branch protection status)
+  * Commit statuses: Read & Write
 
 * Set events subscription:
 
-  * Label
-  * Status
-  * Issue comment
-  * Issues
-  * Pull request
-  * Pull request review
-  * Pull request review comment
   * Commit comment
   * Create
   * Push
   * Release
+  * Issue comment
+  * Issues
+  * Label
+  * Pull request
+  * Pull request review
+  * Pull request review comment
+  * Status
 
 * Set Where can this GitHub App be installed to "Any account"
 * Create the App
