@@ -39,7 +39,6 @@ Software Factory simplifies the management operations:
 * Integrated instance monitoring, and
 * Upgrade.
 
-
 Table of contents
 =================
 
@@ -47,6 +46,7 @@ Table of contents
    :maxdepth: 1
 
    components/index
+   guides/index
    user/index
    operator/index
    contributor/index
