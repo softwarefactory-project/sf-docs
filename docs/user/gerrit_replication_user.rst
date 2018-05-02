@@ -14,7 +14,7 @@ The replication settings can be changed in the config repository; they can be fo
 
 The replication of repositories should be done using the SSH protocol.
 By default Software Factory will use its own SSH private key to
-authenticate against the remote server.
+authenticate against the remote server. 
 
 
 Configure the replication for a repository
@@ -28,7 +28,7 @@ Clone the config repository:
 
 .. code-block:: bash
 
- $ git clone http://<fqdn>/r/config
+ $ git clone https://<fqdn>/r/config
 
 Edit the file *gerrit/replication.config* and add the following::
 
@@ -56,15 +56,14 @@ Then commit and send the patch for review.
  $ git commit -m'Add replication for myproject suite'
  $ git review
 
-The patch needs to be reviewed and approved by CORE or PTL members
-of the config repository. Once your patch is merged the *config-update* job
-will trigger the replication to mirrors.domain.example (in that example).
+Once the patch is merged the *config-update* job will trigger the replication
+to mirrors.domain.example (in that example).
 
 .. note::
 
-  the public key used for the replication needs to be added to
-  the *.ssh/authorized_keys* of the sf user on mirrors.domain.example. Please
-  request that public key to your Sofware Factory administrator.
+  The public key used for the replication needs to be added to
+  the *.ssh/authorized_keys* of the sf user on mirrors.domain.example.
+
 
 See the :ref:`Gerrit replication operator documentation<gerrit-replication-operator>`
 
@@ -81,13 +80,22 @@ See the :ref:`Gerrit replication operator documentation<gerrit-replication-opera
   replication plugin will create the repository if it does not exist.
 
 
+Get the replication SSH public key
+----------------------------------
+
+Gerrit SSH public key is available at the following URL.
+
+.. code-block:: bash
+
+  $ curl -OL https://<fqdn>/keys/gerrit_service_rsa.pub
+
 Configuring repository replication on Github
 --------------------------------------------
 
 There are two solutions you may use to replicate on Github:
 
  * Define a deployment key in your github repository's settings
- * Add a collaborator to you github repository's settings
+ * Add a collaborator to your github repository's settings
 
 The former is less straigtforward than the latter, and involve more work from the
 Software Factory administrator, because the replication plugin will by default use its
