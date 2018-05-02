@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "ba15a1d1_211db466",
+        "filename": "docs/operator/auths.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-05-02T13:02:31Z",
+      "side": 1,
+      "message": "it can\u0027t really go wrong at this point of the setup. However it might be good to add some debug logging to cauth, for example showing the environment variables set by apache_mod_mellon after a successful handshake.",
+      "parentUuid": "ba15a1d1_9e117d60",
+      "range": {
+        "startLine": 173,
+        "startChar": 67,
+        "endLine": 174,
+        "endChar": 4
+      },
+      "revId": "cd66ee91c569db5da9ff8913b0cdf551a6ed9e71",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ba15a1d1_de17f552",
         "filename": "docs/operator/auths.rst",
         "patchSetId": 3
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "ba15a1d1_81104050",
+        "filename": "docs/operator/auths.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 178,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-05-02T13:02:31Z",
+      "side": 1,
+      "message": "just acknowledging the fact that we\u0027re relying on apache_mod_mellon",
+      "parentUuid": "ba15a1d1_de17f552",
+      "range": {
+        "startLine": 178,
+        "startChar": 61,
+        "endLine": 178,
+        "endChar": 80
+      },
+      "revId": "cd66ee91c569db5da9ff8913b0cdf551a6ed9e71",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ba15a1d1_fe1c3979",
         "filename": "docs/operator/auths.rst",
         "patchSetId": 3
@@ -59,6 +107,30 @@
       "writtenOn": "2018-05-02T12:33:41Z",
       "side": 1,
       "message": "and this one idp_metadata.xml ?",
+      "range": {
+        "startLine": 180,
+        "startChar": 41,
+        "endLine": 180,
+        "endChar": 53
+      },
+      "revId": "cd66ee91c569db5da9ff8913b0cdf551a6ed9e71",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ba15a1d1_411a2870",
+        "filename": "docs/operator/auths.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-05-02T13:02:31Z",
+      "side": 1,
+      "message": "this is just a template path",
+      "parentUuid": "ba15a1d1_fe1c3979",
       "range": {
         "startLine": 180,
         "startChar": 41,
