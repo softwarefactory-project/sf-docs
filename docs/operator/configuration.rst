@@ -70,6 +70,16 @@ such as zuul.fqdn and gerrit.fqdn.
     have their fqdn hostname set to: name.fqdn
 
 
+Update FQDN
+...........
+
+To update the fqdn, you have to change the fqdn in
+*/etc/software-factory/sfconfig.yaml* and run:
+
+.. code-block:: bash
+
+   sfconfig --update-fqdn
+
 .. _configure_ssl_certificates:
 
 SSL Certificates
@@ -87,7 +97,7 @@ Authorizing the localCA
 .......................
 
 When deployed using a self-signed certificate, you can authorize the local CA
-by adding: http://fqdn/localCA.pem to your browser's CA trust.
+by adding: https://fqdn/localCA.pem to your browser's CA trust.
 
 
 Automatic TLS certificates with Let's Encrypt
