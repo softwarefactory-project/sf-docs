@@ -70,7 +70,32 @@ such as zuul.fqdn and gerrit.fqdn.
     have their fqdn hostname set to: name.fqdn
 
 
+Update FQDN
+...........
+
+To update the fqdn, you have to change the fqdn in
+*/etc/software-factory/sfconfig.yaml* and run:
+
+.. code-block:: bash
+
+   sfconfig
+
 .. _configure_ssl_certificates:
+
+.. note::
+
+    When changing the fqdn for a deployment, the fqdn is updated for config,
+    sf-jobs and zuul-jobs projects. All the others projects configured in the
+    software factory deployment should be updated by users.
+
+.. code-block:: bash
+
+   cd myproject
+   git remote set-url origin https://$fqdn/r/myproject
+   sed -i 's/$old_fqdn/fqdn' .gitreview
+   git add -A .
+   git commit -m 'update fqdn in gitreview'
+   git review
 
 SSL Certificates
 ----------------
@@ -87,7 +112,7 @@ Authorizing the localCA
 .......................
 
 When deployed using a self-signed certificate, you can authorize the local CA
-by adding: http://fqdn/localCA.pem to your browser's CA trust.
+by adding: https://fqdn/localCA.pem to your browser's CA trust.
 
 
 Automatic TLS certificates with Let's Encrypt
