@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "9a1a9d01_c0b4f4d2",
+        "filename": "docs/operator/auths.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-05-14T12:01:03Z",
+      "side": 1,
+      "message": "In https://softwarefactory-project.io/r/#/c/11874/ you refer as a urn id that is the default X500, it is the same here for email but not for name 2.5.4.42",
+      "revId": "cd66ee91c569db5da9ff8913b0cdf551a6ed9e71",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ba15a1d1_9e117d60",
         "filename": "docs/operator/auths.rst",
         "patchSetId": 3
