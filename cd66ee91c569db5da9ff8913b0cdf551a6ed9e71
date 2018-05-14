@@ -66,6 +66,30 @@
     },
     {
       "key": {
+        "uuid": "9a1a9d01_80c7dc44",
+        "filename": "docs/operator/auths.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-05-14T12:34:32Z",
+      "side": 1,
+      "message": "If nothing can fail here, let\u0027s then remove that sentence.",
+      "parentUuid": "ba15a1d1_211db466",
+      "range": {
+        "startLine": 173,
+        "startChar": 67,
+        "endLine": 174,
+        "endChar": 4
+      },
+      "revId": "cd66ee91c569db5da9ff8913b0cdf551a6ed9e71",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ba15a1d1_de17f552",
         "filename": "docs/operator/auths.rst",
         "patchSetId": 3
@@ -154,6 +178,23 @@
         "endLine": 180,
         "endChar": 53
       },
+      "revId": "cd66ee91c569db5da9ff8913b0cdf551a6ed9e71",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a2fa921_b60d8839",
+        "filename": "docs/operator/auths.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-05-14T12:34:32Z",
+      "side": 1,
+      "message": "sfconfig --skip-install .*",
       "revId": "cd66ee91c569db5da9ff8913b0cdf551a6ed9e71",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
