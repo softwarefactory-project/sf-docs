@@ -160,9 +160,9 @@ to be run in the **check** pipeline along the linters:
   for further details. *Name* is the name of the node as it will appear in
   the job's playbook inventory.
 
-The previous example expects the Ansible playbook "playbooks/unittests.yaml" (or
-"playbooks/unittests/run.yaml") to be present in the project's repository. Here
-is an example of what this playbook could contain:
+The previous example expects the Ansible playbook "playbooks/unittests.yaml"
+to be present in the project's repository. Here is an example of what this
+playbook could contain:
 
 .. code-block:: yaml
 
@@ -177,7 +177,7 @@ is an example of what this playbook could contain:
       - name: run unit tests
         command: tox
         args:
-          chdir: {{ zuul.project.src_dir }}/tests
+          chdir: "{{ zuul.project.src_dir }}/tests"
 
 Further documentation can be found online:
 
