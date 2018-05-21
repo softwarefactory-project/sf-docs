@@ -10,6 +10,12 @@ This section presents how to properly deploy Software Factory services.
 Overview
 ========
 
+.. warning::
+
+    Software Factory is not compatible with EPEL. Please make sure that
+    systems part of your Software Factory deployment does not
+    have the epel-release package installed.
+
 Follow these steps for a successful deployment:
 
 * Use a CentOS-7 system.
