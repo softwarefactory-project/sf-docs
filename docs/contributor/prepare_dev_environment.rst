@@ -7,7 +7,7 @@ Software Factory runs and is developed on CentOS 7. Provision a CentOS 7 system,
 
 .. code-block:: bash
 
- sudo yum install -y centos-release-openstack-pike
+ sudo yum install -y centos-release-openstack-queens centos-release-scl-rh
  sudo yum install -y git git-review vim-enhanced tmux curl rpmdevtools createrepo mock python-jinja2 ansible
  sudo /usr/sbin/usermod -a -G mock $USER
  newgrp mock
