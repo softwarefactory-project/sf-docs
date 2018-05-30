@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "7a2fa921_514bd359",
+        "filename": "docs/guides/github_deployment.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-05-30T19:58:55Z",
+      "side": 1,
+      "message": "I could be interesting to explain why users want to deploy but not using the standard arch, what are benefits, constraints, ...",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 6,
+        "endChar": 72
+      },
+      "revId": "cd0787b5ede99c9f2d0a79bf8b25cf6140048581",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a2fa921_967401d0",
         "filename": "docs/guides/github_deployment.rst",
         "patchSetId": 1
@@ -47,6 +70,29 @@
       "writtenOn": "2018-05-30T13:20:06Z",
       "side": 1,
       "message": "projects would be better named sf-config and sf-jobs",
+      "revId": "cd0787b5ede99c9f2d0a79bf8b25cf6140048581",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a2fa921_b19347a3",
+        "filename": "docs/guides/github_deployment.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-05-30T19:58:55Z",
+      "side": 1,
+      "message": "I have an error when running sf-config\n\n[root@managesf.sfdomain.com.rdocloud software-factory]# sfconfig  --disable-fqdn-redirection                                       \n[Wed May 30 19:45:02 2018] Running sfconfig\nWARNING: couldn\u0027t read previous version, defaulting to 2.6\nConfig and jobs needs to share the same connection\n[root@managesf.sfdomain.com.rdocloud software-factory]# echo $?\n1",
+      "range": {
+        "startLine": 64,
+        "startChar": 0,
+        "endLine": 64,
+        "endChar": 46
+      },
       "revId": "cd0787b5ede99c9f2d0a79bf8b25cf6140048581",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
