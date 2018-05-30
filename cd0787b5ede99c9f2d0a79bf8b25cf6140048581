@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a2fa921_967401d0",
+        "filename": "docs/guides/github_deployment.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-05-30T13:20:06Z",
+      "side": 1,
+      "message": "this doesn\u0027t work yet, we need to shuffle the file around and rename our ci jobs.",
+      "revId": "cd0787b5ede99c9f2d0a79bf8b25cf6140048581",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a2fa921_36816d90",
+        "filename": "docs/guides/github_deployment.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-05-30T13:20:06Z",
+      "side": 1,
+      "message": "the \"--fqdn\" parameter is a bad idea. I think we should have a better doc about setting the correct hostname before deployment, and then auto-set the fqdn in sfconfig from the system hostname.",
+      "revId": "cd0787b5ede99c9f2d0a79bf8b25cf6140048581",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a2fa921_567e69af",
+        "filename": "docs/guides/github_deployment.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-05-30T13:20:06Z",
+      "side": 1,
+      "message": "projects would be better named sf-config and sf-jobs",
+      "revId": "cd0787b5ede99c9f2d0a79bf8b25cf6140048581",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
