@@ -114,6 +114,24 @@
       "revId": "cd0787b5ede99c9f2d0a79bf8b25cf6140048581",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a2fa921_11955be3",
+        "filename": "docs/guides/github_deployment.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-05-31T14:51:59Z",
+      "side": 1,
+      "message": "config-locations:\n  # When not set, the config repositories are hosted locally\n  config-repo: https://github.com/nhicher/zuul-config.git\n  jobs-repo: https://github.com/nhicher/zuul-jobs.git",
+      "parentUuid": "7a2fa921_71ee0fee",
+      "revId": "cd0787b5ede99c9f2d0a79bf8b25cf6140048581",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
