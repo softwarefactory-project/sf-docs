@@ -25,6 +25,24 @@
     },
     {
       "key": {
+        "uuid": "7a2fa921_cc34284c",
+        "filename": "docs/guides/github_deployment.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-01T06:51:05Z",
+      "side": 1,
+      "message": "yes good idea :)",
+      "parentUuid": "7a2fa921_514bd359",
+      "revId": "cd0787b5ede99c9f2d0a79bf8b25cf6140048581",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a2fa921_967401d0",
         "filename": "docs/guides/github_deployment.rst",
         "patchSetId": 1
@@ -36,6 +54,24 @@
       "writtenOn": "2018-05-30T13:20:06Z",
       "side": 1,
       "message": "this doesn\u0027t work yet, we need to shuffle the file around and rename our ci jobs.",
+      "revId": "cd0787b5ede99c9f2d0a79bf8b25cf6140048581",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a2fa921_8cf8707e",
+        "filename": "docs/guides/github_deployment.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-01T06:51:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a2fa921_967401d0",
       "revId": "cd0787b5ede99c9f2d0a79bf8b25cf6140048581",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -59,6 +95,24 @@
     },
     {
       "key": {
+        "uuid": "7a2fa921_acf52c84",
+        "filename": "docs/guides/github_deployment.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-01T06:51:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a2fa921_36816d90",
+      "revId": "cd0787b5ede99c9f2d0a79bf8b25cf6140048581",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a2fa921_567e69af",
         "filename": "docs/guides/github_deployment.rst",
         "patchSetId": 1
@@ -70,6 +124,24 @@
       "writtenOn": "2018-05-30T13:20:06Z",
       "side": 1,
       "message": "projects would be better named sf-config and sf-jobs",
+      "revId": "cd0787b5ede99c9f2d0a79bf8b25cf6140048581",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a2fa921_4cf2589c",
+        "filename": "docs/guides/github_deployment.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-01T06:51:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a2fa921_567e69af",
       "revId": "cd0787b5ede99c9f2d0a79bf8b25cf6140048581",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -129,6 +201,24 @@
       "side": 1,
       "message": "config-locations:\n  # When not set, the config repositories are hosted locally\n  config-repo: https://github.com/nhicher/zuul-config.git\n  jobs-repo: https://github.com/nhicher/zuul-jobs.git",
       "parentUuid": "7a2fa921_71ee0fee",
+      "revId": "cd0787b5ede99c9f2d0a79bf8b25cf6140048581",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a2fa921_2c303c56",
+        "filename": "docs/guides/github_deployment.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-01T06:51:05Z",
+      "side": 1,
+      "message": "indeed there was a bug, it should be fixed by https://softwarefactory-project.io/r/#/c/12371/",
+      "parentUuid": "7a2fa921_11955be3",
       "revId": "cd0787b5ede99c9f2d0a79bf8b25cf6140048581",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
