@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7a2fa921_0212e7b4",
+        "filename": "docs/guides/github_deployment.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-04T13:54:40Z",
+      "side": 1,
+      "message": "yep",
+      "parentUuid": "7a2fa921_82d117fe",
+      "revId": "d0ff6c25339d11fb32416e4d63b7810d4e04d1c3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a2fa921_42dbff1b",
         "filename": "docs/guides/github_deployment.rst",
         "patchSetId": 3
@@ -36,6 +54,24 @@
         "endLine": 35,
         "endChar": 69
       },
+      "revId": "d0ff6c25339d11fb32416e4d63b7810d4e04d1c3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a2fa921_2217e3a4",
+        "filename": "docs/guides/github_deployment.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-04T13:54:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a2fa921_42dbff1b",
       "revId": "d0ff6c25339d11fb32416e4d63b7810d4e04d1c3",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
