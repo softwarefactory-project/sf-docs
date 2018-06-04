@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "7a2fa921_22792394",
+        "filename": "docs/faqs/disable_gerrit.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-04T09:55:04Z",
+      "side": 1,
+      "message": "It should be possible to remove it at any time yes.",
+      "parentUuid": "7a2fa921_a23e93b6",
+      "revId": "7222f3e3f456c4c4e25ff14960aa3f5d0903e392",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a2fa921_472f91a1",
         "filename": "docs/guides/github_deployment.rst",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "7a2fa921_c26dcfcd",
+        "filename": "docs/guides/github_deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-04T09:55:04Z",
+      "side": 1,
+      "message": "i think this would need to be a \"create-release\" process step to update version references from the documentation.",
+      "parentUuid": "7a2fa921_472f91a1",
+      "revId": "7222f3e3f456c4c4e25ff14960aa3f5d0903e392",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a2fa921_6755ed1b",
         "filename": "docs/guides/index.rst",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2018-06-04T09:47:39Z",
       "side": 1,
       "message": "guides",
+      "revId": "7222f3e3f456c4c4e25ff14960aa3f5d0903e392",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a2fa921_e2724bad",
+        "filename": "docs/guides/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-04T09:55:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a2fa921_6755ed1b",
       "revId": "7222f3e3f456c4c4e25ff14960aa3f5d0903e392",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
