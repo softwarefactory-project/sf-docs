@@ -14,3 +14,5 @@ This chapter documents how to contribute on Software Factory project.
    inspect_with_ara
    how_to_contribute
    sf_ci
+   how_to_setup_sf_sandbox
+
