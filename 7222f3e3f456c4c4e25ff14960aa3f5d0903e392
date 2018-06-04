@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a2fa921_a23e93b6",
+        "filename": "docs/faqs/disable_gerrit.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-06-04T09:47:39Z",
+      "side": 1,
+      "message": "This architectural choice must be made at the very beginning, ie you cannot decide to remove gerrit once SF has been deployed with it; or is it possible?",
+      "revId": "7222f3e3f456c4c4e25ff14960aa3f5d0903e392",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a2fa921_472f91a1",
+        "filename": "docs/guides/github_deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-06-04T09:47:39Z",
+      "side": 1,
+      "message": "TODO we should have a generic link sf-release-latest.rpm so we don\u0027t have to update the version number in the doc unless really necessary",
+      "revId": "7222f3e3f456c4c4e25ff14960aa3f5d0903e392",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a2fa921_6755ed1b",
+        "filename": "docs/guides/index.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-06-04T09:47:39Z",
+      "side": 1,
+      "message": "guides",
+      "revId": "7222f3e3f456c4c4e25ff14960aa3f5d0903e392",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
