@@ -28,6 +28,7 @@ application. To continue you will need `webhook_token`, an `app_id` and the
 
 Install the application for all the projects of the organization.
 
+.. _create_config_job_repos:
 
 Create a config and jobs repository
 ...................................
@@ -49,6 +50,7 @@ from the server.
    Make sure the GitHub application is installed on the config and jobs projects
    so that standard jobs and config-update are scheduled.
 
+.. _ update_the_configuration:
 
 Update the configuration
 ........................
