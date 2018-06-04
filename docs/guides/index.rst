@@ -14,3 +14,4 @@ Deployment
 .. toctree::
 
    github_deployment
+   tenant_deployment
