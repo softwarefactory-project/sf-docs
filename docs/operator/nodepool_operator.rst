@@ -78,6 +78,7 @@ configuration.
        project_id: 'tenantname'
        username: 'user'
        password: 'secret'
+       image_format: raw
        region_name: ''
        # Uncomment and set domain-related values when using a keystone v3 authentication endpoint
        # user_domain_name: Default

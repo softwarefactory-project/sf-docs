@@ -26,8 +26,6 @@ diskimage/label:
   ---
   diskimages:
     - name: centos7
-      formats:
-        - raw
       elements:
         - centos-minimal
         - nodepool-minimal
