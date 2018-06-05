@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5a2ca52d_d825d1ae",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-06-05T20:36:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a2ca52d_f551b80f",
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a2fa921_24ee108c",
         "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
         "patchSetId": 2
@@ -66,6 +84,30 @@
     },
     {
       "key": {
+        "uuid": "5a2ca52d_f82a0d7e",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-06-05T20:36:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a2fa921_24ee108c",
+      "range": {
+        "startLine": 6,
+        "startChar": 59,
+        "endLine": 6,
+        "endChar": 63
+      },
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a2ca52d_d5735cb3",
         "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
         "patchSetId": 2
@@ -100,6 +142,30 @@
       "writtenOn": "2018-06-05T09:32:49Z",
       "side": 1,
       "message": "s/centos/CentOS/",
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a2ca52d_981f595b",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-06-05T20:36:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a2ca52d_d5735cb3",
+      "range": {
+        "startLine": 7,
+        "startChar": 8,
+        "endLine": 7,
+        "endChar": 17
+      },
       "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -199,6 +265,30 @@
     },
     {
       "key": {
+        "uuid": "5a2ca52d_b82495af",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-06-05T20:36:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a2ca52d_f578d891",
+      "range": {
+        "startLine": 8,
+        "startChar": 66,
+        "endLine": 8,
+        "endChar": 67
+      },
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a2ca52d_d54cbc78",
         "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
         "patchSetId": 2
@@ -210,6 +300,24 @@
       "writtenOn": "2018-06-05T09:32:49Z",
       "side": 1,
       "message": "create a virtual machine",
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a2ca52d_583a21cf",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-06-05T20:36:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a2ca52d_d54cbc78",
       "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -279,6 +387,24 @@
     },
     {
       "key": {
+        "uuid": "5a2ca52d_b85b352e",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-06-05T20:36:32Z",
+      "side": 1,
+      "message": "I will validate, but during my previous test, the host doesn\u0027t have network configured when booting, I want to avoid network configuration during this setup",
+      "parentUuid": "5a2ca52d_154b145b",
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a2ca52d_3548905b",
         "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
         "patchSetId": 2
@@ -313,6 +439,24 @@
       "writtenOn": "2018-06-05T09:32:49Z",
       "side": 1,
       "message": "the firewalld service\n\nThis is okay here because it\u0027s a sandbox!",
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a2ca52d_383165ed",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-06-05T20:36:32Z",
+      "side": 1,
+      "message": "We don\u0027t use firewalld on production, but it is activated by default when using centos iso",
+      "parentUuid": "5a2ca52d_956de4ce",
       "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -406,6 +550,54 @@
     },
     {
       "key": {
+        "uuid": "5a2ca52d_f851ad0f",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-06-05T20:36:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a2ca52d_7565a8df",
+      "range": {
+        "startLine": 94,
+        "startChar": 1,
+        "endLine": 94,
+        "endChar": 79
+      },
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a2ca52d_98567905",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-06-05T20:36:32Z",
+      "side": 1,
+      "message": "Matthieu is right, the password is available in sfconfig.yaml",
+      "parentUuid": "7a2fa921_a402203d",
+      "range": {
+        "startLine": 94,
+        "startChar": 1,
+        "endLine": 94,
+        "endChar": 79
+      },
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5a2ca52d_b50d8039",
         "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
         "patchSetId": 2
@@ -417,6 +609,30 @@
       "writtenOn": "2018-06-05T09:11:22Z",
       "side": 1,
       "message": "known",
+      "range": {
+        "startLine": 109,
+        "startChar": 73,
+        "endLine": 109,
+        "endChar": 77
+      },
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a2ca52d_5841c138",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-06-05T20:36:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a2ca52d_b50d8039",
       "range": {
         "startLine": 109,
         "startChar": 73,
