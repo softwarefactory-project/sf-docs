@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a2fa921_24ee108c",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-06-05T09:07:08Z",
+      "side": 1,
+      "message": "experiment ?",
+      "range": {
+        "startLine": 6,
+        "startChar": 59,
+        "endLine": 6,
+        "endChar": 63
+      },
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a2fa921_44f30c74",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-06-05T09:07:08Z",
+      "side": 1,
+      "message": "setup a virtual machine host based on VirtualBox.",
+      "range": {
+        "startLine": 8,
+        "startChar": 43,
+        "endLine": 8,
+        "endChar": 67
+      },
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7a2fa921_a402203d",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-06-05T09:07:08Z",
+      "side": 1,
+      "message": "I think it is randomized now. And you can only get from group vars.",
+      "range": {
+        "startLine": 94,
+        "startChar": 1,
+        "endLine": 94,
+        "endChar": 79
+      },
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
