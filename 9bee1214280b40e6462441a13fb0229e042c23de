@@ -68,6 +68,29 @@
       "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a2ca52d_b50d8039",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 201
+      },
+      "writtenOn": "2018-06-05T09:11:22Z",
+      "side": 1,
+      "message": "known",
+      "range": {
+        "startLine": 109,
+        "startChar": 73,
+        "endLine": 109,
+        "endChar": 77
+      },
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
