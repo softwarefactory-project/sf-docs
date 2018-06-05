@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "5a2ca52d_f551b80f",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-06-05T09:32:49Z",
+      "side": 1,
+      "message": "setup a Software Factory",
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a2fa921_24ee108c",
         "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
         "patchSetId": 2
@@ -19,6 +36,70 @@
         "endLine": 6,
         "endChar": 63
       },
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a2ca52d_951f245b",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-06-05T09:32:49Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "7a2fa921_24ee108c",
+      "range": {
+        "startLine": 6,
+        "startChar": 59,
+        "endLine": 6,
+        "endChar": 63
+      },
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a2ca52d_d5735cb3",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-06-05T09:32:49Z",
+      "side": 1,
+      "message": "remove",
+      "range": {
+        "startLine": 7,
+        "startChar": 8,
+        "endLine": 7,
+        "endChar": 17
+      },
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a2ca52d_353170ed",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-06-05T09:32:49Z",
+      "side": 1,
+      "message": "s/centos/CentOS/",
       "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -48,6 +129,236 @@
     },
     {
       "key": {
+        "uuid": "5a2ca52d_95564405",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-06-05T09:32:49Z",
+      "side": 1,
+      "message": "virtual machine guest, rather ?",
+      "parentUuid": "7a2fa921_44f30c74",
+      "range": {
+        "startLine": 8,
+        "startChar": 43,
+        "endLine": 8,
+        "endChar": 67
+      },
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a2ca52d_f578d891",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-06-05T09:32:49Z",
+      "side": 1,
+      "message": "[NIT] maybe specify sth along these lines:\n\n\"The sandbox guest will be configured to be accessible from your host only.\"",
+      "range": {
+        "startLine": 8,
+        "startChar": 66,
+        "endLine": 8,
+        "endChar": 67
+      },
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a2ca52d_b55b402e",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-06-05T09:32:49Z",
+      "side": 1,
+      "message": "explains",
+      "range": {
+        "startLine": 8,
+        "startChar": 28,
+        "endLine": 8,
+        "endChar": 35
+      },
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a2ca52d_d54cbc78",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-06-05T09:32:49Z",
+      "side": 1,
+      "message": "create a virtual machine",
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a2ca52d_55418c38",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-06-05T09:32:49Z",
+      "side": 1,
+      "message": "easiest",
+      "range": {
+        "startLine": 23,
+        "startChar": 4,
+        "endLine": 23,
+        "endChar": 10
+      },
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a2ca52d_753e08ba",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-06-05T09:32:49Z",
+      "side": 1,
+      "message": "remove",
+      "range": {
+        "startLine": 23,
+        "startChar": 30,
+        "endLine": 23,
+        "endChar": 32
+      },
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a2ca52d_154b145b",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-06-05T09:32:49Z",
+      "side": 1,
+      "message": "[NIT] Actually you can configure the main interface before booting the VM to \"Host-only\", so you don\u0027t have to handle 2 interfaces.",
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a2ca52d_3548905b",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-06-05T09:32:49Z",
+      "side": 1,
+      "message": "IP address",
+      "range": {
+        "startLine": 45,
+        "startChar": 8,
+        "endLine": 45,
+        "endChar": 10
+      },
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a2ca52d_956de4ce",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-06-05T09:32:49Z",
+      "side": 1,
+      "message": "the firewalld service\n\nThis is okay here because it\u0027s a sandbox!",
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a2ca52d_b57260ac",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-06-05T09:32:49Z",
+      "side": 1,
+      "message": "enable",
+      "range": {
+        "startLine": 71,
+        "startChar": 17,
+        "endLine": 71,
+        "endChar": 21
+      },
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a2ca52d_5568acba",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-06-05T09:32:49Z",
+      "side": 1,
+      "message": "https",
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a2fa921_a402203d",
         "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
         "patchSetId": 2
@@ -59,6 +370,30 @@
       "writtenOn": "2018-06-05T09:07:08Z",
       "side": 1,
       "message": "I think it is randomized now. And you can only get from group vars.",
+      "range": {
+        "startLine": 94,
+        "startChar": 1,
+        "endLine": 94,
+        "endChar": 79
+      },
+      "revId": "9bee1214280b40e6462441a13fb0229e042c23de",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a2ca52d_7565a8df",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2018-06-05T09:32:49Z",
+      "side": 1,
+      "message": "it is randomized, but I think it is still set in sfconfig.yaml",
+      "parentUuid": "7a2fa921_a402203d",
       "range": {
         "startLine": 94,
         "startChar": 1,
