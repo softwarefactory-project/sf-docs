@@ -9,18 +9,6 @@ related to the replication.
 See the :ref:`Gerrit replication user documentation<gerrit-replication-user>`
 
 
-Public key to provide to SF users for the replication
------------------------------------------------------
-
-You should expose the Gerrit public SSH key to your users
-in order to let them configure the replication target to authorize
-SF to authenticate and replicate.
-
-You will find the key at this path::
-
- /etc/gerrit/ssh_host_rsa_key.pub
-
-
 Add the host key of the remote server to the known_hosts
 --------------------------------------------------------
 
@@ -53,14 +41,14 @@ SF bundles a small utility that help you do that in one command
 
 .. code-block:: bash
 
- $ cat deploy-key.pub | ssh root@fqdn gerrit_repl_alias_helper.py \
+ $ cat deploy-key.pub | ssh root@fqdn /usr/share/sf-config/scripts/gerrit_repl_alias_helper.py \
    --hostname github.com --key-from-stdin github-host-p1-alias
 
 or
 
 .. code-block:: bash
 
- $ gerrit_repl_alias_helper.py --hostname github.com --key-path \
+ $ /usr/share/sf-config/scripts/gerrit_repl_alias_helper.py --hostname github.com --key-path \
    /tmp/deploy-key.pub github-host-p1-alias
 
 These commands will copy the key at the right place and populate
