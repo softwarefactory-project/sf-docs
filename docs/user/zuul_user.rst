@@ -36,6 +36,15 @@ Some of the major changes reflected in Software Factory are:
 Adding a project to the zuul service
 ------------------------------------
 
+.. note::
+
+  Software Factory 3.1 brings a new feature where Zuul tenants files are
+  generated from the config repository resources description. The definition,
+  below, is then no longer mandatory, see the :ref:`Zuul tenants from resources<zuul-resources-integration>`
+  section for more details. Also note that Zuul's tenants definition file, like below,
+  take precedence over the auto generated, if exists.
+
+
 A project file must be submitted to the **config** repository, under the **zuul**
 directory. For example, config/zuul/project-name.yaml can contain the following:
 
