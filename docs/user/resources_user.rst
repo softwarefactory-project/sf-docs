@@ -77,6 +77,7 @@ Below is a YAML file that can be used as a starting point:
   resources:
     projects:
       ichiban-cloud:
+        tenant: local
         description: The best cloud platform engine
         contacts:
           - contacts@ichiban-cloud.io
@@ -158,3 +159,89 @@ job "config-check" will return a failure if the commit message of the change
 does not include the string "sf-resources: allow-delete". This can be seen
 as a confirmation from the change's author to be sure the the deletion of some resources
 is actually intended.
+
+.. _zuul-resources-integration:
+
+Integration with Zuul
+---------------------
+
+Zuul requires a tenants files configuration to be aware of repositories it needs
+to handle. Software Factory 3.1 computes the tenant configuration from the
+resources.
+
+By default, defined repositories, attached to a Resources's project,
+via *source-repositories*, like below, are added automatically to Zuul, with
+the default settings as *untrusted-projects*:
+
+.. code-block:: yaml
+
+  resources:
+    projects:
+      ichiban-cloud:
+        tenant: local
+        description: The best cloud platform engine
+        source-repositories:
+          - ichiban-compute
+          - ichiban-storage
+
+    repos:
+      ichiban-compute:
+        description: The compute manager of ichiban-cloud
+        acl: ichiban-dev-acl
+      ichiban-storage:
+        description: The storage manager of ichiban-cloud
+        acl: ichiban-dev-acl
+
+To define a specific configuration for a repository (a project in the
+Zuul terminology), attributes can be attached to *source-repositories*'s items.
+
+For a *config-project*:
+
+.. code-block:: yaml
+
+  source-repositories:
+    - ichiban-config:
+        zuul/config-project: True
+    - ichiban-compute
+    - ichiban-storage
+
+Other configurations can be simply added under the prefix *zuul/* using
+the same attibute name than for the regular Zuul tenant configuration.
+
+.. code-block:: yaml
+
+  source-repositories:
+    - ichiban-config:
+        zuul/include:
+          - job
+        zuul/shadow: common-config
+
+In order to define global by tenant Zuul configuration, the tenant's resources
+object need to be updated.
+
+.. code-block:: yaml
+
+  tenant:
+    local:
+      description: "The local tenant."
+      url: "https://sftests.com/manage"
+      default-connection: gerrit
+      tenant-options:
+        zuul/max-job-timeout: 3600
+        zuul/max-nodes-per-job: 10
+
+All repositories are attached to Zuul
+.....................................
+
+Repositories not attached to a resources's project will be added to the Zuul
+configuration but with the attribute *include: []* that force Zuul to ignore
+all configuration classes defined in-repo.
+
+If a repository have to been fully excluded from Zuul, then the repository
+have to be attached to a Resources's project and set the attribute *zuul/ignore*.
+
+.. code-block:: yaml
+
+  source-repositories:
+    - ichiban-compute:
+        zuul/ignore: True
