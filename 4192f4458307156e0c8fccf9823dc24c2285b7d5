@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a3bee03d_39e98b35",
+        "filename": "docs/faqs/restart_config_update.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-26T09:01:23Z",
+      "side": 1,
+      "message": "This should be: :ref:`zuul operator documentation \u003crestart_config_update\u003e`",
+      "revId": "4192f4458307156e0c8fccf9823dc24c2285b7d5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
