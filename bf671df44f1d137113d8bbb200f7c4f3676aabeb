@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "65dcecfe_ce2ae066",
+        "filename": "docs/guides/tenant_deployment.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 80,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-06-26T14:13:32Z",
+      "side": 1,
+      "message": "Had to restart managesf and retrigger config. Got a 500 error on the configuration endpoint but unfortunately once restarted to enable debug it started to work.",
+      "revId": "bf671df44f1d137113d8bbb200f7c4f3676aabeb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "05b2e360_a39e31cd",
+        "filename": "docs/guides/tenant_deployment.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-06-26T14:13:32Z",
+      "side": 1,
+      "message": "Had to restart zuul on the main instance to seethe new pipeline.",
+      "revId": "bf671df44f1d137113d8bbb200f7c4f3676aabeb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
