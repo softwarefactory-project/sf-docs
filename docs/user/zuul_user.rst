@@ -288,7 +288,7 @@ can be used to create the YAML tree to be pushed in the project *.zuul.d/* direc
 
 .. code-block:: bash
 
-  ./encrypt_secret.py --infile secret.data --outfile secret.yaml https://<fqdn>/zuul/api/tenant/<tenant> <project>
+  ./encrypt_secret.py --tenant <tenant> --infile secret.data --outfile secret.yaml https://<fqdn>/zuul/ <project>
 
 Then *<name>* and *<fieldname>* fields that are placeholders must be replaced in the
 generated *secret.yaml* file.
