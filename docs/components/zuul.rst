@@ -16,6 +16,7 @@ The service is pre-configured with five pipelines:
 * A **check** pipeline, used for preliminary tests on upcoming changes
 * A **gate** pipeline, used to make sure an approved change can be merged
 * A **post** pipeline, executing jobs right after a change has been merged
+* A **pre-release** pipeline, executing jobs after a tag including 'alpha|beta|rc' has been pushed on a repository
 * A **release** pipeline, executing jobs after a tag has been pushed on a repository
 * A **periodic** pipeline, building jobs at a regular interval, usually daily
 
