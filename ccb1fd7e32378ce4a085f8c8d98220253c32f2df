@@ -1,0 +1,372 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f64b3b0_7ac90cdd",
+        "filename": "docs/user/create_and_configure.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-28T09:56:19Z",
+      "side": 1,
+      "message": "and added to the Zuul tenant configuration",
+      "range": {
+        "startLine": 13,
+        "startChar": 75,
+        "endLine": 13,
+        "endChar": 76
+      },
+      "revId": "ccb1fd7e32378ce4a085f8c8d98220253c32f2df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dc4809d7_2cb89321",
+        "filename": "docs/user/create_and_configure.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-28T09:56:19Z",
+      "side": 1,
+      "message": "drop that addition",
+      "range": {
+        "startLine": 14,
+        "startChar": 22,
+        "endLine": 15,
+        "endChar": 14
+      },
+      "revId": "ccb1fd7e32378ce4a085f8c8d98220253c32f2df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8533250c_4ba9704a",
+        "filename": "docs/user/resources_user.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-28T09:56:19Z",
+      "side": 1,
+      "message": "of the",
+      "range": {
+        "startLine": 168,
+        "startChar": 56,
+        "endLine": 168,
+        "endChar": 59
+      },
+      "revId": "ccb1fd7e32378ce4a085f8c8d98220253c32f2df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5e1146d2_1135354f",
+        "filename": "docs/user/resources_user.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-28T09:56:19Z",
+      "side": 1,
+      "message": "tenants configuration file",
+      "range": {
+        "startLine": 168,
+        "startChar": 16,
+        "endLine": 168,
+        "endChar": 43
+      },
+      "revId": "ccb1fd7e32378ce4a085f8c8d98220253c32f2df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "04bba80e_f20e75db",
+        "filename": "docs/user/resources_user.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-28T09:56:19Z",
+      "side": 1,
+      "message": "watch for events.",
+      "range": {
+        "startLine": 169,
+        "startChar": 3,
+        "endLine": 169,
+        "endChar": 9
+      },
+      "revId": "ccb1fd7e32378ce4a085f8c8d98220253c32f2df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c083b566_0bdbdcab",
+        "filename": "docs/user/resources_user.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-28T09:56:19Z",
+      "side": 1,
+      "message": "can generates",
+      "range": {
+        "startLine": 169,
+        "startChar": 32,
+        "endLine": 169,
+        "endChar": 40
+      },
+      "revId": "ccb1fd7e32378ce4a085f8c8d98220253c32f2df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "082c5451_cb44d041",
+        "filename": "docs/user/resources_user.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-28T09:56:19Z",
+      "side": 1,
+      "message": "the *source-repositories* attached to a project",
+      "range": {
+        "startLine": 172,
+        "startChar": 12,
+        "endLine": 173,
+        "endChar": 26
+      },
+      "revId": "ccb1fd7e32378ce4a085f8c8d98220253c32f2df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "33a7a88d_37714132",
+        "filename": "docs/user/resources_user.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-28T09:56:19Z",
+      "side": 1,
+      "message": "as *untrusted-projects*:",
+      "range": {
+        "startLine": 173,
+        "startChar": 70,
+        "endLine": 174,
+        "endChar": 45
+      },
+      "revId": "ccb1fd7e32378ce4a085f8c8d98220253c32f2df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e1fc4854_a7dfc706",
+        "filename": "docs/user/resources_user.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-28T09:56:19Z",
+      "side": 1,
+      "message": "Source-repositories can be defined as a *config-project*:",
+      "range": {
+        "startLine": 195,
+        "startChar": 0,
+        "endLine": 196,
+        "endChar": 79
+      },
+      "revId": "ccb1fd7e32378ce4a085f8c8d98220253c32f2df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e00129a_de297c93",
+        "filename": "docs/user/resources_user.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-28T09:56:19Z",
+      "side": 1,
+      "message": "Other zuul configuration options can be added using the *zuul/* prefix:",
+      "range": {
+        "startLine": 208,
+        "startChar": 0,
+        "endLine": 209,
+        "endChar": 70
+      },
+      "revId": "ccb1fd7e32378ce4a085f8c8d98220253c32f2df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c8e119a6_ea0ce2a8",
+        "filename": "docs/user/resources_user.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-28T09:56:19Z",
+      "side": 1,
+      "message": "Repositories that are not attached to a project\u0027s source-repository list are automatically added to the Zuul configuration using the *include: []* option to make Zuul ignore the in-repo configuration. This steps is referred to as adding the \"missing resources\".",
+      "range": {
+        "startLine": 222,
+        "startChar": 0,
+        "endLine": 224,
+        "endChar": 42
+      },
+      "revId": "ccb1fd7e32378ce4a085f8c8d98220253c32f2df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "74d34f04_e2c3ea4d",
+        "filename": "docs/user/resources_user.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-28T09:56:19Z",
+      "side": 1,
+      "message": "To exclude a source-repository from Zuul configuration",
+      "range": {
+        "startLine": 226,
+        "startChar": 0,
+        "endLine": 227,
+        "endChar": 49
+      },
+      "revId": "ccb1fd7e32378ce4a085f8c8d98220253c32f2df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "34149343_9446a474",
+        "filename": "docs/user/zuul_user.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-28T09:56:19Z",
+      "side": 1,
+      "message": "enables automatic geneartion of the Zuul tenant configuration",
+      "range": {
+        "startLine": 41,
+        "startChar": 23,
+        "endLine": 42,
+        "endChar": 60
+      },
+      "revId": "ccb1fd7e32378ce4a085f8c8d98220253c32f2df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "50de1560_771a5057",
+        "filename": "docs/user/zuul_user.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-28T09:56:19Z",
+      "side": 1,
+      "message": "needed",
+      "range": {
+        "startLine": 43,
+        "startChar": 27,
+        "endLine": 43,
+        "endChar": 36
+      },
+      "revId": "ccb1fd7e32378ce4a085f8c8d98220253c32f2df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "bcb79823_451b0fb5",
+        "filename": "docs/user/zuul_user.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-28T09:56:19Z",
+      "side": 1,
+      "message": "Note",
+      "range": {
+        "startLine": 44,
+        "startChar": 28,
+        "endLine": 44,
+        "endChar": 37
+      },
+      "revId": "ccb1fd7e32378ce4a085f8c8d98220253c32f2df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4c5d3290_14aa0e96",
+        "filename": "docs/user/zuul_user.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-06-28T09:56:19Z",
+      "side": 1,
+      "message": "you can drop that",
+      "range": {
+        "startLine": 45,
+        "startChar": 41,
+        "endLine": 45,
+        "endChar": 52
+      },
+      "revId": "ccb1fd7e32378ce4a085f8c8d98220253c32f2df",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
