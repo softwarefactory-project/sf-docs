@@ -77,6 +77,7 @@ Below is a YAML file that can be used as a starting point:
   resources:
     projects:
       ichiban-cloud:
+        tenant: local
         description: The best cloud platform engine
         contacts:
           - contacts@ichiban-cloud.io
@@ -158,3 +159,72 @@ job "config-check" will return a failure if the commit message of the change
 does not include the string "sf-resources: allow-delete". This can be seen
 as a confirmation from the change's author to be sure the the deletion of some resources
 is actually intended.
+
+.. _zuul-resources-integration:
+
+Integration with Zuul
+---------------------
+
+Zuul requires a tenants configuration file to be aware of the repositories it needs
+to watch for events. Software Factory 3.1 can generate the tenant configuration from the
+resources.
+
+By default, the *source-repositories* attached to a project, like below, are added
+automatically to Zuul as *untrusted-projects*:
+
+.. code-block:: yaml
+
+  resources:
+    projects:
+      ichiban-cloud:
+        tenant: local
+        description: The best cloud platform engine
+        source-repositories:
+          - ichiban-compute
+          - ichiban-storage
+
+    repos:
+      ichiban-compute:
+        description: The compute manager of ichiban-cloud
+        acl: ichiban-dev-acl
+      ichiban-storage:
+        description: The storage manager of ichiban-cloud
+        acl: ichiban-dev-acl
+
+To define a specific configuration for a repository (a project in the
+Zuul terminology), for instance, a *source-repositorie* can be defined
+as a *config-project*:
+
+.. code-block:: yaml
+
+  source-repositories:
+    - ichiban-config:
+        zuul/config-project: True
+    - ichiban-compute
+    - ichiban-storage
+
+Other zuul configuration options can be added using the *zuul/* prefix:
+
+.. code-block:: yaml
+
+  source-repositories:
+    - ichiban-config:
+        zuul/include:
+          - job
+        zuul/shadow: common-config
+
+All repositories are attached to Zuul
+.....................................
+
+Repositories that are not attached to a project's source-repository list are
+automatically added to the Zuul configuration using the *include: []* option
+to make Zuul ignore the in-repo configuration. This steps is referred to as
+adding the "missing resources".
+
+To exclude a *source-repository* from Zuul configuration:
+
+.. code-block:: yaml
+
+  source-repositories:
+    - ichiban-compute:
+        zuul/ignore: True
