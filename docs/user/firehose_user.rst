@@ -19,12 +19,11 @@ Services supported
   Service           Topic         Source
 ================= ============= ================
  Gerrit             gerrit        `germqtt`_
- Nodepool           nodepool      `ochlero`_
- Zuul               zuul          `ochlero`_
+ Zuul               zuul          `reporter`_
 ================= ============= ================
 
 .. _germqtt: http://git.openstack.org/cgit/openstack-infra/germqtt/
-.. _ochlero: https://pypi.python.org/pypi/ochlero
+.. _reporter: https://zuul-ci.org/docs/zuul/admin/drivers/mqtt.html
 
 Events published
 ----------------
@@ -38,130 +37,13 @@ Every patchset-related events are published, similarly to the `gerrit stream-eve
 command. A full description of each event type can be found here:
 https://gerrit-review.googlesource.com/Documentation/cmd-stream-events.html
 
-Nodepool
-........
-
-The following events are published:
-
-node creation
-#############
-
-================== ===========================================
- Key                Value
-================== ===========================================
- EVENT              CREATE
- HOSTNAME           The hostname
- TIMESTAMP          The Epoch timestamp of the event
- IMAGE              The image used to create the node
- NODE_ID            The nodepool node ID
- PROVIDER           The cloud provider on which the node was created
-================== ===========================================
-
-node ready
-##########
-
-================== ===========================================
- Key                Value
-================== ===========================================
- EVENT              READY
- NODE_ID            The nodepool node ID
- TIMESTAMP          The Epoch timestamp of the event
-================== ===========================================
-
-node ready in the orchestrator
-##############################
-
-================== ===========================================
- Key                Value
-================== ===========================================
- EVENT              READY_ORCHESTRATOR
- NODE_ID            The nodepool node ID
- TIMESTAMP          The Epoch timestamp of the event
- ORCHESTRATOR       The name of the orchestrator (Jenkins)
-================== ===========================================
-
-node deleted
-############
-
-================== ===========================================
- Key                Value
-================== ===========================================
- EVENT              DELETED
- NODE_ID            The nodepool node ID
- TIMESTAMP          The Epoch timestamp of the event
-================== ===========================================
-
-node deleted in the orchestrator
-################################
-
-================== ===========================================
- Key                Value
-================== ===========================================
- EVENT              DELETED_ORCHESTRATOR
- NODE_ID            The nodepool node ID
- TIMESTAMP          The Epoch timestamp of the event
- ORCHESTRATOR       The name of the orchestrator (Jenkins)
-================== ===========================================
-
 Zuul
 ....
 
-The following events are published:
+Every buildset results are published. A full description of the events can
+be found here:
+https://zuul-ci.org/docs/zuul/admin/drivers/mqtt.html#message-schema
 
-Job moved to any pipeline
-#########################
-
-================== ===========================================
- Key                Value
-================== ===========================================
- EVENT              ADD_TO_PIPELINE
- PIPELINE           The name of the destination pipeline
- TIMESTAMP          The Epoch timestamp of the event
- ZUUL_CHANGE        The gerrit review ID
- ZUUL_PATCHSET      The review patchset version number
- ZUUL_CHANGE_IDS    ZUUL_CHANGE,ZUUL_PATCHSET
- ZUUL_PROJECT       The repository on which the review applies
-================== ===========================================
-
-Job launched
-############
-
-================== ===========================================
- Key                Value
-================== ===========================================
- EVENT              LAUNCH_JOB
- TIMESTAMP          The Epoch timestamp of the event
- ZUUL_CHANGE        The gerrit review ID
- ZUUL_PATCHSET      The review patchset version number
- ZUUL_CHANGE_IDS    ZUUL_CHANGE,ZUUL_PATCHSET
- ZUUL_UUID          Internal Zuul job UUID
- JOB_NAME           The name of the job launched
-================== ===========================================
-
-Build started
-#############
-
-================== ===========================================
- Key                Value
-================== ===========================================
- EVENT              START_BUILD
- TIMESTAMP          The Epoch timestamp of the event
- ZUUL_UUID          Internal Zuul job UUID
- JOB_NAME           The name of the job launched
-================== ===========================================
-
-Build result
-############
-
-================== ===========================================
- Key                Value
-================== ===========================================
- EVENT              BUILD_RESULT
- TIMESTAMP          The Epoch timestamp of the event
- ZUUL_UUID          Internal Zuul job UUID
- JOB_NAME           The name of the job launched
- RESULT             Either SUCCESS or FAILURE
-================== ===========================================
 
 Subscribing to events
 ---------------------

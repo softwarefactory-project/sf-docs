@@ -52,18 +52,14 @@ For example the following YAML file describes a group called *mygroup*:
 This file must be named with the extension .yml or .yaml under
 the resources directory of the config repository.
 
-Once done::
+Once done:
 
- * The default config-check job will be run and validate this new
-   resource by checking its format.
- * The CI will assign a score to the *Verified* label on the associated change.
- * Everybody with access to the platform can comment and grade the change.
- * Privileged users can approve the change.
- * Once approved and merged, the config-update job will take care
-   of creating the group on services like Gerrit.
-
-It is a good practice to check the output of the validation (config-check job)
-and the apply (config-update job).
+* The default *config-check* job will be run and validate this new resource.
+* The CI will assign a score to the *Verified* label.
+* Everyone with access to the platform can comment and vote.
+* Privileged users can approve the change.
+* Once approved and merged, the *config-update* job will take care
+  of creating the group on services like Gerrit.
 
 .. _project-example:
 
@@ -82,12 +78,17 @@ Below is a YAML file that can be used as a starting point:
         contacts:
           - contacts@ichiban-cloud.io
         source-repositories:
+          - ichiban-config:
+              zuul/config-project: True
           - ichiban-compute
           - ichiban-storage
         website: http://ichiban-cloud.io
         documentation: http://ichiban-cloud.io/docs
         issue-tracker-url: http://ichiban-cloud.bugtrackers.io
     repos:
+      ichiban-config:
+        description: The config project of ichiban-cloud
+        acl: ichiban-dev-acl
       ichiban-compute:
         description: The compute manager of ichiban-cloud
         acl: ichiban-dev-acl

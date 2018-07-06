@@ -17,17 +17,13 @@ repositories are always in a healthy state. It is up to repositories managers
 to define what constitutes a healthy state: for example passing all unit tests,
 success in building software, etc.
 
-Software Factory ships with Zuul, which is a major rewrite of Zuul with many improvements.
-Most basic concepts remain valid though, so it is advised to read Software Factory's
-:ref:`general documentation on Zuul <zuul-user>` before proceeding further.
-
-Some of the major changes reflected in Software Factory are:
+Software Factory ships with Zuul version 3, which is a major rewrite of Zuul
+with many improvements. Some of the major changes reflected in Software Factory
+are:
 
 * In Zuul's terminology, a **project** is a gated repository
-* Projects must be added to the main configuration in the config repository's **zuul** directory
-* Jobs can inherit from the **zuul-jobs** repository base jobs
-* Pipelines are managed within repositories
-* Custom jobs can be defined within repositories
+* Jobs can inherit from the **zuul-jobs** repository base jobs.
+* Pipelines and jobs are stored in repositories.
 * Github was added as a possible repository source for gating projects, enabling
   Software Factory to act as a third party CI for repositories hosted on Github.
 

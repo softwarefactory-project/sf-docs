@@ -10,9 +10,9 @@ the service in charge of creating tests environment. It supports 3 types of
 drivers to create instances:
 
 * Openstack cloud
-* OpenContainer (runC)
 * Static node
+* OpenContainer (runC) (tech preview)
+* OpenShift (tech preview)
 
-It is designed to handle the life cycle of work nodes (creation, provision,
+It is designed to handle the life cycle of build resources (creation, provision,
 assignation and destruction).
-

@@ -8,7 +8,7 @@ arch.yaml. This file defines how services are deployed. Each host declares:
 
 * A hostname,
 * An IP address,
-* A public_url (used for service like zuul-merger),
+* An optional public_url, and
 * A list of components.
 
 For example, to add a new zuul-merger, start a new instance inside the internal
@@ -18,12 +18,12 @@ update the arch.yaml with:
 
 .. code-block:: yaml
 
-  # vim /etc/software-factory/arch.yaml # Add new host:
-      - host: zm02
+  vim /etc/software-factory/arch.yaml # Add new host:
+      - name: zm02
         ip: 192.168.0.XXX
         roles:
           - zuul-merger
-  # sfconfig
+  sfconfig
 
 
 .. _architecture_config_file:
@@ -78,7 +78,8 @@ Optional services can be enabled:
 
 * zuul-merger
 * nodepool-builder
-* hypervisor-oci
+* hypervisor-runc
+* hypervisor-openshift
 * rabbitmq
 * etherpad
 * lodgeit
@@ -100,12 +101,14 @@ Optional services can be enabled:
 * hydrant
 * influxdb
 * grafana
-
+* cgit
+* hound
 
 .. note::
 
-   Check the :ref:`nodepool documentation<nodepool-operator-oci>` to learn
-   how to configure the hypervisor-oci role to enable container providers in Nodepool.
+   Check the :ref:`nodepool documentation<nodepool-operator-runc>` to learn
+   how to configure the hypervisor-runc role to enable container providers in
+   Nodepool.
 
 .. _architecture_extending:
 

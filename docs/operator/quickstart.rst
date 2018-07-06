@@ -36,25 +36,26 @@ nodepool) using these commands:
 
 .. _oci-quickstart:
 
-OpenContainer provider quickstart
----------------------------------
+RunC provider quickstart
+------------------------
 
-The Nodepool service integrated in Software Factory comes with an OCI provider
-driver support. The sfconfig configuration management comes with a **hypervisor-oci**
-role that you can use to quickly setup and configure a test environment.
+The Nodepool service integrated in Software Factory comes with a runC provider
+driver to enable simple static node usage. The sfconfig configuration
+management comes with a **hypervisor-runc** role that you can use to quickly
+setup and configure a test environment.
 
 For this quickstart, we will use the main instance as the hypervisor:
 
 .. code-block:: bash
 
-  echo "      - hypervisor-oci" >> /etc/software-factory/arch.yaml
+  echo "      - hypervisor-runc" >> /etc/software-factory/arch.yaml
   sfconfig --enable-insecure-slaves
 
 .. note::
 
   Because the container doesn't have network isolation, we have to use a sfconfig
   argument to enable the main host as a nodepool provider. Please check the
-  the :ref:`nodepool operator doc<nodepool-operator-oci>` to properly deploy
+  the :ref:`nodepool operator doc<nodepool-operator-runc>` to properly deploy
   one or many dedicated instances to use as nodepool containers providers.
 
 Sfconfig will automatically update the config repository and create some ready
@@ -73,17 +74,18 @@ follow `this guide <https://docs.openstack.org/infra/system-config/third_party.h
 
 It's recommended to first deploy a local installation, before adding
 the external gerrit. In that case, after your local deployment is validated,
-add the local zuul ssh public key (located here: /var/lib/software-factory/bootstrap-data/ssh_keys/zuul_rsa.pub) to
-the remote `user ssh key setting page <https://review.openstack.org/r/#/settings/ssh-keys>`_.
-Then run this command:
+add the local zuul ssh public key (located here: /var/lib/software-factory/bootstrap-data/ssh_keys/zuul_rsa.pub)
+to the remote `user ssh key setting page <https://review.openstack.org/r/#/settings/ssh-keys>`_.
+Then add the new gerrit connection to /etc/software-factory/sfconfig.yaml file:
 
-.. code-block:: bash
+.. code-block:: yaml
 
-  sfconfig --zuul-external-gerrit openstack.org#username --zuul-upstream-jobs
-
-Alternatively you can pre-configure the remote user ssh key and copy the key files
-to the install server to deploy everything in one shot using this command:
-
-.. code-block:: bash
-
-  sfconfig --zuul-external-gerrit openstack.org#username --zuul-upstream-jobs --zuul-ssh-key /path/to/user/private/key
+  zuul:
+    gerrit_connections:
+      - name: review.openstack.org
+        hostname: review.openstack.org
+        port: 29418
+        puburl: https://review.openstack.org
+        username: external-gerrit-user-name
+        # optional canonical_hostname
+        canonical_hostname: git.openstack.org
