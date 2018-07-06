@@ -10,7 +10,7 @@ Organisation
 
 The project is divided into many repositories, available on the
 https://softwarefactory-project.io gerrit software-factory/ namespace,
-and replicated on github at https://github.com/softwarefactory-project ::
+and replicated on github at https://github.com/softwarefactory-project :
 
 * sf-release: The release rpm to install the repository
 * sf-config: The configuration/upgrade process
@@ -38,13 +38,16 @@ The arch.yaml file describes what roles should run on which instances. Then
 based on this information, the sfconfig process generates all the necessary
 playbooks to configure and maintain the deployment:
 
-* The **sf_setup.yml** playbook runs the install, setup, config_update tasks to deploy
-  the services on a fresh instance.
-* The **sf_configrepo_update.yml** playbook applies the config project configuration,
-  it is the playbook executed by the *config-update* job.
-* The **sf_backup.yml** playbook collects all the services' data in /var/lib/software-factory/backup
-* The **get_logs.yml** playbook collects all the services' logs, it's mostly used for sf-ci logs collections.
-* The **sf_erase.yml** playbook disables and can remove all the services' data, it is used to un-install the services.
+* The **sfconfig.yml** playbook runs the install, setup, config_update
+  tasks to deploy the services on a fresh instance.
+* The **sf_configrepo_update.yml** playbook applies the config project
+  configuration, it is the playbook executed by the *config-update* job.
+* The **sf_backup.yml** playbook collects all the services' data in
+  /var/lib/software-factory/backup
+* The **get_logs.yml** playbook collects all the services' logs,
+  it's mostly used for sf-ci logs collections.
+* The **sf_erase.yml** playbook disables and can remove all the services'
+  data, it is used to un-install the services.
 
 
 The system configuration

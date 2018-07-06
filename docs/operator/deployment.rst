@@ -76,6 +76,9 @@ gerrit             2GB   Projects git clones and patchset history, e.g. 20GB
 others             1GB   5GB
 ================= ===== =======================================================
 
+* Zookeeper needs 1GB of memory for every 10 nodes it manages
+* Zuul executors need 2GB of memory per vCPU, and each vCPU can handle
+  approximately 4 concurrent jobs.
 
 .. _network access control:
 
@@ -193,8 +196,7 @@ Access Software Factory
 =======================
 
 The Dashboard is available at https://FQDN and the *admin* user can authenticate
-using "Internal Login". If you used the default domain *sftests.com* then the default
-admin password is *userpass*.
+using "Internal Login".
 
 Congratulations, you successfully deployed Software Factory.
 You can now head over to the :ref:`architecture documentation<architecture>` to

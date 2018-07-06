@@ -141,12 +141,8 @@ Use openstack-infra/zuul-jobs
 -----------------------------
 
 The zuul-scheduler can automatically import all the jobs defined in
-the openstack-infra/zuul-jobs repository. Use this command line to enable
-its usage:
-
-.. code-block:: bash
-
-    sfconfig --zuul-upstream-jobs
+the zuul-ci.org/zuul-jobs repository. Set the zuul.upstream_zuul_jobs options
+to True in sfconfig.yaml
 
 
 .. _restart_config_update:
@@ -185,7 +181,8 @@ First you need to enable the executor's *keepjob* option so that ansible logs ar
 
 .. code-block:: bash
 
-    /opt/rh/rh-python35/root/bin/zuul-executor -c /etc/zuul/zuul.conf keep
+    /opt/rh/rh-python35/root/bin/zuul-executor keep
+    /opt/rh/rh-python35/root/bin/zuul-executor verbose
 
 Then next job execution will be available in /tmp/systemd-private-*-rh-python35-zuul-executor.service-*/tmp/
 
@@ -195,4 +192,5 @@ When done with debugging, deactivate the keepjob option by running:
 
 .. code-block:: bash
 
-    /opt/rh/rh-python35/root/bin/zuul-executor -c /etc/opt/rh/rh-python35/zuul/zuul.conf nokeep
+    /opt/rh/rh-python35/root/bin/zuul-executor nokeep
+    /opt/rh/rh-python35/root/bin/zuul-executor unverbose

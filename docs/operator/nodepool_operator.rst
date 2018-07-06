@@ -31,11 +31,13 @@ This minimal deployment uses an OpenStack cloud provider, where images available
 to build test nodes will be managed through the OpenStack cloud itself, for example
 with Glance.
 
-OCI containers
-..............
+RunC containers
+...............
 
-To use the OCI container driver, add the **hypervisor-oci** component to the
-architecture file or check the :ref:`OCI manual setup<nodepool-manual-operator-oci>` below.
+To use the RunC container driver, add the **hypervisor-runc** component to the
+architecture file or check the
+:ref:`RunC manual setup<nodepool-manual-operator-runc>` below.
+
 
 Diskimage-builder
 .................
@@ -102,68 +104,71 @@ As an administrator, it can be really useful to check
 /var/log/nodepool to debug the Nodepool configuration.
 
 
-.. _nodepool-operator-oci:
+.. _nodepool-operator-runc:
 
 Add a container provider
 ------------------------
 
-Software Factory's Nodepool service comes with a new OCI (OpenContainer) driver
-based on a simple runc implementation. It is still under review and not integrated
-in the upstream version of Nodepool yet, however it is available in Software Factory
-to enable a lightweight environment for Zuul jobs, instead of full-fledged OpenStack
-instances.
+Software Factory's Nodepool service comes with a new RunC (OpenContainer) driver
+based on a simple runc implementation. It is still under review and not
+integrated in the upstream version of Nodepool yet, however it is available in
+Software Factory to enable a lightweight environment for Zuul jobs,
+instead of full-fledged OpenStack instances.
 
-The driver will start containerized *sshd* processes using a TCP port in a range from
-22022 to 65535. Make sure the OCI provider host accepts incoming traffic on these
-ports from the zuul-executor.
+The driver will start containerized *sshd* processes using a TCP port in a
+range from 22022 to 65535. Make sure the OCI provider host accepts incoming
+traffic on these ports from the zuul-executor.
 
 
-Setup an OCI provider using the hypervisor-oci role
-...................................................
+Setup an RunC provider using the hypervisor-runc role
+.....................................................
 
-The role **hypervisor-oci** can be added to the architecture file. This role will
-install the requirements and configure the node.
-This role must be installed on a Centos 7 instance. Containers *bind mount* the local host's
-filesystem, that means you don't have to configure an image, what is installed on
-the instance is available inside the containers. The role can be defined on multiple
-nodes in order to scale.
+The role **hypervisor-runc** can be added to the architecture file. This role
+will install the requirements and configure the node.
+This role must be installed on a Centos 7 instance. Containers *bind mount*
+the local host's filesystem, that means you don't have to configure an image,
+what is installed on the instance is available inside the containers.
+The role can be defined on multiple nodes in order to scale.
 
-Please refer to :ref:`Extending the architecture<architecture_extending>` for adding a node
-to the architecture, then run sfconfig.
+Please refer to :ref:`Extending the architecture<architecture_extending>` for
+adding a node to the architecture, then run sfconfig.
 
 .. warning::
 
-  The OCI provider doesn't enforce network isolation and slaves need to run on
-  a dedicated instance/network. sfconfig will refuse to install this role on a server
-  where Software Factory services are running. Nevertheless you can bypass this
-  protection by using the sfconfig's option *--enable-insecure-slaves*.
+  The RunC provider doesn't enforce network isolation and slaves need to run on
+  a dedicated instance/network. sfconfig will refuse to install this role on a
+  server where Software Factory services are running. Nevertheless you can
+  bypass this protection by using the sfconfig's
+  option *--enable-insecure-slaves*.
 
 .. note::
 
-  Note that *config/nodepool/_local_hypervisor_oci.yaml* will by automatically updated
-  in the config repository, making OCI provider(s) available in Nodepool.
+  Note that *config/nodepool/_local_hypervisor_runc.yaml* will by automatically
+  updated in the config repository, making OCI provider(s) available in
+  Nodepool.
 
 
-.. _nodepool-manual-operator-oci:
+.. _nodepool-manual-operator-runc:
 
-Manual setup of an OCI container provider
-.........................................
+Manual setup of an RunC container provider
+..........................................
 
 Alternatively, you can setup a container provider manually using one or more
 dedicated server(s), which could be running Fedora, CentOS, RHEL or any other
 Linux distribution:
 
 * Create a new user, for example: useradd -m zuul-worker
-* Authorize nodepool to connect as root: copy the /var/lib/nodepool/.ssh/id_rsa.pub to
-  /root/.ssh/authorized_keys
-* Authorize zuul to connect to the new user: copy the /var/lib/zuul/.ssh/id_rsa.pub to
-  /home/zuul-worker/.ssh/authorized_keys
+* Authorize nodepool to connect as root: copy the
+  /var/lib/nodepool/.ssh/id_rsa.pub to /root/.ssh/authorized_keys
+* Authorize zuul to connect to the new user: copy the
+  /var/lib/zuul/.ssh/id_rsa.pub to /home/zuul-worker/.ssh/authorized_keys
 * Create the working directory: mkdir /home/zuul-worker/src
 * Install runc and any other test packages such as yamllint, rpm-build, ...
-* Authorize network connection from software factory on port 22 and 22022 to 65535
+* Authorize network connection from software factory on port 22 and
+  22022 to 65535
 
-Then register the provider to the nodepool configuration: in the config repository
-add a new file in /root/config/nodepool/new-oci-provider.yaml:
+Then register the provider to the nodepool configuration: in the config
+repository add a new file in /root/config/nodepool/new-oci-provider.yaml:
 
 .. code-block:: yaml
 
@@ -172,20 +177,20 @@ add a new file in /root/config/nodepool/new-oci-provider.yaml:
 
   providers:
     - name: new-provider
-      driver: oci
-      hypervisor: instance-hostname-or-ip
+      driver: runC
       pools:
-        - name: main
+        - name: instance-hostname-or-ip
           max-servers: instance-core-number
           labels:
             - name: new-container
               username: zuul-worker
 
-Once this config repo change is merged, any job can now use this new-container label.
+Once this config repo change is merged, any job can now use this new-container
+label.
 
 
-Use custom container images with the OCI provider
-.................................................
+Use custom container images with the RunC provider
+..................................................
 
 By default, the server root filesystem is used for the container rootfs, but
 you can create and use different rootfs for the containers. To create a new
@@ -195,7 +200,8 @@ rootfs, do:
 * Create server ssh keys: chroot /srv/centos-6 /usr/sbin/sshd-keygen
 * Create a new user: chroot /srv/centos-6 useradd -m zuul-worker
 * Install test packages: chroot /srv/centos-6 yum install -y rpm-build
-* Authorize zuul to connect to the new user: copy the /var/lib/zuul/.ssh/id_rsa.pub to
+* Authorize zuul to connect to the new user: copy the
+  /var/lib/zuul/.ssh/id_rsa.pub to
   /srv/centos-6/home/zuul-worker/.ssh/authorized_keys
 
 Then create a new label in the nodepool configuration using the 'path'
@@ -208,10 +214,9 @@ attribute to set the new rootfs, for example:
 
   providers:
     - name: new-provider
-      driver: oci
-      hypervisor: install-hostname-or-ip
+      driver: runC
       pools:
-        - name: main
+        - name: instance-hostname-or-ip
           max-servers: install-core-number
           labels:
             - name: centos-6-container
@@ -225,7 +230,8 @@ Debug container creation failure
 If for some reason containers fail to start, here are some tips to investigate
 the errors:
 
-* Look for failure in logs, e.g.: grep nodepool.driver.oci /var/log/nodepool/launcher.log
+* Look for failure in logs, e.g.:
+  grep nodepool.driver.runc /var/log/nodepool/launcher.log
 * Catch container start failures by running runc manually on the host server:
 
 .. code-block:: bash
@@ -239,7 +245,8 @@ the errors:
   runc list
   runc exec $container-id bash
 
-* Verify the runtime OCI specification config.json file located in the bundle directory
+* Verify the runtime OCI specification config.json file located in the bundle
+  directory
 * Check that zuul can connect to the server on ports higher than 22022
 
 
@@ -253,8 +260,8 @@ option to get the public IP of the instances:
 
  $ nodepool list
 
-Trigger an diskimage build. The image will be automatically uploaded on the provider(s)
-after a successful build:
+Trigger an diskimage build. The image will be automatically uploaded on the
+provider(s) after a successful build:
 
 .. code-block:: bash
 
