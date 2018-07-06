@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "b17aebc8_012dc1b7",
+        "filename": "docs/guides/github_deployment.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-07-06T01:44:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "39bcb63b_2697b3ad",
+      "revId": "3a6d2e0562ba258b62d27319379ff250d68dc68c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "05691a45_a1494874",
         "filename": "docs/guides/github_deployment.rst",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2018-06-20T09:55:16Z",
       "side": 1,
       "message": "We need to mention the application needs to be installed on the config and job projects",
+      "revId": "3a6d2e0562ba258b62d27319379ff250d68dc68c",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "32703179_7a800dc4",
+        "filename": "docs/guides/github_deployment.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-07-06T01:44:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "05691a45_a1494874",
       "revId": "3a6d2e0562ba258b62d27319379ff250d68dc68c",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
