@@ -116,7 +116,7 @@ Software Factory to enable a lightweight environment for Zuul jobs,
 instead of full-fledged OpenStack instances.
 
 The driver will start containerized *sshd* processes using a TCP port in a
-range from 22022 to 65535. Make sure the OCI provider host accepts incoming
+range from 22022 to 65535. Make sure the RunC provider host accepts incoming
 traffic on these ports from the zuul-executor.
 
 
@@ -144,7 +144,7 @@ adding a node to the architecture, then run sfconfig.
 .. note::
 
   Note that *config/nodepool/_local_hypervisor_runc.yaml* will by automatically
-  updated in the config repository, making OCI provider(s) available in
+  updated in the config repository, making RunC provider(s) available in
   Nodepool.
 
 
@@ -168,7 +168,7 @@ Linux distribution:
   22022 to 65535
 
 Then register the provider to the nodepool configuration: in the config
-repository add a new file in /root/config/nodepool/new-oci-provider.yaml:
+repository add a new file in /root/config/nodepool/new-runc-provider.yaml:
 
 .. code-block:: yaml
 
@@ -236,7 +236,7 @@ the errors:
 
 .. code-block:: bash
 
-  runc run --bundle /var/lib/nodepool/oci/$nodepool-node-server-id debug-run
+  runc run --bundle /var/lib/nodepool/runc/$nodepool-node-server-id debug-run
 
 * Execute command directly:
 
@@ -245,7 +245,7 @@ the errors:
   runc list
   runc exec $container-id bash
 
-* Verify the runtime OCI specification config.json file located in the bundle
+* Verify the runtime RunC specification config.json file located in the bundle
   directory
 * Check that zuul can connect to the server on ports higher than 22022
 

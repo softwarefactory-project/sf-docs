@@ -25,12 +25,12 @@ Jobs default nodeset
 --------------------
 
 The default configuration in */etc/software-factory/sfconfig.yaml* for zuul
-nodeset is to use the label *centos-oci*. This label is only available if you
-added the role *hypervisor-oci* in */etc/software-factory/arch.yaml*. If you
+nodeset is to use the label *runc-centos*. This label is only available if you
+added the role *hypervisor-runc* in */etc/software-factory/arch.yaml*. If you
 don't use this role, you should specify the nodeset to use for jobs. For
 example, if you have defined a dib image in nodepool configuration, you should
-update */etc/software-factory/sfconfig.yaml* to specify the nodeset name and
-label, for instance:
+update */etc/software-factory/sfconfig.yaml* to specify the default nodeset name
+and label, for instance:
 
 .. code-block:: yaml
 

@@ -81,7 +81,7 @@ Configure firewalld to allow http, https and gerrit access from your host:
 Install Software Factory
 ........................
 
-The next step is to install Software Factory. We will add *hypervisor-oci* to
+The next step is to install Software Factory. We will add *hypervisor-runc* to
 the architecture file to enable containers in check and gating jobs:
 
 Ensure the system is up to date before installing Software Factory:
@@ -97,7 +97,7 @@ Install Software Factory
   yum install -y https://softwarefactory-project.io/repos/sf-release-3.1.rpm
   yum update -y
   yum install -y sf-config
-  echo '      - hypervisor-oci' >> /etc/software-factory/arch.yaml
+  echo '      - hypervisor-runc' >> /etc/software-factory/arch.yaml
   sfconfig --enable-insecure-slaves
 
 Validate https access

@@ -34,7 +34,7 @@ nodepool) using these commands:
    properly.
 
 
-.. _oci-quickstart:
+.. _runc-quickstart:
 
 RunC provider quickstart
 ------------------------
@@ -60,7 +60,7 @@ For this quickstart, we will use the main instance as the hypervisor:
 
 Sfconfig will automatically update the config repository and create some ready
 to use slaves so that you can run zuul tests without an OpenStack account.
-Running "nodepool list" will show 2 centos-oci slaves.
+Running "nodepool list" will show 2 *runc-centos* slaves.
 
 
 .. _tpci-quickstart:
