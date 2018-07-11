@@ -229,3 +229,20 @@ To exclude a *source-repository* from Zuul configuration:
   source-repositories:
     - ichiban-compute:
         zuul/ignore: True
+
+
+.. _zuul-github-resources:
+
+Define a github project in the resources
+----------------------------------------
+
+.. code-block:: yaml
+
+  resources:
+    projects:
+      repopo:
+        description: "The repopo project"
+        connection: github.com
+        source-repositories:
+          - repopo1:
+              zuul/exclude-unprotected-branches: true

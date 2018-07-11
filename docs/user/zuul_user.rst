@@ -339,14 +339,14 @@ options are available.
 
 .. _zuul-github-app-user:
 
-Configure a GitHub App
-----------------------
+Install a GitHub App
+--------------------
 
 After a GitHub Application is created and configured in Software Factory (see this :ref:`guide <zuul-github-app-operator>`),
 to add the application to your projects, follow this `documentation <https://help.github.com/articles/installing-an-app-in-your-organization/#installing-a-github-app-in-your-organization>`_:
 
 * Visit the application page, e.g.: https://github.com/apps/my-org-zuul
-* Click "Install"
+* Click "Install or Configure"
 * Select your GitHub organisation
 * Select the repositories to install the application on
 * Click "Install"
@@ -356,13 +356,6 @@ Then you'll be redirected to the Setup URL with the instruction to finish the co
 * Update the config repository to add the projects to the zuul main.yaml file.
 * Create a Pull Request to add a .zuul.yaml to your project and verify it works.
 
-.. note::
-
-  Software Factory pre-configures its default *check* pipeline to trigger jobs according to the pull request
-  status. Status of jobs running in the *check* pipeline will be reported in the pull request. You might want
-  to define specific pipelines like a *github-gate* and a *github-post*. To do so you should propose them in
-  the *config* repository *zuul.d/*. Refer to the upstream manual_.
-
 .. _manual: https://docs.openstack.org/infra/zuul/admin/drivers/github.html
 
 
@@ -371,7 +364,7 @@ Then you'll be redirected to the Setup URL with the instruction to finish the co
 Configure branch protection
 ---------------------------
 
-After the GitHub Application is installed, you may want to configure branch protection to
+After the GitHub Application is installed, you must configure branch protection to
 enforce proper Zuul gating:
 
 * Visit the project setting page, e.g.: https://github.com/<org>/<project>/settings/branches
@@ -390,5 +383,8 @@ enforce proper Zuul gating:
 
     * "local/check" status (this may need a initial PR to be created first)
 
-Then in the main zuul config, activate "exclude-unprotected-branches: true" in
+Then in the zuul tenant config, activate "exclude-unprotected-branches: true" in
 the tenant configuration.
+
+Alternatively, since Software Factory 3.1, Github projects can configured via the
+resources engine. See this :ref:`section <zuul-github-resources>`).
