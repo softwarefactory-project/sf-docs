@@ -83,7 +83,7 @@ be enabled using this :ref:`zuul-github-branch-protection` documentation.
 Add projects
 ............
 
-In the sf-config, new projects can be added, for example
+In the *config* repo, new projects can be added, for example
 create a zuul/projects.yaml file with:
 
 .. code-block:: yaml
@@ -96,6 +96,9 @@ create a zuul/projects.yaml file with:
              - MyOrg/demo-project
              - MyOrg/demo-project-client
 
+
+Alternatively, since Software Factory 3.1, Github projects can be defines via the resources
+engine. See this :ref:`section <zuul-github-resources>`.
 
 Conclusion
 ..........

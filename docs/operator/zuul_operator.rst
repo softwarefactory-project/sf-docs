@@ -114,11 +114,10 @@ To configure the Github connection in sfconfig.yaml, add to the **github_connect
 
   - name: "github.com"
     webhook_token: XXXX # The Webhook secret defined earlier
-    app_id: 42 # Can be found under the Public Link on the right hand side labeled ID.
-    app_key: | # In Github this is known as Private key and must be collected when generated
-      -----BEGIN RSA PRIVATE KEY-----
-      KEY CONTENT HERE
-      -----END RSA PRIVATE KEY-----
+    app_id: 42 # The ID shown in the about section of the app.
+    app_key: /etc/software-factory/github.key # Path to the private key generated during the setup of the app.
+    app_name: app-name
+    label_name: mergeit # Label of the tag that must be set to let Zuul trigger the gate pipeline.
 
 Then run **sfconfig** to apply the configuration. And finally verify in the 'Advanced'
 tab that the Ping payload works (green tick and 200 response). Click "Redeliver" if needed.
