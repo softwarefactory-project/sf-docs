@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "450a66aa_21c86d70",
+        "filename": "docs/guides/github_deployment.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-07-12T07:52:46Z",
+      "side": 1,
+      "message": "defined",
+      "range": {
+        "startLine": 100,
+        "startChar": 66,
+        "endLine": 100,
+        "endChar": 74
+      },
+      "revId": "fee84a0a3b5398fafb05ea89088385aac6569e56",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
