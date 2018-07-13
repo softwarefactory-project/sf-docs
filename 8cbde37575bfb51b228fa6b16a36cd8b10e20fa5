@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ca3a74f1_4fb685d3",
+        "filename": "docs/guides/tenant_deployment.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-07-13T07:03:34Z",
+      "side": 1,
+      "message": "How about adding:\n\nIf the tenant config repositories are on Github, follow github_deployment.html#create-a-config-and-jobs-repository to create the projects and github_deployment.html#update-the-configuration without the github_connection section since it is already set in the main instance.",
+      "revId": "8cbde37575bfb51b228fa6b16a36cd8b10e20fa5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6c720dde_95bceadc",
+        "filename": "docs/guides/tenant_deployment.rst",
+        "patchSetId": 9
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-07-13T07:03:34Z",
+      "side": 1,
+      "message": "default connection if needed",
+      "range": {
+        "startLine": 47,
+        "startChar": 20,
+        "endLine": 47,
+        "endChar": 38
+      },
+      "revId": "8cbde37575bfb51b228fa6b16a36cd8b10e20fa5",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
