@@ -101,12 +101,17 @@ SSL Certificates
 ----------------
 
 By default, *sfconfig* creates a self-signed certificate. To use another certificate,
-you need to copy the provided files to /var/lib/software-factory/bootstrap-data/certs and
-apply the change with the sfconfig script.
+you need to copy the required files to the install-server, e.g. in /etc/software-factory/,
+and set those options in sfconfig.yaml:
 
-* gateway.crt: the public certificate
-* gateway.key: the private key
-* gateway.chain: the TLS chain file
+.. code-block:: yaml
+
+    network:
+      tls_cert_file: /etc/software-factory/my-tls.crt
+      tls_chain_file: /etc/software-factory/my-tls.chain
+      tls_key_file: /etc/software-factory/my-tls.key
+
+Then deploy the new certificates by running sfconfig.
 
 Authorizing the localCA
 .......................
