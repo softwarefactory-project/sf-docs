@@ -9,11 +9,11 @@ To maintain the deployment up-to-date, simply uses:
 
   yum update -y
 
-To upgrade to a new release of Software Factory, for example the version 3.0:
+To upgrade to a new release of Software Factory, for example the version 3.1:
 
 .. code-block:: bash
 
-  yum install -y https://softwarefactory-project.io/repos/sf-release-3.0.rpm
+  yum install -y https://softwarefactory-project.io/repos/sf-release-3.1.rpm
   yum update -y sf-config
   sfconfig --upgrade
 
