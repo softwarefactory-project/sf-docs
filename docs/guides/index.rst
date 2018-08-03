@@ -4,7 +4,7 @@
 Guides
 ======
 
-This chapter list standalone guides you can follow to deploy and/or use
+This chapter lists standalone guides you can follow to deploy and/or use
 Software Factory.
 
 

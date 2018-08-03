@@ -4,7 +4,7 @@
 Operator documentation
 ======================
 
-This chapter documents how to deploy and manage a Software Factory deployment.
+This chapter documents how to deploy and manage a Software Factory instance.
 
 .. toctree::
    :maxdepth: 2

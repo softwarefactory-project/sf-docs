@@ -1,6 +1,6 @@
-============================================
-Welcome to Software Factory's documentation!
-============================================
+================================
+Software Factory's Documentation
+================================
 
 .. figure:: imgs/logo.svg
    :width: 20%
@@ -15,29 +15,29 @@ a powerful platform to build software.
 Software Factory integrates services covering each step in the software
 production chain:
 
-* Version control and code hosting
-* Code review system
-* Pipelines manager
-* Test instances management
-* Task tracker
-* Collaborative tools
-* Repositories metrics
-* Log management
+* Version control and code hosting,
+* Code review system,
+* Pipeline manager,
+* Test instance managemer,
+* Task tracker,
+* Collaborative tools,
+* Repository metrics,
+* Log management, and
 * System metrics
 
 Software Factory offers a seamless user experience with:
 
 * Single Sign-On authentication, on every authenticated service,
-* A unified REST API,
-* A top menu to access all the services quickly, and
-* A command line tool and a web interface.
+* Unified REST API,
+* Top menu to access all the services quickly, and
+* Command line tool and a web interface.
 
-Software Factory simplifies the management operations:
+Software Factory simplifies system operations:
 
-* A single sfconfig command to deploy all the services,
-* Automatic backup, restore and recover,
+* A single sfconfig command to deploy all services,
+* Backup and recovery process,
 * Integrated instance monitoring, and
-* Upgrade.
+* Software upgrades.
 
 Table of contents
 =================

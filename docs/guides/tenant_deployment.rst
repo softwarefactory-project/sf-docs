@@ -95,7 +95,7 @@ a final sfconfig run on the tenant SF will finalize the pairing.
 
 
 Workflow details
-----------------
+................
 
 A tenant SF gets its own SF config repository. The tenant can manage its own resources
 like CRUD on Gerrit repositories. *config-check* and *config-update* jobs are triggered

@@ -4,7 +4,7 @@
 Components
 ==========
 
-This chapter describe the services available on Software Factory
+This chapter describes the services available on Software Factory.
 
 .. image:: imgs/landing_page.png
    :scale: 50 %

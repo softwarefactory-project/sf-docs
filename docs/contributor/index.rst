@@ -2,7 +2,7 @@
 Contributor documentation
 =========================
 
-This chapter documents how to contribute on Software Factory project.
+This chapter documents how to contribute to the Software Factory project.
 
 .. toctree::
    :maxdepth: 2

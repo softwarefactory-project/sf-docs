@@ -11,4 +11,4 @@ To join technical discussions or get announcements, subscribe to our mailing lis
 
 The project's backlog is here: https://tree.taiga.io/project/morucci-software-factory/backlog?tags=software%20factory
 
-And issues can be reported here: https://tree.taiga.io/project/morucci-software-factory/issues .
+Issues can be reported here: https://tree.taiga.io/project/morucci-software-factory/issues .
