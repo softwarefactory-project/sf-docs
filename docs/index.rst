@@ -18,7 +18,7 @@ production chain:
 * Version control and code hosting,
 * Code review system,
 * Pipeline manager,
-* Test instance managemer,
+* Test instance manager,
 * Task tracker,
 * Collaborative tools,
 * Repository metrics,
