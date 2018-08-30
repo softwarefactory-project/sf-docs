@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'software-factory'
-copyright = u'2017, Red Hat'
+copyright = u'2017-2018, Red Hat'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
