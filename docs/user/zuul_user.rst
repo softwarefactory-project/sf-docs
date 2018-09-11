@@ -298,6 +298,33 @@ can be used to create the YAML tree to be pushed in the project *.zuul.d/* direc
 Then *<name>* and *<fieldname>* fields that are placeholders must be replaced in the
 generated *secret.yaml* file.
 
+The script will return an output similar to this one::
+
+  writing RSA key
+  Public key length: 4096 bits (512 bytes)
+  Max plaintext length per chunk: 470 bytes
+  Input plaintext length: 4 bytes
+  Number of chunks: 1
+
+And create a *secret.yaml* file with a content similar to this one::
+
+  - secret:
+      name: <name>
+      data:
+        <fieldname>: !encrypted/pkcs1-oaep
+          - ez1qa4gmsXYfazEP42XnXfNRqbevuT1kCGFReFxTbiLTGGPTdoElF8On5/LXb+yqlRI/V
+            30jB3ZfS/12PX5e4V/IhdG/oSfDP8nLoQQEX+Fj5e6rKoszuwFAc4WLAEztBNGdnTHkTu
+            Fjo9knexVXl/4a2yNtsaRajdNWYkAVQ+ozrKUeztv8UHn8Fsjtom60zzEG9id2WvTOgKI
+            DM/zIgkQqfR2UNJ2pdCMJafwnaZfSOZFkHSAEFbIc3OjwGf6T0/kUDFYLFE7PaoJL78Iz
+            yAySsFEcsParHiZFL8gTA8hFcOIEgIzgse0zQMzq8iDzemos3N4UbkcE5k6PHj/xAns0T
+            y1VFCkwKl0vFYq1hgIdscIHMH31PCODY1eQCZJAQSwi0wwQNnSfwpfPg+H5HypClec5IA
+            HCtzVlNadKdgGpObdChEVspXMFqgtKD9QsXTqXTNdVzAMe48BNJTa83ZkmrRGqq3qelFf
+            aCNbt7pwaD/rK3Nu03ep7nQ8IEcmTHICboeZTf31T7X1z+IDMa7/1GIHSlo8G2OdcQqXG
+            kNM3bYL4CG4CW1Vge+oBrjB2e3gGDfYWc0AudY9GKqkWoW4vZV4MWBpSUF9e+iBt2aAFw
+            eA4zs2b5N8ywnRX7rBhNiUjWrzTWXY8MseZokE7t8C7x6ogq+7MV9glqBegD+s=
+
+You can now edit the YAML structure in the secrets.yaml file and adjust the `<name>` and `<fieldname>` values.
+
 A secret used in a job must be defined in the same project than the job is defined.
 The user should read carefully the section_ about secrets.
 
