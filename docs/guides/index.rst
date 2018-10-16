@@ -15,3 +15,4 @@ Deployment
 
    github_deployment
    tenant_deployment
+   standalone_tenant
