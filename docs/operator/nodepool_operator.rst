@@ -250,6 +250,20 @@ the errors:
 * Check that zuul can connect to the server on ports higher than 22022
 
 
+.. _restart-nodepool-services:
+
+
+Restart Nodepool services
+-------------------------
+
+The *nodepool_restart.yml* playbook stop and restart Nodepool launcher
+services.
+
+.. code-block:: yaml
+
+  ansible-playbook /var/lib/software-factory/ansible/nodepool_restart.yml
+
+
 Useful commands
 ---------------
 

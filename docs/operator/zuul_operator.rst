@@ -43,21 +43,34 @@ Then, run :ref:`sfconfig  <configure_reconfigure>` to apply the modification
 Save and restore the queues
 ---------------------------
 
-The zuul service is stateless and stopping the process will lose track
+The zuul scheduler service is stateless and stopping the process will lose track
 of running jobs. However the zuul-changes.py utility can be used
 to save and restore the current state:
 
 .. code-block:: bash
 
     # Print and save all builds in progress to /var/lib/zuul/zuul-queues-dump.sh
-    /usr/local/bin/zuul-changes.py dump
+    /usr/libexec/software-factory/zuul-changes.py dump
 
     systemctl restart rh-python35-zuul-scheduler
 
-    # Reload the previous state:
-    /usr/local/bin/zuul-changes.py load
+    # Reload the previous state
+    /usr/libexec/software-factory/zuul-changes.py load
 
 The periodic and post pipelines are not dumped by this tool.
+
+.. _restart-zuul-services:
+
+Restart Zuul services
+---------------------
+
+The *zuul_restart.yml* playbook stop and restart Zuul services in the
+right order as well as dump and restore the Zuul scheduler's jobs queues.
+
+.. code-block:: yaml
+
+  ansible-playbook /var/lib/software-factory/ansible/zuul_restart.yml
+
 
 Configure an external gerrit (use Software Factory as a Third-Party CI)
 -----------------------------------------------------------------------
