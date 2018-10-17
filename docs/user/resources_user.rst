@@ -167,7 +167,7 @@ Integration with Zuul
 ---------------------
 
 Zuul requires a tenants configuration file to be aware of the repositories it needs
-to watch for events. Software Factory 3.1 can generate the tenant configuration from the
+to watch for events. Software Factory can generate the tenant configuration from the
 resources.
 
 By default, the *source-repositories* attached to a project, like below, are added
