@@ -34,8 +34,8 @@ Adding a project to the zuul service
 
 .. note::
 
-  Software Factory 3.1 enables automatic generation of the Zuul tenant configuration
-  from the config repository resources description. The definition,
+  Since version 3.1, Software Factory enables automatic generation of the Zuul
+  tenant configuration from the config repository resources description. The definition,
   below, is then no longer needed, see the :ref:`Zuul tenants from resources<zuul-resources-integration>`
   section for more details. Note that Zuul's tenants definition file, like below,
   take precedence over the auto generated.
