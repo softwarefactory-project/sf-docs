@@ -12,7 +12,6 @@ Management
    gerritbot_operator
    firehose_operator
    gerrit_replication_operator
-   resources_operator
    repoxplorer
    elk_operator
    access_control
