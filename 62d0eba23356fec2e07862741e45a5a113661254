@@ -1,0 +1,291 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5eeaf366_5065145b",
+        "filename": "docs/guides/standalone_tenant.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-10-18T21:42:46Z",
+      "side": 1,
+      "message": "https://sftests.com/zuul/t/org-test/status ?",
+      "range": {
+        "startLine": 25,
+        "startChar": 9,
+        "endLine": 25,
+        "endChar": 42
+      },
+      "revId": "62d0eba23356fec2e07862741e45a5a113661254",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cf74410c_9aa90ce5",
+        "filename": "docs/guides/standalone_tenant.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-10-18T21:42:46Z",
+      "side": 1,
+      "message": "replace org by org-test, easier to sed \u003d)",
+      "range": {
+        "startLine": 33,
+        "startChar": 13,
+        "endLine": 33,
+        "endChar": 16
+      },
+      "revId": "62d0eba23356fec2e07862741e45a5a113661254",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dbbbef91_9cfe6a09",
+        "filename": "docs/guides/standalone_tenant.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-10-18T21:42:46Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 35,
+        "startChar": 13,
+        "endLine": 35,
+        "endChar": 16
+      },
+      "revId": "62d0eba23356fec2e07862741e45a5a113661254",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cae647b1_f57d292c",
+        "filename": "docs/guides/standalone_tenant.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-10-18T21:42:46Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 42,
+        "startChar": 7,
+        "endLine": 42,
+        "endChar": 10
+      },
+      "revId": "62d0eba23356fec2e07862741e45a5a113661254",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e11bc41d_63d90605",
+        "filename": "docs/guides/standalone_tenant.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-10-18T21:42:46Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 45,
+        "startChar": 7,
+        "endLine": 45,
+        "endChar": 10
+      },
+      "revId": "62d0eba23356fec2e07862741e45a5a113661254",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3d3392ba_7584dfef",
+        "filename": "docs/guides/standalone_tenant.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-10-18T21:42:46Z",
+      "side": 1,
+      "message": "I had to add a zuul/org-test.yaml file too\n\n# /root/config/zuul/org-test.yaml\n---                                                                                                                                 \n- tenant:                                                                                                                           \n    name: \u0027org-test\u0027                                                                                                     \n    source:                                                                                                                         \n      gerrit:                                                                                                                       \n        config-projects:                                                                                                            \n          - org-test-config                                                                                              \n        untrusted-projects:                                                                                                         \n          - org-test-jobs",
+      "revId": "62d0eba23356fec2e07862741e45a5a113661254",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "40214c29_760d43b6",
+        "filename": "docs/guides/standalone_tenant.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-10-18T21:42:46Z",
+      "side": 1,
+      "message": "add zuul/org-test.yaml too",
+      "revId": "62d0eba23356fec2e07862741e45a5a113661254",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "50187926_e6f02e1c",
+        "filename": "docs/guides/standalone_tenant.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-10-18T21:42:46Z",
+      "side": 1,
+      "message": "Should be\n\nhttps://sftests.com/zuul/t/tenants.html",
+      "range": {
+        "startLine": 113,
+        "startChar": 25,
+        "endLine": 113,
+        "endChar": 70
+      },
+      "revId": "62d0eba23356fec2e07862741e45a5a113661254",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c272bf04_5fa39d60",
+        "filename": "docs/guides/standalone_tenant.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-10-18T21:42:46Z",
+      "side": 1,
+      "message": "org-test",
+      "range": {
+        "startLine": 129,
+        "startChar": 35,
+        "endLine": 129,
+        "endChar": 38
+      },
+      "revId": "62d0eba23356fec2e07862741e45a5a113661254",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8eec01f0_53447a61",
+        "filename": "docs/guides/standalone_tenant.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-10-18T21:42:46Z",
+      "side": 1,
+      "message": "org-test",
+      "range": {
+        "startLine": 130,
+        "startChar": 6,
+        "endLine": 130,
+        "endChar": 9
+      },
+      "revId": "62d0eba23356fec2e07862741e45a5a113661254",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "28c6db58_6584384b",
+        "filename": "docs/guides/standalone_tenant.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 262,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-10-18T21:42:46Z",
+      "side": 1,
+      "message": "I added in .git/info\n[remote \"gerrit\"]\n        url \u003d ssh://admin@sftests.com:29418/org-test-config\n        fetch \u003d +refs/heads/*:refs/remotes/gerrit/*\notherwise:\n\n[root@managesf.sftests.com org-test-config]# git push gerrit master\nfatal: \u0027gerrit\u0027 does not appear to be a git repository\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.",
+      "range": {
+        "startLine": 262,
+        "startChar": 3,
+        "endLine": 262,
+        "endChar": 25
+      },
+      "revId": "62d0eba23356fec2e07862741e45a5a113661254",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e6bae905_eb20bec3",
+        "filename": "docs/guides/standalone_tenant.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 276,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-10-18T21:42:46Z",
+      "side": 1,
+      "message": "org-test",
+      "range": {
+        "startLine": 276,
+        "startChar": 35,
+        "endLine": 276,
+        "endChar": 38
+      },
+      "revId": "62d0eba23356fec2e07862741e45a5a113661254",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ec2e0e9d_8ca13a5c",
+        "filename": "docs/guides/standalone_tenant.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-10-18T21:42:46Z",
+      "side": 1,
+      "message": "org-test",
+      "range": {
+        "startLine": 277,
+        "startChar": 6,
+        "endLine": 277,
+        "endChar": 9
+      },
+      "revId": "62d0eba23356fec2e07862741e45a5a113661254",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
