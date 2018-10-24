@@ -220,6 +220,29 @@
     },
     {
       "key": {
+        "uuid": "2c4ded30_a6470b5d",
+        "filename": "docs/guides/standalone_tenant.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2018-10-24T16:05:52Z",
+      "side": 1,
+      "message": "We should note somewhere that this file comes from the SF installation",
+      "range": {
+        "startLine": 196,
+        "startChar": 14,
+        "endLine": 196,
+        "endChar": 82
+      },
+      "revId": "62d0eba23356fec2e07862741e45a5a113661254",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "28c6db58_6584384b",
         "filename": "docs/guides/standalone_tenant.rst",
         "patchSetId": 1
