@@ -37,6 +37,13 @@ Into /etc/software-factory/sfconfig.yaml add:
 
 If the tenant config repositories are on Github, follow :ref:`Create a config and jobs repository<create_config_job_repos>` to create the projects and the section :ref:`Update the configuration<update_the_configuration>` without the github_connection section since it is already set in the main instance.
 
+.. note::
+
+  if master-sf instance use self-signed certificates, you should copy
+  '/etc/pki/ca-trust/source/anchors/localCA.pem' from master-sf to
+  '/etc/pki/ca-trust/source/anchors/master-sf.pem' on the tenant instance, then run
+  'update-ca-trust' to trust this CA.
+
 Then run sfconfig:
 
 .. code-block:: bash
