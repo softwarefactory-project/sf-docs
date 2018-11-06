@@ -27,7 +27,7 @@ On a CentOS-7 system, deploy the tenant minimal architecture:
   yum install -y sf-config
   cp /usr/share/sf-config/refarch/tenant-minimal.yaml /etc/software-factory/arch.yaml
 
-Into /etc/software-factory/sfconfig.yaml add:
+Edit /etc/software-factory/sfconfig.yaml to set the fqdn for the deployment and add:
 
 .. code-block:: yaml
 
@@ -35,14 +35,20 @@ Into /etc/software-factory/sfconfig.yaml add:
     name: tenant-name
     master-sf: https://master-sf.com
 
-If the tenant config repositories are on Github, follow :ref:`Create a config and jobs repository<create_config_job_repos>` to create the projects and the section :ref:`Update the configuration<update_the_configuration>` without the github_connection section since it is already set in the main instance.
-
 .. note::
 
   if master-sf instance use self-signed certificates, you should copy
   '/etc/pki/ca-trust/source/anchors/localCA.pem' from master-sf to
   '/etc/pki/ca-trust/source/anchors/master-sf.pem' on the tenant instance, then run
   'update-ca-trust' to trust this CA.
+
+.. note::
+
+  If the tenant config repositories are on Github, you have to remove gerrit and
+  gitweb from /etc/software-factory/arch.yaml and follow :ref:`Create a config and
+  jobs repository<create_config_job_repos>` to create the projects and the section
+  :ref:`Update the configuration<update_the_configuration>` without the
+  github_connection section since it is already set in the main instance.
 
 Then run sfconfig:
 
@@ -86,8 +92,16 @@ config/resources/tenant.yaml:
 
   git add resources/tenant.yaml && git commit -m"Add new tenant" && git review
 
+.. note::
+
+  if tenant-sf instance use self-signed certificates, you should copy
+  '/etc/pki/ca-trust/source/anchors/localCA.pem' from tenant-sf to
+  '/etc/pki/ca-trust/source/anchors/master-sf.pem' on the instances where
+  zuul-executor services are deployed, then run 'update-ca-trust' to trust this
+  CA.
+
 Once the change is approved, merged and the *config-update* finished with success,
-operator can run a new sfconfig run on the tenant SF.
+operator can run sfconfig on the tenant SF instance.
 
 
 Finalize the tenant SF configuration
