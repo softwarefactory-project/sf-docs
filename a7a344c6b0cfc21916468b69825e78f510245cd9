@@ -1,0 +1,84 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1b2927ab_1cf94e72",
+        "filename": "docs/guides/tenant_deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-11-07T09:35:35Z",
+      "side": 1,
+      "message": "echo \"      - gerrit\\n      - gitweb\" \u003e\u003e /etc/software-factory/arch.yaml",
+      "revId": "a7a344c6b0cfc21916468b69825e78f510245cd9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ecf5dc4_cd2743d9",
+        "filename": "docs/guides/tenant_deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-11-07T09:35:35Z",
+      "side": 1,
+      "message": "I thought the other way around.",
+      "range": {
+        "startLine": 47,
+        "startChar": 51,
+        "endLine": 48,
+        "endChar": 49
+      },
+      "revId": "a7a344c6b0cfc21916468b69825e78f510245cd9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "30f4b469_98c3a992",
+        "filename": "docs/guides/tenant_deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-11-07T09:35:35Z",
+      "side": 1,
+      "message": "master-sf\u0027s zuul-executor instances",
+      "revId": "a7a344c6b0cfc21916468b69825e78f510245cd9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f7d23aa8_e173ce45",
+        "filename": "docs/guides/tenant_deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-11-07T09:35:35Z",
+      "side": 1,
+      "message": "Better to move that block line 78.",
+      "range": {
+        "startLine": 95,
+        "startChar": 0,
+        "endLine": 101,
+        "endChar": 5
+      },
+      "revId": "a7a344c6b0cfc21916468b69825e78f510245cd9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
