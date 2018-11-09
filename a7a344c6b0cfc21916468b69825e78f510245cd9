@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8f63b07c_2273a381",
+        "filename": "docs/guides/tenant_deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-11-09T18:34:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1b2927ab_1cf94e72",
+      "revId": "a7a344c6b0cfc21916468b69825e78f510245cd9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "9ecf5dc4_cd2743d9",
         "filename": "docs/guides/tenant_deployment.rst",
         "patchSetId": 2
@@ -30,6 +48,30 @@
       "writtenOn": "2018-11-07T09:35:35Z",
       "side": 1,
       "message": "I thought the other way around.",
+      "range": {
+        "startLine": 47,
+        "startChar": 51,
+        "endLine": 48,
+        "endChar": 49
+      },
+      "revId": "a7a344c6b0cfc21916468b69825e78f510245cd9",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4c50fe96_efd7cda0",
+        "filename": "docs/guides/tenant_deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-11-09T18:34:52Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ecf5dc4_cd2743d9",
       "range": {
         "startLine": 47,
         "startChar": 51,
