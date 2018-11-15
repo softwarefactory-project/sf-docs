@@ -79,6 +79,18 @@ Refer to the :ref:`Third-Party-CI Quick Start guide <tpci-quickstart>`
 
 .. _zuul-github-app-operator:
 
+Add a git connection
+--------------------
+
+In /etc/software-factory/sfconfig.yaml add in *git_connections*:
+
+.. code-block:: yaml
+
+  - name: gerrithub
+    baseurl: https://review.gerrithub.io
+
+Then run **sfconfig** to apply the configuration.
+
 Create a GitHub app
 -------------------
 
