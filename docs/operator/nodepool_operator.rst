@@ -77,7 +77,7 @@ configuration.
    providers:
      - name: default
        auth_url: http://localhost:5000/v2.0
-       project_id: 'tenantname'
+       project_name: 'tenantname'
        username: 'user'
        password: 'secret'
        image_format: raw
