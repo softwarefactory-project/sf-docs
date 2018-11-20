@@ -7,25 +7,26 @@ Zuul user documentation
 
   This is a lightweight documentation intended to get users started with setting
   up CI pipelines and jobs. For more insight on what Zuul can do, please refer
-  to its `upstream documentation`_ and `migration documentation`_.
+  to its `upstream documentation`_.
 
-.. _`upstream documentation`: https://docs.openstack.org/infra/zuul/user/
-.. _`migration documentation`: https://docs.openstack.org/infra/manual/zuulv3.html
+.. _`upstream documentation`: https://zuul-ci.org/docs/zuul/
 
 Zuul is a *commit gating system* for continuous integration that ensures that
 repositories are always in a healthy state. It is up to repositories managers
 to define what constitutes a healthy state: for example passing all unit tests,
 success in building software, etc.
 
-Software Factory ships with Zuul version 3, which is a major rewrite of Zuul
-with many improvements. Some of the major changes reflected in Software Factory
-are:
-
 * In Zuul's terminology, a **project** is a gated repository
 * Jobs can inherit from the **zuul-jobs** repository base jobs.
 * Pipelines and jobs are stored in repositories.
 * Github was added as a possible repository source for gating projects, enabling
   Software Factory to act as a third party CI for repositories hosted on Github.
+
+In addition to the upstream documentation, the Software Factory team published a
+series of blog post called `Zuul Hand-On`_ that showcases some Zuul use
+cases.
+
+.. _`Zuul Hand-on`: https://www.softwarefactory-project.io/tag/zuul-hands-on-series.html
 
 .. _zuul-main-yaml:
 
@@ -78,9 +79,9 @@ directory. For example, config/zuul/project-name.yaml can contain the following:
   to add any repository under this category. Therefore repositories should always
   be declared under the "untrusted-projects" category.
 
-.. _`config-projects`: https://docs.openstack.org/infra/zuul/admin/tenants.html#attr-tenant.config-projects
+.. _`config-projects`: https://zuul-ci.org/docs/zuul/admin/tenants.html#attr-tenant.config-projects
 
-.. _`untrusted-projects`: https://docs.openstack.org/infra/zuul/admin/tenants.html#attr-tenant.untrusted-projects
+.. _`untrusted-projects`: https://zuul-ci.org/docs/zuul/admin/tenants.html#attr-tenant.untrusted-projects
 
 After merging this change, the config-update job will reload the zuul scheduler.
 
@@ -106,21 +107,11 @@ and pipelines contents by having a file named *.zuul.yaml* at the root of the pr
   Zuul's configuration file earlier
 * **check**, **gate** are pipelines defined in Software Factory.
 
-A default deployment of Software Factory comes with the following base jobs:
+A default deployment of Software Factory comes with a copy of the upstream
+zuul-jobs library. But SF can be configured to import the master **openstack-infra/zuul-jobs**
+jobs library. A list of the jobs in this library can be found here_.
 
-============= =============================================================
- Name          Description
-============= =============================================================
-**linters**    Run the bashate, flake8 and yaml linters on relevant files
-**tox**        Run tox
-**tox-py27**   Run tox -epy27
-============= =============================================================
-
-Software Factory can be configured to import the **openstack-infra/zuul-jobs**
-jobs library; ask your instance operator if this is the case. A list of the jobs in this
-library can be found here_.
-
-.. _here: https://docs.openstack.org/infra/zuul-jobs/jobs.html
+.. _here: https://zuul-ci.org/docs/zuul-jobs/jobs.html
 
 A full list of all the jobs that have been built at least once on Software Factory
 can be accessed at https://<fqdn>/zuul/local/jobs.html.
@@ -193,7 +184,7 @@ Further documentation can be found online:
 
 .. _modules: http://docs.ansible.com/ansible/latest/modules_by_category.html
 
-.. _`Predefined variables available in jobs`: https://docs.openstack.org/infra/zuul/user/jobs.html#variables
+.. _`Predefined variables available in jobs`: https://zuul-ci.org/docs/zuul/user/jobs.html#variables
 
 
 .. _zuul-artifacts-export:
@@ -328,7 +319,7 @@ You can now edit the YAML structure in the secrets.yaml file and adjust the `<na
 A secret used in a job must be defined in the same project than the job is defined.
 The user should read carefully the section_ about secrets.
 
-.. _section: https://docs.openstack.org/infra/zuul/user/config.html?highlight=secret#secret
+.. _section: https://zuul-ci.org/docs/zuul/user/config.html#secret
 
 
 Web Interface
