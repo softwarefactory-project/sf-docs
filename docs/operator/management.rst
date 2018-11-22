@@ -14,6 +14,7 @@ Management
    gerrit_replication_operator
    repoxplorer
    elk_operator
+   log_classify_operator
    access_control
    metrics
    code_search

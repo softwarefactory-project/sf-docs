@@ -28,6 +28,7 @@ Optional components
    Storyboard: Issue tracker <storyboard>
    metrics
    log_search_engine
+   log_classify
    code_search
    Repoxplorer: Browse projects stats <repoxplorer>
    collaborative_tools
