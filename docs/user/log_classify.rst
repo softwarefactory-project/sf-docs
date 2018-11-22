@@ -1,16 +1,15 @@
-.. _log-classify:
+.. _log-classify-user:
 
-.. note::
+Log Classify User
+=================
 
-   This is a tech-preview introduced in the version 3.1 of Software Factory.
-
-
-Log-Classify detect anomaly in jobs
-===================================
+When :ref:`log classify <log-classify>` is enabled
+(see :ref:`operator doc<log-classify-operator>`), then a report.html is
+created in failed job logs artifacts.
 
 When a job fails, a post-action will compare the job output with previous
-successful build to detect anomaly. The action creates a log-classify.html
-report in the jobs artifacts.
+successful build to detect anomaly. When nominal builds are found, the action
+creates a log-classify.html report in the jobs artifacts.
 
 To disable the post action, set the job variable logclassify_optin to false,
 e.g.:
@@ -25,8 +24,11 @@ e.g.:
                  logclassify_optin: false
 
 To make the report directly available from the failed job links, set the
-logclassify_report to true.
+logclassify_report to true, for example in the job definition:
 
-When a model is built, it is automatically published to the logserver in
-the "classifiers" directory. Other Zuul executor may then re-use a model
-if it is already built.
+.. code-block:: yaml
+
+   - job:
+       name: my-job
+       vars:
+         logclassify_report: true
