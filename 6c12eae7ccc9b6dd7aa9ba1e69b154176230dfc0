@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "57e7bf86_6cbb3452",
+        "filename": "docs/guides/standalone_tenant.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 200
+      },
+      "writtenOn": "2018-11-23T17:16:47Z",
+      "side": 1,
+      "message": "I would add some more explanation about this. I had to dig a bit until I found out what the zuul/shadow option means.",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 41
+      },
+      "revId": "6c12eae7ccc9b6dd7aa9ba1e69b154176230dfc0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
