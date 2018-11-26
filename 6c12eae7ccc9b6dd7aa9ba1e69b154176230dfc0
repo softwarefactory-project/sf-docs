@@ -22,6 +22,30 @@
       "revId": "6c12eae7ccc9b6dd7aa9ba1e69b154176230dfc0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7df3559d_10a3e20b",
+        "filename": "docs/guides/standalone_tenant.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-11-26T10:24:32Z",
+      "side": 1,
+      "message": "good idea.",
+      "parentUuid": "57e7bf86_6cbb3452",
+      "range": {
+        "startLine": 36,
+        "startChar": 0,
+        "endLine": 39,
+        "endChar": 41
+      },
+      "revId": "6c12eae7ccc9b6dd7aa9ba1e69b154176230dfc0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
