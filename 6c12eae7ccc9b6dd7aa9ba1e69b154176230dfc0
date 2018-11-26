@@ -46,6 +46,69 @@
       "revId": "6c12eae7ccc9b6dd7aa9ba1e69b154176230dfc0",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "26a94a99_a99fc0c0",
+        "filename": "docs/guides/standalone_tenant.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-11-26T10:34:23Z",
+      "side": 1,
+      "message": "domain",
+      "revId": "6c12eae7ccc9b6dd7aa9ba1e69b154176230dfc0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e65ce14d_d1a679dd",
+        "filename": "docs/guides/standalone_tenant.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-11-26T10:34:23Z",
+      "side": 1,
+      "message": "Remove /root/ we assume we use the config from git not local FS.",
+      "range": {
+        "startLine": 91,
+        "startChar": 6,
+        "endLine": 91,
+        "endChar": 12
+      },
+      "revId": "6c12eae7ccc9b6dd7aa9ba1e69b154176230dfc0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5afad8a8_cbcd349a",
+        "filename": "docs/guides/standalone_tenant.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-11-26T10:34:23Z",
+      "side": 1,
+      "message": "Can be remove. That won\u0027t be done by an admin.",
+      "range": {
+        "startLine": 98,
+        "startChar": 0,
+        "endLine": 98,
+        "endChar": 18
+      },
+      "revId": "6c12eae7ccc9b6dd7aa9ba1e69b154176230dfc0",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
