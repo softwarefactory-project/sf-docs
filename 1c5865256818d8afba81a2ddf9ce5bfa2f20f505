@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "939b9050_a0e02c8f",
+        "filename": "docs/operator/log_classify_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-11-26T10:42:48Z",
+      "side": 1,
+      "message": "typo",
+      "revId": "1c5865256818d8afba81a2ddf9ce5bfa2f20f505",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
