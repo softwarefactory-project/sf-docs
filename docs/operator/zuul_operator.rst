@@ -16,6 +16,71 @@ By default, no merger are being deployed because the executor service
 can perform merge task. However, a merger can also be deployed to speed
 up start time when there are many projects defined.
 
+
+Default tenant name
+-------------------
+
+By default, the Zuul tenant name is "local". This can be changed by updating
+the "default-tenant-name" option in sfconfig.yaml:
+
+.. code-block:: yaml
+
+   default-tenant-name: "org-name"
+
+Changing the default tenant name update the "Zuul" link in the top-menu,
+as well as pipeline definition for github gate requirements.
+
+Note that new tenants can be created, see
+:ref:`Standalone deployment guide <tenant_deployment>` or the
+:ref:`Unmanaged tenant guide <unmanaged_tenant>`.
+
+
+Project renaming
+----------------
+
+When renaming project, Zuul configuration may needs to be updated regarding
+job and secret definition. Here is a list of steps to simplify renaming:
+
+First you need to copy the Zuul scheduler project's private key so that any secrets
+defined in the project will be usable after the renaming. Run these command
+on the scheduler host:
+
+.. code-block:: console
+
+   CONNECTION_NAME=github.com
+   NEW_CONNECTION=github.com
+   PROJECT_NAME=my-org/my-project-test
+   NEW_PROJECT=my-org/my-project
+   rsync -a \
+     /var/lib/zuul/keys/secrets/project/${CONNECTION_NAME}/${PROJECT_NAME}/ \
+     /var/lib/zuul/keys/secrets/project/${NEW_CONNECTION}/${NEW_PROJECT}/
+   rsync -a \
+     /var/lib/zuul/keys/ssh/project/${CONNECTION_NAME}/${PROJECT_NAME}/ \
+     /var/lib/zuul/keys/ssh/project/${NEW_CONNECTION}/${NEW_PROJECT}/
+
+Then merge and update the zuul configuration to rename any old project name
+reference:
+
+.. code-block:: console
+
+   git clone https://github.com/my-org/my-project
+   pushd my-project
+   git remote add old https://github.com/my-org/my-project-test
+   git fetch old
+   git merge old/master master
+   # Rename my-project-test to my-project, for example in:
+   vim zuul.d/_jobs-base.yaml resources/_internal.yaml
+
+Finally add the new project and remove the old one in Zuul tenant configuration.
+If it's the config project, then update sfconfig.yaml and re-run sfconfig:
+
+.. code-block:: yaml
+
+   # sfconfig.yaml
+   config-location:
+     config-repo: https://github.com/my-org/my-project
+
+
 Jobs default nodeset
 --------------------
 
