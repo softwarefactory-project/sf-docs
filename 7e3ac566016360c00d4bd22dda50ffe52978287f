@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5d148dc0_80e25d5e",
+        "filename": "docs/contributor/run_tests.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-12-06T20:57:09Z",
+      "side": 1,
+      "message": "I have to install python-nose:\n\nsudo yum install -y python-nose\n\nAnd chown /var/lib/software-factory:\n\nsudo chown centos /var/lib/software-factory/ -R\n\nWith these changes, I can run tests as centos user:\n\n[centos@test sf-ci]$ sudo ./scripts/create_ns.sh nosetests -sv tests/functional/                                                   \ntest various commit messages triggering a hook ... SKIP: This instance of SF is not running storyboard                             \ntest commit messages with double quotes ... SKIP: This instance of SF is not running storyboard\n...",
+      "range": {
+        "startLine": 23,
+        "startChar": 1,
+        "endLine": 23,
+        "endChar": 60
+      },
+      "revId": "7e3ac566016360c00d4bd22dda50ffe52978287f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
