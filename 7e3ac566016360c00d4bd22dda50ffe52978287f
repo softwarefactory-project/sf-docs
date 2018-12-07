@@ -22,6 +22,30 @@
       "revId": "7e3ac566016360c00d4bd22dda50ffe52978287f",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5adf94e1_927f6496",
+        "filename": "docs/contributor/run_tests.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-12-07T09:27:34Z",
+      "side": 1,
+      "message": "I added a note that all command must be run as root and the python-nose requirements installation instruction.",
+      "parentUuid": "5d148dc0_80e25d5e",
+      "range": {
+        "startLine": 23,
+        "startChar": 1,
+        "endLine": 23,
+        "endChar": 60
+      },
+      "revId": "7e3ac566016360c00d4bd22dda50ffe52978287f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
