@@ -22,8 +22,7 @@ On a CentOS-7 system, deploy the tenant minimal architecture:
 
 .. code-block:: bash
 
-  yum install -y https://softwarefactory-project.io/repos/sf-release-3.2.rpm
-  yum update -y
+  yum install -y https://softwarefactory-project.io/repos/sf-release-3.3.rpm
   yum install -y sf-config
   cp /usr/share/sf-config/refarch/tenant-minimal.yaml /etc/software-factory/arch.yaml
   echo -e "      - gerrit\n      - gitweb" >> /etc/software-factory/arch.yaml

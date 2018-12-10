@@ -14,11 +14,11 @@ The command takes care of updating packages (system and software factory) on
 all nodes. Some services may be restarted if their version changed and sfconfig
 will run migration tasks automatically if needed.
 
-To upgrade to a new release of Software Factory, for example the version 3.2:
+To upgrade to a new release of Software Factory:
 
 .. code-block:: bash
 
-  yum install -y https://softwarefactory-project.io/repos/sf-release-3.2.rpm
+  yum install -y https://softwarefactory-project.io/repos/sf-release-3.3.rpm
   yum update -y sf-config
   sfconfig --update
 

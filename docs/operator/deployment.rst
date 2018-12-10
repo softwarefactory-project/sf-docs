@@ -18,7 +18,7 @@ Overview
 
 Follow these steps for a successful deployment:
 
-* Use a CentOS-7 system.
+* Use a CentOS-7 or RHEL-7 system.
 
 * Create as many host instances as needed according to the
   :ref:`recommended requirements<deployment_requirements>`.
@@ -128,13 +128,31 @@ Deployment configuration
 
 Deployment and maintenance tasks (such as backup/restore or upgrade) are
 performed through a node called the install-server which acts as a jump server.
-Make sure this instance can ssh into the other instances via public key authentication.
-The steps below need to be performed on the install-server.
+Make sure this instance can ssh into the other instances via public key
+authentication. The steps below need to be performed on the install-server.
+
+Rhel registration
+-----------------
+
+When deploying Software Factory on RHEL, operators should register the system
+and enable repositories on all nodes before running sfconfig.
+
 
 .. code-block:: bash
 
-  yum install -y https://softwarefactory-project.io/repos/sf-release-3.2.rpm
-  yum update -y
+   subscription-manager register --username $rhsm_username
+   subscription-manager attach --auto
+   subscription-manager repos --enable rhel-server-rhscl-7-rpms \
+                              --enable=rhel-7-server-extras-rpms \
+                              --enable=rhel-7-server-optional-rpms \
+                              --enable=rhel-7-server-rh-common-rpms
+
+Installation
+------------
+
+.. code-block:: bash
+
+  yum install -y https://softwarefactory-project.io/repos/sf-release-3.3.rpm
   yum install -y sf-config
 
 
