@@ -156,6 +156,11 @@ Installation
   yum install -y sf-config
 
 
+.. warning::
+
+  All services define in /usr/share/sf-config/refarch/allinone.yaml are
+  supported on RHEL excepts dlrn.
+
 To enable extra services (such as logstash) or to distribute services on
 multiple instances, you have to edit the arch.yaml file
 (see the :ref:`architecture documentation<architecture>` for more details).
