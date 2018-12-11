@@ -155,7 +155,6 @@ Installation
   yum install -y https://softwarefactory-project.io/repos/sf-release-3.3.rpm
   yum install -y sf-config
 
-
 To enable extra services (such as logstash) or to distribute services on
 multiple instances, you have to edit the arch.yaml file
 (see the :ref:`architecture documentation<architecture>` for more details).

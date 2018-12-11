@@ -103,12 +103,19 @@ Optional services can be enabled:
 * grafana
 * cgit
 * hound
+* dlrn
 
 .. note::
 
    Check the :ref:`nodepool documentation<nodepool-operator-runc>` to learn
    how to configure the hypervisor-runc role to enable container providers in
    Nodepool.
+
+.. note::
+
+  All services defined in /usr/share/sf-config/refarch/allinone.yaml are
+  supported on RHEL except `dlrn <https://github.com/softwarefactory-project/dlrn>`_
+
 
 .. _architecture_extending:
 
