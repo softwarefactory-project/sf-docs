@@ -96,6 +96,54 @@
     },
     {
       "key": {
+        "uuid": "74be6909_3961ba3b",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-12-12T19:36:25Z",
+      "side": 1,
+      "message": "Silently remove option is horrible \u003d), I prefer to have a note on the docs and I will check how stop if dlrn is present on arch file.",
+      "parentUuid": "24a0e9cc_8a755beb",
+      "range": {
+        "startLine": 161,
+        "startChar": 54,
+        "endLine": 161,
+        "endChar": 68
+      },
+      "revId": "37dfa1c23f7caffbbb8c27c450d1b95abe00bd5b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d9752e79_134f94e3",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-12-12T19:36:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c5c5b009_11a34d7a",
+      "range": {
+        "startLine": 161,
+        "startChar": 15,
+        "endLine": 161,
+        "endChar": 21
+      },
+      "revId": "37dfa1c23f7caffbbb8c27c450d1b95abe00bd5b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "29d6628e_4a2593c6",
         "filename": "docs/operator/deployment.rst",
         "patchSetId": 1
@@ -135,6 +183,54 @@
         "startChar": 20,
         "endLine": 162,
         "endChar": 27
+      },
+      "revId": "37dfa1c23f7caffbbb8c27c450d1b95abe00bd5b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c8856604_0e9e0565",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-12-12T19:36:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "940f3568_d95233be",
+      "range": {
+        "startLine": 162,
+        "startChar": 20,
+        "endLine": 162,
+        "endChar": 27
+      },
+      "revId": "37dfa1c23f7caffbbb8c27c450d1b95abe00bd5b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ab1a51f_196f9401",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-12-12T19:36:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "29d6628e_4a2593c6",
+      "range": {
+        "startLine": 162,
+        "startChar": 28,
+        "endLine": 162,
+        "endChar": 32
       },
       "revId": "37dfa1c23f7caffbbb8c27c450d1b95abe00bd5b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
