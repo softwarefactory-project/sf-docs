@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3ab7a165_3f52f07e",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-12-12T20:14:36Z",
+      "side": 1,
+      "message": "It is maybe better to add that note in operator/architecture.html#architecture and by the way add dlrn to the list of component in architecture. The default arch do not include dlrn. So if someone want to extend it will read the operator/architecture.html that is linked just bellow.",
+      "revId": "45bc2891c0921e5c3a5641e77f9487419e92c499",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
