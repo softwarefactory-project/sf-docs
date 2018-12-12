@@ -143,6 +143,30 @@
     },
     {
       "key": {
+        "uuid": "fa1b9901_da038575",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-12-12T09:25:21Z",
+      "side": 1,
+      "message": "Ok :)",
+      "parentUuid": "1a4dcd0f_db8e3327",
+      "range": {
+        "startLine": 80,
+        "startChar": 0,
+        "endLine": 88,
+        "endChar": 36
+      },
+      "revId": "04614a67bd3c399dc50fbe6a8e8fadb9563a7a6f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1a4dcd0f_9b6d0bcf",
         "filename": "docs/operator/nodepool_operator.rst",
         "patchSetId": 5
