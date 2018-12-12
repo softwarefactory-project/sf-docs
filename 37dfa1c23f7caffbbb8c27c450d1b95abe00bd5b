@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "225667be_87f69dcd",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2018-12-12T10:01:13Z",
+      "side": 1,
+      "message": "The integration was completed, we just not use it yet. I agree that now it needs to be refreshed with last DLRN version. I think we should keep it in the allinone arch to at least have packages installed + sfconfig install phase run in the CI. Why not having sfconfig that remove that role from the loaded arch automatically when we run on RHEL or even stop if present in the arch ? I would have been happy with the note in an operator section for DLRN (but we don\u0027t have one yet)",
+      "parentUuid": "2d28a11b_da9aa47e",
+      "range": {
+        "startLine": 161,
+        "startChar": 54,
+        "endLine": 161,
+        "endChar": 68
+      },
+      "revId": "37dfa1c23f7caffbbb8c27c450d1b95abe00bd5b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "29d6628e_4a2593c6",
         "filename": "docs/operator/deployment.rst",
         "patchSetId": 1
