@@ -25,6 +25,29 @@
     },
     {
       "key": {
+        "uuid": "2d28a11b_da9aa47e",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 1
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-12-12T02:48:19Z",
+      "side": 1,
+      "message": "How about removing dlrn from that file and instead make a tech-preview arch to be used in the CI. DLRN is not really supported on CentOS either because the integration is not completed :)",
+      "range": {
+        "startLine": 161,
+        "startChar": 54,
+        "endLine": 161,
+        "endChar": 68
+      },
+      "revId": "37dfa1c23f7caffbbb8c27c450d1b95abe00bd5b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "29d6628e_4a2593c6",
         "filename": "docs/operator/deployment.rst",
         "patchSetId": 1
