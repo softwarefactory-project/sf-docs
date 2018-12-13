@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "54b0561f_56fae566",
+        "filename": "docs/operator/architecture.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-12-13T09:48:26Z",
+      "side": 1,
+      "message": "i think we should better remove dlrn from the allinone arch.",
+      "range": {
+        "startLine": 114,
+        "startChar": 0,
+        "endLine": 117,
+        "endChar": 84
+      },
+      "revId": "9edc4e84293141e4ce1bf7e888087e9df7166b52",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
