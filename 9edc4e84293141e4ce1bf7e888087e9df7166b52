@@ -22,6 +22,23 @@
       "revId": "9edc4e84293141e4ce1bf7e888087e9df7166b52",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6d4746b5_95e92e94",
+        "filename": "docs/operator/architecture.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2018-12-19T04:03:37Z",
+      "side": 1,
+      "message": "Another solution would be to document DLRN, then we can say it\u0027s not supported on rhel. Though we should really make it work on rhel so... I don\u0027t think this really warrant a note here.",
+      "revId": "9edc4e84293141e4ce1bf7e888087e9df7166b52",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
