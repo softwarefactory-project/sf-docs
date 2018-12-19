@@ -1,0 +1,11 @@
+Code-Review+1: Nicolas HICHER <nhicher@redhat.com>
+Code-Review+1: David Moreau Simard <dmsimard@redhat.com>
+Code-Review+2: Matthieu Huin <mhuin@redhat.com>
+Code-Review+2: Tristan de Cacqueray <tdecacqu@redhat.com>
+Workflow+1: Tristan de Cacqueray <tdecacqu@redhat.com>
+Verified+2: Zuul CI <zuul@softwarefactory-project.io>
+Submitted-by: Zuul CI <zuul@softwarefactory-project.io>
+Submitted-at: Wed, 19 Dec 2018 04:09:40 +0000
+Reviewed-on: https://softwarefactory-project.io/r/14572
+Project: software-factory/sf-docs
+Branch: refs/heads/master
