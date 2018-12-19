@@ -48,6 +48,54 @@
     },
     {
       "key": {
+        "uuid": "9af4df56_958a4a39",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-12-19T16:03:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e139f84f_7313acec",
+      "range": {
+        "startLine": 60,
+        "startChar": 14,
+        "endLine": 60,
+        "endChar": 28
+      },
+      "revId": "ef6bf270f764af7cfd421123e47a2aa759e755ef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f1f4482c_702353dd",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-12-19T16:03:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8ced9fa5_c34ba17b",
+      "range": {
+        "startLine": 60,
+        "startChar": 65,
+        "endLine": 60,
+        "endChar": 75
+      },
+      "revId": "ef6bf270f764af7cfd421123e47a2aa759e755ef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fc54b8a4_9e69b6de",
         "filename": "docs/operator/nodepool_operator.rst",
         "patchSetId": 12
@@ -59,6 +107,30 @@
       "writtenOn": "2018-12-12T16:32:01Z",
       "side": 1,
       "message": "where the",
+      "range": {
+        "startLine": 62,
+        "startChar": 34,
+        "endLine": 62,
+        "endChar": 40
+      },
+      "revId": "ef6bf270f764af7cfd421123e47a2aa759e755ef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dd482f7b_d5047d17",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-12-19T16:03:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fc54b8a4_9e69b6de",
       "range": {
         "startLine": 62,
         "startChar": 34,
@@ -94,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "468bedb7_46ead699",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-12-19T16:03:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "019971b1_13cf43c2",
+      "range": {
+        "startLine": 67,
+        "startChar": 39,
+        "endLine": 67,
+        "endChar": 49
+      },
+      "revId": "ef6bf270f764af7cfd421123e47a2aa759e755ef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7a407b93_3312a44b",
         "filename": "docs/operator/nodepool_operator.rst",
         "patchSetId": 12
@@ -117,6 +213,30 @@
     },
     {
       "key": {
+        "uuid": "76559be2_58041075",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-12-19T16:03:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a407b93_3312a44b",
+      "range": {
+        "startLine": 70,
+        "startChar": 45,
+        "endLine": 70,
+        "endChar": 47
+      },
+      "revId": "ef6bf270f764af7cfd421123e47a2aa759e755ef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "efaf5f1c_3a546246",
         "filename": "docs/operator/nodepool_operator.rst",
         "patchSetId": 12
@@ -128,6 +248,30 @@
       "writtenOn": "2018-12-12T16:32:01Z",
       "side": 1,
       "message": "must add the image\u0027s name and registration password",
+      "range": {
+        "startLine": 71,
+        "startChar": 0,
+        "endLine": 71,
+        "endChar": 4
+      },
+      "revId": "ef6bf270f764af7cfd421123e47a2aa759e755ef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f5708476_25138863",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-12-19T16:03:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "efaf5f1c_3a546246",
       "range": {
         "startLine": 71,
         "startChar": 0,
@@ -179,6 +323,54 @@
         "startChar": 9,
         "endLine": 137,
         "endChar": 13
+      },
+      "revId": "ef6bf270f764af7cfd421123e47a2aa759e755ef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c75c0f6f_13f6ed69",
+        "filename": "docs/user/nodepool_user.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-12-19T16:03:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f24e3272_65d370f9",
+      "range": {
+        "startLine": 137,
+        "startChar": 9,
+        "endLine": 137,
+        "endChar": 13
+      },
+      "revId": "ef6bf270f764af7cfd421123e47a2aa759e755ef",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c52113c0_4dcb81b4",
+        "filename": "docs/user/nodepool_user.rst",
+        "patchSetId": 12
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2018-12-19T16:03:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c9f09d67_832b07d9",
+      "range": {
+        "startLine": 137,
+        "startChar": 46,
+        "endLine": 137,
+        "endChar": 50
       },
       "revId": "ef6bf270f764af7cfd421123e47a2aa759e755ef",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
