@@ -142,7 +142,8 @@ and enable repositories on all nodes before running sfconfig.
 
    subscription-manager register --username $rhsm_username
    subscription-manager attach --auto
-   subscription-manager repos --enable rhel-server-rhscl-7-rpms \
+   subscription-manager repos --enable rhel-7-server-rpms \
+                              --enable rhel-server-rhscl-7-rpms \
                               --enable=rhel-7-server-extras-rpms \
                               --enable=rhel-7-server-optional-rpms \
                               --enable=rhel-7-server-rh-common-rpms
