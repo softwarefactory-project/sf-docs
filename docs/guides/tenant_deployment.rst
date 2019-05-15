@@ -68,6 +68,7 @@ Define the tenant's default connection in /etc/software-factory/sfconfig.yaml:
       port: 29418
       puburl: https://tenant-sf.com/r/
       username: zuul
+      default_pipelines: false
 
 Then run sfconfig
 
