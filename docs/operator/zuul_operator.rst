@@ -99,7 +99,7 @@ To create a GitHub app on my-org follow this
 
 * Open the App creation form:
 
-  * to create the app under an organization, go to `https://github.com/organizations/<organization>org/settings/apps/new`
+  * to create the app under an organization, go to `https://github.com/organizations/<organization>/settings/apps/new`
   * to create the app under a user account, go to `https://github.com/settings/apps/new`
 
 * Set GitHub App name to "my-org-zuul"
