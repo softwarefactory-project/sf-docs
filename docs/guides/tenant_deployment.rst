@@ -3,10 +3,6 @@
 Deploy a tenant instance of Software Factory
 --------------------------------------------
 
-.. warning::
-
-  Tenant deployment mode must be considered beta for the 3.2 release.
-
 A tenant SF is an instance that does not run Zuul services. Zuul
 services (Zuul, Nodepool) will be shared with a Master SF. Users of a
 tenant SF benefit from their own SF services like Gerrit or ELK.
@@ -25,7 +21,7 @@ On a CentOS-7 system, deploy the tenant minimal architecture:
   yum install -y https://softwarefactory-project.io/repos/sf-release-3.3.rpm
   yum install -y sf-config
   cp /usr/share/sf-config/refarch/tenant-minimal.yaml /etc/software-factory/arch.yaml
-  echo -e "      - gerrit\n      - gitweb" >> /etc/software-factory/arch.yaml
+  sed -i '/      - cauth/a\      - gerrit\n      - gitweb' /etc/software-factory/arch.yaml
 
 Edit /etc/software-factory/sfconfig.yaml to set the fqdn for the deployment and add:
 
