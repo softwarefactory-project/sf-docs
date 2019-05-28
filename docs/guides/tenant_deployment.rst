@@ -3,10 +3,6 @@
 Deploy a tenant instance of Software Factory
 --------------------------------------------
 
-.. warning::
-
-  Tenant deployment mode must be considered beta for the 3.2 release.
-
 A tenant SF is an instance that does not run Zuul services. Zuul
 services (Zuul, Nodepool) will be shared with a Master SF. Users of a
 tenant SF benefit from their own SF services like Gerrit or ELK.
@@ -25,14 +21,14 @@ On a CentOS-7 system, deploy the tenant minimal architecture:
   yum install -y https://softwarefactory-project.io/repos/sf-release-3.3.rpm
   yum install -y sf-config
   cp /usr/share/sf-config/refarch/tenant-minimal.yaml /etc/software-factory/arch.yaml
-  echo -e "      - gerrit\n      - gitweb" >> /etc/software-factory/arch.yaml
+  sed -i '/      - cauth/a\      - gerrit\n      - gitweb' /etc/software-factory/arch.yaml
 
 Edit /etc/software-factory/sfconfig.yaml to set the fqdn for the deployment and add:
 
 .. code-block:: yaml
 
   tenant-deployment:
-    name: tenant-name
+    name: tenant-sf
     master-sf: https://master-sf.com
 
 .. note::
@@ -63,7 +59,7 @@ Define the tenant's default connection in /etc/software-factory/sfconfig.yaml:
 .. code-block:: yaml
 
   gerrit_connections:
-    - name: tenant-gerrit
+    - name: tenant-sf
       hostname: tenant-sf.com
       port: 29418
       puburl: https://tenant-sf.com/r/
@@ -80,7 +76,7 @@ Then run sfconfig
 
   if tenant-sf instance use self-signed certificates, you should copy
   '/etc/pki/ca-trust/source/anchors/localCA.pem' from tenant-sf to
-  '/etc/pki/ca-trust/source/anchors/master-sf.pem' on master-sf's zuul-executor
+  '/etc/pki/ca-trust/source/anchors/tenant-sf.pem' on master-sf's zuul-executor
   instances, then run 'update-ca-trust' to trust this CA.
 
 Define the new tenant inside the resources. Create the following file
@@ -93,7 +89,7 @@ config/resources/tenant.yaml:
       tenant-sf:
         description: "The new tenant"
         url: "https://tenant-sf.com/manage"
-        default-connection: tenant-gerrit
+        default-connection: tenant-sf
 
 .. code-block:: bash
 
