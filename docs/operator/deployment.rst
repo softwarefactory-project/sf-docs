@@ -137,7 +137,6 @@ Rhel registration
 When deploying Software Factory on RHEL, operators should register the system
 and enable repositories on all nodes before running sfconfig.
 
-
 .. code-block:: bash
 
    subscription-manager register --username $rhsm_username
@@ -160,8 +159,13 @@ Installation
 To enable extra services (such as logstash) or to distribute services on
 multiple instances, you have to edit the arch.yaml file
 (see the :ref:`architecture documentation<architecture>` for more details).
-For example to add a logstash service on a dedicated instance, edit
-the /etc/software-factory/arch.yaml file like this:
+
+.. warning::
+
+   Some components can't be installed on RHEL7 such as dlrn, firehose and hydrant
+
+To add a logstash service on a dedicated instance, edit the
+/etc/software-factory/arch.yaml file like this:
 
 .. code-block:: yaml
 
