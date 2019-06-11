@@ -138,6 +138,11 @@ When deploying Software Factory on RHEL, operators should register the system
 and enable repositories on all nodes before running sfconfig.
 
 
+.. warning::
+
+   All components present on sf-config/refarch/allinone.yaml arch file can be
+   installed on RHEL-7 except gerritbot and dlrn.
+
 .. code-block:: bash
 
    subscription-manager register --username $rhsm_username
