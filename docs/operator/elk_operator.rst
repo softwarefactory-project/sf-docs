@@ -35,3 +35,20 @@ Then running:
 
 The Kibana interface should be accessible via the Software Factory top menu under
 the name Kibana.
+
+
+Manage indices
+--------------
+
+Query the list and usage of index using:
+
+.. code-block:: bash
+
+   curl http://elasticsearch:9200/_cat/indices?v
+
+
+Delete old/unused index using:
+
+.. code-block:: bash
+
+   curl -X DELETE http://elasticsearch:9200/INDEX-NAME
