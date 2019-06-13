@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a16f6d0_e9f44dac",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 6
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2019-06-13T22:31:18Z",
+      "side": 1,
+      "message": "How about: \"Some components can\u0027t be installed on RHEL7 such as dlrn, firehose and hydrant\". (https://softwarefactory-project.io/r/#/c/15741/ should fix gerritbot)",
+      "range": {
+        "startLine": 165,
+        "startChar": 3,
+        "endLine": 166,
+        "endChar": 58
+      },
+      "revId": "041b74348f98fd61b7dcd4f39a36992dd256dd52",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
