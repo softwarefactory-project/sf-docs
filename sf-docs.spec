@@ -13,7 +13,7 @@ BuildArch:      noarch
 BuildRequires:  python-sphinx
 BuildRequires:  graphviz
 BuildRequires:  python-sphinx_rtd_theme
-Requires:       managesf-doc
+Requires:       rh-python35-managesf-doc
 Requires:       python-sfmanager-doc
 
 %description
