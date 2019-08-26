@@ -218,3 +218,9 @@ When done with debugging, deactivate the keepjob option by running:
 
     /opt/rh/rh-python35/root/bin/zuul-executor nokeep
     /opt/rh/rh-python35/root/bin/zuul-executor unverbose
+
+
+Accessing test resources on failure (autohold)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+See the :ref:`nodepool operator documentation <nodepool-autohold>`.

@@ -62,6 +62,29 @@ RHEL image, check :ref:`nodepool user documentation <nodepool-user-rhel>`). The
 operator can store base images on the host where the **nodepool-builder**
 service is deployed in */var/lib/nodepool/images*.
 
+
+.. _nodepool-autohold:
+
+Accessing test resources on failure (autohold)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To get a persistent shell access to test resources, use the autohold feature:
+
+* From the zuul-scheduler host, run this command (the --change argument is optional):
+
+.. code-block:: bash
+
+   zuul autohold --tenant <tenant-name> --project <project-name> --job <job-name> --reason "text-string" [--change <change-id>]
+
+* Check the hold is registered using `zuul autohold-list`
+
+* Wait for a job failure and get the node ip using `nodepool list --detail | grep "text-string"`
+
+* Connect to the instance using `ssh -i ~zuul/.ssh/id_rsa <username>@<ip>`, the username can be `zuul` or `zuul-worker` depending on how the label has been built. You can add more public keys and share the access.
+
+* Once you are done with the instance, run `nodepool delete <nodeid>`
+
+
 .. _nodepool-operator-password:
 
 Storing registration password to build RHEL image
