@@ -315,6 +315,59 @@ services.
   ansible-playbook /var/lib/software-factory/ansible/nodepool_restart.yml
 
 
+Build a Nodepool image locally
+------------------------------
+
+If you want to build a custom image with diskimage-builder locally you can
+follow this process. The following commands are runned on fedora 30.
+
+.. warning::
+
+  Using a dedicated virtual machine is recommended. You can delete everything
+  after your tests.
+
+We start by installing the required dependencies, and downloading elements we
+will need for our build.
+
+.. code-block:: bash
+
+  sudo dnf install -y qemu kpartx yum-utils policycoreutils-python-utils
+  pip3 install --user diskimage-builder
+  mkdir elements
+  git clone https://softwarefactory-project.io/r/config
+  git clone https://softwarefactory-project.io/r/software-factory/sf-elements
+  cp -Rf config/nodepool/elements/* elements/
+  cp -Rf sf-elements/elements/* elements/
+  export ELEMENTS_PATH=~/elements
+  export PATH=$PATH:~/.local/bin
+  mkdir -p /etc/nodepool/scripts
+
+Some elements can require some files during the build. Be sure those files are
+present on your host before you run the build.
+
+i.e. `zuul-user` element requires `/var/lib/nodepool/.ssh/zuul_rsa.pub` during
+the build. So create this file if you use `zuul-user` element in your image.
+
+.. code-block:: bash
+
+  sudo mkdir -p /var/lib/nodepool/.ssh/
+  sudo touch /var/lib/nodepool/.ssh/zuul_rsa.pub
+
+You can now build your image using `disk-image-create` and the nodepool
+elements you need
+
+.. code-block:: bash
+
+  ELEMENTS_PATH=~/elements disk-image-create -o image_name [nodepool_elements ...]
+  ELEMENTS_PATH=~/elements disk-image-create -o test zuul-user
+
+You can edit/debug your element and run the build again
+
+.. code-block:: bash
+  vi elements/zuul-user/...
+  ELEMENTS_PATH=~/elements disk-image-create -o test zuul-user
+
+
 Useful commands
 ---------------
 
