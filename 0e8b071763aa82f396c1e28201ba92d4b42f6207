@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8d20e9b9_8fe7bc42",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2019-09-20T12:01:10Z",
+      "side": 1,
+      "message": "run",
+      "range": {
+        "startLine": 322,
+        "startChar": 48,
+        "endLine": 322,
+        "endChar": 54
+      },
+      "revId": "0e8b071763aa82f396c1e28201ba92d4b42f6207",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
