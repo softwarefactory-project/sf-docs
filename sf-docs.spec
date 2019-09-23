@@ -2,7 +2,7 @@
 
 Name:           sf-docs
 Version:        3.3.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
@@ -13,8 +13,6 @@ BuildArch:      noarch
 BuildRequires:  python3-sphinx
 BuildRequires:  graphviz
 BuildRequires:  python3-sphinx_rtd_theme
-Requires:       rh-python35-managesf-doc
-Requires:       python-sfmanager-doc
 
 %description
 %{sum}
@@ -34,6 +32,9 @@ mv build/html/* %{buildroot}%{_docdir}/software-factory
 %{_docdir}/software-factory
 
 %changelog
+* Tue Sep 24 2019 Tristan Cacqueray <tdecacqu@redhat.com> - 3.3.0-3
+- Remove managesf requirement
+
 * Sat Sep 21 2019 Tristan Cacqueray <tdecacqu@redhat.com> - 3.3.0-2
 - Use python3-sphinx
 
