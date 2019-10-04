@@ -201,14 +201,23 @@ Troubleshooting non starting jobs
 Troubleshooting the executor
 ----------------------------
 
-First you need to enable the executor's *keepjob* option so that ansible logs are available on dist:
+Make sure the zuul service logging is configured to use level: DEBUG in the /etc/zuul/executor-logging.yaml files. This can be enabled globally by setting this variable:
+
+.. code-block:: yaml
+
+   # /etc/software-factory/custom-vars.yaml
+   ---
+   zuul_debug: true
+
+
+First you need to enable the executor's *keepjob* option so that ansible logs are available:
 
 .. code-block:: bash
 
-    /opt/rh/rh-python35/root/bin/zuul-executor keep
-    /opt/rh/rh-python35/root/bin/zuul-executor verbose
+    /bin/zuul-executor keep
+    /bin/zuul-executor verbose
 
-Then next job execution will be available in /tmp/systemd-private-*-rh-python35-zuul-executor.service-*/tmp/
+Then next job execution will be available in /var/lib/zuul/builds/
 
 In particular, the work/ansible/job-logs.txt usually tells why a job failed.
 
@@ -216,8 +225,8 @@ When done with debugging, deactivate the keepjob option by running:
 
 .. code-block:: bash
 
-    /opt/rh/rh-python35/root/bin/zuul-executor nokeep
-    /opt/rh/rh-python35/root/bin/zuul-executor unverbose
+    /bin/zuul-executor nokeep
+    /bin/zuul-executor unverbose
 
 
 Accessing test resources on failure (autohold)
