@@ -147,6 +147,11 @@ and enable repositories on all nodes before running sfconfig.
                               --enable=rhel-7-server-optional-rpms \
                               --enable=rhel-7-server-rh-common-rpms
 
+.. note::
+
+  To use the Nodepool's kubernetes or openshift drivers, the 'rhel-7-server-ose-3.11-rpms' needs to be enabled too.
+
+
 Installation
 ------------
 
