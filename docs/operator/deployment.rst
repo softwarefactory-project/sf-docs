@@ -147,6 +147,12 @@ and enable repositories on all nodes before running sfconfig.
                               --enable=rhel-7-server-optional-rpms \
                               --enable=rhel-7-server-rh-common-rpms
 
+.. note::
+
+  If you want to use 'hypervisor-openshift' or 'hypervisor-k1s' roles, you need
+  to enable 'rhel-7-server-ose-3.9-rpms' repo.
+
+
 Installation
 ------------
 
