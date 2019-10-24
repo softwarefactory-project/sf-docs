@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ef52ff5_a25ad6ab",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2019-10-24T17:30:56Z",
+      "side": 1,
+      "message": "This should rather be: \"To use the Nodepool\u0027s kubernetes or openshift drivers, the \u0027rhel-7-server-ose-3.9-rpms\u0027 needs to be enabled too.",
+      "range": {
+        "startLine": 152,
+        "startChar": 0,
+        "endLine": 153,
+        "endChar": 46
+      },
+      "revId": "770d547e52751e208c0f592a7960bade7b83fe7d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
