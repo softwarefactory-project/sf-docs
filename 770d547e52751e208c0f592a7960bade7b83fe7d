@@ -22,6 +22,30 @@
       "revId": "770d547e52751e208c0f592a7960bade7b83fe7d",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "74586f10_abbcc607",
+        "filename": "docs/operator/deployment.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 22
+      },
+      "writtenOn": "2019-10-24T17:35:21Z",
+      "side": 1,
+      "message": "Thanks for the review, I\u0027ve updated openshift version too",
+      "parentUuid": "8ef52ff5_a25ad6ab",
+      "range": {
+        "startLine": 152,
+        "startChar": 0,
+        "endLine": 153,
+        "endChar": 46
+      },
+      "revId": "770d547e52751e208c0f592a7960bade7b83fe7d",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
