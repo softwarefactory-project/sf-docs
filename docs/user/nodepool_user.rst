@@ -92,6 +92,18 @@ existing provider using a dedicated file. For example:
           min-ram: 4096
 
 
+.. _nodepool-virt-customize:
+
+Building Images Using Virt Customize
+------------------------------------
+
+It's also possible to use virt-customize instead of diskimage-builder with
+the virt-customize roles provided in the config repository.
+All the informations are in the *config/nodepool/virt-images/* README.
+There is an example playbook to build a fedora rawhide image.
+
+
+
 Diskimage elements
 ------------------
 
