@@ -11,13 +11,8 @@
 Operate nodepool
 ================
 
-The nodepool service is installed with the rh-python35 software collections:
-
 * The configuration is located in /etc/nodepool
 * The logs are written to /var/log/nodepool
-* The services are prefixed with rh-python35-
-
-A convenient wrapper for the command line is installed in /usr/bin/nodepool.
 
 
 Architecture

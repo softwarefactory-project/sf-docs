@@ -9,13 +9,8 @@
 Operate zuul
 ============
 
-The Zuul service is installed with rh-python35 software collections:
-
 * The configuration is located in /etc/zuul
 * The logs are written to /var/log/zuul
-* The services are prefixed with rh-python35-
-
-A convenient wrapper for the command line is installed in /usr/bin/zuul.
 
 By default, no merger are being deployed because the executor service
 can perform merge task. However, a merger can also be deployed to speed
@@ -52,7 +47,7 @@ to save and restore the current state:
     # Print and save all builds in progress to /var/lib/zuul/zuul-queues-dump.sh
     /usr/libexec/software-factory/zuul-changes.py dump
 
-    systemctl restart rh-python35-zuul-scheduler
+    systemctl restart zuul-scheduler
 
     # Reload the previous state
     /usr/libexec/software-factory/zuul-changes.py load
@@ -188,14 +183,14 @@ The job will be running in the post pipeline of the Zuul status page.
 Troubleshooting non starting jobs
 ---------------------------------
 
-* First check that the project is defined in /etc/opt/rh/rh-python35/zuul/main.yaml
+* First check that the project is defined in /etc/zuul/main.yaml
 * Then check in scheduler.log that it correctly requested a node and submitted a
   job to the executor
 * When zuul reports *PRE_FAILURE* or *POST_FAILURE*,
   then the executor's debugging needs to be turned on
 * Finally passing all loggers' level to DEBUG in
-  /etc/opt/rh/rh-python35/zuul/scheduler-logging.yaml then restarting the service
-  rh-python35-zuul-scheduler might help to debug.
+  /etc/zuul/scheduler-logging.yaml then restarting the service
+  zuul-scheduler might help to debug.
 
 
 Troubleshooting the executor
@@ -205,10 +200,10 @@ First you need to enable the executor's *keepjob* option so that ansible logs ar
 
 .. code-block:: bash
 
-    /opt/rh/rh-python35/root/bin/zuul-executor keep
-    /opt/rh/rh-python35/root/bin/zuul-executor verbose
+    /usr/bin/zuul-executor keep
+    /usr/bin/zuul-executor verbose
 
-Then next job execution will be available in /tmp/systemd-private-*-rh-python35-zuul-executor.service-*/tmp/
+Then next job execution will be available in /tmp/systemd-private-*-zuul-executor.service-*/tmp/
 
 In particular, the work/ansible/job-logs.txt usually tells why a job failed.
 
@@ -216,8 +211,8 @@ When done with debugging, deactivate the keepjob option by running:
 
 .. code-block:: bash
 
-    /opt/rh/rh-python35/root/bin/zuul-executor nokeep
-    /opt/rh/rh-python35/root/bin/zuul-executor unverbose
+    /usr/bin/zuul-executor nokeep
+    /usr/bin/zuul-executor unverbose
 
 
 Accessing test resources on failure (autohold)
