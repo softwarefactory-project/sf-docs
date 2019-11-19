@@ -145,7 +145,8 @@ and enable repositories on all nodes before running sfconfig.
                               --enable rhel-server-rhscl-7-rpms \
                               --enable=rhel-7-server-extras-rpms \
                               --enable=rhel-7-server-optional-rpms \
-                              --enable=rhel-7-server-rh-common-rpms
+                              --enable=rhel-7-server-rh-common-rpms \
+                              --enable=rhel-7-server-openstack-14-rpms
 
 .. note::
 
