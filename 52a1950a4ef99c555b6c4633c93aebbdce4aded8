@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2df20e8c_4dd1acc9",
+        "filename": "docs/operator/zuul_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2019-11-20T09:29:33Z",
+      "side": 1,
+      "message": "... Zuul scheduler project\u0027s private keys ...",
+      "revId": "52a1950a4ef99c555b6c4633c93aebbdce4aded8",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
