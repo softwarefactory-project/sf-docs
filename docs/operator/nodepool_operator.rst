@@ -99,6 +99,8 @@ you have add image name and registration password in
 
 Then run sfconfig --skip-install to finish the configuration.
 
+.. _nodepool_cloud_provider:
+
 Add a cloud provider
 --------------------
 
@@ -114,23 +116,13 @@ node. Please refer to `OpenStack's documentation
 how to modify security groups.
 
 In order to configure an OpenStack provider you need
-to add in sfconfig.yaml the cloud client information, below is an example of
-configuration.
+to copy the *clouds.yaml* file to /etc/software-factory/ and set this configuration
+in sfconfig.yaml:
 
 .. code-block:: yaml
 
  nodepool:
-   providers:
-     - name: default
-       auth_url: http://localhost:5000/v2.0
-       project_name: 'tenantname'
-       username: 'user'
-       password: 'secret'
-       image_format: raw
-       region_name: ''
-       # Uncomment and set domain-related values when using a keystone v3 authentication endpoint
-       # user_domain_name: Default
-       # project_domain_name: Default
+   clouds_File: /etc/software-factory/clouds.yaml
 
 To apply the configuration you need to run again the sfconfig script.
 
