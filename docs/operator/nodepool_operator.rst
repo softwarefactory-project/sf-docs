@@ -98,6 +98,8 @@ you have add image name and registration password in
 
 Then run sfconfig --skip-install to finish the configuration.
 
+.. _nodepool_cloud_provider:
+
 Add a cloud provider
 --------------------
 

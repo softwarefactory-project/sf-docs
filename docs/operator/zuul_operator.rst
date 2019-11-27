@@ -86,6 +86,8 @@ In /etc/software-factory/sfconfig.yaml add in *git_connections*:
 
 Then run **sfconfig** to apply the configuration.
 
+.. _zuul-github-app-create:
+
 Create a GitHub app
 -------------------
 
