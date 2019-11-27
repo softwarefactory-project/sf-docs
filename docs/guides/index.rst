@@ -16,3 +16,4 @@ Deployment
    github_deployment
    tenant_deployment
    unmanaged_tenant
+   third_party_ci
