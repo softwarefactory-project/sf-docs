@@ -12,7 +12,9 @@ Deployment
 ----------
 
 .. toctree::
+   :maxdepth: 2
 
    github_deployment
    tenant_deployment
    unmanaged_tenant
+   third_party_ci
