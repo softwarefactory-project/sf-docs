@@ -203,7 +203,7 @@ First you need to enable the executor's *keepjob* option so that ansible logs ar
     /usr/bin/zuul-executor keep
     /usr/bin/zuul-executor verbose
 
-Then next job execution will be available in /tmp/systemd-private-*-zuul-executor.service-*/tmp/
+Then next job execution will be available in /var/lib/zuul/builds/.
 
 In particular, the work/ansible/job-logs.txt usually tells why a job failed.
 
