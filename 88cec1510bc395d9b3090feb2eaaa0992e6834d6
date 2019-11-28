@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c4673c02_953ed26b",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2019-11-28T16:09:03Z",
+      "side": 1,
+      "message": "minimal kubernetes server",
+      "range": {
+        "startLine": 31,
+        "startChar": 17,
+        "endLine": 31,
+        "endChar": 23
+      },
+      "revId": "88cec1510bc395d9b3090feb2eaaa0992e6834d6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7d89bf33_b91a5301",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2019-11-28T16:09:03Z",
+      "side": 1,
+      "message": "Is there a workaround we can explain in the doc ?",
+      "revId": "88cec1510bc395d9b3090feb2eaaa0992e6834d6",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}

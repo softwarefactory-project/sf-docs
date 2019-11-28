@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5e5509b9_7eae6aab",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2019-11-28T16:09:03Z",
+      "side": 0,
+      "message": "Why not keeping that as k1s usage due to zuul jobs is not fully functional ?",
+      "revId": "f6c5cc471f8455353037b428e825afb90dce1aa7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
