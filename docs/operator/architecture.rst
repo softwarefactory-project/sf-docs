@@ -78,7 +78,7 @@ Optional services can be enabled:
 
 * zuul-merger
 * nodepool-builder
-* hypervisor-runc
+* hypervisor-k1s
 * hypervisor-openshift
 * etherpad
 * lodgeit
@@ -101,11 +101,9 @@ Optional services can be enabled:
 * cgit
 * hound
 
-.. note::
+Deprecated service that will be removed in the next release:
 
-   Check the :ref:`nodepool documentation<nodepool-operator-runc>` to learn
-   how to configure the hypervisor-runc role to enable container providers in
-   Nodepool.
+* hypervisor-runc
 
 .. _architecture_extending:
 
