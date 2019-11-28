@@ -16,6 +16,24 @@
       "revId": "f6c5cc471f8455353037b428e825afb90dce1aa7",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "06971332_3d174e67",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2019-11-28T16:16:54Z",
+      "side": 0,
+      "message": "Because I think we shouldn\u0027t document how to customize and debug something we want to remove...",
+      "parentUuid": "5e5509b9_7eae6aab",
+      "revId": "f6c5cc471f8455353037b428e825afb90dce1aa7",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
