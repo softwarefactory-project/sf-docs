@@ -9,7 +9,7 @@ Defaults dashboards
 When metrics are activated on Software Factory, some defaults dashboards are
 created:
 
-* system: a dynamic dashboard with all servers used in the deployment (except hypervisor-runc role)
+* system: a dynamic dashboard with all servers used in the deployment
 * zuul: a status dashboard
 * nodepool: a status dashboard and a dashboard per provider
 
