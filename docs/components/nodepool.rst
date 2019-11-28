@@ -11,8 +11,7 @@ drivers to create instances:
 
 * Openstack cloud
 * Static node
-* OpenContainer (runC) (tech preview)
-* OpenShift (tech preview)
+* OpenShift
 
 It is designed to handle the life cycle of build resources (creation, provision,
 assignation and destruction).

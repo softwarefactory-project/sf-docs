@@ -78,9 +78,8 @@ Optional services can be enabled:
 
 * zuul-merger
 * nodepool-builder
-* hypervisor-runc
+* hypervisor-k1s
 * hypervisor-openshift
-* rabbitmq
 * etherpad
 * lodgeit
 * gerritbot
@@ -93,8 +92,6 @@ Optional services can be enabled:
 * logstash
 * kibana
 * mirror
-* storyboard
-* storyboard-webclient
 * repoxplorer
 * firehose
 * pages
@@ -103,12 +100,6 @@ Optional services can be enabled:
 * grafana
 * cgit
 * hound
-
-.. note::
-
-   Check the :ref:`nodepool documentation<nodepool-operator-runc>` to learn
-   how to configure the hypervisor-runc role to enable container providers in
-   Nodepool.
 
 .. _architecture_extending:
 
