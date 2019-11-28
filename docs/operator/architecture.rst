@@ -80,7 +80,6 @@ Optional services can be enabled:
 * nodepool-builder
 * hypervisor-runc
 * hypervisor-openshift
-* rabbitmq
 * etherpad
 * lodgeit
 * gerritbot
@@ -93,8 +92,6 @@ Optional services can be enabled:
 * logstash
 * kibana
 * mirror
-* storyboard
-* storyboard-webclient
 * repoxplorer
 * firehose
 * pages

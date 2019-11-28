@@ -12,8 +12,7 @@ component is used to enforce all authenticated HTTP access.
 Single Sign On
 ^^^^^^^^^^^^^^
 
-Software Factory provides a unified authentication for services such as Gerrit or Storyboard.
-Once you are authenticated on Gerrit you are also logged in on Storyboard.
+Software Factory provides a unified authentication for services such as Gerrit.
 Logging out from one service logs you out from other services as well.
 
 Currently SF provides five kinds of backends to authenticate:
