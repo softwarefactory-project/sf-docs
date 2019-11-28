@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "58b4b6be_d9a0af9a",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2019-11-28T08:47:59Z",
+      "side": 1,
+      "message": "For an other platform then contact the platform operator.",
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2802d35f_f63ac0de",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2019-11-28T08:47:59Z",
+      "side": 1,
+      "message": "But the recommended start does not include gerrit.",
+      "range": {
+        "startLine": 72,
+        "startChar": 50,
+        "endLine": 72,
+        "endChar": 73
+      },
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
