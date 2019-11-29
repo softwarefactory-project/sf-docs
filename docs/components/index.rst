@@ -25,7 +25,6 @@ Optional components
 .. toctree::
    :maxdepth: 2
 
-   Storyboard: Issue tracker <storyboard>
    metrics
    log_search_engine
    log_classify

@@ -10,7 +10,7 @@ automatically set up on Software Factory.
 .. note::
 
    Project, repository and ACL management across all services is only supported
-   on Gerrit and Storyboard.
+   on Gerrit.
 
 Advantages of managing resources via the config repository
 ----------------------------------------------------------
