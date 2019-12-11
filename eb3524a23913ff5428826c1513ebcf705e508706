@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "ec124e58_1b517dac",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2019-12-11T14:54:34Z",
+      "side": 1,
+      "message": "Services configuration",
+      "range": {
+        "startLine": 8,
+        "startChar": 3,
+        "endLine": 8,
+        "endChar": 24
+      },
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "58b4b6be_d9a0af9a",
         "filename": "docs/guides/third_party_ci.rst",
         "patchSetId": 3
@@ -13,6 +36,116 @@
       "writtenOn": "2019-11-28T08:47:59Z",
       "side": 1,
       "message": "For an other platform then contact the platform operator.",
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e8cd060e_0ea6bded",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2019-12-11T14:54:34Z",
+      "side": 1,
+      "message": "Refer to the platform\u0027s user manual",
+      "parentUuid": "58b4b6be_d9a0af9a",
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6fc5dd07_5948fc18",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2019-12-11T14:54:34Z",
+      "side": 1,
+      "message": "needs a CentOS instance to run on",
+      "range": {
+        "startLine": 54,
+        "startChar": 0,
+        "endLine": 54,
+        "endChar": 47
+      },
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f4d8a68_16135a53",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2019-12-11T14:54:34Z",
+      "side": 1,
+      "message": "scaled up",
+      "range": {
+        "startLine": 57,
+        "startChar": 71,
+        "endLine": 57,
+        "endChar": 79
+      },
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "464430fd_a50a5e2f",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2019-12-11T14:54:34Z",
+      "side": 1,
+      "message": "Below are some instance sizing recommendations:",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 34
+      },
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "04bdf99d_3f4962e6",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2019-12-11T14:54:34Z",
+      "side": 1,
+      "message": "/ internal gerrit, see below ?",
+      "range": {
+        "startLine": 63,
+        "startChar": 50,
+        "endLine": 63,
+        "endChar": 61
+      },
       "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
@@ -35,6 +168,139 @@
         "startChar": 50,
         "endLine": 72,
         "endChar": 73
+      },
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0898f22d_b9bd11bf",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2019-12-11T14:54:34Z",
+      "side": 1,
+      "message": "+1 the doc should mention that gerrit is needed in the minimal if the config won\u0027t be hosted somewhere else",
+      "parentUuid": "2802d35f_f63ac0de",
+      "range": {
+        "startLine": 72,
+        "startChar": 50,
+        "endLine": 72,
+        "endChar": 73
+      },
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b3806287_63f79847",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2019-12-11T14:54:34Z",
+      "side": 1,
+      "message": "maintenance",
+      "range": {
+        "startLine": 73,
+        "startChar": 1,
+        "endLine": 73,
+        "endChar": 9
+      },
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "19d0caa7_ec4eed8b",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2019-12-11T14:54:34Z",
+      "side": 1,
+      "message": "where does this come from? is it a key the user must create? Is it provided during the creation of the github app ?",
+      "range": {
+        "startLine": 106,
+        "startChar": 9,
+        "endLine": 106,
+        "endChar": 50
+      },
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4b746a0e_db47280a",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2019-12-11T14:54:34Z",
+      "side": 1,
+      "message": "jobs",
+      "range": {
+        "startLine": 117,
+        "startChar": 40,
+        "endLine": 117,
+        "endChar": 43
+      },
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4b724617_b07f1dce",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2019-12-11T14:54:34Z",
+      "side": 1,
+      "message": "needs a .",
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "35d1fa99_3972eed1",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2019-12-11T14:54:34Z",
+      "side": 1,
+      "message": "provided the `logserver`role is in the arch",
+      "range": {
+        "startLine": 151,
+        "startChar": 1,
+        "endLine": 151,
+        "endChar": 80
       },
       "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
