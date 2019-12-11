@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "02848d9c_a7802f9b",
+        "filename": "docs/contributor/how_to_contribute.rst",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2019-12-11T13:50:47Z",
+      "side": 1,
+      "message": "Let\u0027s make it a dedicated paragraph with a short explanation (and link to gitweb) of the main subprojects people might want to contribute to:\n\n* sf-config: ansible roles and playbooks used to setup, deploy and upgrade an SF instance\n* sf-docs: SF documentation\n* sf-ci: CI jobs definitions for Zuul\n* sfinfo: jobs\u0027 ansible roles definitions, releases definitions\n\nmain SF components:\n\n* cauth: SSO service\n* managesf: SF REST API, resources management\n\nRPM distgit repos:\n\n* xxx-distgit: distgit repository for xxx",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 10,
+        "endChar": 52
+      },
+      "revId": "b1cbadd9a8231fbd4f0bcfa1c6c2139093ec1679",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
