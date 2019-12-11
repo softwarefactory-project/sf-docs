@@ -5,7 +5,18 @@ How to contribute
 
 * Connect to https://softwarefactory-project.io/ to create an account
 * Register your public SSH key on your account. See: :ref:`Adding public key`
-* Check the bug tracker and the pending reviews
+* Check the `bug tracker`_ and the `pending reviews`_
+
+The product is made out of several repositories which you can see at
+https://softwarefactory-project.io/cgit/?q=software-factory%2Fsf and you can
+just copy the link from the name column and use it for git cloning. For example
+you can see how to clone documentation:
+
+.. code-block:: bash
+
+    # clone docs
+    git clone https://softwarefactory-project.io/cgit/software-factory/sf-docs/
+
 
 Submit a change
 ...............
@@ -25,3 +36,6 @@ also check https://softwarefactory-project.io/zuul/ to check where your patch is
 Note that Software Factory is developed using Software Factory. That means that you can
 contribute to Software Factory in the same way you would contribute to any other project hosted
 on an instance: :ref:`contribute`.
+
+.. _`bug tracker`: https://tree.taiga.io/project/morucci-software-factory/backlog?q=
+.. _`pending reviews`: https://softwarefactory-project.io/r/#/q/project:%255Esoftware-factory.*
