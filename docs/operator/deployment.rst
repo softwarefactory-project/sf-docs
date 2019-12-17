@@ -158,7 +158,7 @@ Installation
 
 .. code-block:: bash
 
-  yum install -y https://softwarefactory-project.io/repos/sf-release-3.3.rpm
+  yum install -y https://softwarefactory-project.io/repos/sf-release-3.4.rpm
   yum install -y sf-config
 
 
