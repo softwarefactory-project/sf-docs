@@ -96,7 +96,7 @@ download, install and configure services:
 
 .. code-block:: bash
 
-  yum install -y https://softwarefactory-project.io/repos/sf-release-3.3.rpm
+  yum install -y https://softwarefactory-project.io/repos/sf-release-3.4.rpm
   yum install -y sf-config
   echo '      - hypervisor-runc' >> /etc/software-factory/arch.yaml
   sfconfig --enable-insecure-slaves
