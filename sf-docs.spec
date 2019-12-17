@@ -1,7 +1,7 @@
 %global         sum The Software Factory project documentation
 
 Name:           sf-docs
-Version:        3.3.0
+Version:        3.4.0
 Release:        3%{?dist}
 Summary:        %{sum}
 
