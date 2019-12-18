@@ -1,0 +1,7 @@
+Verified+1: Zuul CI <zuul@softwarefactory-project.io>
+Code-Review+2: Fabien Boucher <fboucher@redhat.com>
+Submitted-by: Tristan de Cacqueray <tdecacqu@redhat.com>
+Submitted-at: Wed, 18 Dec 2019 15:29:12 +0000
+Reviewed-on: https://softwarefactory-project.io/r/17245
+Project: software-factory/sf-docs
+Branch: refs/heads/3.4
