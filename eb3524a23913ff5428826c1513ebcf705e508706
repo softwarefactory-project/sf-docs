@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "acef1926_5259fbdc",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2020-02-05T14:01:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ec124e58_1b517dac",
+      "range": {
+        "startLine": 8,
+        "startChar": 3,
+        "endLine": 8,
+        "endChar": 24
+      },
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "58b4b6be_d9a0af9a",
         "filename": "docs/guides/third_party_ci.rst",
         "patchSetId": 3
@@ -60,6 +84,24 @@
     },
     {
       "key": {
+        "uuid": "d904cb62_d3e15d61",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2020-02-05T14:01:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e8cd060e_0ea6bded",
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6fc5dd07_5948fc18",
         "filename": "docs/guides/third_party_ci.rst",
         "patchSetId": 3
@@ -71,6 +113,30 @@
       "writtenOn": "2019-12-11T14:54:34Z",
       "side": 1,
       "message": "needs a CentOS instance to run on",
+      "range": {
+        "startLine": 54,
+        "startChar": 0,
+        "endLine": 54,
+        "endChar": 47
+      },
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2cda6202_4b0315fe",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2020-02-05T14:01:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6fc5dd07_5948fc18",
       "range": {
         "startLine": 54,
         "startChar": 0,
@@ -106,6 +172,30 @@
     },
     {
       "key": {
+        "uuid": "32ec44e0_fa3331a3",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2020-02-05T14:01:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3f4d8a68_16135a53",
+      "range": {
+        "startLine": 57,
+        "startChar": 71,
+        "endLine": 57,
+        "endChar": 79
+      },
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "464430fd_a50a5e2f",
         "filename": "docs/guides/third_party_ci.rst",
         "patchSetId": 3
@@ -129,6 +219,30 @@
     },
     {
       "key": {
+        "uuid": "257714f7_c48e08e3",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2020-02-05T14:01:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "464430fd_a50a5e2f",
+      "range": {
+        "startLine": 58,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 34
+      },
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "04bdf99d_3f4962e6",
         "filename": "docs/guides/third_party_ci.rst",
         "patchSetId": 3
@@ -140,6 +254,30 @@
       "writtenOn": "2019-12-11T14:54:34Z",
       "side": 1,
       "message": "/ internal gerrit, see below ?",
+      "range": {
+        "startLine": 63,
+        "startChar": 50,
+        "endLine": 63,
+        "endChar": 61
+      },
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "49e8e3ae_820c3c10",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2020-02-05T14:01:38Z",
+      "side": 1,
+      "message": "Third-party CI are likely not interested in Gerrit.",
+      "parentUuid": "04bdf99d_3f4962e6",
       "range": {
         "startLine": 63,
         "startChar": 50,
@@ -199,6 +337,30 @@
     },
     {
       "key": {
+        "uuid": "3242fd5d_d45152d6",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2020-02-05T14:01:38Z",
+      "side": 1,
+      "message": "This is part of the initial configuration, I think it\u0027s ok to let the operator either use the provide gerrit, or follow the external-config-repo guide at that point.",
+      "parentUuid": "0898f22d_b9bd11bf",
+      "range": {
+        "startLine": 72,
+        "startChar": 50,
+        "endLine": 72,
+        "endChar": 73
+      },
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b3806287_63f79847",
         "filename": "docs/guides/third_party_ci.rst",
         "patchSetId": 3
@@ -245,6 +407,30 @@
     },
     {
       "key": {
+        "uuid": "ab038e75_98411b9c",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2020-02-05T14:01:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "19d0caa7_ec4eed8b",
+      "range": {
+        "startLine": 106,
+        "startChar": 9,
+        "endLine": 106,
+        "endChar": 50
+      },
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4b746a0e_db47280a",
         "filename": "docs/guides/third_party_ci.rst",
         "patchSetId": 3
@@ -256,6 +442,30 @@
       "writtenOn": "2019-12-11T14:54:34Z",
       "side": 1,
       "message": "jobs",
+      "range": {
+        "startLine": 117,
+        "startChar": 40,
+        "endLine": 117,
+        "endChar": 43
+      },
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7387fa72_0e49dab6",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2020-02-05T14:01:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4b746a0e_db47280a",
       "range": {
         "startLine": 117,
         "startChar": 40,
@@ -285,6 +495,24 @@
     },
     {
       "key": {
+        "uuid": "e153b747_af423e3a",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2020-02-05T14:01:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4b724617_b07f1dce",
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "35d1fa99_3972eed1",
         "filename": "docs/guides/third_party_ci.rst",
         "patchSetId": 3
@@ -296,6 +524,30 @@
       "writtenOn": "2019-12-11T14:54:34Z",
       "side": 1,
       "message": "provided the `logserver`role is in the arch",
+      "range": {
+        "startLine": 151,
+        "startChar": 1,
+        "endLine": 151,
+        "endChar": 80
+      },
+      "revId": "eb3524a23913ff5428826c1513ebcf705e508706",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7cd6f6d8_ac22f047",
+        "filename": "docs/guides/third_party_ci.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2020-02-05T14:01:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "35d1fa99_3972eed1",
       "range": {
         "startLine": 151,
         "startChar": 1,
