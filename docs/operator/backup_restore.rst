@@ -36,9 +36,6 @@ Before running that command, on the install-server node:
  - Install the sf-release package (same version than your previous deployment)
  - Install the sf-config package
  - Copy the backup data into the */var/lib/software-factory/backup* directory
- - Verify that the arch in */etc/software-factory/arch.yml* is as expected for
-   your deployment. You can compare to the legacy arch.yml file from
-   */var/lib/software-factory/backup/install-server/etc/software-factory/arch.yaml*
 
 The recover will run:
 
