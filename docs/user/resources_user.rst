@@ -139,6 +139,15 @@ Below is a YAML file that can be used as a starting point:
 
    Users mentioned in a group must have been logged at least once on Software Factory.
 
+.. Note::
+
+   The acl "file" field can be extended to set the configuration of any Gerrit
+   plugin that can be done at the project level by editing its `project.config`
+   file. For example, the plugin "reviewers by blame" can be configured by adding
+   the `[plugin "reviewers-by-blame"]` section to the acl file, and setting it
+   according to the `instructions here <https://gerrit.googlesource.com/plugins/reviewers-by-blame/+/refs/heads/stable-2.14/src/main/resources/Documentation/config.md>`_.
+
+
 Refer to the `resources schema documentation </docs/managesf/resources.html>`_ for
 more information about resources definition.
 
