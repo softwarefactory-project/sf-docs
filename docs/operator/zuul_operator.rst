@@ -20,7 +20,7 @@ Jobs default nodeset
 --------------------
 
 The default configuration in */etc/software-factory/sfconfig.yaml* for zuul
-nodeset is to use the label *pod-centos*. This label is only available if you
+nodeset is to use the label *pod-centos-7*. This label is only available if you
 added the role *hypervisor-k1s* in */etc/software-factory/arch.yaml*. If you
 don't use this role, you should specify the nodeset to use for jobs. For
 example, if you have defined a cloud image in nodepool configuration, you should
