@@ -101,9 +101,10 @@ Optional services can be enabled:
 * cgit
 * hound
 
-Deprecated service that will be removed in the next release:
 
-* hypervisor-runc
+Check the :ref:`nodepool documentation<nodepool-operator-k1s>` to learn
+how to configure the hypervisor-k1s role to enable container providers in
+Nodepool.
 
 .. _architecture_extending:
 
