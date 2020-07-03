@@ -78,7 +78,7 @@ Optional services can be enabled:
 
 * zuul-merger
 * nodepool-builder
-* hypervisor-runc
+* hypervisor-k1s
 * hypervisor-openshift
 * rabbitmq
 * etherpad
@@ -106,8 +106,8 @@ Optional services can be enabled:
 
 .. note::
 
-   Check the :ref:`nodepool documentation<nodepool-operator-runc>` to learn
-   how to configure the hypervisor-runc role to enable container providers in
+   Check the :ref:`nodepool documentation<nodepool-operator-k1s>` to learn
+   how to configure the hypervisor-k1s role to enable container providers in
    Nodepool.
 
 .. _architecture_extending:

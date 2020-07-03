@@ -33,34 +33,27 @@ nodepool) using these commands:
    properly.
 
 
-.. _runc-quickstart:
+.. _k1s-quickstart:
 
-RunC provider quickstart
-------------------------
+k1s provider quickstart
+-----------------------
 
-The Nodepool service integrated in Software Factory comes with a runC provider
-driver to enable simple static node usage. The sfconfig configuration
-management comes with a **hypervisor-runc** role that you can use to quickly
-setup and configure a test environment.
+The sfconfig configuration management comes with a **hypervisor-k1s** role that
+you can use to quickly setup and configure a test environment based on podman.
 
 For this quickstart, we will use the main instance as the hypervisor:
 
 .. code-block:: bash
 
-  echo "      - hypervisor-runc" >> /etc/software-factory/arch.yaml
+  echo "      - hypervisor-k1s" >> /etc/software-factory/arch.yaml
   sfconfig --enable-insecure-slaves
 
 .. note::
 
   Because the container doesn't have network isolation, we have to use a sfconfig
   argument to enable the main host as a nodepool provider. Please check the
-  the :ref:`nodepool operator doc<nodepool-operator-runc>` to properly deploy
-  one or many dedicated instances to use as nodepool containers providers.
-
-Sfconfig will automatically update the config repository and create some ready
-to use slaves so that you can run zuul tests without an OpenStack account.
-Running "nodepool list" will show 2 *runc-centos* slaves.
-
+  the :ref:`nodepool operator doc<nodepool-operator-k1s>` to properly deploy
+  one or many dedicated k1s instances.
 
 .. _tpci-quickstart:
 
