@@ -190,7 +190,7 @@ Then you need to create a default base job:
         nodes:
           # Note: change the default nodeset
           - name: container
-            label: pod-centos
+            label: pod-centos-7
 
 Then you need to create a secret for the log server from the install-server
 (the zuul_logserver_rsa private key is kept in /var/lib/software-factory):
