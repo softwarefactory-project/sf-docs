@@ -29,21 +29,11 @@ Podman containers
 .................
 
 A new minimal kubernetes driver using podman container is available through the
-**hypervisor-k1s** component. However the zuul-jobs library needs some
-adjustment to work with the kubectl command because the Ansible synchronize module doesn't work:
-https://github.com/ansible/ansible/pull/62107
+**hypervisor-k1s** component.
 
-The base job provided by software factory is compatible with kubernetes, but
-using zuul-jobs requires this set of changes:
-https://review.opendev.org/#/q/topic:zuul-jobs-with-kubectl
-
-
-RunC containers (deprecated)
-............................
-
-To use the RunC container driver, add the **hypervisor-runc** component to the
-architecture file.
-
+To use the kubernetes container driver, add the **hypervisor-k1s** component to the
+architecture file or check the
+:ref:`k1s manual setup<nodepool-manual-operator-k1s>` below.
 
 .. _nodepool-operator-dib:
 
@@ -150,62 +140,19 @@ As an administrator, it can be really useful to check
 
 .. _nodepool-operator-k1s:
 
-Add a podman container provider
--------------------------------
+Setup a k1s provider using the hypervisor-k1s role
+..................................................
 
-After adding the **hypervisor-k1s** component, a new provider is defined in
-the *config/nodepool/_local_hypervisor_k1s.yaml* file.
-
-To add containers label:
-
-* Create a Dockerfile in *config/containers/<label-name>/Dockerfile*
-* Add labels in *config/nodepool/k1s-labels.yaml* :
-
-.. code-block:: yaml
-
-   labels:
-     - name: pod-<label-name>
-
-   extra-labels:
-     - provider: managed-k1s-provider-k1s01
-       pool: main
-       labels:
-         - name: pod-<label-name>
-           image: localhost/k1s/<label-name>
-           python-path: /bin/python2
-
-
-.. _nodepool-operator-runc:
-
-Add a runc container provider (deprecated)
-------------------------------------------
-
-Software Factory's Nodepool service comes with a RunC (OpenContainer) driver
-based on a simple runc implementation. It will be removed once kubernetes
-can be used in place. In the meantime, it can be used to enable a lightweight
-environment for Zuul jobs, instead of full-fledged OpenStack instances.
-
-The driver will start containerized *sshd* processes using a TCP port in a
-range from 22022 to 65535. Make sure the RunC provider host accepts incoming
-traffic on these ports from the zuul-executor.
-
-
-Setup a RunC provider using the hypervisor-runc role
-....................................................
-
-The role **hypervisor-runc** can be added to the architecture file. This role
+The role **hypervisor-k1s** can be added to the architecture file. This role
 will install the requirements and configure the node.
-This role must be installed on a Centos 7 instance. Containers *bind mount*
-the local host's filesystem, that means you don't have to configure an image,
-what is installed on the instance is available inside the containers.
-The role can be defined on multiple nodes in order to scale.
+This role must be installed on a Centos 7 instance.
 
 Please refer to :ref:`Extending the architecture<architecture_extending>` for
 adding a node to the architecture, then run sfconfig.
 
 .. warning::
 
-  The RunC provider doesn't enforce network isolation and slaves need to run on
+  The k1s provider doesn't enforce network isolation and test containers need to run on
   a dedicated instance/network. sfconfig will refuse to install this role on a
   server where Software Factory services are running. Nevertheless you can
   bypass this protection by using the sfconfig's
@@ -213,10 +160,71 @@ adding a node to the architecture, then run sfconfig.
 
 .. note::
 
-  Note that *config/nodepool/_local_hypervisor_runc.yaml* will by automatically
-  updated in the config repository, making RunC provider(s) available in
-  Nodepool.
+  Note that *config/nodepool/_local_hypervisor_k1s.yaml* and
+  *config/nodepool/_pods.yaml* will by automatically updated in the config repository,
+  making the k1s provider(s) and the default pod (test container) available in Nodepool.
 
+The zuul-executors hosts need to be allowed to connect to the k1s hosts
+via 9023/TCP.
+
+.. _nodepool-manual-operator-k1s:
+
+Define and use container images with the k1s provider
+.....................................................
+
+A new container image must be stored in the *config/containers/* directory.
+The filename must be *Dockerfile*.
+
+You need to ensure that the following lines are part of the new Dockerfile:
+
+  RUN mv /etc/sudoers /etc/sudoers.d/zuul && grep includedir \
+    /etc/sudoers.d/zuul > /etc/sudoers && sed -e 's/.*includedir.*//' -i \
+    /etc/sudoers.d/zuul && chmod 440 /etc/sudoers
+  RUN echo "zuul:x:0:0:root:/root:/bin/bash" >> /etc/passwd
+
+The *config-update* job builds the new container and publish the container
+image into the k1s hosts local registry.
+
+  [root@managesf.sftests.com config]# podman images | grep k1s
+  localhost/k1s/centos-7-alt   latest   b205360ccab6   2 hours ago    699 MB
+  localhost/k1s/centos-7       latest   c75f523a04de   2 hours ago    699 MB
+
+The name of the container image is the directory name of the container.
+
+To make the new container image available to Nodepool then a new label must be
+defined and linked to k1s providers.
+
+For a new container images called centos-7-alt, edit *config/nodepool/k1s-labels.yaml*:
+
+  labels:
+  - name: pod-centos-7-alt
+    min-ready: 1
+
+  extra-labels:
+    - provider: managed-k1s-provider-managesf
+      pool: main
+      labels:
+        - name: pod-centos-7-alt
+          image: localhost/k1s/centos-7-alt
+          python-path: /bin/python2
+
+The *config-update* job updates the nodepool configuration. Once the job is done, the
+new label should appear in Zuul and one container should be ready.
+
+Debug container creation failure
+................................
+
+If for some reason containers fail to start, here are some tips to investigate
+the errors:
+
+* Look for failure in Nodepool logs: /var/log/nodepool/launcher.log
+* Look for failure in k1s logs: journalctl -u k1s
+* Inspect podman manually on the k1s host server:
+
+.. code-block:: bash
+
+  podman images
+  podman ps -a
 
 .. _restart-nodepool-services:
 
