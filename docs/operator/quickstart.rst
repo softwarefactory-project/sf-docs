@@ -48,7 +48,6 @@ For this quickstart, we will use the main instance as the hypervisor:
 .. code-block:: bash
 
   echo "      - hypervisor-k1s" >> /etc/software-factory/arch.yaml
-  sed -e "s/default_pods: false/default_pods: true/" -i /etc/software-factory/sfconfig.yaml
   sfconfig --enable-insecure-slaves
 
 .. note::
@@ -56,12 +55,7 @@ For this quickstart, we will use the main instance as the hypervisor:
   Because the container doesn't have network isolation, we have to use a sfconfig
   argument to enable the main host as a nodepool provider. Please check the
   the :ref:`nodepool operator doc<nodepool-operator-k1s>` to properly deploy
-  one or many dedicated instances to use as nodepool containers providers.
-
-Sfconfig will automatically update the config repository and create some ready
-to use slaves so that you can run zuul tests without an OpenStack account.
-Running "nodepool list" will show 2 *pod-centos* slaves.
-
+  one or many dedicated k1s instances.
 
 .. _tpci-quickstart:
 
