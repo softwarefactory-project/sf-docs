@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "80eff266_b187f0e3",
+        "filename": "docs/contributor/how_to_setup_sf_sandbox.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-07-06T09:27:06Z",
+      "side": 1,
+      "message": "I don\u0027t see that option yet.",
+      "parentUuid": "0e5e2dda_e826cbb6",
+      "range": {
+        "startLine": 102,
+        "startChar": 29,
+        "endLine": 102,
+        "endChar": 35
+      },
+      "revId": "3b97762ad5bddf833cd03e2feb800e750f489d10",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6209ae65_c917b980",
         "filename": "docs/operator/nodepool_operator.rst",
         "patchSetId": 3
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "d26d5b60_6283ebff",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-07-06T09:27:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6209ae65_c917b980",
+      "range": {
+        "startLine": 32,
+        "startChar": 30,
+        "endLine": 38,
+        "endChar": 59
+      },
+      "revId": "3b97762ad5bddf833cd03e2feb800e750f489d10",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "716679bc_ef143c64",
         "filename": "docs/operator/nodepool_operator.rst",
         "patchSetId": 3
@@ -59,6 +107,30 @@
       "writtenOn": "2020-07-03T19:22:52Z",
       "side": 1,
       "message": "Kubernetes",
+      "range": {
+        "startLine": 41,
+        "startChar": 11,
+        "endLine": 41,
+        "endChar": 14
+      },
+      "revId": "3b97762ad5bddf833cd03e2feb800e750f489d10",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "228388ed_01a55f6a",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-07-06T09:27:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "716679bc_ef143c64",
       "range": {
         "startLine": 41,
         "startChar": 11,
