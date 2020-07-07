@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "20105e8e_58b8139d",
+        "filename": "docs/operator/nodepool_operator.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 215,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2020-07-07T14:38:59Z",
+      "side": 1,
+      "message": "we should really move to centos8 and python3 everywhere.",
+      "range": {
+        "startLine": 215,
+        "startChar": 10,
+        "endLine": 215,
+        "endChar": 35
+      },
+      "revId": "1f097f7778c03f4e337c1f72f8c89a5e71c9bfcd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
