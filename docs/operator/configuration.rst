@@ -120,32 +120,6 @@ When deployed using a self-signed certificate, you can authorize the local CA
 by adding: https://fqdn/localCA.pem to your browser's CA trust.
 
 
-Automatic TLS certificates with Let's Encrypt
-.............................................
-
-Software Factory comes with the `lecm <https://github.com/Spredzy/lecm>`_ utility
-to automatically manage TLS certificates. To enable HTTPS security with let's encrypt,
-you need to enable this option in sfconfig.yaml (and run sfconfig afterwards).
-
-.. code-block:: yaml
-
-  network:
-    use_letsencrypt: true
-
-
-A certificate will be automatically created and renewed, you can check the status using
-the *lecm* utility:
-
-.. code-block:: bash
-
-  $ lecm -l
-  +----------------------------------+---------------+------------------------------------------------------------------+-----------------------------------------------------------+------+
-  |               Item               |     Status    |                          subjectAltName                          |                          Location                         | Days |
-  +----------------------------------+---------------+------------------------------------------------------------------+-----------------------------------------------------------+------+
-  |   softwarefactory-project.io     |   Generated   |                 DNS:softwarefactory-project.io                   |    /etc/letsencrypt/pem/softwarefactory-project.io.pem    |  89  |
-  +----------------------------------+---------------+------------------------------------------------------------------+-----------------------------------------------------------+------+
-
-
 Services configuration
 ----------------------
 
