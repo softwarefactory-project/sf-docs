@@ -55,7 +55,7 @@ After having deployed Software Factory, run:
 
 .. code-block:: bash
 
- sfconfig --skip-install --skip-setup --enable-insecure-slaves
+ sfconfig --skip-install --skip-setup --enable-insecure-workers
 
 The testinfra checks are simple smoke tests validating Software Factory's
 services are up and running.

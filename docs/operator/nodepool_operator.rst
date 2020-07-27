@@ -105,7 +105,7 @@ To add a cloud provider, an OpenStack cloud account is required.
 It is highly recommended to use a project dedicated to
 Nodepool.
 
-The slave instances inherit the project's "default" security group for access
+The worker instances inherit the project's "default" security group for access
 rules. Therefore the project's "default" security group must allow incoming SSH
 traffic (TCP/22) and incoming log stream port (TCP/19885) from the zuul-executor
 node. Please refer to `OpenStack's documentation
@@ -156,7 +156,7 @@ adding a node to the architecture, then run sfconfig.
   a dedicated instance/network. sfconfig will refuse to install this role on a
   server where Software Factory services are running. Nevertheless you can
   bypass this protection by using the sfconfig's
-  option *--enable-insecure-slaves*.
+  option *--enable-insecure-workers*.
 
 .. note::
 
@@ -303,7 +303,7 @@ You can edit/debug your element and run the build again
 Useful commands
 ---------------
 
-List slave instances and their status (used, building ...). Use the *--detail**
+List worker instances and their status (used, building ...). Use the *--detail**
 option to get the public IP of the instances:
 
 .. code-block:: bash

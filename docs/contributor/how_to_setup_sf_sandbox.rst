@@ -99,7 +99,7 @@ download, install and configure services:
   yum install -y https://softwarefactory-project.io/repos/sf-release-3.4.rpm
   yum install -y sf-config
   echo '      - hypervisor-k1s' >> /etc/software-factory/arch.yaml
-  sfconfig --enable-insecure-slaves
+  sfconfig --enable-insecure-workers
 
 Validate https access
 .....................

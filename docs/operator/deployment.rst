@@ -111,7 +111,7 @@ Gearman/Zookeeper       Zuul/Nodepool
 Gearman/Elasticsearch   Log-gearman for logstash
 ====================== =========================
 
-Test instances (slaves) need to be isolated from the service network; however
+Test instances (workers) need to be isolated from the service network; however
 the following ports must be open:
 
 ====================== =========================

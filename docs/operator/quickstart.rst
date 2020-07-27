@@ -48,7 +48,7 @@ For this quickstart, we will use the main instance as the hypervisor:
 .. code-block:: bash
 
   echo "      - hypervisor-k1s" >> /etc/software-factory/arch.yaml
-  sfconfig --enable-insecure-slaves
+  sfconfig --enable-insecure-workers
 
 .. note::
 
