@@ -1,8 +1,8 @@
 %global         sum The Software Factory project documentation
 
 Name:           sf-docs
-Version:        3.4.0
-Release:        3%{?dist}
+Version:        3.5.0
+Release:        1%{?dist}
 Summary:        %{sum}
 
 License:        ASL 2.0
@@ -32,6 +32,9 @@ mv build/html/* %{buildroot}%{_docdir}/software-factory
 %{_docdir}/software-factory
 
 %changelog
+* Wed Aug  5 2020 Tristan Cacqueray <tdecacqu@redhat.com> - 3.5.0-1
+- Update version to 3.5
+
 * Tue Sep 24 2019 Tristan Cacqueray <tdecacqu@redhat.com> - 3.3.0-3
 - Remove managesf requirement
 
