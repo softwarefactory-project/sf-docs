@@ -16,6 +16,24 @@
       "revId": "0c166472c162dc0194f776a6fd56c7ce75e22ebe",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ef46c6aa_d476b4cb",
+        "filename": "docs/contributor/run_tests.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2020-09-14T15:08:18Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "cc3ff82b_d47f1488",
+      "revId": "0c166472c162dc0194f776a6fd56c7ce75e22ebe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
