@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1a11fe0c_eb724d98",
+        "filename": "docs/contributor/run_tests.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2020-09-14T17:24:03Z",
+      "side": 1,
+      "message": "I think this needs an empty line before the `.. code-block` directive, see: https://softwarefactory-project.io/logs/93/19493/4/check/sf-docs-build/a1607ea/docs-html/contributor/run_tests.html#functional-tests",
+      "revId": "e2109543df111ad04da2debcf9461e07484bbacf",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
