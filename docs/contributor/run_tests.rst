@@ -20,12 +20,20 @@ To deploy a software factory to hack and run tests just follow the
 Functional tests
 ................
 
-After having deployed Software Factory, run:
+After having deployed Software Factory, run functional tests:
 
+1. Clone sf-ci repository, if it is not available on host:
 .. code-block:: bash
 
- yum install -y python-nose
- sudo ./scripts/create_ns.sh nosetests -sv tests/functional/
+  git clone https://softwarefactory-project.io/r/software-factory/sf-ci
+
+2. Run tests:
+.. code-block:: bash
+
+ yum install -y python3-nose
+ export PYTHONPATH=sf-ci/tests/functional/
+ sudo ./sf-ci/scripts/create_ns.sh
+ nosetests-3 -sv tests/functional/
 
 Most tests can be executed without the *create_ns.sh* script but some
 of them require to be wrapped inside a network namespace to simulate
@@ -39,14 +47,20 @@ After having deployed Software Factory using sf-ci, run:
 
 .. code-block:: bash
 
- pushd tests/functional/provisioner/ && python provisioner.py && popd
- ansible-playbook -e @health-check/group_vars/all.yaml health-check/sf-health-check.yaml
-
+ export PYTHONPATH=sf-ci/tests/functional/
+ pushd sf-ci/tests/functional/provisioner/ && python3 provisioner.py && popd
+ ANSIBLE_ROLES_PATH=sf-ci/roles \
+   ansible-playbook -i /var/lib/software-factory/ansible/hosts \
+   -e @sf-ci/playbooks/health-check/group_vars/all.yaml \
+   sf-ci/playbooks/health-check/sf-health-check.yaml
 
 The health-check playbooks complete the functional tests coverage by testing:
 
 * Zuul
 * Gerritbot
+* Curator
+* k1s
+* Kibana backup and restore process
 
 Testinfra validation
 ....................
