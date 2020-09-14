@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cc3ff82b_d47f1488",
+        "filename": "docs/contributor/run_tests.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-09-14T13:42:03Z",
+      "side": 1,
+      "message": "I though this should be one line;\nsudo ./scripts/create_ns.sh nosetests -sv tests/functional/",
+      "revId": "0c166472c162dc0194f776a6fd56c7ce75e22ebe",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
