@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aba6b4ca_638f288f",
+        "filename": "docs/contributor/run_tests.rst",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 385
+      },
+      "writtenOn": "2020-09-15T08:11:38Z",
+      "side": 1,
+      "message": "in that case, sudo will not have PYTHONPATH.\nIt needs to be changed.",
+      "range": {
+        "startLine": 37,
+        "startChar": 1,
+        "endLine": 37,
+        "endChar": 74
+      },
+      "revId": "0d6b3cea91b64efe9a4c08a6158f91558060943f",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
