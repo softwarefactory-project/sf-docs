@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "044896c1_6c31464b",
+        "filename": "docs/user/opendistro.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 385
+      },
+      "writtenOn": "2020-11-06T12:55:32Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "eda2626e_9ce7e657",
+      "revId": "3bdadf91b313dfe75686a5873d79f1f50796ca53",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "db1be18b_120c0e73",
         "filename": "docs/user/opendistro.rst",
         "patchSetId": 4
@@ -138,6 +156,30 @@
       "writtenOn": "2020-11-06T10:18:32Z",
       "side": 1,
       "message": "I thought we decided that the admin user needs to connect to create the indexes.",
+      "range": {
+        "startLine": 188,
+        "startChar": 0,
+        "endLine": 190,
+        "endChar": 59
+      },
+      "revId": "3bdadf91b313dfe75686a5873d79f1f50796ca53",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c5c3f0bc_f70e0b33",
+        "filename": "docs/user/opendistro.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 385
+      },
+      "writtenOn": "2020-11-06T12:55:32Z",
+      "side": 1,
+      "message": "It will be changed when the opendistro change will be done",
+      "parentUuid": "226953a0_be9382fe",
       "range": {
         "startLine": 188,
         "startChar": 0,
