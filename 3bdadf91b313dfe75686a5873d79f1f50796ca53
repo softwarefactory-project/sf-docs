@@ -124,6 +124,29 @@
       "revId": "3bdadf91b313dfe75686a5873d79f1f50796ca53",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "226953a0_be9382fe",
+        "filename": "docs/user/opendistro.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-06T10:18:32Z",
+      "side": 1,
+      "message": "I thought we decided that the admin user needs to connect to create the indexes.",
+      "range": {
+        "startLine": 188,
+        "startChar": 0,
+        "endLine": 190,
+        "endChar": 59
+      },
+      "revId": "3bdadf91b313dfe75686a5873d79f1f50796ca53",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
