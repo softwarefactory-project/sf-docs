@@ -2,6 +2,98 @@
   "comments": [
     {
       "key": {
+        "uuid": "3afb53ba_895779c1",
+        "filename": "docs/operator/elk_operator.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2020-11-06T13:56:40Z",
+      "side": 1,
+      "message": "based",
+      "range": {
+        "startLine": 6,
+        "startChar": 38,
+        "endLine": 6,
+        "endChar": 42
+      },
+      "revId": "3bdadf91b313dfe75686a5873d79f1f50796ca53",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c83d925c_e4e5560b",
+        "filename": "docs/operator/elk_operator.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2020-11-06T13:56:40Z",
+      "side": 1,
+      "message": "jobs\u0027",
+      "range": {
+        "startLine": 7,
+        "startChar": 23,
+        "endLine": 7,
+        "endChar": 28
+      },
+      "revId": "3bdadf91b313dfe75686a5873d79f1f50796ca53",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c2e3228e_75aef38e",
+        "filename": "docs/operator/elk_operator.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2020-11-06T13:56:40Z",
+      "side": 1,
+      "message": "the",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 5
+      },
+      "revId": "3bdadf91b313dfe75686a5873d79f1f50796ca53",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce0256b4_c6968e06",
+        "filename": "docs/operator/elk_operator.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 68
+      },
+      "writtenOn": "2020-11-06T13:56:40Z",
+      "side": 1,
+      "message": "is",
+      "range": {
+        "startLine": 8,
+        "startChar": 29,
+        "endLine": 8,
+        "endChar": 33
+      },
+      "revId": "3bdadf91b313dfe75686a5873d79f1f50796ca53",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eda2626e_9ce7e657",
         "filename": "docs/user/opendistro.rst",
         "patchSetId": 4
