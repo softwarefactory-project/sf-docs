@@ -1,0 +1,129 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eda2626e_9ce7e657",
+        "filename": "docs/user/opendistro.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-06T10:01:14Z",
+      "side": 1,
+      "message": "The audience of this doc seems to be an operator. Could you put it in docs/operator/ instead ?",
+      "revId": "3bdadf91b313dfe75686a5873d79f1f50796ca53",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "db1be18b_120c0e73",
+        "filename": "docs/user/opendistro.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-06T10:01:14Z",
+      "side": 1,
+      "message": "decided",
+      "revId": "3bdadf91b313dfe75686a5873d79f1f50796ca53",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "daea60b2_7517f8e0",
+        "filename": "docs/user/opendistro.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-06T10:01:14Z",
+      "side": 1,
+      "message": "I would expect clear actions here.\n\nexample:\n\n1. After the deployment of the ELK services, an operator must  connect as admin into Kibana to force Kibana to create its indexes in Elascticsearch. W/o that action no jobs logs will be browsable through Kibana.\n2. ...",
+      "revId": "3bdadf91b313dfe75686a5873d79f1f50796ca53",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4caa047f_5c953759",
+        "filename": "docs/user/opendistro.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-06T10:01:14Z",
+      "side": 1,
+      "message": "sfconfig",
+      "revId": "3bdadf91b313dfe75686a5873d79f1f50796ca53",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cb800433_deae7d95",
+        "filename": "docs/user/opendistro.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-06T10:01:14Z",
+      "side": 1,
+      "message": "control",
+      "revId": "3bdadf91b313dfe75686a5873d79f1f50796ca53",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f6653fa4_0f145dfc",
+        "filename": "docs/user/opendistro.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-06T10:01:14Z",
+      "side": 1,
+      "message": "Better to remove this sentence IMO and keep only current facts.",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 59
+      },
+      "revId": "3bdadf91b313dfe75686a5873d79f1f50796ca53",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "932fb1a5_99ff6330",
+        "filename": "docs/user/opendistro.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-06T10:01:14Z",
+      "side": 1,
+      "message": "Not sure we should encourage operator to change this because changes will be overwritten by sfconfig. ANd will not integrate well with the rest of SF component.",
+      "revId": "3bdadf91b313dfe75686a5873d79f1f50796ca53",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
