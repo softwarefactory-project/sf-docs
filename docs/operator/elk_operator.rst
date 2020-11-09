@@ -3,10 +3,10 @@
 ELK service
 ===========
 
-Software Factory bundles an ELK stack to ease search through
-job's logs artifacts. Once activated, job's console of every
-build are exported through logstash and then available to
-the search via Kibana.
+Software Factory bundles an ELK stack based on :ref:`Opendistro for Elasticsearch <opendistro>`
+to ease searching through the logs artifacts of jobs. Once activated,
+the console log of every build is exported through logstash and
+then searchable via Kibana.
 
 A Software Factory user might want to export more artifacts
 than the job's console. Indeed a job may generate additional
