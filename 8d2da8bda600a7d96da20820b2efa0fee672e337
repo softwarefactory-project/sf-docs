@@ -1,0 +1,95 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fb4067db_83f19cca",
+        "filename": "docs/operator/elk_operator.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-09T11:10:25Z",
+      "side": 1,
+      "message": "Why you don\u0027t add the opendistro content into that page ? I don\u0027t see the point to have a separate page.",
+      "revId": "8d2da8bda600a7d96da20820b2efa0fee672e337",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b3a39562_5f72f1c0",
+        "filename": "docs/operator/opendistro.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-09T11:10:25Z",
+      "side": 1,
+      "message": "Could you have a look to my comment on patchset 4 ?",
+      "revId": "8d2da8bda600a7d96da20820b2efa0fee672e337",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2f11d3a4_3d73dd55",
+        "filename": "docs/operator/opendistro.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-09T11:10:25Z",
+      "side": 1,
+      "message": "Ditto",
+      "revId": "8d2da8bda600a7d96da20820b2efa0fee672e337",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "213760a2_9bdfbebb",
+        "filename": "docs/user/create_elasticsearch_user.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-09T11:10:25Z",
+      "side": 1,
+      "message": "Do we really want to push operator to add new users and changes roles ? If done by an operator, is this going to be overwritten by a sfconfig run ?",
+      "range": {
+        "startLine": 63,
+        "startChar": 0,
+        "endLine": 91,
+        "endChar": 19
+      },
+      "revId": "8d2da8bda600a7d96da20820b2efa0fee672e337",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d5c9e4c0_846c2c77",
+        "filename": "docs/user/index.rst",
+        "patchSetId": 7
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-09T11:10:25Z",
+      "side": 1,
+      "message": "User creation is a operator stuff not user stuff.",
+      "revId": "8d2da8bda600a7d96da20820b2efa0fee672e337",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
