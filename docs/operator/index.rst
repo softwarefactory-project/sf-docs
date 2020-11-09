@@ -15,3 +15,4 @@ This chapter documents how to deploy and manage a Software Factory instance.
    configuration
    management
    deepdive
+   opendistro

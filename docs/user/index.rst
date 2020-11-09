@@ -16,5 +16,6 @@ This chapter documents how to use Software Factory.
    short_gerrit
    log_classify
    config_repo
+   elasticsearch_users
 
 * `sfmanager </docs/sfmanager/>`_ is a command line client can be used to interact with the managesf API.
