@@ -1,0 +1,107 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d6240c34_422d75ff",
+        "filename": "docs/operator/elk_operator.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-10T16:15:26Z",
+      "side": 1,
+      "message": "Could you move the opendistro.rst content into that file ?",
+      "revId": "410be12e621a21937d67e854b25a726d6ad313c3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "487c550c_42666539",
+        "filename": "docs/operator/opendistro.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-10T16:15:26Z",
+      "side": 1,
+      "message": "Could you clarify this ? As an operator It is not clear what I should ?",
+      "range": {
+        "startLine": 11,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 59
+      },
+      "revId": "410be12e621a21937d67e854b25a726d6ad313c3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f62372a4_cc40b217",
+        "filename": "docs/operator/opendistro.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-10T16:15:26Z",
+      "side": 1,
+      "message": "Please move the available users data here.",
+      "revId": "410be12e621a21937d67e854b25a726d6ad313c3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "11eb3864_ded7eb00",
+        "filename": "docs/operator/opendistro.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-10T16:15:26Z",
+      "side": 1,
+      "message": "?",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 63
+      },
+      "revId": "410be12e621a21937d67e854b25a726d6ad313c3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "31000d9b_687d05f8",
+        "filename": "docs/user/elasticsearch_users.rst",
+        "patchSetId": 10
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-10T16:15:26Z",
+      "side": 1,
+      "message": "As a SF user (not operator) I\u0027m not interested in that information.",
+      "range": {
+        "startLine": 10,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 56
+      },
+      "revId": "410be12e621a21937d67e854b25a726d6ad313c3",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
