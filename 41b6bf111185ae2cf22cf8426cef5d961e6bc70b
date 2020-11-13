@@ -1,0 +1,193 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e8c8593_8a10b2e9",
+        "filename": "docs/operator/elk_operator.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-13T09:29:01Z",
+      "side": 1,
+      "message": "I\u0027d like to see a section, how to restart ELK services and where to access the logs of services.",
+      "revId": "41b6bf111185ae2cf22cf8426cef5d961e6bc70b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b7680a08_acfea237",
+        "filename": "docs/operator/elk_operator.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-13T09:29:01Z",
+      "side": 1,
+      "message": "For this section why not just this ?:\n\nAfter the installation of Software Factory, or the activation of ELK, you must connect to Kibana as the `admin` user and go to the section \"Discover\" in Kibana menu to ensure that Kibana has created the index pattern. This is a per-requisite before a regular Kibana user (which has read-only access) can search through the jobs logs.\n \nThe password for `admin` is set as a `elasticsearch_password` entry in `secrets.yaml file`.\n\nYou can also use below command:\n\n.. code-block:: bash\n\n   awk \u0027/elasticsearch_password/ {print $2}\u0027 /var/lib/software-factory/bootstrap-data/secrets.yaml\n\n.. note::\n\n   After the first CI job execution, The job console logs are sent to ElasticSearch through Logstash. Then Kibana will be able to create the index pattern when connected as `admin`.",
+      "revId": "41b6bf111185ae2cf22cf8426cef5d961e6bc70b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f247ae34_b73d8294",
+        "filename": "docs/operator/elk_operator.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-13T09:29:01Z",
+      "side": 1,
+      "message": "This could be remove imo.",
+      "range": {
+        "startLine": 53,
+        "startChar": 0,
+        "endLine": 58,
+        "endChar": 71
+      },
+      "revId": "41b6bf111185ae2cf22cf8426cef5d961e6bc70b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ea96c0f4_a61c05c6",
+        "filename": "docs/operator/elk_operator.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-13T09:29:01Z",
+      "side": 1,
+      "message": "We should do the change in the role to not let the Kibana user create that index pattern. You should align in that patch the doc to what we want for the next release 3.6.",
+      "range": {
+        "startLine": 66,
+        "startChar": 0,
+        "endLine": 67,
+        "endChar": 62
+      },
+      "revId": "41b6bf111185ae2cf22cf8426cef5d961e6bc70b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b1222aa9_ac94a1da",
+        "filename": "docs/operator/elk_operator.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-13T09:29:01Z",
+      "side": 1,
+      "message": "Please remove the version.",
+      "range": {
+        "startLine": 99,
+        "startChar": 49,
+        "endLine": 99,
+        "endChar": 52
+      },
+      "revId": "41b6bf111185ae2cf22cf8426cef5d961e6bc70b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "d48e4837_23e8e064",
+        "filename": "docs/operator/elk_operator.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-13T09:29:01Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 146,
+        "startChar": 24,
+        "endLine": 146,
+        "endChar": 27
+      },
+      "revId": "41b6bf111185ae2cf22cf8426cef5d961e6bc70b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "e483eca6_74eace9a",
+        "filename": "docs/operator/elk_operator.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-13T09:29:01Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 164,
+        "startChar": 16,
+        "endLine": 164,
+        "endChar": 21
+      },
+      "revId": "41b6bf111185ae2cf22cf8426cef5d961e6bc70b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "da603fb5_a1dc32c9",
+        "filename": "docs/operator/elk_operator.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-13T09:29:01Z",
+      "side": 1,
+      "message": "I don\u0027t get it. As an operator should I do something ?",
+      "range": {
+        "startLine": 168,
+        "startChar": 0,
+        "endLine": 176,
+        "endChar": 45
+      },
+      "revId": "41b6bf111185ae2cf22cf8426cef5d961e6bc70b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ac080745_05127803",
+        "filename": "docs/operator/elk_operator.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-13T09:29:01Z",
+      "side": 1,
+      "message": "Is this needed ?",
+      "revId": "41b6bf111185ae2cf22cf8426cef5d961e6bc70b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
