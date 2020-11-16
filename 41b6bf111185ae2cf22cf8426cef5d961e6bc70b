@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "bd70a9dc_ef7df58c",
+        "filename": "docs/operator/elk_operator.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 385
+      },
+      "writtenOn": "2020-11-16T13:42:12Z",
+      "side": 1,
+      "message": "Do we really need to have such information? There is no different service name or \"workflow\" how to maintain EL comparing to elasticsearch.\nThis information was not added earlier, so maybe it was not so important to include in the document?",
+      "parentUuid": "6e8c8593_8a10b2e9",
+      "revId": "41b6bf111185ae2cf22cf8426cef5d961e6bc70b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b7680a08_acfea237",
         "filename": "docs/operator/elk_operator.rst",
         "patchSetId": 11
@@ -30,6 +48,24 @@
       "writtenOn": "2020-11-13T09:29:01Z",
       "side": 1,
       "message": "For this section why not just this ?:\n\nAfter the installation of Software Factory, or the activation of ELK, you must connect to Kibana as the `admin` user and go to the section \"Discover\" in Kibana menu to ensure that Kibana has created the index pattern. This is a per-requisite before a regular Kibana user (which has read-only access) can search through the jobs logs.\n \nThe password for `admin` is set as a `elasticsearch_password` entry in `secrets.yaml file`.\n\nYou can also use below command:\n\n.. code-block:: bash\n\n   awk \u0027/elasticsearch_password/ {print $2}\u0027 /var/lib/software-factory/bootstrap-data/secrets.yaml\n\n.. note::\n\n   After the first CI job execution, The job console logs are sent to ElasticSearch through Logstash. Then Kibana will be able to create the index pattern when connected as `admin`.",
+      "revId": "41b6bf111185ae2cf22cf8426cef5d961e6bc70b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8c0e3927_e4c62a6a",
+        "filename": "docs/operator/elk_operator.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 385
+      },
+      "writtenOn": "2020-11-16T13:42:12Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "b7680a08_acfea237",
       "revId": "41b6bf111185ae2cf22cf8426cef5d961e6bc70b",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
