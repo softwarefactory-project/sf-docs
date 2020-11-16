@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "9502ec71_68bab09f",
+        "filename": "docs/operator/elk_operator.rst",
+        "patchSetId": 11
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2020-11-16T13:51:59Z",
+      "side": 1,
+      "message": "I think that is useful info for an ops. Zuul ops page in SF provides such info. But I won\u0027t block on that.",
+      "parentUuid": "bd70a9dc_ef7df58c",
+      "revId": "41b6bf111185ae2cf22cf8426cef5d961e6bc70b",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b7680a08_acfea237",
         "filename": "docs/operator/elk_operator.rst",
         "patchSetId": 11
