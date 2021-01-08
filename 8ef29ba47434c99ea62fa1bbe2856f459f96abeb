@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "221b6fd8_8b023df8",
+        "filename": "docs/operator/elk_operator.rst",
+        "patchSetId": 13
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 7
+      },
+      "writtenOn": "2021-01-08T18:21:25Z",
+      "side": 1,
+      "message": "those seems to cause a warning. Perhaps use simple `` escape?",
+      "range": {
+        "startLine": 77,
+        "startChar": 0,
+        "endLine": 79,
+        "endChar": 71
+      },
+      "revId": "8ef29ba47434c99ea62fa1bbe2856f459f96abeb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
