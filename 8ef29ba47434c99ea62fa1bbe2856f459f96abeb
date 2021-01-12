@@ -22,6 +22,30 @@
       "revId": "8ef29ba47434c99ea62fa1bbe2856f459f96abeb",
       "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0a3a882a_2ba65f59",
+        "filename": "docs/operator/elk_operator.rst",
+        "patchSetId": 13
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 385
+      },
+      "writtenOn": "2021-01-12T07:27:01Z",
+      "side": 1,
+      "message": "better if its highlighted + new line like it is in other code blocks.\nNone should be ok",
+      "parentUuid": "221b6fd8_8b023df8",
+      "range": {
+        "startLine": 77,
+        "startChar": 0,
+        "endLine": 79,
+        "endChar": 71
+      },
+      "revId": "8ef29ba47434c99ea62fa1bbe2856f459f96abeb",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
     }
   ]
 }
