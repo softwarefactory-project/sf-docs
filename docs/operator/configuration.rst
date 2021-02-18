@@ -100,9 +100,11 @@ To update the fqdn, you have to change the fqdn in
 SSL Certificates
 ----------------
 
-By default, *sfconfig* creates a self-signed certificate. To use another certificate,
-you need to copy the required files to the install-server, e.g. in /etc/software-factory/,
-and set those options in sfconfig.yaml:
+By default, *sfconfig* creates a self-signed certificate. To use another
+certificate, you need to copy the required files to the install-server, e.g. in
+/etc/software-factory/, and set those options in sfconfig.yaml.
+tls_challenge_alias_path is used to renew public crt (You have to create this
+directory).
 
 .. code-block:: yaml
 
@@ -110,6 +112,7 @@ and set those options in sfconfig.yaml:
       tls_cert_file: /etc/software-factory/my-tls.crt
       tls_chain_file: /etc/software-factory/my-tls.chain
       tls_key_file: /etc/software-factory/my-tls.key
+      tls_challenge_alias_path: "/.well-known/acme-challenge /var/www/challenges/$my_domain"
 
 Then deploy the new certificates by running sfconfig.
 
