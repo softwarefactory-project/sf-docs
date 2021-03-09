@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c8ce9cfc_1b5fdf43",
+        "filename": "docs/operator/configuration.rst",
+        "patchSetId": 3
+      },
+      "lineNbr": 115,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2021-03-09T13:52:20Z",
+      "side": 1,
+      "message": "it should be: tls_challenge_alias_path: \"/var/www/challenges/$my_domain\" ?",
+      "range": {
+        "startLine": 115,
+        "startChar": 46,
+        "endLine": 115,
+        "endChar": 47
+      },
+      "revId": "b665f92e74c6544725da10df193bc83758f754fd",
+      "serverId": "6c1dc8ef-8b94-40e4-bd83-c2359d45ecc0",
+      "unresolved": false
+    }
+  ]
+}
