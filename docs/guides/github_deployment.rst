@@ -12,7 +12,7 @@ On a CentOS-7 system, deploy the minimal architecture:
 
 .. code-block:: bash
 
-  yum install -y https://softwarefactory-project.io/repos/sf-release-3.5.rpm
+  yum install -y https://softwarefactory-project.io/repos/sf-release-3.6.rpm
   yum install -y sf-config
   cp /usr/share/sf-config/refarch/zuul-minimal.yaml /etc/software-factory/arch.yaml
   sfconfig
