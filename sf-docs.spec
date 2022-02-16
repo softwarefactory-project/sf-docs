@@ -1,7 +1,7 @@
 %global         sum The Software Factory project documentation
 
 Name:           sf-docs
-Version:        3.6.0
+Version:        3.7.0
 Release:        1%{?dist}
 Summary:        %{sum}
 
@@ -32,6 +32,9 @@ mv build/html/* %{buildroot}%{_docdir}/software-factory
 %{_docdir}/software-factory
 
 %changelog
+* Tue Feb 21 2022 Francisco Seruca Salgado <fserucas@redhat.com> - 3.7.0-1
+- Update version to 3.7
+
 * Tue Mar 30 2021 Tristan Cacqueray <tdecacqu@redhat.com> - 3.6.0-1
 - Update version to 3.6
 

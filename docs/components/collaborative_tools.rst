@@ -13,7 +13,7 @@ within a team:
 .. image:: imgs/etherpad.jpg
    :scale: 50 %
 
-* `Lodgeit <http://www.pocoo.org/projects/lodgeit/>`_ is a pastebin-like tool
+* `Lodgeit <https://opendev.org/opendev/lodgeit>`_ is a pastebin-like tool
   that helps sharing code snippets, error stack traces, anything text-based that
   does not need edition.
 
@@ -23,3 +23,7 @@ within a team:
 * `Mumble <https://wiki.mumble.info/wiki/Main_Page>`_ is a lightweight VoIP and
   chat software. Software Factory provides the server out of the box, users have
   to install the mumble client for their respective OSes.
+
+.. figure:: imgs/mumble.png
+
+   Image taken from `Mumble repository <https://github.com/mumble-voip/mumble>`_

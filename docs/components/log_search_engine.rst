@@ -15,7 +15,7 @@ deployed:
    :scale: 50 %
 
 As operator, you can understand how the logging system is implemented on
-Software Factory and how to to activate it by following the :ref:`operator
+Software Factory and how to to activate it by following :ref:`elk's operator
 documentation <elk-operator>`.
 
 ..

@@ -117,7 +117,7 @@ Using extra elements
 --------------------
 
 All `diskimage-builder elements <https://docs.openstack.org/developer/diskimage-builder/elements.html>`_
-as well as `sf-elements <https://softwarefactory-project.io/r/gitweb?p=software-factory/sf-elements.git;a=tree;f=elements>`_
+as well as `sf-elements <https://softwarefactory-project.io/cgit/software-factory/sf-elements/tree/elements>`_
 are available to define a nodepool image. For example you can:
 
 * Replace *centos7* by *fedora*, *debian* or *gentoo* to change the base OS
@@ -143,7 +143,7 @@ python 3.4 to a CentOS-based system, you need to create this element:
 Then you can add the 'python34-epel' element to an existing image.
 
 Read more about diskimage builder elements `here <https://docs.openstack.org/developer/diskimage-builder/developer/developing_elements.html>`_.
-Or look at examples from `sf-elements <https://softwarefactory-project.io/r/gitweb?p=software-factory/sf-elements.git;a=tree;f=elements>`_.
+Or look at examples from `sf-elements <https://softwarefactory-project.io/cgit/software-factory/sf-elements/tree/elements>`_.
 
 .. _nodepool-user-rhel:
 

@@ -114,7 +114,7 @@ jobs library. A list of the jobs in this library can be found here_.
 .. _here: https://zuul-ci.org/docs/zuul-jobs/jobs.html
 
 A full list of all the jobs that have been built at least once on Software Factory
-can be accessed at https://<fqdn>/zuul/local/jobs.html.
+can be accessed at `https://<fqdn>/zuul/local/jobs`.
 
 Defining a custom job within a project
 --------------------------------------
@@ -184,7 +184,7 @@ Further documentation can be found online:
 
 .. _modules: http://docs.ansible.com/ansible/latest/modules_by_category.html
 
-.. _`Predefined variables available in jobs`: https://zuul-ci.org/docs/zuul/user/jobs.html#variables
+.. _`Predefined variables available in jobs`: https://zuul-ci.org/docs/zuul/5.0.0/job-content.html#variables
 
 
 .. _zuul-artifacts-export:
@@ -279,23 +279,25 @@ secret data. To fetch a project's public key:
 
   curl -O https://<fqdn>/zuul/api/tenant/<tenant>/key/<project>.pub
 
-The *tools/encrypt_secret.py* tool, from the Zuul repository,
+The *zuul-client* tool, from the Zuul repository ( more information can be found  at `zuul-client documentation <https://zuul-ci.org/docs/zuul-client/>`_ ),
 can be used to create the YAML tree to be pushed in the project *.zuul.d/* directory.
 
 .. code-block:: bash
-
-  ./encrypt_secret.py --tenant <tenant> --infile secret.data --outfile secret.yaml https://<fqdn>/zuul/ <project>
+  
+  zuul-client -v --insecure --zuul-url https://<fqdn>/zuul/ encrypt --infile secret.data --outfile secret.yaml --project <project> --tenant <tenant>
 
 Then *<name>* and *<fieldname>* fields that are placeholders must be replaced in the
 generated *secret.yaml* file.
 
 The script will return an output similar to this one::
 
+  ...
   writing RSA key
-  Public key length: 4096 bits (512 bytes)
-  Max plaintext length per chunk: 470 bytes
-  Input plaintext length: 4 bytes
-  Number of chunks: 1
+  INFO:zuul-client:Public key length: 4096 bits (512 bytes)
+  INFO:zuul-client:Max plaintext length per chunk: 470 bytes
+  INFO:zuul-client:Input plaintext length: 31 bytes
+  INFO:zuul-client:Number of chunks: 1
+  ...
 
 And create a *secret.yaml* file with a content similar to this one::
 
@@ -319,7 +321,7 @@ You can now edit the YAML structure in the secrets.yaml file and adjust the `<na
 A secret used in a job must be defined in the same project than the job is defined.
 The user should read carefully the section_ about secrets.
 
-.. _section: https://zuul-ci.org/docs/zuul/user/config.html#secret
+.. _section: https://zuul-ci.org/docs/zuul/5.0.0/config/secret.html
 
 
 Web Interface
@@ -330,7 +332,7 @@ Zuul comes with the following web interface:
 Status
 ......
 
-Zuul's status can be reached at https://<fqdn>/zuul/t/local/status.html
+Zuul's status can be reached at `https://<fqdn>/zuul/t/local/status`
 
 This page shows the current buildsets in Zuul's pipelines. Filtering options are
 available.
@@ -341,7 +343,7 @@ open a stream of its logs in real time.
 Jobs
 ....
 
-Zuul's Jobs dashboard can be reached at https://<fqdn>/t/zuul/local/jobs.html
+Zuul's Jobs dashboard can be reached at `https://<fqdn>/zuul/t/local/jobs`
 
 This page lists all the jobs that have been built at least once by Zuul. Filtering
 options are available.
@@ -349,7 +351,7 @@ options are available.
 Builds
 ......
 
-Zuul's Builds dashboard can be reached at https://<fqdn>/t/zuul/local/builds.html
+Zuul's Builds dashboard can be reached at `https://<fqdn>/zuul/t/local/builds`
 
 This page lists all the builds and build sets that have completed. Filtering
 options are available.
@@ -385,7 +387,7 @@ Configure branch protection
 After the GitHub Application is installed, you must configure branch protection to
 enforce proper Zuul gating:
 
-* Visit the project setting page, e.g.: https://github.com/<org>/<project>/settings/branches
+* Visit the project setting page, e.g.: `https://github.com/<org>/<project>/settings/branches`
 
 * Click "Edit" for the branches to protect, and enable these options:
 

@@ -31,7 +31,7 @@ You can find an example of job dashboard in the config repository
 the JOB_NAME and FQDN variables.
 
 You can find a description of all statsd metrics in `upstream documentation
-<https://docs.openstack.org/infra/zuul/admin/monitoring.html>`_.
+<https://docs.openstack.org/infra/zuul/5.0.0/monitoring.html>`_.
 
 When a user submit a review with a dashboard in the config repo. The dashboard is
 validated by the config-update job using the following command:

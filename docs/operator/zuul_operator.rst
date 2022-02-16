@@ -4,7 +4,7 @@
   up the Zuul service. For more insight on what Zuul can do, please refer
   to upstream documentation_.
 
-.. _documentation: https://docs.openstack.org/infra/zuul/
+.. _documentation: https://zuul-ci.org/docs/zuul/5.0.0/
 
 Operate zuul
 ============

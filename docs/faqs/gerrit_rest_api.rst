@@ -19,7 +19,7 @@ For example, getting open changed with cURL would be:
 
 .. code-block:: bash
 
-  curl "http://fqdn/r/changes/?q=status:open"
+  curl "https://fqdn/r/changes/?q=status:open"
 
 And to access a restricted resources with cURL would be:
 

@@ -85,7 +85,7 @@ Storing registration password to build RHEL image
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To provide the password environment variable to the nodepool-builder service,
-you have add image name and registration password in
+you have to add image name and registration password in
 /etc/software-factory/sfconfig.yaml:
 
 .. code-block:: bash
@@ -264,7 +264,7 @@ will need for our build.
 
 .. code-block:: bash
 
-  sudo dnf install -y qemu kpartx yum-utils policycoreutils-python-utils
+  sudo dnf install -y qemu qemu-img kpartx yum-utils policycoreutils-python
   python3 -m pip install --user diskimage-builder
   mkdir elements
   git clone https://softwarefactory-project.io/r/config
@@ -292,14 +292,14 @@ elements you need
 .. code-block:: bash
 
   disk-image-create -o image_name [nodepool_elements ...]
-  disk-image-create -o test zuul-user
+  disk-image-create -o test zuul-user centos
 
 You can edit/debug your element and run the build again
 
 .. code-block:: bash
 
   vi elements/zuul-user/...
-  disk-image-create -o test zuul-user
+  disk-image-create -o test zuul-user centos
 
 
 Useful commands

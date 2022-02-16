@@ -125,7 +125,7 @@ To deploy a specific service on a dedicated instance:
 
 See `sf-config/refarch`_ directory for examples of valid architectures.
 
-.. _sf-config/refarch: https://softwarefactory-project.io/r/gitweb?p=software-factory/sf-config.git;a=tree;f=refarch
+.. _sf-config/refarch: https://softwarefactory-project.io/cgit/software-factory/sf-config/tree/refarch
 
 .. _architecture_migrate_service:
 
@@ -134,7 +134,7 @@ Migrate a service to a dedicated instance
 
 This procedure demonstrates how to run the log indexation services (ELK stack) on a dedicated instance:
 
-* First stop and disable all elk related services (elasticsearch, logstash, kibana, log-gearman-client and log-gearman-worker)
+* First stop and disable all elk related services (elasticsearch, logstash and kibana)
 * Copy the current data, e.g.: rsync -a /var/lib/elasticsearch/ new_instance_ip:/var/lib/elasticsearch/
 * Add the new instances and roles to the /etc/software-factory/arch.yaml file:
 

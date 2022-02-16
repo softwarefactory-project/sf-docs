@@ -9,6 +9,4 @@ The easiest way to get involved is to join us on IRC. We hang out on the #softwa
 
 To join technical discussions or get announcements, subscribe to our mailing list softwarefactory-dev@redhat.com: https://www.redhat.com/mailman/listinfo/softwarefactory-dev.
 
-The project's backlog is here: https://tree.taiga.io/project/morucci-software-factory/backlog?tags=software%20factory
-
-Issues can be reported here: https://tree.taiga.io/project/morucci-software-factory/issues .
+Issues can be reported here: `Software Factory Project <https://app.element.io/#/room/#softwarefactory-project:matrix.org>`_.

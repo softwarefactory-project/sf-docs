@@ -69,7 +69,7 @@ Managing internal users
 -----------------------
 
 There are few users created in Elasticsearch in Software Factory.
-The full list of available users `is in this :ref:`chapter <el_users>`
+The full list of available users can be seen :ref:`here <Available users>`
 
 Users information are stored in `internal_users.yml` file which is
 located in `opendistro_security config directory`:
@@ -89,8 +89,8 @@ More information about the file, you can find `here`_.
 
 .. _`here`: https://opendistro.github.io/for-elasticsearch-docs/docs/security/configuration/yaml/#internal_usersyml
 
-.. _el_users:
 
+.. _Available users:
 
 Available users
 ---------------
@@ -135,10 +135,10 @@ The generated hash should be added into the `internal_users.yml` file as the
    file before executing sfconfig tool!
 
 
-Securityadmin.sh script
+securityadmin.sh script
 -----------------------
 
-To apply created changes, you need to execute the `dedicated script`_ script.
+To apply changes, you need to execute the `securityadmin script`_.
 It is the most important step that you should not forget after doing some
 changes.
 
@@ -154,14 +154,14 @@ script. What you need to do is to execute it on the Elasticsearch host.
      -key /etc/elasticsearch/certs/elasticsearch-admin.key    \
      -h $(hostname)
 
-.. _`dedicated script`: https://opendistro.github.io/for-elasticsearch-docs/docs/security/configuration/generate-certificates/#run-securityadminsh
+.. _`securityadmin script`: https://opendistro.github.io/for-elasticsearch-docs/docs/security/configuration/generate-certificates/#run-securityadminsh
 
 
 Tenants
 -------
 
-Software Factory is only configuring one tenant: `global` and
-it also disable multi-tenancy (check Kibana configuration file).
+Software Factory is only configuring one tenant: `global`.
+Multi-tenancy is disabled (check Kibana configuration file).
 
 
 Manage indices

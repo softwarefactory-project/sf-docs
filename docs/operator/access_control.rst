@@ -13,7 +13,7 @@ override the default behavior.
 How to change access policies
 -----------------------------
 
-* git clone the config-repository
+* git clone the config repository
 * edit the config/policies/policy.yaml file to suit your needs
 * submit the config change
 * have the change reviewed and approved by an operator

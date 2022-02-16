@@ -25,7 +25,7 @@ Deployment
 ----------
 
 These components are not deployed by default but can be activated by adding
-them in */etc/software-factory/arch.yaml*:
+them in */etc/software-factory/arch.yaml*.
 
 You can deploy Grafana and Influxdb on different hosts if needed. Telegraf will be
 automatically deployed on all nodes defined in the arch.yaml file.
@@ -55,12 +55,36 @@ the password in secrets.yaml:
 
    telegraf_passwd=$(awk '/telegraf_influxdb_password/ {print $2}' /var/lib/software-factory/bootstrap-data/secrets.yaml)
    influx -ssl -host $influxdb_host -username telegraf -password $telegraf_passwd -database telegraf
-   Connected to https://$influxdb_host:8086 version 1.4.2
-   InfluxDB shell version: 1.4.2
-   >
+   Connected to https://$influxdb_host:8086 version 1.8.6
+   InfluxDB shell version: 1.8.6
+
+
+.. note:: If you do not have crt fiel, add ``-unsafeSsl`` option to influx command.
+
+For more information about *influx* command go to the `official
+cli documentation <https://docs.influxdata.com/influxdb/v1.4/tools/shell/>`_
 
 Explore Telegraf database
 ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* list available databases.
+
+.. code-block:: bash
+
+   > show databases
+   name: databases
+   name
+   ----
+   telegraf
+
+* connect to a database
+
+.. code-block:: bash
+
+   > use telegraf
+   Using database telegraf
+
+.. note:: To connect directly to a database using *influx* cli add ``-database <database name>`` option.
 
 * list measurements and series
 
@@ -70,18 +94,25 @@ Explore Telegraf database
    name: measurements
    name
    ----
-   cpu
-   disk
-   diskio
-   kernel
-   mem
+   zuul.all_jobs
+   zuul.event.gerrit.gerrit.ref-updated
+   zuul.event.gerrit.ref-updated
+   zuul.executor.managesf_sftests_com.builds
+   zuul.executor.managesf_sftests_com.load_average
+
 
 * Query data
 
-Influx queries are similar to sql syntax, it's fully explained on the `official
-cli documentation <https://docs.influxdata.com/influxdb/v1.4/tools/shell/>`_.
+Influx queries are similar to sql syntax, called InfluxQL, it's fully explained on the `official
+InfluxQL documentation <https://docs.influxdata.com/influxdb/v1.4/query_language/>`_.
 
 .. code-block:: bash
+
+   > select * from "zuul.all_jobs"
+   name: zuul.all_jobs
+   time                value
+   ----                -----
+   1645615050000000000 1
 
    > select * from "zuul.tenant.local.pipeline.check.total_changes" limit 1
    name: zuul.tenant.local.pipeline.check.total_changes
@@ -93,8 +124,7 @@ cli documentation <https://docs.influxdata.com/influxdb/v1.4/tools/shell/>`_.
 Dashboards access
 -----------------
 
-There is a new item on the top menu, on the right side named "Status" to access
-the Grafana dashboard:
+At Software Factory main page, there is the Grafana icon, click on it to access Grafana's dashboard:
 
 .. image:: imgs/metrics/grafana_dashboard.png
    :scale: 50 %

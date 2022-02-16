@@ -89,8 +89,8 @@ To update the fqdn, you have to change the fqdn in
 .. code-block:: bash
 
    cd myproject
-   git remote set-url origin https://$fqdn/r/myproject
-   sed -i 's/$old_fqdn/fqdn' .gitreview
+   git remote set-url origin https://$new_fqdn/r/myproject
+   sed -i 's/$old_fqdn/$new_fqdn/' .gitreview
    git add -A .
    git commit -m 'update fqdn in gitreview'
    git review

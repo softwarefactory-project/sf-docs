@@ -47,13 +47,13 @@ playbooks to configure and maintain the deployment:
 * The **get_logs.yml** playbook collects all the services' logs,
   it's mostly used for sf-ci logs collections.
 * The **sf_erase.yml** playbook disables and can remove all the services'
-  data, it is used to un-install the services.
+  data, it is used to uninstall services.
 
 
 The system configuration
 ------------------------
 
-The sfconfig script drives the system configuration. This script does the following actions:
+The *sfconfig* script drives the system configuration. This script does the following actions:
 
 * Generates secrets such as internal passwords, ssh keys and tls certificats,
 

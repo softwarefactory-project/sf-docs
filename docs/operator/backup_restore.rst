@@ -20,7 +20,7 @@ To run the backup playbook, from the install-server use the following command:
 
   # ansible-playbook /var/lib/software-factory/ansible/sf_backup.yml
 
-.. note:: The sf-ops https://softwarefactory-project.io/r/software-factory/sf-ops
+.. note:: The `sf-ops <https://softwarefactory-project.io/cgit/software-factory/sf-ops/>`_
    repository from the Software Factory project provides a backup playbook that will
    fetch the backup directory from a Software Factory instance and store it
    locally.

@@ -202,7 +202,7 @@ automatically to Zuul as *untrusted-projects*:
         acl: ichiban-dev-acl
 
 To define a specific configuration for a repository (a project in the
-Zuul terminology), for instance, a *source-repositorie* can be defined
+Zuul terminology), for instance, a *source-repository* can be defined
 as a *config-project*:
 
 .. code-block:: yaml

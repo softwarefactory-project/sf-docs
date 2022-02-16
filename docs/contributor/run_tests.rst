@@ -49,7 +49,7 @@ After having deployed Software Factory using sf-ci, run:
 
 .. code-block:: bash
 
- export PYTHONPATH=sf-ci/tests/functional/
+ export PYTHONPATH=$( realpath sf-ci/tests/functional/ )
  pushd sf-ci/tests/functional/provisioner/ && python3 provisioner.py && popd
  ANSIBLE_ROLES_PATH=sf-ci/roles \
    ansible-playbook -i /var/lib/software-factory/ansible/hosts \

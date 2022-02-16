@@ -158,7 +158,7 @@ Installation
 
 .. code-block:: bash
 
-  yum install -y https://softwarefactory-project.io/repos/sf-release-3.6.rpm
+  yum install -y https://softwarefactory-project.io/repos/sf-release-3.7.rpm
   yum install -y sf-config
 
 
@@ -224,7 +224,7 @@ Finally, to setup and start the services, run:
 Access Software Factory
 =======================
 
-The Dashboard is available at https://FQDN and the *admin* user can authenticate
+The Dashboard is available at `https://FQDN` and the *admin* user can authenticate
 using "Internal Login".
 
 Congratulations, you successfully deployed Software Factory.

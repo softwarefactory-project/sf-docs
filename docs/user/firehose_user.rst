@@ -23,7 +23,7 @@ Services supported
 ================= ============= ================
 
 .. _germqtt: http://git.openstack.org/cgit/openstack-infra/germqtt/
-.. _reporter: https://zuul-ci.org/docs/zuul/admin/drivers/mqtt.html
+.. _reporter: https://zuul-ci.org/docs/zuul/5.0.0/drivers/mqtt.html
 
 Events published
 ----------------
@@ -42,7 +42,7 @@ Zuul
 
 Every buildset results are published. A full description of the events can
 be found here:
-https://zuul-ci.org/docs/zuul/admin/drivers/mqtt.html#message-schema
+https://zuul-ci.org/docs/zuul/5.0.0/drivers/mqtt.html#message-schema
 
 
 Subscribing to events
@@ -68,6 +68,6 @@ If you are using a GTK based desktop
 environment such as gnome, this script can be used
 to get notifications on specific, customizable events from the firehose:
 
-https://softwarefactory-project.io/r/gitweb?p=software-factory%2Fsf-desktop-notifications.git;a=summary
+https://softwarefactory-project.io/cgit/software-factory/sf-desktop-notifications/
 
 Please see the project's README for more information.

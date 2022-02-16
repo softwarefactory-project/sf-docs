@@ -18,9 +18,11 @@ To upgrade to a new release of Software Factory:
 
 .. code-block:: bash
 
-  yum install -y https://softwarefactory-project.io/repos/sf-release-3.6.rpm
+  yum install -y https://softwarefactory-project.io/repos/sf-release-X.X.rpm
   yum update -y sf-config
   sfconfig --update
+
+.. note:: Check `supported releases <https://www.softwarefactory-project.io/>`_
 
 Prevent services auto-restart
 -----------------------------

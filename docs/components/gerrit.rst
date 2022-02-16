@@ -31,7 +31,6 @@ The following events will trigger actions on the CI pipelines:
 * A patch reaching the score needed to be candidate for merging (+2 Core, +1 Workflow, +1 Verified)
 * A patch being merged
 
-See the `pipelines manager <Pipelines manager>`_ section for more details.
 
 .. image:: imgs/gerrit.jpg
    :scale: 50 %

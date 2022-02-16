@@ -17,7 +17,7 @@ Submit a change
   # Hack the code, create a commit on top of HEAD ! and ...
   git review # Summit your proposal on softwarefactory-project.io
 
-Your patch will be listed on the reviews dashboard at https://softwarefactory-project.io/r/ .
+Your patch will be listed on Gerrit reviews dashboard at https://softwarefactory-project.io/r/ .
 Automatic tests are run against it and the CI will
 report results on your patch's summary page. You can
 also check https://softwarefactory-project.io/zuul/ to check where your patch is in the pipelines.
