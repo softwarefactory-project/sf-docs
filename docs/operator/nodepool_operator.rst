@@ -14,7 +14,6 @@ Operate nodepool
 * The configuration is located in /etc/nodepool
 * The logs are written to /var/log/nodepool
 
-
 Architecture
 ------------
 

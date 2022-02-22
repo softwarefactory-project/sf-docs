@@ -95,7 +95,6 @@ via the config-repo:
 * mirrors/: mirror2swift configuration.
 * resources/: Platform wide groups, projects, repositories definitions.
 * dashboard/: Custom Gerrit dashboard configuration
-* repoxplorer/: RepoXplorer additional definitions (idents, groups, ...)
 * policies/: ManageSF API ACLs definition
 
 This is actually managed through SF CI system, thanks to the config-update job.
@@ -105,3 +104,46 @@ This job is actually an ansible playbook that will:
 * Reload nodepool, gerritbot and gerrit replication, and
 * Set mirror2swift configuration for manual or next periodic update.
 * Apply resources definitions (create repositories, update groups, ...)
+
+Containerized services
+----------------------
+
+Some services are containerized since SF-3.7:
+
+* elk stack
+* gerrit
+* nodepool services
+* zuul services
+
+Services are managed by systemd, configuration files are located on /etc/$service and logs are located on /var/log/$service
+
+You can find the command used to create the container on /usr/local/bin/container-$service.sh
+
+If you need to interact with a container, you can first list them
+
+.. code-block:: bash
+
+    [root@managesf.$fqdn ~]# podman ps
+    CONTAINER ID  IMAGE                                                   COMMAND               CREATED       STATUS           PORTS  NAMES
+    27bf06e712eb  quay.io/software-factory/nodepool-builder-ubi:5.0.0-2   /usr/local/bin/no...  30 hours ago  Up 30 hours ago         nodepool-builder
+    5593621f6c1c  quay.io/software-factory/zuul-web-ubi:5.0.0-0           /usr/local/bin/zu...  30 hours ago  Up 28 hours ago         zuul-web
+    71bb6b0795d2  quay.io/software-factory/zuul-executor-ubi:5.0.0-0      /usr/local/bin/zu...  30 hours ago  Up 28 hours ago         zuul-executor
+    ac8a57cd93bb  quay.io/software-factory/zuul-scheduler-ubi:5.0.0-0     /usr/local/bin/zu...  30 hours ago  Up 28 hours ago         zuul-scheduler
+    7b9fce44add3  quay.io/software-factory/nodepool-launcher-ubi:5.0.0-2  /usr/local/bin/no...  30 hours ago  Up 30 hours ago         nodepool-launcher
+    29bd9915f524  quay.io/software-factory/gerrit:3.4.3-0                 /bin/bash             30 hours ago  Up 30 hours ago         gerrit
+
+You can login on a container using
+
+.. code-block:: bash
+
+    [root@managesf.$fqdn ~]# podman exec -ti $container_name /bin/bash # or /bin/sh
+
+You can execute a command on a container using
+
+.. code-block:: bash
+
+    [root@managesf.sftests.com ~]# podman exec -ti nodepool-builder nodepool image-list
+    +----------+-----------+----------+-------+---------------------+-------------------+-------+-----+
+    | Build ID | Upload ID | Provider | Image | Provider Image Name | Provider Image ID | State | Age |
+    +----------+-----------+----------+-------+---------------------+-------------------+-------+-----+
+    +----------+-----------+----------+-------+---------------------+-------------------+-------+-----+

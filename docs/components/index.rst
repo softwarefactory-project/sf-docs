@@ -29,10 +29,4 @@ Optional components
    log_search_engine
    log_classify
    code_search
-   Repoxplorer: Browse projects stats <repoxplorer>
    collaborative_tools
-
-.. TODO Task 568: add Projects metrics description and screenshot (repoxporer)
-.. ----------------
-..
-.. `Repoxplorer <https://github.com/morucci/repoxplorer>`_

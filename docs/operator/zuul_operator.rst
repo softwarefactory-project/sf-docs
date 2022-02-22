@@ -202,8 +202,8 @@ First you need to enable the executor's *keepjob* option so that ansible logs ar
 
 .. code-block:: bash
 
-    /usr/bin/zuul-executor keep
-    /usr/bin/zuul-executor verbose
+    podman exec -ti zuul-executor /usr/local/bin/zuul-executor keep
+    podman exec -ti zuul-executor /usr/local/bin/zuul-executor verbose
 
 Then next job execution will be available in /var/lib/zuul/builds/.
 
@@ -213,8 +213,8 @@ When done with debugging, deactivate the keepjob option by running:
 
 .. code-block:: bash
 
-    /usr/bin/zuul-executor nokeep
-    /usr/bin/zuul-executor unverbose
+    podman exec -ti zuul-executor /usr/local/bin/zuul-executor nokeep
+    podman exec -ti zuul-executor /usr/local/bin/zuul-executor unverbose
 
 
 Accessing test resources on failure (autohold)

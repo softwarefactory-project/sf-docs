@@ -100,7 +100,6 @@ There are few users created  in Software Factory for Elasticsearch:
 - admin - the superuser in Kibana. It has all permissions to manage the Kibana and Elasticsearch cluster
 - kibanaserver - this user is used by Kibana service to connect to the Elasticsearch
 - logstash - dedicated user to communicate logstash service to the Elasticsearch
-- repoxplorer - user that is used by RepoXplorer to connect to the ES cluster
 - curator - user that is used by curator service to 'clean-up' the index
 - kibana - a read-only user. This user shows on the login page
 

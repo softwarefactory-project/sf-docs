@@ -92,7 +92,6 @@ Optional services can be enabled:
 * logstash
 * kibana
 * mirror
-* repoxplorer
 * firehose
 * pages
 * hydrant

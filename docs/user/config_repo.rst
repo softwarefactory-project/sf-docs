@@ -33,7 +33,6 @@ To make a change in the configuration:
    gerritbot_user
    gerrit_replication_user
    gerritlinks_user
-   repoxplorer_user
    pages_user
    firehose_user
    metrics
