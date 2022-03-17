@@ -66,6 +66,98 @@ automatically restore the scheduler's jobs queues.
 
   ansible-playbook /var/lib/software-factory/ansible/zuul_restart.yml
 
+Authentication
+--------------
+
+Zuul 5.0 requires authentication to execute administrative tasks such as enqueueing and dequeueing.
+
+Several authenticators can be configured to enable authentication:
+
+* **Internal authenticators**: these can be used by operators to generate authentication tokens manually.
+  Token generation and validation is entirely handled by Zuul. The tokens generated in such a way can
+  then be handed out to users, and are meant to be used with Zuul's CLI.
+* **External authenticators**: OpenID Connect-compatible Identity Providers such as Keycloak, Glu, Auth0 ...
+  These authenticators can be used to set up authentication on Zuul's web interface. Users will be redirected
+  to the Identity Provider's login page whenever they authenticate.c
+
+See the upstream documentation on `authentication <https://zuul-ci.org/docs/zuul/5.0.0/authentication.html>`_ and `access rules <https://zuul-ci.org/docs/zuul/5.0.0/tenants.html#access-rule>`_
+for more details.
+
+Authenticating with the CLI
+............................
+
+Software Factory configures automatically an internal authenticator that can be used to generate credentials to
+use with the CLI when needed. The authenticator is called ``zuul_operator``.
+
+To generate a token, run this command as root on the node where the zuul-scheduler service is up:
+
+.. code-block:: bash
+
+  [root@sftests.com]$ podman exec -ti zuul-scheduler /usr/local/bin/zuul create-auth-token --auth-config zuul_operator --tenant xyz --user XXX
+  Bearer eyJ0eX[...]
+
+The part after "Bearer" is the authentication token you can use with the argument ``--auth-token`` of the Zuul CLI.
+
+Authenticating on the web interface
+...................................
+
+Zuul 5.0 supports authentication via OpenID Connect in the web interface. The authentication
+is tenant scoped, meaning you need to define a preferred way of authenticating per Zuul tenant, if you
+choose to enable authentication for a specific tenant. Authentication is only used to allow specific users
+to perform admin actions from the web GUI, such as dequeueing buildsets and managing autohold queries.
+
+.. note::
+
+  Software Factory's current SSO service **does not support** OpenID Connect. These features require the use of an external Identity Provider such as a Keycloak instance, or Google.
+
+Assuming you have created an OpenID Connect client with the Identity Provider you wish to
+use, edit the following part in sfconfig.yaml:
+
+.. code-block:: yaml
+
+  external_authenticators:
+    - name: redhat_sso
+      realm: redhat
+      issuer_id: https://keycloak/auth/realms/redhat
+      client_id: zuul
+
+You can then use the ``realm`` value to set the authentication realm to redirect users to
+when they browse Zuul's web interface for a given tenant:
+
+.. code-block:: yaml
+
+  - tenant:
+      name: xyz
+      # ...
+      authentication-realm: redhat
+
+Access rules
+.............
+
+By default authenticated users cannot perform any admin tasks on a tenant. Access rules, or ``admin-rules``
+must be defined in Zuul's configuration to allow elevated privileges. The rules are based on conditions on
+the claims of the access tokens issued by the OpenID Connect Identity Provider. Please contact your
+Identity Provider to find out more about the claims that are being set in the access tokens.
+
+By default, Software Factory will convert Gerrit ACL rules that are defined in the config repository,
+to Zuul admin-rules of the same name. They can be used if the access tokens have a claim named ``groups``,
+and the groups defined in Gerrit exist in the Identity Provider.
+
+Your configuration may then look like this:
+
+.. code-block:: yaml
+
+  - admin-rule:
+      name: custom_rule
+      conditions:
+        - email: admin@seriouscompany.com
+  - tenant:
+      name: xyz
+      # ...
+      authentication-realm: redhat
+      admin-rules:
+        - custom_rule
+        - some_gerrit_ACL
 
 Configure an external gerrit (use Software Factory as a Third-Party CI)
 -----------------------------------------------------------------------
@@ -218,6 +310,6 @@ When done with debugging, deactivate the keepjob option by running:
 
 
 Accessing test resources on failure (autohold)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------------
 
 See the :ref:`nodepool operator documentation <nodepool-autohold>`.

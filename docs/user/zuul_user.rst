@@ -408,3 +408,19 @@ the tenant configuration.
 
 Alternatively, since Software Factory 3.1, Github projects can be configured via the
 resources engine. See this :ref:`section <zuul-github-resources>`).
+
+Zuul CLI
+--------
+
+If you are authorized to do so (ie an authentication token was handed to you by a Zuul operator), you can perform administrative actions on Zuul with its command-line interface.
+It can be also used to encrypt secrets for a project.
+
+Installation
+............
+
+The easiest way to install the CLI is to `use its official container image <https://zuul-ci.org/docs/zuul-client/installation.html#via-the-zuul-client-container>`_.
+
+Use
+...
+
+A list of available actions through the CLI can be found `in upstream's documentation <https://zuul-ci.org/docs/zuul-client/commands.html>`_.
