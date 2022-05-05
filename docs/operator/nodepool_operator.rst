@@ -67,9 +67,9 @@ To get a persistent shell access to test resources, use the autohold feature:
 
 .. code-block:: bash
 
-   zuul autohold --tenant <tenant-name> --project <project-name> --job <job-name> --reason "text-string" [--change <change-id>]
+   zuul-client autohold --tenant <tenant> --project <project-name> --job <job-name> --reason "text-string" [--change <change-id>]
 
-* Check the hold is registered using `zuul autohold-list`
+* Check the hold is registered using `zuul-client autohold-list --tenant <tenant>`
 
 * Wait for a job failure and get the node ip using `nodepool list --detail | grep "text-string"`
 
