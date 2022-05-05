@@ -5,8 +5,4 @@ How can I help?
 
 Thanks for asking.
 
-The easiest way to get involved is to join us on IRC. We hang out on the #softwarefactory channel on Freenode.
-
-To join technical discussions or get announcements, subscribe to our mailing list softwarefactory-dev@redhat.com: https://www.redhat.com/mailman/listinfo/softwarefactory-dev.
-
-Issues can be reported here: `Software Factory Project <https://app.element.io/#/room/#softwarefactory-project:matrix.org>`_.
+The easiest way to get involved is to join us on Matrix `#softwarefactory-project:matrix.org <https://app.element.io/#/room/#softwarefactory-project:matrix.org>`_.
