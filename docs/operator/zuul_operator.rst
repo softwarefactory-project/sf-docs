@@ -66,10 +66,67 @@ automatically restore the scheduler's jobs queues.
 
   ansible-playbook /var/lib/software-factory/ansible/zuul_restart.yml
 
+Command Line Interfaces
+-----------------------
+
+Zuul Admin client
+.................
+
+The legacy admin client can be used to change Zuul's behavior, manage projects keys, create auth tokens (see below) or check its configuration. It can be invoked
+by running the command `zuul` on the zuul scheduler node.
+
+.. warning::
+
+    Tenant-scoped operations are deprecated with the legacy admin client. For these, please use the zuul client (see below).
+
+More information can be found on `zuul's upstream documentation about the admin client <https://zuul-ci.org/docs/zuul/latest/client.html>`_.
+
+Zuul Client
+...........
+
+The REST client can be used for tenant-scoped operations related to normal workflow like enqueues, dequeues, autoholds, promotions and secrets encryption.
+It can be invoked by running the command `zuul-client` on the scheduler node:
+
+.. code-block:: bash
+
+  [root@scheduler] zuul-client --help
+
+.. code-block:: bash
+
+  [root@scheduler] zuul-client autohold-list --tenant XXX
+
+More information can be found on `zuul-client's upstream documentation <https://zuul-ci.org/docs/zuul-client/>`_.
+
+Running Zuul Client anywhere
+----------------------------
+
+The REST client can be used anywhere as long as the Software Factory web interface can be reached. You can pull the container on your system with the following command:
+
+.. code-block:: bash
+
+  [user@computah] podman pull quay.io/softwarefactory/zuul-client:a6ce77acffd852219fd43a6dc61cbe637aa85bf2-1
+
+Software Factory includes a script that can be used to generate an appropriate configuration file for zuul-client. Run the command below on the scheduler node:
+
+.. code-block:: bash
+
+  [root@<FQDN>] python3 /var/lib/zuul/scripts/generate-zuul-client-config.py https://<FQDN>/zuul/
+
+The script will print a configuration to the shell's standard output. A configuration section will be created for each tenant,
+setting the Zuul URL and a temporary authentication token. The configuration should be saved to $HOME/.config/zuul/client.conf 
+on the system you intend to run the client from; zuul-client will automatically look for a configuration in that path.
+
+You can then run the `zuul-client` container like so, assuming you saved the configuration to $HOME/.config/zuul/client.conf:
+
+.. code-block:: bash
+
+  [user@computah] podman run --rm --name zc_container -v $HOME/.config/zuul/:/config/:Z quay.io/software-factory/zuul-client:a6ce77acffd852219fd43a6dc61cbe637aa85bf2-1 -c /config/client.conf --use-config <tenant-name> ...
+
 Authentication
 --------------
 
 Zuul 5.0 requires authentication to execute administrative tasks such as enqueueing and dequeueing.
+This means it is also possible to delegate and grant the right to perform these tasks to trusted users.
 
 Several authenticators can be configured to enable authentication:
 
@@ -78,7 +135,12 @@ Several authenticators can be configured to enable authentication:
   then be handed out to users, and are meant to be used with Zuul's CLI.
 * **External authenticators**: OpenID Connect-compatible Identity Providers such as Keycloak, Glu, Auth0 ...
   These authenticators can be used to set up authentication on Zuul's web interface. Users will be redirected
-  to the Identity Provider's login page whenever they authenticate.c
+  to the Identity Provider's login page whenever they authenticate.
+
+.. note:: 
+
+    When running zuul-client from the scheduler node, you don't need to generate a token prior to running a privileged command, the client will attempt to generate
+    one for you automatically based on the zuul service's configuration. How convenient!
 
 See the upstream documentation on `authentication <https://zuul-ci.org/docs/zuul/5.0.0/authentication.html>`_ and `access rules <https://zuul-ci.org/docs/zuul/5.0.0/tenants.html#access-rule>`_
 for more details.
@@ -93,10 +155,10 @@ To generate a token, run this command as root on the node where the zuul-schedul
 
 .. code-block:: bash
 
-  [root@sftests.com]$ podman exec -ti zuul-scheduler /usr/local/bin/zuul create-auth-token --auth-config zuul_operator --tenant xyz --user XXX
+  [root@sftests.com]$ zuul create-auth-token --auth-config zuul_operator --tenant xyz --user XXX
   Bearer eyJ0eX[...]
 
-The part after "Bearer" is the authentication token you can use with the argument ``--auth-token`` of the Zuul CLI.
+The part after "Bearer" is the authentication token you can use with the argument ``--auth-token`` of the Zuul CLIs.
 
 Authenticating on the web interface
 ...................................
