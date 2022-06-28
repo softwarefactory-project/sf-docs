@@ -331,7 +331,7 @@ hash of the config repository.
 
 .. code-block:: bash
 
-    zuul enqueue-ref --trigger gerrit --tenant local --pipeline post --project config --ref master --newrev ref-sha
+    zuul-client enqueue-ref --tenant local --pipeline post --project config --ref master --newrev ref-sha
 
 The job will be running in the post pipeline of the Zuul status page.
 
