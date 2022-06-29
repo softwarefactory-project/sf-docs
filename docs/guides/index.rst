@@ -14,6 +14,7 @@ Deployment
 .. toctree::
    :maxdepth: 2
 
+   zuul_hands_on
    github_deployment
    tenant_deployment
    unmanaged_tenant
