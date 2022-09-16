@@ -19,3 +19,4 @@ Management
    code_search
    upgrade
    backup_restore
+   opensearch_deployment
