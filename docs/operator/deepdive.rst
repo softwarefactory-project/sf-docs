@@ -23,14 +23,6 @@ and replicated on github at https://github.com/softwarefactory-project :
 All the components are packaged using **distgit** repositories.
 
 
-The SSO mechanism
------------------
-
-Below is the sequence diagram of the SSO mechanism.
-
-.. graphviz:: authentication.dot
-
-
 Ansible usage
 -------------
 

@@ -7,6 +7,7 @@ Management
    :maxdepth: 1
 
    auths
+   user_management
    zuul_operator
    nodepool_operator
    gerritbot_operator

@@ -64,7 +64,7 @@ The minimal architecture includes following components:
 * mysql
 * zookeeper
 * gateway
-* cauth
+* keycloak
 * `managesf </docs/managesf/>`_
 * gitweb
 * `gerrit </r/Documentation/index.html>`_

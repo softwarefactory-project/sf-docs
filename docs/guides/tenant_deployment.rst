@@ -11,8 +11,19 @@ In this guide, we will deploy a SF for a tenant. This tenant
 will run Gerrit. Some tasks will be executed on the Tenant SF
 and some others on the master SF.
 
+It is assumed the Master SF instance is already up and running and we will call it
+*master-sf*, or its FQDN *master-sf.com*, in the rest of this document.
+
+
 Deploy the minimal tenant architecture
 ......................................
+
+.. warning::
+
+  **if the master SF instance uses self-signed certificates**, you must first copy
+  '/etc/pki/ca-trust/source/anchors/localCA.pem' from master-sf to
+  '/etc/pki/ca-trust/source/anchors/master-sf.pem' on the tenant instance, then run
+  'update-ca-trust' on the tenant instance to trust this CA.
 
 On a CentOS-7 system, deploy the tenant minimal architecture:
 
@@ -21,7 +32,7 @@ On a CentOS-7 system, deploy the tenant minimal architecture:
   yum install -y https://softwarefactory-project.io/repos/sf-release-3.7.rpm
   yum install -y sf-config
   cp /usr/share/sf-config/refarch/tenant-minimal.yaml /etc/software-factory/arch.yaml
-  sed -i '/      - cauth/a\      - gerrit\n      - gitweb' /etc/software-factory/arch.yaml
+  sed -i '/      - keycloak/a\      - gerrit\n' /etc/software-factory/arch.yaml
 
 Edit /etc/software-factory/sfconfig.yaml to set the fqdn for the deployment and add:
 
@@ -30,13 +41,6 @@ Edit /etc/software-factory/sfconfig.yaml to set the fqdn for the deployment and 
   tenant-deployment:
     name: tenant-sf
     master-sf: https://master-sf.com
-
-.. note::
-
-  if master-sf instance use self-signed certificates, you should copy
-  '/etc/pki/ca-trust/source/anchors/localCA.pem' from master-sf to
-  '/etc/pki/ca-trust/source/anchors/master-sf.pem' on the tenant instance, then run
-  'update-ca-trust' to trust this CA.
 
 .. note::
 
@@ -66,18 +70,25 @@ Define the tenant's default connection in /etc/software-factory/sfconfig.yaml:
       username: zuul
       default_pipelines: false
 
-Then run sfconfig
+**If the tenant-sf instance uses self-signed certificates**, you must copy
+'/etc/pki/ca-trust/source/anchors/localCA.pem' from tenant-sf to
+'/etc/pki/ca-trust/source/anchors/tenant-sf.pem' on the host(s) where the
+zuul-executor, zuul-scheduler and managesf containers are running,
+then run 'update-ca-trust' to trust this CA. Then to update the containers' certificates,
+you need to restart the associated services. Run this on the install server node:
+
+.. code-block:: bash
+
+  for s in "managesf zuul-executor zuul-scheduler"; do
+  ansible $s -b -m shell -a "systemctl restart $s"
+  done;
+
+Run sfconfig to apply the change:
 
 .. code-block:: yaml
 
   sfconfig --skip-install
 
-.. note::
-
-  if tenant-sf instance use self-signed certificates, you should copy
-  '/etc/pki/ca-trust/source/anchors/localCA.pem' from tenant-sf to
-  '/etc/pki/ca-trust/source/anchors/tenant-sf.pem' on master-sf's zuul-executor
-  instances, then run 'update-ca-trust' to trust this CA.
 
 Define the new tenant inside the resources. Create the following file
 config/resources/tenant.yaml:
@@ -102,7 +113,7 @@ operator can run sfconfig on the tenant SF instance.
 Finalize the tenant SF configuration
 ....................................
 
-The Master is now configured and know about the new tenant, then
+The Master is now configured and knows about the new tenant, then
 a final sfconfig run on the tenant SF will finalize the pairing.
 
 .. code-block:: bash

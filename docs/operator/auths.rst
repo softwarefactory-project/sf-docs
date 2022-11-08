@@ -1,226 +1,110 @@
 .. _authentication:
 
 Authentication
---------------
+==============
 
-Software Factory supports several authentication backends.
-The `Cauth <https://softwarefactory-project.io/cgit/software-factory/cauth/>`_
-component is used to enforce all authenticated HTTP access.
+.. note::
 
+  This page is about basic administration of the authentication component in Software Factory.
+  For more information on how to manage users and authorizations, see the :ref:`user management documentation<user_management>` 
 
+Software Factory's IAM is handled by the `Keycloak component <https://www.keycloak.org>`_.
+Keycloak also provides single sign-on on Software Factory's authenticated services via the OpenID Connect protocol.
 
-Single Sign On
-^^^^^^^^^^^^^^
+Keycloak replaces the Cauth component in Software Factory 3.8 and above.
 
-Software Factory provides a unified authentication for services such as Gerrit.
-Logging out from one service logs you out from other services as well.
+This page focuses on the specificities of how Keycloak is deployed in Software Factory.
 
-Currently SF provides five kinds of backends to authenticate:
+For more details on how to actually manage the service as an administrator, `Keycloak's full documentation
+can be found here <https://www.keycloak.org/archive/documentation-19.0.html>`_.
 
-* Oauth2 for Github, Google and Bitbucket
-* OpenID (e.g. for Launchpad)
-* local user database hosted in the managesf node
-* LDAP backend
-* SAML2
+It is recommended to at least get familiar with common operations like handling users, handling social login
+providers and managing groups and roles.
 
-.. image:: ../imgs/login.jpg
+Features
+^^^^^^^^
 
+* Single Sign-on out of the box with Gerrit, Zuul, Opensearch Dashboards and Grafana
+  when deploying these services in Software Factory
+* Social login - Enable login with Github, Facebook, and many other services
+* User Federation - Sync users from LDAP or Active Directory servers
+* Two-factor authentication support
+* Roles management for Zuul, Opensearch Dashboards and Grafana
+* Events (Login, etc) are broadcast on the firehose (MQTT) under the secured topic "keycloak"
+* Github users' public SSH keys are automatically imported from Github and provisioned into Gerrit
 
-Admin user
-^^^^^^^^^^
+Using the CLI
+^^^^^^^^^^^^^
 
-The admin user is hard coded and only the password can be defined.
-To change the admin user password, edits sfconfig.yaml:
+Everything in Keycloak can be done through its web UI. Keycloak's container also comes with a CLI utility.
 
-.. code-block:: yaml
-
-  authentication:
-    admin_password: userpass
-
-
-
-OAuth2-based authentication
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Software Factory allows authentication with several OAuth2-based identity providers. The
-following providers are currently supported:
-
-* GitHub
-* Google (user data will be fetched from Google+)
-* BitBucket
-
-You have to register your SF deployment with the provider of your choice in order to enable
-authentication. Please refer to the provider's documentation to do so. The OAuth2 protocol will
-always require a callback URL regardless of the provider. This URL is https://fqdn/auth/login/oauth2/callback
-
-Heres is an example of setting up the GitHub authentication:
-
-Log on https://github.com and open https://github.com/settings/developers and select "register a new application"
-
-You have to complete the form, the following parameters are mandatory:
-
-* Application name: $fqdn
-* Homepage URL: https://$fqdn/auth/login
-* Authorization callback URL: https://$fqdn/auth/login/oauth2/callback
-
-During configuration, the identity provider will generate a client ID and a client secret that are
-needed to complete the configuration in /etc/software-factory/sfconfig.yaml.
-
-.. code-block:: yaml
-
- authentication:
-   oauth2:
-     github:
-       disabled: False
-       client_id: "Client ID"
-       client_secret: "Client Secret"
-
-
-Apply the configuration by running sfconfig and open https://$fqdn/auth/login, select github, you will
-be redirected to a github page to authorize application, validate. Github could now be used to authenticate
-yours users.
-
-The other OAuth2 providers can be set up in a similar fashion. Because of possible collisions between
-user names and other details, it is advised to use only one provider per deployment.
-
-The GitHub provider also lets you filter users logging in depending on the organizations they belong
-to, with the field "github_allowed_organizations". Leave blank if not necessary.
-
-
-OpenID authentication
-^^^^^^^^^^^^^^^^^^^^^
-
-Similarly, an OpenID provider can be used for authentication. Only a single OpenID provider
-can be configured at a time, for example to use Launchpad:
-
-.. code-block:: yaml
-
-  authentication:
-    openid:
-      disabled: False
-      server: https://login.launchpad.net/+openid
-      login_button_text: "Log in with Launchpad"
-
-
-OpenID Connect authentication
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-An OpenID Connect provider can be used for authentication. Likewise OAuth2, it requires an
-application created on the provider to provides a client_id and client_secret. The callback
-URL will be: https://fqdn/auth/login/openid_connect/callback .
-
-Moreover it needs an issuer_url to retrieve the openid-configuration. Only a single OpenID
-Connect provider can be configured at a time.
-
-.. code-block:: yaml
-
-  authentication:
-    openid_connect:
-        disabled: False
-        issuer_url: https://accounts.google.com/
-        login_button_text: "Log in with Google"
-        client_id:
-        client_secret:
-
-The issuer_url can be tested using the */.well-known/openid-configuration* uri path, e.g.:
-https://accounts.google.com/.well-known/openid-configuration
-
-Single Sign-On with SAML2
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Software Factory can be configured as a Service Provider and rely on an external
-Identity Provider using the SAML2 protocol for users authentication.
-
-The configuration of the single sign-on with SAML2 requires the operator to
-know which user properties and attributes will be sent by the Identity Provider
-to Software Factory, as they need to be mapped to the following user properties
-in Software Factory's configuration file:
-
-* **login**: the user name on Software Factory
-* **email**: the email address
-* **name**: the full name of the user
-* **uid**: the unique identifier of the user on the Identity Provider
-
-If the Identity Provider exposes the SSH public key(s) of its users in an
-attribute, it is possible to map the keys to **ssh_keys**, and specify a
-delimiter character to split the keys from this attribute value.
-
-Here is an example configuration for a `Keycloak <https://www.keycloak.org/>`_
-Identity Provider, using the default built-in user properties for "email" and
-"name", and custom-defined attributes for "login" and "uid" (See
-Keycloak's documentation for more details on how to create custom mappings for
-SAML2):
-
-.. code-block:: yaml
-
-  authentication:
-    SAML2:
-      # set to true to activate
-      disabled: true
-      # Customize the login prompt here
-      login_button_text: "Log in with Keycloak"
-      # if the Identity Provider has a mapping for ssh keys, the delimiter
-      # character will be used to split multiple keys
-      key_delimiter: ','
-      mapping:
-        login: "username"
-        email: "urn:oid:1.2.840.113549.1.9.1"
-        name: "urn:oid:2.5.4.42"
-        uid: "uid"
-        ssh_keys: ""
-
-Run ``sfconfig`` once to initialize the Service Provider metadata. You will
-then be prompted with this message at the end of the run:
+Assuming you are on a shell on the host running the Keycloak container (you can check this by running  `podman ps` and look for
+the `keycloak` container), you can use the CLI by running as root:
 
 .. code-block:: bash
 
-  Service Provider metadata is available at /etc/httpd/saml2/mellon_metadata.xml
-  Once you have the Identity Provider metadata, run:
-    sfconfig --set-idp-metadata <path/to/metadata.xml>
+  podman exec -ti keycloak /opt/keycloak/bin/kcadm.sh
 
-The file ``/etc/httpd/saml2/mellon_metadata.xml`` must then be forwarded to
-the Identity Provider in order to register Software Factory as one of its Service
-Providers. The Identity Provider's administrator should send you the identity
-provider's metadata back in the form of a file or a URL. Re-run sfconfig with
-the path to the metadata to finalize the configuration and activate the
-Single Sign-On:
+Please refer to the `CLI's documentation <https://www.keycloak.org/docs/latest/server_admin/#admin-cli>`_ to authenticate and run commands with it.
+
+Using the web UI
+^^^^^^^^^^^^^^^^
+
+The admin web UI can be reached at https://<FQDN>/auth/ . Note that this URL is "hidden", ie not visible from Software Factory's welcome page. Authenticate on
+the admin page with the admin credentials, then select the "SF" realm. From there you can manage users and roles.
+
+Migrating from cauth
+^^^^^^^^^^^^^^^^^^^^
+
+Changes
+.......
+
+If you are upgrading to Software Factory 3.8 from a previous version using Cauth for authentication,
+you will notice some changes:
+
+* Local users (ie created with `sfmanager`) must be imported manually into keycloak (see procedure and details below)
+* Automated logging in on services is disabled: prior to version 3.8, if for example you were authenticated on Software Factory's
+  landing page then browsed to Gerrit, you would be automatically authenticated on Gerrit. Starting from
+  version 3.8, you need to click on each service's login button to get authenticated. As is expected
+  of Single Sign-On however, if you authenticated once you won't have to re-enter your credentials for
+  the duration of your session.
+* Software Factory's User settings page is no longer available, and replaced by Keycloak's User account page.
+* Social login and User Federation must be configured in Keycloak. All configuration fields
+  related to external authentication in sfconfig.yaml are ignored as of version 3.8, **except for github authentication**.
+  It will however likely be removed in a future version of Software Factory, meaning all external identity providers
+  will have to be managed through Keycloak.
+
+Regarding **github-based authentication specifically**:
+
+* To enable SSH key synchronization between github and Gerrit for users authenticating via github, **you must enable the `firehose` service in your deployment architecture**.
+* You must reconfigure the callback URL in your GitHub OAuth application settings page to this new value: ``https://<FQDN>/auth/realms/SF/broker/github/endpoint``
+
+Regarding **service-specific changes**:
+
+* Gerrit API keys for users are now managed in Gerrit rather than Software Factory's User Settings page.
+  Existing API keys are not valid anymore.
+* Kibana, OpenSearch dashboards no longer use a default read-only user; users can authenticate normally to use the services.
+
+Importing local users
+.....................
+
+.. warning::
+
+  Only do this if you created users on Software Factory with sfmanager!
+
+
+As root on the install-server node, run:
 
 .. code-block:: bash
+  
+    /usr/share/sf-config/scripts/sfusers_to_keycloak.sh
 
-  sfconfig --set-idp-metadata <path/to/idp_metadata.xml>
+This script will dump existing local users from the mariadb database and create them in Keycloak. Note that
+the database only holds hashes of the users' passwords, so these cannot be retrieved. A verification email
+will be sent to the users so that they can reset their passwords.
 
-Local user management
-^^^^^^^^^^^^^^^^^^^^^
+Backup and Restore
+^^^^^^^^^^^^^^^^^^
 
-For simple deployments without an Identity Provider, you can manage the users
-through the SFManager command-line utility (except for the default admin user, defined
-in the sfconfig.yaml file).
-
-For example, to create a local user, run this command on the install-server:
-
-.. code-block:: bash
-
-    sfmanager user create --username demo --password demo
-        --email demo@sftests.com --fullname "A local demo user"
-
-
-Other authentication settings
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Cookie timeout
-""""""""""""""
-
-The SSO cookie timeout can also be changed:
-
-.. code-block:: yaml
-
-  authentication:
-    # timeout of sessions in seconds
-    sso_cookie_timeout: 43200
-
-Identity provider data sync
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-By default, user data such as full name or email address are synchronized upon each successful login. Users
-can disable this behavior in the user settings page (available from top right menu). When disabled, users
-can manage the email address used in Software Factory service indepently from the identity provider data.
+Keycloak uses the mariadb backend to store its configuration, users, groups and roles. Backups and restorations are therefore handled
+via the mariadb backup/restore process.

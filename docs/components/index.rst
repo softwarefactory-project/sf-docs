@@ -30,3 +30,4 @@ Optional components
    log_classify
    code_search
    collaborative_tools
+   sso

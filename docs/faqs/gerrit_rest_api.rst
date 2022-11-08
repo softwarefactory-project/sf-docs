@@ -11,18 +11,17 @@ There is an extensive documentation available online:
 The Gerrit API is available at the *https://fqdn/r/* endpoint for
 non authenticated requests and for authenticated requests it is *https://fqdn/r/a/*.
 
-To use the authenticated endpoint you have to create an API password first.
-To do so, go to the **User Settings** page (upper right corner on the top menu)
-and click on the button *Generate new API key*.
+To use the authenticated endpoint you have to create HTTP credentials in Gerrit's user settings page,
+which can be found at *https://fqdn/r/settings/#HTTPCredentials* once you are authenticated.
 
-For example, getting open changed with cURL would be:
+For example, here is how to use cURL to list open changes:
 
 .. code-block:: bash
 
   curl "https://fqdn/r/changes/?q=status:open"
 
-And to access a restricted resources with cURL would be:
+And to access restricted resources with cURL, type the following:
 
 .. code-block:: bash
 
-  curl -u username:apikey https://fqdn/r/a/accounts/self/password.http
+  curl -u username:<http_credentials> https://fqdn/r/a/accounts/self/password.http
