@@ -32,5 +32,5 @@ The following events will trigger actions on the CI pipelines:
 * A patch being merged
 
 
-.. image:: imgs/gerrit.jpg
-   :scale: 50 %
+.. image:: imgs/gerrit.png
+   :scale: 36 %

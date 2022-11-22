@@ -4,4 +4,4 @@ Zuul Hands On
 -------------
 We published on our blog a zuul hands on series to help new Sofware Factory users to get the core concepts before moving on.
 
-You can find the blog posts on https://www.softwarefactory-project.io/tag/zuul-hands-on-series.html
+You can find the blog posts on `Zuul Hands On Series. <https://www.softwarefactory-project.io/tag/zuul-hands-on-series.html>`_

@@ -29,7 +29,7 @@ On a CentOS-7 system, deploy the tenant minimal architecture:
 
 .. code-block:: bash
 
-  yum install -y https://softwarefactory-project.io/repos/sf-release-3.7.rpm
+  yum install -y https://softwarefactory-project.io/repos/sf-release-3.8.rpm
   yum install -y sf-config
   cp /usr/share/sf-config/refarch/tenant-minimal.yaml /etc/software-factory/arch.yaml
   sed -i '/      - keycloak/a\      - gerrit\n' /etc/software-factory/arch.yaml
@@ -88,6 +88,22 @@ Run sfconfig to apply the change:
 .. code-block:: yaml
 
   sfconfig --skip-install
+
+.. note::
+
+  if tenant-sf instance use self-signed certificates, you must copy
+  '/etc/pki/ca-trust/source/anchors/localCA.pem' from tenant-sf to
+  '/etc/pki/ca-trust/source/anchors/tenant-sf.pem' on the host(s) where the
+  zuul-executor, zuul-scheduler and managesf containers are running,
+  then run 'update-ca-trust' to trust this CA.
+
+  Then to update the containers, you need to restart the associated services. Run this:
+
+  .. code-block:: bash
+
+    ansible zuul-executor -b -m shell -a "systemctl restart zuul-executor"
+    ansible zuul-scheduler -b -m shell -a "systemctl restart zuul-scheduler"
+    ansible managesf -b -m shell -a "systemctl restart managesf"
 
 
 Define the new tenant inside the resources. Create the following file

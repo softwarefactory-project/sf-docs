@@ -7,7 +7,7 @@ Components
 This chapter describes the services available on Software Factory.
 
 .. image:: imgs/landing_page.png
-   :scale: 50 %
+   :scale: 36 %
 
 Main components
 ---------------

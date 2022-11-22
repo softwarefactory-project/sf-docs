@@ -18,32 +18,27 @@ Services supported
 ================= ============= ================
   Service           Topic         Source
 ================= ============= ================
- Gerrit             gerrit        `germqtt`_
  Zuul               zuul          `reporter`_
+ keycloak           keycloak      `keycloakemitter`_
 ================= ============= ================
 
-.. _germqtt: http://git.openstack.org/cgit/openstack-infra/germqtt/
-.. _reporter: https://zuul-ci.org/docs/zuul/5.0.0/drivers/mqtt.html
+.. _reporter: https://zuul-ci.org/docs/zuul/5.0.0/drivers/mqtt.html#reporter-configuration
+.. _keycloakemitter: https://github.com/softwarefactory-project/keycloak-event-listener-mqtt
 
 Events published
 ----------------
-
-Events are published in JSON format. The payload is specific to each event.
-
-Gerrit
-......
-
-Every patchset-related events are published, similarly to the `gerrit stream-events`
-command. A full description of each event type can be found here:
-https://gerrit-review.googlesource.com/Documentation/cmd-stream-events.html
 
 Zuul
 ....
 
 Every buildset results are published. A full description of the events can
-be found here:
-https://zuul-ci.org/docs/zuul/5.0.0/drivers/mqtt.html#message-schema
+be found here: `Message Schema <https://zuul-ci.org/docs/zuul/5.0.0/drivers/mqtt.html#message-schema>`_
 
+Keycloak
+........
+
+EA Keycloak SPI that publishes events to a MQTT broker. A fuul description can
+be found here: `Keycloak Deploy <https://github.com/softwarefactory-project/keycloak-event-listener-mqtt#deploy>`_
 
 Subscribing to events
 ---------------------
@@ -66,8 +61,6 @@ Simple desktop notifier
 
 If you are using a GTK based desktop
 environment such as gnome, this script can be used
-to get notifications on specific, customizable events from the firehose:
-
-https://softwarefactory-project.io/cgit/software-factory/sf-desktop-notifications/
+to get notifications on specific, customizable events from the `Software Factory Firehose desktop notifications project <https://softwarefactory-project.io/cgit/software-factory/sf-desktop-notifications/tree/>`_.
 
 Please see the project's README for more information.

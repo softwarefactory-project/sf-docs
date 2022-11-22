@@ -60,9 +60,8 @@ The health-check playbooks complete the functional tests coverage by testing:
 
 * Zuul
 * Gerritbot
-* Curator
 * k1s
-* Kibana backup and restore process
+* OpenSearch backup and restore process
 
 Testinfra validation
 ....................
@@ -79,7 +78,7 @@ services are up and running.
 Scratch a deployment
 ....................
 
-To scratch a deployment and start over, use the "--erase" argument:
+To scratch a deployment and start over, use the ``--erase`` argument:
 
 .. code-block:: bash
 

@@ -106,8 +106,8 @@ Validate https access
 
 Connect to `<https://sftests.com>`_ to access to the software factory web interface
 
-.. figure:: imgs/sf_dashboard.png
-   :width: 80%
+.. figure:: imgs/landing_page.png
+   :width: 36%
 
 Configure admin public SSH key
 ..............................
@@ -125,7 +125,7 @@ Go to `<https://sftests.com/auth/login>`_ and log in as admin by clicking on
 "Settings" to edit the admin account:
 
 .. figure:: imgs/gerrit_settings.png
-   :width: 80%
+   :width: 36%
 
 Select *SSH Public Keys* and add your public key (Do not delete the other
 defined key, it's used for administrative tasks).

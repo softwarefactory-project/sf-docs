@@ -12,7 +12,7 @@ On a CentOS-7 system, deploy the minimal architecture:
 
 .. code-block:: bash
 
-  yum install -y https://softwarefactory-project.io/repos/sf-release-3.7.rpm
+  yum install -y https://softwarefactory-project.io/repos/sf-release-3.8.rpm
   yum install -y sf-config
   cp /usr/share/sf-config/refarch/zuul-minimal.yaml /etc/software-factory/arch.yaml
   sfconfig
@@ -104,12 +104,12 @@ engine. See this :ref:`section <zuul-github-resources>`.
 Conclusion
 ..........
 
-* The Zuul service is running at https://hostname/zuul
-* Logserver is configured at https://hostname/logs
+* The Zuul service is running at `<https://\<fqdn\>/zuul>`_
+* Logserver is configured at `<https://\<fqdn\>/logs>`_
 * The sf-config project has been provisioned with a base job using
   the logserver.
 * The sf-jobs project has been provisioned with demo jobs and roles ready
-  to be used. See https://hostname/zuul/t/local/jobs.html for the list of
+  to be used. See `<https://\<fqdn\>/zuul/t/local/jobs.html>`_ for the list of
   available jobs.
 
 Next things to do (guides are pending):

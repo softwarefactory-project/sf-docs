@@ -107,8 +107,8 @@ For example, the following services are consumed by:
  Service name           Consumers
 ====================== =========================
 SQL server              Most services
-Gearman/Zookeeper       Zuul/Nodepool
-Gearman/Elasticsearch   Log-gearman for logstash
+Zookeeper               Zuul/Nodepool
+Zuul Web                Log Scraper
 ====================== =========================
 
 Test instances (workers) need to be isolated from the service network; however
@@ -158,7 +158,7 @@ Installation
 
 .. code-block:: bash
 
-  yum install -y https://softwarefactory-project.io/repos/sf-release-3.7.rpm
+  yum install -y https://softwarefactory-project.io/repos/sf-release-3.8.rpm
   yum install -y sf-config
 
 
@@ -178,11 +178,10 @@ To add a logstash service on a dedicated instance, edit the
   - name: elk
     ip: 192.168.XXX.YYY
     roles:
-      - elasticsearch
-      - job-logs-gearman-client
-      - job-logs-gearman-worker
-      - logstash
-      - kibana
+      - opensearch
+      - logserver
+      - log-processing
+      - opensearch-dashboards
 
 
 .. note::
@@ -224,7 +223,7 @@ Finally, to setup and start the services, run:
 Access Software Factory
 =======================
 
-The Dashboard is available at `https://FQDN` and the *admin* user can authenticate
+The Dashboard is available at ``https://<fqdn>`` and the *admin* user can authenticate
 using "Internal Login".
 
 Congratulations, you successfully deployed Software Factory.

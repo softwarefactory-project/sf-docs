@@ -10,7 +10,7 @@ Once a change has been approved, the config-update job is executed to apply the 
 
 To make a change in the configuration:
 
-* First clone the repository: git clone https:\/\/<fqdn>/r/config
+* First clone the repository: ``git clone https://<fqdn>/r/config``
 * Edit the relevant files and commit: git commit
 * Submit a change for review: git review
 * The configuration will be updated once the change is approved and merged

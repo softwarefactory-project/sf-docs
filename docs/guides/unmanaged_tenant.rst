@@ -328,4 +328,4 @@ Finalize tenant creation
 - Setup check and gate jobs for the org-test-config and org-test-jobs repository.
 
 - Define project-template and define the PTI, see:
-  https://zuul-ci.org/docs/zuul/user/howtos/pti.html
+  https://zuul-ci.org/docs/zuul/latest/howtos/pti.html

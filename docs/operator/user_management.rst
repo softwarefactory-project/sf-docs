@@ -92,13 +92,13 @@ Default Roles
 
 Software Factory comes with the following default roles, and the following services are pre-configured to make use of these roles:
 
-============================== =================== =========================    ===============================================================
-Role Name                      Service(s)          Default?                     Description and Usage
-============================== =================== =========================    ===============================================================
-zuul_admin                     Zuul                Admin user                   This role grants admin access to every tenant defined on Zuul.
-<tenant>_zuul_admin            Zuul                Must be assigned manually    This role grants admin access to the tenant <tenant> on Zuul.
-sf_opensearch_dashboards_user  Opensearch, Kibana  All users                    This role grants read access to the OpenSearch database.
-============================== =================== =========================    ===============================================================
+============================== ================================= =========================    ===============================================================
+Role Name                      Service(s)                        Default?                     Description and Usage
+============================== ================================= =========================    ===============================================================
+zuul_admin                     Zuul                              Admin user                   This role grants admin access to every tenant defined on Zuul.
+<tenant>_zuul_admin            Zuul                              Must be assigned manually    This role grants admin access to the tenant <tenant> on Zuul.
+sf_opensearch_dashboards_user  Opensearch, OpenSearch Dashboard  All users                    This role grants read access to the OpenSearch database.
+============================== ================================= =========================    ===============================================================
 
 The tenant-scoped admin roles get created automatically whenever a Zuul tenant is created in the Zuul section of the config repository.
 

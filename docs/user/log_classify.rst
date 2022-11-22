@@ -21,7 +21,7 @@ e.g.:
          check:
            - linters:
                vars:
-                 logclassify_optin: false
+                 logclassify_option: false
 
 To make the report directly available from the failed job links, set the
 logclassify_report to true, for example in the job definition:

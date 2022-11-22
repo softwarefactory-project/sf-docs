@@ -10,7 +10,7 @@ Software Factory (also called SF) is a collection of services that provides
 a powerful platform to build software.
 
 .. image:: imgs/landing_page.png
-   :scale: 50 %
+   :scale: 36 %
 
 Software Factory integrates services covering each step in the software
 production chain:
@@ -19,18 +19,14 @@ production chain:
 * Code review system,
 * Pipeline manager,
 * Test instance manager,
-* Task tracker,
 * Collaborative tools,
-* Repository metrics,
 * Log management, and
 * System metrics
 
 Software Factory offers a seamless user experience with:
 
 * Single Sign-On authentication, on every authenticated service,
-* Unified REST API,
-* Top menu to access all the services quickly, and
-* Command line tool and a web interface.
+* Web Interface.
 
 Software Factory simplifies system operations:
 

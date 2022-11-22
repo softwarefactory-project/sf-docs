@@ -28,4 +28,4 @@ When deployed locally, the service is configured with a few roles:
 * upload-logs: upload job logs to a static webserver
 
 .. image:: imgs/zuul.png
-   :scale: 50 %
+   :scale: 36 %

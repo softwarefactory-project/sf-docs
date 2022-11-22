@@ -100,12 +100,16 @@ This job is actually an ansible playbook that will:
 Containerized services
 ----------------------
 
-Some services are containerized since SF-3.7:
+All services, but the gateway, are containerized since SF-3.8:
 
 * elk stack
 * gerrit
 * nodepool services
 * zuul services
+* authentication
+* loggers
+* databases
+
 
 Services are managed by systemd, configuration files are located on /etc/$service and logs are located on /var/log/$service
 
@@ -123,6 +127,7 @@ If you need to interact with a container, you can first list them
     ac8a57cd93bb  quay.io/software-factory/zuul-scheduler-ubi:5.0.0-0     /usr/local/bin/zu...  30 hours ago  Up 28 hours ago         zuul-scheduler
     7b9fce44add3  quay.io/software-factory/nodepool-launcher-ubi:5.0.0-2  /usr/local/bin/no...  30 hours ago  Up 30 hours ago         nodepool-launcher
     29bd9915f524  quay.io/software-factory/gerrit:3.4.3-0                 /bin/bash             30 hours ago  Up 30 hours ago         gerrit
+    ...
 
 You can login on a container using
 

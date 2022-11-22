@@ -170,7 +170,7 @@ to perform admin actions from the web GUI, such as dequeueing buildsets and mana
 
 .. note::
 
-  Software Factory's current SSO service **does not support** OpenID Connect. These features require the use of an external Identity Provider such as a Keycloak instance, or Google.
+  Software Factory's currently uses Keycloak as SSO service. There is a possiblity to use other Identity Providers, but it will always uses Keyclaok as a intermediary. Check how to configure Keycloak with other provides `here<https://www.keycloak.org/docs/latest/server_admin/#_identity_broker>`.
 
 Assuming you have created an OpenID Connect client with the Identity Provider you wish to
 use, edit the following part in sfconfig.yaml:

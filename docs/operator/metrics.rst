@@ -54,12 +54,14 @@ the password in secrets.yaml:
 .. code-block:: bash
 
    telegraf_passwd=$(awk '/telegraf_influxdb_password/ {print $2}' /var/lib/software-factory/bootstrap-data/secrets.yaml)
-   influx -ssl -host $influxdb_host -username telegraf -password $telegraf_passwd -database telegraf
+   podman exec -it influxdb influx -ssl -host $(hostname) -username telegraf -password $telegraf_passwd -database telegraf
    Connected to https://$influxdb_host:8086 version 1.8.6
    InfluxDB shell version: 1.8.6
 
 
 .. note:: If you do not have crt fiel, add ``-unsafeSsl`` option to influx command.
+
+.. note:: InfluDB cli must be executes inside the InfluxDB container.
 
 For more information about *influx* command go to the `official
 cli documentation <https://docs.influxdata.com/influxdb/v1.4/tools/shell/>`_

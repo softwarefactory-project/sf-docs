@@ -32,7 +32,7 @@ to manually create a user on the remote gerrit. For openstack.org,
 follow `this guide <https://docs.opendev.org/opendev/system-config/latest/third_party.html#creating-a-service-account>`_ to configure it.
 
 Once Software Factory is deployed, add the local Zuul ssh public key
-(located on https://<fqdn>/keys/zuul_rsa.pub or /var/lib/software-factory/bootstrap-data/ssh_keys/zuul_rsa.pub)
+(located on `<https://\<fqdn\>/keys/zuul_rsa.pub>`_ or /var/lib/software-factory/bootstrap-data/ssh_keys/zuul_rsa.pub)
 to the remote `user ssh key setting page <https://review.opendev.org/#/settings/ssh-keys>`_.
 
 GitHub
@@ -61,13 +61,13 @@ See the :ref:`deployment_requirements` section for resources requirements per se
 It is recommended to start with an all-in-one installation that can be scaled up once the services are working.
 Below are some instance sizing recommendations:
 
-===== ===== ====== ==========================================
+===== ===== ====== ===========================================
  Ram   CPU   Disk   Services
-===== ===== ====== ==========================================
+===== ===== ====== ===========================================
  4GB    1    40GB   Bare minimal: Zuul / Nodepool / Zookeeper
  4GB    2    80GB   Above + logserver
- 8GB    4   120GB   Above + elasticsearch / logstash / kibana
-===== ===== ====== ==========================================
+ 8GB    4   120GB   Above + Opensearch / Opensearch Dashboards
+===== ===== ====== ===========================================
 
 Initial configuration
 ~~~~~~~~~~~~~~~~~~~~~
@@ -138,7 +138,7 @@ For Pagure:
 Then run *sfconfig* again to setup the connection.
 
 You can check that the connection is enabled by looking at:
-  https://fqdn/zuul/api/connections
+  https://<fqdn>/zuul/api/connections
 
 CI resources
 ............

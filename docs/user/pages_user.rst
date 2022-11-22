@@ -71,7 +71,7 @@ define in a yaml file under the *config* repository *zuul.d/*.
        - myproject
 
 *vhost_name* is the name of the Apache Virtual Host and that means the website
-will be accessible at *http://www-myproject.sftests.com*. Furthermore, note that
+will be accessible at *http://www.myproject.sftests.com*. Furthermore, note that
 *final* set to *true* and *allowed-projects* set to the project name that will use
 that job are important options. Indeed it ensures that, only, *myproject* can
 use this publication's job.

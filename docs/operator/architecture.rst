@@ -64,10 +64,10 @@ The minimal architecture includes following components:
 * mysql
 * zookeeper
 * gateway
-* keycloak
-* `managesf </docs/managesf/>`_
-* gitweb
+* `keycloak <https://softwarefactory-project.io/docs/operator/auths.html>`_
+* firehose
 * `gerrit </r/Documentation/index.html>`_
+* `managesf </docs/managesf/>`_
 * logserver
 * `zuul-scheduler </docs/zuul/>`_
 * `zuul-executor </docs/zuul/>`_
@@ -76,29 +76,21 @@ The minimal architecture includes following components:
 
 Optional services can be enabled:
 
-* zuul-merger
-* nodepool-builder
-* hypervisor-k1s
-* hypervisor-openshift
-* etherpad
-* lodgeit
-* gerritbot
-* logserver
-* nodepool-builder
-* murmur
-* elasticsearch
-* job-logs-gearman-client
-* job-logs-gearman-worker
-* logstash
-* kibana
-* mirror
-* firehose
-* pages
-* hydrant
-* influxdb
-* grafana
 * cgit
+* etherpad
+* gerritbot
+* grafana
 * hound
+* influxdb
+* lodgeit
+* log-classify
+* log-processing
+* murmur
+* nodepool-builder
+* opensearch
+* opensearch-dashboards
+* zuul-fingergw
+* zuul-merger
 
 
 Check the :ref:`nodepool documentation<nodepool-operator-k1s>` to learn
@@ -133,8 +125,8 @@ Migrate a service to a dedicated instance
 
 This procedure demonstrates how to run the log indexation services (ELK stack) on a dedicated instance:
 
-* First stop and disable all elk related services (elasticsearch, logstash and kibana)
-* Copy the current data, e.g.: rsync -a /var/lib/elasticsearch/ new_instance_ip:/var/lib/elasticsearch/
+* First stop and disable all elk related services (opensearch, logstash and opensearch-dashboards)
+* Copy the current data, e.g.: rsync -a /var/lib/opensearch/ new_instance_ip:/var/lib/opensearch-dashboards/
 * Add the new instances and roles to the /etc/software-factory/arch.yaml file:
 
 .. code-block:: yaml
@@ -143,10 +135,9 @@ This procedure demonstrates how to run the log indexation services (ELK stack) o
     - name: elk
       ip: new_instance_ip
       roles:
-        - elasticsearch
-        - logstash
-	- kibana
-        - log-gearman-client
-        - log-gearman-worker
+        - opensearch
+        - opensearch-dashboards
+        - logserver
+        - log-processing
 
 * Run sfconfig to apply the architecture modification

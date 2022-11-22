@@ -49,7 +49,7 @@ Configuration and reconfiguration
 Fully Qualified Domain Name
 ---------------------------
 
-The "fqdn" parameter defines the hostname used to access SF services.
+The **fqdn** parameter defines the hostname used to access SF services.
 It is an important parameter since it is used by external identity providers
 to redirect a user after authentication. Thus the name needs to be resolvable,
 either manually with the /etc/hosts, either with a proper DNS record.

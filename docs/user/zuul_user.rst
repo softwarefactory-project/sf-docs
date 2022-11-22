@@ -114,7 +114,7 @@ jobs library. A list of the jobs in this library can be found here_.
 .. _here: https://zuul-ci.org/docs/zuul-jobs/jobs.html
 
 A full list of all the jobs that have been built at least once on Software Factory
-can be accessed at `https://<fqdn>/zuul/local/jobs`.
+can be accessed at ``https://<fqdn>/zuul/local/jobs``.
 
 Defining a custom job within a project
 --------------------------------------
@@ -123,7 +123,7 @@ It is possible to define jobs specific to a project within its repository. This
 is done in the *.zuul.yaml* file at the root of the repository. Jobs are based
 on Ansible playbooks.
 
-For example, the following .zuul.yaml file will define a job called **unit-tests**
+For example, the following `.zuul.yaml`` file will define a job called **unit-tests**
 to be run in the **check** pipeline along the linters:
 
 .. code-block:: yaml
@@ -239,7 +239,7 @@ Export logs artifacts to logstash
 ---------------------------------
 
 A job can be configured to export specific artifacts
-to logstash to make them available to the search via Kibana.
+to logstash to make them available to the search via OpenSearch.
 The ELK stack must be activated on the Software Factory instance.
 
 The job variable *logstash_processor_config* need to be provided
