@@ -24,7 +24,7 @@ nodepool) using these commands:
 
   yum install -y https://softwarefactory-project.io/repos/sf-release-3.8.rpm
   yum install -y sf-config
-  sfconfig --provision-demo
+  sfconfig
 
 .. note::
 
